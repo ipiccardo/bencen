@@ -3,9 +3,9 @@ import '../styles/globals.css'
 
 const HomePage = () => {
     return (
-        <>
+        <div className='center'>
             LA HOME
-        </>
+        </div>
     )
 }
 
