@@ -1,0 +1,13 @@
+.navBar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navBar li{
+    list-style-type: none;
+}
+
+.navBar li a{
+    color: black
+}
