@@ -1,3 +1,4 @@
+/* Normal State */
 .serviceCard {
     background-color: #ffffff;
     box-shadow: 0px 1.5px 22.5px 0.75px #00000040;
@@ -62,4 +63,25 @@
     top: 32px;
     width: 208px;
   }
+
+  /* Hover State */
+  .serviceCard:hover {
+    background-color: var(--black-color);
+    box-shadow: 0px 4.5px 60px #00000040;
+    height: 299px;
+    width: 240px;
+    position: relative;
+  }
   
+  .serviceCard:hover .group {
+    position: absolute;
+    top: 40px;
+  }
+  
+  .serviceCard:hover .header {
+    color: var(--white-color);
+  }
+
+  .serviceCard:hover .content {
+    color: var(--white-color);
+  }
