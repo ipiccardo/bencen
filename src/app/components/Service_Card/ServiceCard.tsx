@@ -1,6 +1,9 @@
-import React from "react";
+'use client'
+
+import React, {useState} from "react";
 import Image from "next/image";
 import classes from './serviceCard.module.css';
+import Button from '../Ui/Button';
 
 interface Props {
   imageName: string;
@@ -9,10 +12,12 @@ interface Props {
 }
 
 export const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div className={classes.serviceCard}>
       <div className={classes.group}>
-        <Image className={classes.image} alt="Excavator" src={`/icons/${imageName}.png`} width={96} height={96} />
+        <Image className={classes.image} alt='hi' src={`/icons/${imageName}.png`} width={96} height={96} />
         <div className={classes.text}>
           <div className={classes.header}>{header}</div>
           <p className={classes.content}>{content}</p>
