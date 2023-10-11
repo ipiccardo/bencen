@@ -8,10 +8,18 @@ const Footer = () => {
     <div className={classes.footer}>
       <div className={classes.footer__firstBlock}>
         <Icon name="logo" size={55} />
-        <NavBar />
+        <NavBar
+          withHome={true}
+          hasPipes={false}
+          linkTitles={["About Us", "Services", "Projects", "News", "Contact"]}
+        />
       </div>
       <div className={classes.footer__secondBlock}>
-        <p>BENCEN | PRIVACY POLICY | TERMS AND CONDITIONS</p>
+        <NavBar
+          withHome={false}
+          hasPipes={true}
+          linkTitles={["BENCEN", "PRIVACY POLICY", "TERMS AND CONDITIONS"]}
+        />
         <div className={classes.footer__icons}>
           <Icon name="facebook" size={20} />
           <Icon name="instagram" size={20} />

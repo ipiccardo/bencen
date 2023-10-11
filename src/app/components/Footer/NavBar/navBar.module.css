@@ -8,6 +8,10 @@
     list-style-type: none;
 }
 
-.navBar li a{
+.navBar__link{
     color: black
+}
+
+.navBar__link:hover {
+    color: orange;
 }
