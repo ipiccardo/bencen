@@ -3,7 +3,6 @@ import Image from "next/image";
 import classes from './serviceCard.module.css';
 
 interface Props {
-  className: any;
   imageName: string;
   header: string;
   content: string;
