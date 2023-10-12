@@ -1,18 +1,26 @@
-.btn {
-  text-decoration: none;
-  cursor: pointer;
-  font: inherit;
-  background-color: #03be9f;
-  border: 1px solid #03be9f;
-  border-radius: 6px;
-  color: #dafff7;
-  padding: 0.5rem 1.5rem;
-  text-align: center;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+.button {
+  all: unset;
+  background-color: var(--first-color);
+  box-sizing: border-box;
+  height: 39px;
+  position: relative;
+  width: 154px;
 }
 
-.btn:hover,
-.btn:active {
-  background-color: #02afa1;
-  border-color: #02afa1;
+.button .text {
+  color: #ffffff;
+  font-family: var(--bold-font-family);
+  font-size: var(--bold-font-size);
+  font-style: var(--bold-font-style);
+  font-weight: var(--bold-font-weight);
+  left: 46px;
+  letter-spacing: var(--bold-letter-spacing);
+  line-height: var(--bold-line-height);
+  text-align: center;
+  top: 10px;
+  white-space: nowrap;
+}
+
+.button:hover {
+  background-color: var(--logo-color);
 }

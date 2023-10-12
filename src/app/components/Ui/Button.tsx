@@ -2,17 +2,15 @@ import React from "react";
 import classes from "./button.module.css";
 import Link from "next/link";
 
-const Button = (props: any) => {
-    if (props.link) {
-        return (
-            <Link href={props.link}>
-                <a className={classes.btn}>{props.children}</a>
-            </Link>
-        );
-    }
+interface Props {
+    className?: string;
+    text: string;
+  }
+
+const Button = ({ className, text }: Props) : JSX.Element => {
     return (
-        <button className={classes.btn} onClick={props.onClick}>
-            {props.children}
+        <button className={`${classes.button} ${className || ""}`} >
+            <div className={classes.text}>{text}</div>
         </button>
     );
 };

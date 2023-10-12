@@ -1,6 +1,9 @@
-import React from "react";
+'use client'
+
+import React, {useState} from "react";
 import Image from "next/image";
 import classes from './serviceCard.module.css';
+import Button from '../Ui/Button';
 
 interface Props {
   imageName: string;
@@ -8,16 +11,31 @@ interface Props {
   content: string;
 }
 
-export const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
+const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
+  const [hover, setHover] = useState(false);
+
   return (
-    <div className={classes.serviceCard}>
+    <div 
+    className={`${classes.serviceCard} ${hover ? classes.hover : ""}`}
+    onMouseEnter={() => setHover(true)}
+    onMouseLeave={() => setHover(false)}
+    >
       <div className={classes.group}>
-        <Image className={classes.image} alt="Excavator" src={`/icons/${imageName}.png`} width={96} height={96} />
+        <Image 
+          className={classes.image} 
+          alt={`${header}`.toLowerCase() + " icon"} 
+          src={`/icons/${hover ? imageName + "_hover" : imageName}.png`} 
+          width={96} 
+          height={96} 
+        />
         <div className={classes.text}>
           <div className={classes.header}>{header}</div>
-          <p className={classes.content}>{content}</p>
+          <div className={classes.content}>{content}</div>
         </div>
       </div>
+      {hover && <Button className={classes.button} text="FIND OUT MORE"/>}
     </div>
   );
 };
+
+export default ServiceCard
