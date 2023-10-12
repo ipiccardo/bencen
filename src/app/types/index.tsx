@@ -1,5 +1,5 @@
 export type IconProps = {
-  name: "home" | "facebook" | "logo" | "instagram" | "linkedin";
+  name: "home" | "facebook" | "logo" | "instagram" | "linkedin" | "language";
   size: number;
   onClick?: Function;
 };

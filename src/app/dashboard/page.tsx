@@ -8,7 +8,6 @@ import { ServiceCard } from "../components/Service_Card/ServiceCard";
 const HomePage = () => {
   return (
     <>
-      <div className="center">LA HOME</div>
       <Footer />
     </>
   );
