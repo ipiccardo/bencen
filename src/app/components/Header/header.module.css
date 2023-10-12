@@ -3,9 +3,8 @@
   justify-content: space-between;
   gap: 1rem;
   list-style: none;
-  padding-left: 0;
+  padding: 0 1rem;
   align-items: center;
-  padding-right: 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -17,7 +16,39 @@
   gap: 1rem;
 }
 
-.navBar li a {
-  text-decoration: none;
-  font-family: "Roboto";
+.header a:visited {
+  text-decoration: underline;
+}
+
+.header__hamburguerMenu {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .header__hamburguerMenu {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    list-style: none;
+    padding-left: 0;
+    align-items: center;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header__hamburguerMenu__toggleButton {
+    width: 3rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding-top: 0;
+    padding-bottom: 0;
+    vertical-align: middle;
+    display: inline-block;
+  }
+
+  .header {
+    display: none;
+  }
 }

@@ -1,7 +1,9 @@
+'use client'
 import Link from "next/link";
 import Icon from "../../Icon/Icon";
 import classes from "./navBar.module.css";
 import { convertLinkString } from "@/app/utils";
+import { usePathname } from 'next/navigation'
 
 type NavBarProps = {
   withHome: boolean;
@@ -10,6 +12,9 @@ type NavBarProps = {
 };
 
 const NavBar = ({ withHome, hasPipes, linkTitles = [] }: NavBarProps) => {
+
+  const pathName = usePathname()
+
   return (
     <div>
       <nav>
@@ -25,7 +30,7 @@ const NavBar = ({ withHome, hasPipes, linkTitles = [] }: NavBarProps) => {
             return (
               <li key={link + index}>
                 <Link
-                  className={classes.navBar__link}
+                  className={`/dashboard/${convertLinkString(link)}` === pathName ? classes.navBar__link && classes.active : classes.navBar__link}
                   href={`/dashboard/${convertLinkString(link)}`}
                 >
                   {link}

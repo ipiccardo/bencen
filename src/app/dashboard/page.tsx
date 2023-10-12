@@ -8,16 +8,16 @@ import Footer from '../components/Footer/Footer';
 const HomePage = () => {
   return (
     <>
-        <ul className={classes.serviceCard}>
-            {Object.keys(SERVICES).map((serviceKey) => {
-                const [imageName, header, content] = SERVICES[serviceKey];
-                return (
-                    <li key={serviceKey}>
-                        <ServiceCard imageName={imageName} header={header} content={content} />
-                    </li>
-                );
-            })}
-        </ul>
+      <ul className={classes.serviceCard}>
+        {Object.keys(SERVICES).map((serviceKey) => {
+          const [imageName, header, content] = SERVICES[serviceKey];
+          return (
+            <li key={serviceKey}>
+              <ServiceCard imageName={imageName} header={header} content={content} />
+            </li>
+          );
+        })}
+      </ul>
       <Footer />
     </>
   );
