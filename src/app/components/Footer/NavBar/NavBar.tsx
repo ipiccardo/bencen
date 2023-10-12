@@ -17,7 +17,7 @@ const NavBar = ({ withHome, hasPipes, linkTitles = [] }: NavBarProps) => {
           {withHome && (
             <li>
               <Link className={classes.navBar__link} href="/">
-                <Icon name="home" size={18} />
+                <Icon name="home" size={20} />
               </Link>
             </li>
           )}

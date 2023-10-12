@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className={classes.footer}>
       <div className={classes.footer__firstBlock}>
-        <Icon name="logo" size={55} />
+        <Icon name="logo" size={60} />
         <NavBar
           withHome={true}
           hasPipes={false}

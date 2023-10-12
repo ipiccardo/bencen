@@ -9,9 +9,9 @@
 }
 
 .navBar__link{
-    color: black
+    color: var(--second-alpha-color);
 }
 
 .navBar__link:hover {
-    color: orange;
+    color: var(--logo-color);
 }
