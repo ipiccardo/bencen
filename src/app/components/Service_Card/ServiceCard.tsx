@@ -21,7 +21,13 @@ export const ServiceCard = ({ imageName, header, content }: Props): JSX.Element 
     onMouseLeave={() => setHover(false)}
     >
       <div className={classes.group}>
-        <Image className={classes.image} alt='hi' src={`/icons/${imageName}.png`} width={96} height={96} />
+        <Image 
+          className={classes.image} 
+          alt={`${header}`.toLowerCase() + " icon"} 
+          src={`/icons/${hover ? imageName + "_hover" : imageName}.png`} 
+          width={96} 
+          height={96} 
+        />
         <div className={classes.text}>
           <div className={classes.header}>{header}</div>
           <p className={classes.content}>{content}</p>
