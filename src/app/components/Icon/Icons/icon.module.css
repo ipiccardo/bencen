@@ -1,0 +1,8 @@
+.fillColor{
+    fill: var(--second-alpha-color);
+}
+
+.fillColor:hover {
+    fill: var(--logo-color);
+    cursor: pointer;
+}
