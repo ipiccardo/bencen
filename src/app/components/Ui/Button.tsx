@@ -3,15 +3,18 @@ import classes from "./button.module.css";
 import Link from "next/link";
 
 interface Props {
+    href: string;
     className?: string;
     text: string;
   }
 
-const Button = ({ className, text }: Props) : JSX.Element => {
+const Button = ({ href, className, text }: Props) : JSX.Element => {
     return (
-        <button className={`${classes.button} ${className || ""}`} >
-            <div className={classes.text}>{text}</div>
-        </button>
+        <Link href={href}>
+            <button className={`${classes.button} ${className || ""}`}>
+                <div className={classes.text}>{text}</div>
+            </button>
+        </Link>
     );
 };
 

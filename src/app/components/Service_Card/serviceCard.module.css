@@ -73,11 +73,6 @@
     width: 168px !important;
   }
 
-  .serviceCard .design-component-instance-node {
-    left: 25px !important;
-    top: 14px !important;
-  }
-
   /* Hover State */
   .serviceCard:hover {
     background-color: var(--black-color);
