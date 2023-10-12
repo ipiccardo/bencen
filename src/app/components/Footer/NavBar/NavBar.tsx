@@ -25,7 +25,7 @@ const NavBar = ({ withHome, hasPipes, linkTitles = [] }: NavBarProps) => {
             return (
               <li key={link + index}>
                 <Link
-                  className={`font-16 font-w-500 ${classes.navBar__link}`}
+                  className={`font-w-500 ${classes.navBar__link}`}
                   href={`/dashboard/${convertLinkString(link)}`}
                 >
                   {link}

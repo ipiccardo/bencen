@@ -2,12 +2,13 @@ import React from "react";
 import classes from "./footer.module.css";
 import NavBar from "./NavBar/NavBar";
 import Icon from "../Icon/Icon";
+import IconWithImages from "../IconWithImages/IconWithImages";
 
 const Footer = () => {
   return (
-    <div className={classes.footer}>
+    <footer className={classes.footer}>
       <div className={classes.footer__firstBlock}>
-        <Icon name="logo" size={60} />
+        <IconWithImages name="letra" size={60} />
         <NavBar
           withHome={true}
           hasPipes={false}
@@ -26,7 +27,7 @@ const Footer = () => {
           <Icon name="linkedin" size={20} />
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

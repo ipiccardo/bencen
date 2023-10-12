@@ -29,13 +29,27 @@
     }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 475px) {
     .navBar {
         gap: 10px;
     }
 
     .navBar__pipes{
         right: -6px;
+    }
+
+    .navBar__link{
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navBar {
+        gap: 5px;
+    }
+
+    .navBar__pipes{
+        right: -5px;
     }
 
     .navBar__link{
