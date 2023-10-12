@@ -19,3 +19,23 @@
     display: flex;
     gap: 40px
 }
+
+@media (max-width: 950px) {
+
+    .footer {
+        padding: 20px 80px;
+    }
+
+    .footer__secondBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding: 20px 1rem;
+    }
+}

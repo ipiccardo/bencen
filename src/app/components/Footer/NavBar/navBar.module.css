@@ -6,12 +6,39 @@
 
 .navBar li{
     list-style-type: none;
+    position: relative;
 }
 
 .navBar__link{
     color: var(--second-alpha-color);
+    font-size: 16px;
 }
 
 .navBar__link:hover {
     color: var(--logo-color);
+}
+
+.navBar__pipes{
+    position: absolute;
+    right: -12px;
+}
+
+@media (max-width: 700px) {
+    .navBar__home {
+        display: none;
+    }
+}
+
+@media (max-width: 460px) {
+    .navBar {
+        gap: 10px;
+    }
+
+    .navBar__pipes{
+        right: -6px;
+    }
+
+    .navBar__link{
+        font-size: 14px;
+    }
 }
