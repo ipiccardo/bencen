@@ -11,7 +11,7 @@ interface Props {
   content: string;
 }
 
-export const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
+const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
   const [hover, setHover] = useState(false);
 
   return (
@@ -30,10 +30,12 @@ export const ServiceCard = ({ imageName, header, content }: Props): JSX.Element 
         />
         <div className={classes.text}>
           <div className={classes.header}>{header}</div>
-          <p className={classes.content}>{content}</p>
-          {hover && <Button />}
+          <div className={classes.content}>{content}</div>
         </div>
       </div>
+      {hover && <Button className={classes.button} text="FIND OUT MORE"/>}
     </div>
   );
 };
+
+export default ServiceCard

@@ -4,6 +4,7 @@
     box-shadow: 0px 1.5px 22.5px 0.75px #00000040;
     height: 240px;
     width: 240px;
+    transition: opacity 300ms ease;
   }
   
   .serviceCard .group {
@@ -64,6 +65,19 @@
     width: 208px;
   }
 
+  .serviceCard .button {
+    height: 48px !important;
+    left: 36px !important;
+    position: absolute !important;
+    top: 240px !important;
+    width: 168px !important;
+  }
+
+  .serviceCard .design-component-instance-node {
+    left: 25px !important;
+    top: 14px !important;
+  }
+
   /* Hover State */
   .serviceCard:hover {
     background-color: var(--black-color);
@@ -71,6 +85,7 @@
     height: 299px;
     width: 240px;
     position: relative;
+    top: -24px;
   }
   
   .serviceCard:hover .group {
