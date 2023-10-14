@@ -4,6 +4,7 @@ import React, {useState} from "react";
 import Image from "next/image";
 import classes from './serviceCard.module.css';
 import Button from '../Ui/Button';
+import { SERVICES } from '../../utils/constants';
 
 interface Props {
   imageName: string;
@@ -24,7 +25,7 @@ const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
         <Image 
           className={classes.image} 
           alt={`${header}`.toLowerCase() + " icon"} 
-          src={`/icons/${hover ? imageName + "_hover" : imageName}.png`} 
+          src={`/icons/Services/${hover ? imageName + "_hover" : imageName}.png`} 
           width={96} 
           height={96} 
         />
@@ -38,4 +39,19 @@ const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
   );
 };
 
-export default ServiceCard
+const ServiceCards = (): JSX.Element => {
+  return (
+    <ul className={classes.serviceCards}>
+    {Object.keys(SERVICES).map((key) => {
+      const [imageName, header, content] = SERVICES[key];
+      return (
+       <li key={key}>
+         <ServiceCard imageName={imageName} header={header} content={content} />
+       </li>
+       );
+    })}
+   </ul>
+  ) 
+};
+
+export default ServiceCards
