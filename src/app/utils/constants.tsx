@@ -14,3 +14,10 @@ export const UNMATCHED_SERVICES: Object = {
   infrastructure: ['motorway', 'INFRASTRUCTURE AND SYSTEMS', 'Earthmoving for infrastructure projects. Waterproofing and road rehabilitation. Construction and maintenance of sewer and aqueduct systems.']
 };
 
+export const CONTACT: Object = {
+  location: ['location', 'ADDRESS', 'Av. Maipú 2649, Olivos,\n Buenos Aires, Argentina'],
+  phone: ['phone', 'PHONE NUMBER', '+54 11 4790 - 5791'],
+  email: ['email', 'EMAIL', 'info@bencen.com.ar'],
+  socials: ['socials', 'SOCIAL MEDIA', '']
+};
+
