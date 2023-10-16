@@ -6,6 +6,7 @@ import HomeIcon from "./Icons/HomeIcon";
 import InstagramIcon from "./Icons/InstagramIcon";
 import LinkedinIcon from "./Icons/LinkedinIcon";
 import LogoIcon from "./Icons/LogoIcon";
+import HamburguerIcon from "./Icons/HamburguerIcon";
 
 const Icons = (name: string, size: number) => {
   switch (name) {
@@ -19,6 +20,8 @@ const Icons = (name: string, size: number) => {
       return <LinkedinIcon size={size} />;
     case "logo":
       return <LogoIcon size={size} />;
+    case "hamburguer":
+      return <HamburguerIcon size={size} />;
     default:
       return <HomeIcon size={size} />;
   }

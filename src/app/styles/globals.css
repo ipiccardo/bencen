@@ -1,6 +1,10 @@
 @import "./font.css";
 @import "normalize.css";
 
+.body {
+  font-family: "Roboto", sans-serif;
+}
+
 :root {
   --black-alpha-color: rgba(0, 0, 0, 0.5);
   --black-color: rgba(0, 0, 0, 1);

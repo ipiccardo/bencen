@@ -6,7 +6,8 @@ export type IconProps = {
     | "instagram"
     | "linkedin"
     | "language"
-    | "letra";
+    | "letra"
+    | "hamburguer";
   size: number;
   onClick?: Function;
 };

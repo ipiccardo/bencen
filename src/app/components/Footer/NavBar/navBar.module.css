@@ -1,7 +1,7 @@
 .navBar {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .navBar li{
@@ -15,8 +15,14 @@
 }
 
 .navBar__link:hover {
-    color: var(--logo-color);
+  color: var(--logo-color);
 }
+
+.active {
+  border-bottom: 1px solid var(--logo-color);
+  color: var(--logo-color);
+}
+
 
 .navBar__pipes{
     position: absolute;
