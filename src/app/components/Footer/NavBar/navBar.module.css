@@ -43,9 +43,9 @@
     }
 }
 
-@media (max-width: 400px) {
+/* @media (max-width: 400px) {
     .navBar {
-        gap: 5px;
+        gap: 10px;
     }
 
     .navBar__pipes{
@@ -55,4 +55,4 @@
     .navBar__link{
         font-size: 14px;
     }
-}
+} */
