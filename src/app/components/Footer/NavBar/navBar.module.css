@@ -49,16 +49,35 @@
     }
 }
 
-/* @media (max-width: 400px) {
-    .navBar {
-        gap: 10px;
-    }
+@media (max-width: 400px) {
+    .navBarFooter {
+        flex-direction: column;
+        align-items: flex-end;
+        margin: 0px;
+        gap: 1rem;
+      }
 
+    .navBarFooter .navBar__link{
+        font-size: 1rem;
+      }
+
+    .navBar__linkWithPipes{
+        font-size: 10px;
+    }
+    
     .navBar__pipes{
-        right: -5px;
+        font-size: 12px;
+        top: 3px;
+        right: -7px;
     }
+}
 
-    .navBar__link{
-        font-size: 14px;
+@media (max-width: 290px) {
+    .navBar__linkWithPipes{
+        font-size: 8px;
     }
-} */
+    .navBar__pipes{
+        font-size: 10px;
+        top: 5px;
+    }
+}

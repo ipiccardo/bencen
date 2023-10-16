@@ -9,15 +9,25 @@ type NavBarProps = {
   withHome: boolean;
   hasPipes: boolean;
   linkTitles: string[];
+  father?: string;
 };
 
-const NavBar = ({ withHome, hasPipes, linkTitles = [] }: NavBarProps) => {
+const NavBar = ({
+  withHome,
+  hasPipes,
+  linkTitles = [],
+  father,
+}: NavBarProps) => {
   const pathName = usePathname();
 
   return (
     <div>
       <nav>
-        <ul className={classes.navBar}>
+        <ul
+          className={`${classes.navBar} ${
+            father === "footer" && !hasPipes && classes.navBarFooter
+          }`}
+        >
           {withHome && (
             <li className={classes.navBar__home}>
               <Link className={classes.navBar__link} href="/">
@@ -30,11 +40,17 @@ const NavBar = ({ withHome, hasPipes, linkTitles = [] }: NavBarProps) => {
               <li key={link + index}>
                 <Link
                   className={`font-w-500 ${
+                    hasPipes && classes.navBar__linkWithPipes
+                  } ${
                     `/dashboard/${convertLinkString(link)}` === pathName
                       ? classes.navBar__link && classes.active
                       : classes.navBar__link
                   }`}
-                  href={`/dashboard/${convertLinkString(link)}`}
+                  href={
+                    link.toLowerCase().includes("bencen")
+                      ? "/"
+                      : `/dashboard/${convertLinkString(link)}`
+                  }
                 >
                   {link}
                 </Link>

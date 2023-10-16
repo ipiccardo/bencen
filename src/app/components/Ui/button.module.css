@@ -2,9 +2,7 @@
   all: unset;
   background-color: var(--first-color);
   box-sizing: border-box;
-  height: 39px;
   position: relative;
-  width: 154px;
 }
 
 .button .text {
