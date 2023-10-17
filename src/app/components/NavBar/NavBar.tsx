@@ -12,8 +12,9 @@ type NavBarProps = {
   hasPipes: boolean;
   linkTitles: string[];
   father?: string;
-  withLanguage?: boolean
-  handleSideBar?: any
+  withLanguage?: string
+  handleSideBar?: () => void
+  handleChangeLanguage?: () => void
 };
 
 const NavBar = ({
@@ -23,10 +24,10 @@ const NavBar = ({
   father,
   withLanguage,
   handleSideBar,
+  handleChangeLanguage,
 }: NavBarProps) => {
   const pathName = usePathname();
 
-  console.log(pathName, 'pathName')
 
   return (
     <div>
@@ -69,8 +70,8 @@ const NavBar = ({
           {
             withLanguage && (
               <li className={`${father === 'footer' && classes.navBar__home}`}>
-                <div>
-                  <IconWithImages name='language' size={30} />
+                <div className={classes.languageIconContainer} onClick={handleChangeLanguage}>
+                  <IconWithImages name={withLanguage === 'english' ? 'language' : 'languageEn'} size={30} />
                 </div>
               </li>
             )

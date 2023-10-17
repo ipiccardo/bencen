@@ -5,6 +5,7 @@ import Image from "next/image";
 let Icons: any = {
   logo: "/img/logo.svg",
   language: "/img/languageEs.svg",
+  languageEn: "/img/languageEn.svg",
   letra: "/img/letraLogo.svg",
 };
 

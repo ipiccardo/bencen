@@ -10,12 +10,11 @@ import { usePathname } from 'next/navigation';
 
 const Header = () => {
     const pathName = usePathname();
+    const [openSideBar, setOpenSideBar] = useState(false)
+    const [language, setLanguage] = useState('english')
 
     const myRefElement1 = useRef(null);
     const myRefElement2 = useRef(null);
-
-
-    const [openSideBar, setOpenSideBar] = useState(false)
 
     const handleClickOutsideFn = () => setOpenSideBar(false)
 
@@ -31,7 +30,9 @@ const Header = () => {
         }
     }, [pathName])
 
-
+    const handleChangeLanguage = () => {
+        setLanguage(language === 'spanish' ? 'english' : 'spanish')
+    }
 
     return (
         <>
@@ -44,7 +45,8 @@ const Header = () => {
                         withHome={true}
                         hasPipes={false}
                         linkTitles={["About Us", "Services", "Projects", "News", "Contact"]}
-                        withLanguage={true}
+                        withLanguage={language}
+                        handleChangeLanguage={handleChangeLanguage}
                     />
                 </div>
             </div>
@@ -61,8 +63,9 @@ const Header = () => {
                         hasPipes={false}
                         father='header'
                         linkTitles={["About Us", "Services", "Projects", "News", "Contact"]}
-                        withLanguage={true}
+                        withLanguage={language}
                         handleSideBar={handleSideBar}
+                        handleChangeLanguage={handleChangeLanguage}
                     >
                     </NavBar>
                 </div>

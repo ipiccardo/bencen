@@ -32,6 +32,10 @@
   right: -12px;
 }
 
+.languageIconContainer {
+  cursor: pointer;
+}
+
 @media (max-width: 700px) {
   .navBar__home {
     display: none;
