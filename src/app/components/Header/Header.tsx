@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
-import NavBar from '../Footer/NavBar/NavBar';
+import NavBar from '../NavBar/NavBar';
 import IconWithImages from '../IconWithImages/IconWithImages';
 import classes from './header.module.css';
 import Icon from '../Icon/Icon';
@@ -44,7 +44,7 @@ const Header = () => {
                         withHome={true}
                         hasPipes={false}
                         linkTitles={["About Us", "Services", "Projects", "News", "Contact"]}
-                        withLanguaje={true}
+                        withLanguage={true}
                     />
                 </div>
             </div>
@@ -61,7 +61,7 @@ const Header = () => {
                         hasPipes={false}
                         father='header'
                         linkTitles={["About Us", "Services", "Projects", "News", "Contact"]}
-                        withLanguaje={true}
+                        withLanguage={true}
                         handleSideBar={handleSideBar}
                     >
                     </NavBar>

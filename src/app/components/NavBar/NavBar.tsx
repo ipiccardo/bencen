@@ -1,18 +1,17 @@
 "use client";
 import Link from "next/link";
-import Icon from "../../Icon/Icon";
+import Icon from "../Icon/Icon";
 import classes from "./navBar.module.css";
 import { convertLinkString } from "@/app/utils";
 import { usePathname } from "next/navigation";
-import IconWithImages from "../../IconWithImages/IconWithImages";
-import { useEffect } from "react";
+import IconWithImages from "../IconWithImages/IconWithImages";
 
 type NavBarProps = {
   withHome: boolean;
   hasPipes: boolean;
   linkTitles: string[];
   father?: string;
-  withLanguaje?: boolean
+  withLanguage?: boolean
   handleSideBar?: any
 };
 
@@ -21,7 +20,7 @@ const NavBar = ({
   hasPipes,
   linkTitles = [],
   father,
-  withLanguaje,
+  withLanguage,
   handleSideBar,
 }: NavBarProps) => {
   const pathName = usePathname();
@@ -67,7 +66,7 @@ const NavBar = ({
             );
           })}
           {
-            withLanguaje && (
+            withLanguage && (
               <li className={`${father === 'footer' && classes.navBar__home}`}>
                 <div>
                   <IconWithImages name='language' size={30} />

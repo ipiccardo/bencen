@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./footer.module.css";
-import NavBar from "./NavBar/NavBar";
+import NavBar from "../NavBar/NavBar";
 import Icon from "../Icon/Icon";
 import IconWithImages from "../IconWithImages/IconWithImages";
 import Link from "next/link";
