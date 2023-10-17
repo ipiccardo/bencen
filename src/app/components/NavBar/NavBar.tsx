@@ -6,6 +6,7 @@ import { convertLinkString } from "@/app/utils";
 import { usePathname } from "next/navigation";
 import IconWithImages from "../IconWithImages/IconWithImages";
 
+
 type NavBarProps = {
   withHome: boolean;
   hasPipes: boolean;
@@ -25,7 +26,7 @@ const NavBar = ({
 }: NavBarProps) => {
   const pathName = usePathname();
 
-
+  console.log(pathName, 'pathName')
 
   return (
     <div>
@@ -36,7 +37,7 @@ const NavBar = ({
         >
           {withHome && (
             <li className={`${father === 'footer' && classes.navBar__home}`}>
-              <Link onClick={handleSideBar} className={classes.navBar__link} href="/">
+              <Link onClick={handleSideBar} className={`${pathName === "/" ? classes.navBar__link && classes.active : classes.navBar__link}`} href="/">
                 <Icon name="home" size={20} />
               </Link>
             </li>

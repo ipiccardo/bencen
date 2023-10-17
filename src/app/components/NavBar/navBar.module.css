@@ -23,6 +23,10 @@
   color: var(--logo-color);
 }
 
+.active svg {
+  fill: var(--logo-color);
+}
+
 .navBar__pipes {
   position: absolute;
   right: -12px;
