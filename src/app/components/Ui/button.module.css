@@ -1,8 +1,6 @@
 .button {
   all: unset;
   background-color: var(--first-color);
-  box-sizing: border-box;
-  position: relative;
 }
 
 .button .text {
@@ -11,11 +9,9 @@
   font-size: var(--bold-font-size);
   font-style: var(--bold-font-style);
   font-weight: var(--bold-font-weight);
-  left: 46px;
+  text-align: center;
   letter-spacing: var(--bold-letter-spacing);
   line-height: var(--bold-line-height);
-  text-align: center;
-  top: 10px;
   white-space: nowrap;
 }
 
