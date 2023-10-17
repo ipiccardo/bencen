@@ -64,7 +64,7 @@
   height: 100vh;
 }
 
-.mobileNavItems {
+.mobileNav ul {
   width: 90%;
   height: 100%;
   list-style: none;
@@ -73,13 +73,13 @@
   text-align: center;
 }
 
-.mobileNavItem {
+.mobileNav ul li {
   margin: 1rem 0;
 }
 
-.mobileNavItem a {
+/* .mobileNav ul li a {
   font-size: 1.5rem;
-}
+} */
 
 .open {
   display: block !important;

@@ -36,10 +36,8 @@ const Header = () => {
                         withHome={true}
                         hasPipes={false}
                         linkTitles={["About Us", "Services", "Projects", "News", "Contact"]}
+                        withLanguaje={true}
                     />
-                    <div>
-                        <IconWithImages name='language' size={30} />
-                    </div>
                 </div>
             </div>
             <div className={classes.header__hamburguerMenu}>
@@ -49,25 +47,15 @@ const Header = () => {
                 <div className={classes.header__hamburguerMenu__toggleButton} onClick={handleSideBar}>
                     <Icon name='hamburguer' size={30} />
                 </div>
-                <nav ref={myRefElement1} className={`${classes.mobileNav} ${openSideBar ? classes.open : ''}`}>
-                    <ul className={classes.mobileNavItems}>
-                        <li className={classes.mobileNavItem}>
-                            About Us
-                        </li>
-                        <li className={classes.mobileNavItem}>
-                            Services
-                        </li>
-                        <li className={classes.mobileNavItem}>
-                            Projects
-                        </li>
-                        <li className={classes.mobileNavItem}>
-                            News
-                        </li>
-                        <li className={classes.mobileNavItem}>
-                            Contact
-                        </li>
-                    </ul>
-                </nav>
+                <div ref={myRefElement1} className={`${classes.mobileNav} ${openSideBar ? classes.open : ''}`}>
+                    <NavBar
+                        withHome={true}
+                        hasPipes={false}
+                        father='header'
+                        linkTitles={["About Us", "Services", "Projects", "News", "Contact"]}
+                        withLanguaje={true}>
+                    </NavBar>
+                </div>
             </div>
         </>
     )

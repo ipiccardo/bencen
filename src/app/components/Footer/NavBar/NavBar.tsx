@@ -4,12 +4,14 @@ import Icon from "../../Icon/Icon";
 import classes from "./navBar.module.css";
 import { convertLinkString } from "@/app/utils";
 import { usePathname } from "next/navigation";
+import IconWithImages from "../../IconWithImages/IconWithImages";
 
 type NavBarProps = {
   withHome: boolean;
   hasPipes: boolean;
   linkTitles: string[];
   father?: string;
+  withLanguaje?: boolean
 };
 
 const NavBar = ({
@@ -17,6 +19,7 @@ const NavBar = ({
   hasPipes,
   linkTitles = [],
   father,
+  withLanguaje,
 }: NavBarProps) => {
   const pathName = usePathname();
 
@@ -24,28 +27,26 @@ const NavBar = ({
     <div>
       <nav>
         <ul
-          className={`${classes.navBar} ${
-            father === "footer" && !hasPipes && classes.navBarFooter
-          }`}
+          className={`${classes.navBar} ${father === "footer" && !hasPipes ? classes.navBarFooter : father === 'header' && classes.navBarHeader
+            }`}
         >
           {withHome && (
-            <li className={classes.navBar__home}>
+            <li className={`${father === 'footer' && classes.navBar__home}`}>
               <Link className={classes.navBar__link} href="/">
                 <Icon name="home" size={20} />
               </Link>
             </li>
           )}
+
           {linkTitles.map((link: string, index: number, array: string[]) => {
             return (
               <li key={link + index}>
                 <Link
-                  className={`font-w-500 ${
-                    hasPipes && classes.navBar__linkWithPipes
-                  } ${
-                    `/dashboard/${convertLinkString(link)}` === pathName
+                  className={`font-w-500 ${hasPipes && classes.navBar__linkWithPipes
+                    } ${`/dashboard/${convertLinkString(link)}` === pathName
                       ? classes.navBar__link && classes.active
                       : classes.navBar__link
-                  }`}
+                    }`}
                   href={
                     link.toLowerCase().includes("bencen")
                       ? "/"
@@ -60,6 +61,15 @@ const NavBar = ({
               </li>
             );
           })}
+          {
+            withLanguaje && (
+              <li className={`${father === 'footer' && classes.navBar__home}`}>
+                <div>
+                  <IconWithImages name='language' size={30} />
+                </div>
+              </li>
+            )
+          }
         </ul>
       </nav>
     </div>
