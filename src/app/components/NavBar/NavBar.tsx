@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Icon from "../Icon/Icon";
 import classes from "./navBar.module.css";
-import { convertLinkString } from "@/app/utils";
+import { changeFolderPath, convertLinkString } from "@/app/utils";
 import { usePathname } from "next/navigation";
 import IconWithImages from "../IconWithImages/IconWithImages";
 
@@ -49,14 +49,14 @@ const NavBar = ({
               <li key={link + index}>
                 <Link onClick={handleSideBar}
                   className={`font-w-500 ${hasPipes && classes.navBar__linkWithPipes
-                    } ${`/dashboard/${convertLinkString(link)}` === pathName
+                    } ${`/dashboard/${changeFolderPath(link)}` === pathName
                       ? classes.navBar__link && classes.active
                       : classes.navBar__link
                     }`}
                   href={
                     link.toLowerCase().includes("bencen")
                       ? "/"
-                      : `/dashboard/${convertLinkString(link)}`
+                      : `/dashboard/${changeFolderPath(link)}`
                   }
                 >
                   {link}

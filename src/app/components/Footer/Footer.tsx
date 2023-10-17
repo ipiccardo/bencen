@@ -36,7 +36,7 @@ const Footer = () => {
           <NavBar
             withHome={true}
             hasPipes={false}
-            linkTitles={language === 'english' ? ["About Us", "Services", "Projects", "News", "Contact"] : ['Sobre Nosotros', 'Servicios', 'Poryectos', 'Noticias', 'Contacto']}
+            linkTitles={language === 'english' ? ["About Us", "Services", "Projects", "News", "Contact"] : ['Sobre Nosotros', 'Servicios', 'Proyectos', 'Noticias', 'Contacto']}
             father="footer"
           />
         </div>
@@ -44,7 +44,7 @@ const Footer = () => {
           <NavBar
             withHome={false}
             hasPipes={true}
-            linkTitles={language === 'english' ? ["BENCEN", "PRIVACY POLICY", "TERMS AND CONDITIONS"] : ["BENCEN", "POLÍTICA DE PRIVACIDAD", "TERMINOS Y CONDICIONES"]}
+            linkTitles={language === 'english' ? ["BENCEN", "PRIVACY POLICY", "TERMS AND CONDITIONS"] : ["BENCEN", "POLÍTICA DE PRIVACIDAD", "TÉRMINOS Y CONDICIONES"]}
           />
           <div className={classes.footer__icons}>
             <Icon name="facebook" size={20} />

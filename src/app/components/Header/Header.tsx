@@ -48,7 +48,7 @@ const Header = () => {
                     <NavBar
                         withHome={true}
                         hasPipes={false}
-                        linkTitles={language === 'english' ? ["About Us", "Services", "Projects", "News", "Contact"] : ['Sobre Nosotros', 'Servicios', 'Poryectos', 'Noticias', 'Contacto']}
+                        linkTitles={language === 'english' ? ["About Us", "Services", "Projects", "News", "Contact"] : ['Sobre Nosotros', 'Servicios', 'Proyectos', 'Noticias', 'Contacto']}
                         withLanguage={language}
                         handleChangeLanguage={handleChangeLanguage}
                     />
@@ -66,7 +66,7 @@ const Header = () => {
                         withHome={true}
                         hasPipes={false}
                         father='header'
-                        linkTitles={language === 'english' ? ["About Us", "Services", "Projects", "News", "Contact"] : ['Sobre Nosotros', 'Servicios', 'Poryectos', 'Noticias', 'Contacto']}
+                        linkTitles={language === 'english' ? ["About Us", "Services", "Projects", "News", "Contact"] : ['Sobre Nosotros', 'Servicios', 'Proyectos', 'Noticias', 'Contacto']}
                         withLanguage={language}
                         handleSideBar={handleSideBar}
                         handleChangeLanguage={handleChangeLanguage}

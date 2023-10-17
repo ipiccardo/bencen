@@ -6,22 +6,22 @@ export const convertLinkString = (string: string): string => {
 
 
 export const changeFolderPath = (string: string) => {
-  console.log(string)
   switch (string) {
-    case 'Acerca de nosotros':
+    case "Sobre Nosotros":
       return 'aboutUs'
-
-    //       //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-    //       [break;]
-    //     case valor2:
-    //       //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
-    //       [break;]
-    //     ...
-    //     case valorN:
-    // //Declaraciones ejecutadas cuando el resultado de expresión coincide con valorN
-    // [break;]
-    //     default:
-    // //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
-    // [break;]
+    case "Servicios":
+      return 'services'
+    case "Noticias":
+      return 'news'
+    case "Contacto":
+      return 'contact'
+    case "Proyectos":
+      return 'projects'
+    case "Política de Privacidad":
+      return 'polTicaDePrivacidad'
+    case "Términos y Condiciones":
+      return 'termsAndConditions'
+    default:
+      return convertLinkString(string);
   }
 }
