@@ -2,6 +2,7 @@ import { useState } from "react";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import "./styles/globals.css";
+import ThemeContextProvider from "./context/context";
 
 export const metadata = {
   title: "Next.js",
@@ -16,10 +17,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <ThemeContextProvider>
+          <Header />
+          {children}
+          <Footer />
+        </ThemeContextProvider>
       </body>
     </html>
   );
 }
+
