@@ -1,12 +1,21 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import NavBar from '../Footer/NavBar/NavBar';
 import IconWithImages from '../IconWithImages/IconWithImages';
 import classes from './header.module.css';
 import Icon from '../Icon/Icon';
 
 const Header = () => {
+
+    const [openSideBar, setOpenSideBar] = useState(false)
+
+
+    const handleSideBar = () => {
+        setOpenSideBar(!openSideBar)
+    }
+
+
 
     return (
         <>
@@ -29,9 +38,28 @@ const Header = () => {
                 <div>
                     <IconWithImages name='logo' size={150} />
                 </div>
-                <div className={classes.header__hamburguerMenu__toggleButton}>
+                <div className={classes.header__hamburguerMenu__toggleButton} onClick={handleSideBar}>
                     <Icon name='hamburguer' size={30} />
                 </div>
+                <nav className={`${classes.mobileNav} ${openSideBar ? classes.open : ''}`}>
+                    <ul className={classes.mobileNavItems}>
+                        <li className={classes.mobileNavItem}>
+                            About Us
+                        </li>
+                        <li className={classes.mobileNavItem}>
+                            Services
+                        </li>
+                        <li className={classes.mobileNavItem}>
+                            Projects
+                        </li>
+                        <li className={classes.mobileNavItem}>
+                            News
+                        </li>
+                        <li className={classes.mobileNavItem}>
+                            Contact
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </>
     )

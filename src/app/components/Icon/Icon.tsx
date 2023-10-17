@@ -34,5 +34,6 @@ const Icons = (name: string, size: number) => {
  */
 
 export default function Icon({ name, size = 20, onClick }: IconProps) {
+
   return Icons(name, size);
 }
