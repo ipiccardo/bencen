@@ -6,8 +6,8 @@ import UnmatchedCards from "../components/Unmatched_Card/UnmatchedCard";
 const HomePage = () => {
   return (
     <>
-      {/* <ServiceCards />
-      <UnmatchedCards /> */}
+      <ServiceCards />
+      <UnmatchedCards />
     </>
   );
 };
