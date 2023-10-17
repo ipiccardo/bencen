@@ -62,7 +62,7 @@
   background: white;
   width: 50%;
   height: 100vh;
-  padding: 0 10px;
+  padding: 0 1rem;
   box-shadow: 2px 2px 2px 1px black;
 }
 
@@ -83,6 +83,8 @@
   display: block !important;
   position: absolute;
   z-index: 1000;
+  animation-duration: 1s;
+  animation-name: slidein;
 }
 
 .overlay {
@@ -93,4 +95,14 @@
   right: 0;
   background-color: black;
   opacity: 0.5;
+}
+
+@keyframes slidein {
+  from {
+    right: -200px;
+  }
+
+  to {
+    right: 0;
+  }
 }
