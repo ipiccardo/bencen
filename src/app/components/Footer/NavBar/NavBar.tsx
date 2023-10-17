@@ -5,6 +5,7 @@ import classes from "./navBar.module.css";
 import { convertLinkString } from "@/app/utils";
 import { usePathname } from "next/navigation";
 import IconWithImages from "../../IconWithImages/IconWithImages";
+import { useEffect } from "react";
 
 type NavBarProps = {
   withHome: boolean;
@@ -12,6 +13,7 @@ type NavBarProps = {
   linkTitles: string[];
   father?: string;
   withLanguaje?: boolean
+  handleSideBar?: any
 };
 
 const NavBar = ({
@@ -20,8 +22,11 @@ const NavBar = ({
   linkTitles = [],
   father,
   withLanguaje,
+  handleSideBar,
 }: NavBarProps) => {
   const pathName = usePathname();
+
+
 
   return (
     <div>
@@ -32,7 +37,7 @@ const NavBar = ({
         >
           {withHome && (
             <li className={`${father === 'footer' && classes.navBar__home}`}>
-              <Link className={classes.navBar__link} href="/">
+              <Link onClick={handleSideBar} className={classes.navBar__link} href="/">
                 <Icon name="home" size={20} />
               </Link>
             </li>
@@ -41,7 +46,7 @@ const NavBar = ({
           {linkTitles.map((link: string, index: number, array: string[]) => {
             return (
               <li key={link + index}>
-                <Link
+                <Link onClick={handleSideBar}
                   className={`font-w-500 ${hasPipes && classes.navBar__linkWithPipes
                     } ${`/dashboard/${convertLinkString(link)}` === pathName
                       ? classes.navBar__link && classes.active

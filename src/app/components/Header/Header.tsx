@@ -1,13 +1,15 @@
 'use client'
 
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import NavBar from '../Footer/NavBar/NavBar';
 import IconWithImages from '../IconWithImages/IconWithImages';
 import classes from './header.module.css';
 import Icon from '../Icon/Icon';
 import useOnClickOutside from '../../hooks/useOnClickOutside'
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
+    const pathName = usePathname();
 
     const myRefElement1 = useRef(null);
     const myRefElement2 = useRef(null);
@@ -22,6 +24,12 @@ const Header = () => {
     const handleSideBar = () => {
         setOpenSideBar(!openSideBar)
     }
+
+    useEffect(() => {
+        if (openSideBar) {
+            setOpenSideBar(false)
+        }
+    }, [pathName])
 
 
 
@@ -53,10 +61,16 @@ const Header = () => {
                         hasPipes={false}
                         father='header'
                         linkTitles={["About Us", "Services", "Projects", "News", "Contact"]}
-                        withLanguaje={true}>
+                        withLanguaje={true}
+                        handleSideBar={handleSideBar}
+                    >
                     </NavBar>
                 </div>
             </div>
+            {openSideBar && (
+                <div className={classes.overlay}>
+                </div>
+            )}
         </>
     )
 }
