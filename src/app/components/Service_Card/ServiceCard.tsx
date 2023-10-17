@@ -33,8 +33,8 @@ const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
           <div className={classes.header}>{header}</div>
           <div className={classes.content}>{content}</div>
         </div>
+        <Button href="" classNameButton={classes.button} text="FIND OUT MORE"/>
       </div>
-      {hover && <Button href="" className={classes.button} text="FIND OUT MORE"/>}
     </div>
   );
 };

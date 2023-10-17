@@ -64,11 +64,7 @@
   }
 
   .serviceCard .button {
-    width: 168px !important;
-    height: 48px !important;
-    left: 36px !important;
-    top: 240px !important;
-    position: absolute !important;
+    visibility: hidden;
   }
 
 /* Service Card - Hover State */
@@ -82,10 +78,22 @@
   }
   
   .serviceCard:hover .group {
+    width: 208px;
+    height: 248px;
     top: 40px;
-    position: absolute;
+    left: 16px;
+    position: relative;
   }
   
+  .serviceCard:hover .button {
+    visibility: visible;
+    width: 168px; 
+    height: 48px;  
+    left: 20px;  
+    position: absolute; 
+    top: 200px;
+  }
+
   .serviceCard:hover .header {
     color: var(--white-color);
   }

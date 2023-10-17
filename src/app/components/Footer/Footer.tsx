@@ -17,7 +17,7 @@ const Footer = () => {
             cost-effective projects tailored to clients unique needs.
           </p>
         </div>
-        <Button href={""} text="GET FREE QUOTATION" className="padding-20" />
+        <Button href={""} text="GET FREE QUOTATION" classNameContent="padding-20" />
       </div>
       <footer className={classes.footer}>
         <div className={classes.footer__firstBlock}>

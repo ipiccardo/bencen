@@ -4,15 +4,16 @@ import Link from "next/link";
 
 interface Props {
   href: string;
-  className?: string;
+  classNameContent?: string;
+  classNameButton?: string;
   text: string;
 }
 
-const Button = ({ href, className, text }: Props): JSX.Element => {
+const Button = ({ href, classNameButton, classNameContent, text }: Props): JSX.Element => {
   return (
     <Link href={href}>
-      <button className={`${classes.button}`}>
-        <div className={`${classes.text} ${className || ""}`}>{text}</div>
+      <button className={`${classes.button} ${classNameButton || ""}`}>
+        <div className={`${classes.text} ${classNameContent || ""}`}>{text}</div>
       </button>
     </Link>
   );
