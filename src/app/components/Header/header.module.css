@@ -60,12 +60,11 @@
   top: 0;
   right: 0;
   background: white;
-  width: 50%;
+  width: 60%;
   height: 100vh;
   padding: 0 1rem;
   box-shadow: 2px 2px 2px 1px black;
   box-sizing: border-box;
-  max-width: 300px;
   transition: all 0.4s;
 }
 
