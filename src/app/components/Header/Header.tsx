@@ -12,15 +12,22 @@ import { store } from '@/app/context/context';
 const Header = () => {
     const pathName = usePathname();
     const [openSideBar, setOpenSideBar] = useState(false)
+    const [closeSideBar, setCloseSideBar] = useState('')
     const context = useContext(store)
 
     const { language, setLanguage }: any = context
 
 
+
     const myRefElement1 = useRef(null);
     const myRefElement2 = useRef(null);
 
-    const handleClickOutsideFn = () => setOpenSideBar(false)
+    const handleClickOutsideFn = () => {
+        setOpenSideBar(false)
+        if (openSideBar) {
+            setCloseSideBar(classes.close)
+        }
+    }
 
     useOnClickOutside(myRefElement1, handleClickOutsideFn, myRefElement2);
 
@@ -61,15 +68,15 @@ const Header = () => {
                 <div className={classes.header__hamburguerMenu__toggleButton} onClick={handleSideBar}>
                     <Icon name='hamburguer' size={30} />
                 </div>
-                <div ref={myRefElement1} className={`${classes.mobileNav} ${openSideBar ? classes.open : ''}`}>
+                <div ref={myRefElement1} className={`${classes.mobileNav} ${openSideBar ? classes.open : closeSideBar}`}>
                     <NavBar
                         withHome={true}
                         hasPipes={false}
                         father='header'
                         linkTitles={language === 'english' ? ["About Us", "Services", "Projects", "News", "Contact"] : ['Sobre Nosotros', 'Servicios', 'Proyectos', 'Noticias', 'Contacto']}
-                        withLanguage={language}
                         handleSideBar={handleSideBar}
                         handleChangeLanguage={handleChangeLanguage}
+                        withLanguage={language}
                     >
                     </NavBar>
                 </div>

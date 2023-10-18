@@ -87,6 +87,12 @@
   animation-name: slidein;
 }
 
+.close {
+  position: absolute;
+  animation-duration: 1s;
+  animation-name: slideOut;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -104,5 +110,17 @@
 
   to {
     right: 0;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    right: 0;
+    display: block;
+  }
+
+  to {
+    right: -200px;
+    display: none;
   }
 }
