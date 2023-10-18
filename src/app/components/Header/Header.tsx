@@ -48,7 +48,7 @@ const Header = () => {
         } else {
             setTimeout(() => {
                 setShowOverlay(false)
-            }, 300)
+            }, 100)
         }
     }, [openSideBar])
 
