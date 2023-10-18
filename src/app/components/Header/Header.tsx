@@ -12,7 +12,7 @@ import { store } from '@/app/context/context';
 const Header = () => {
     const pathName = usePathname();
     const [openSideBar, setOpenSideBar] = useState(false)
-    const [closeSideBar, setCloseSideBar] = useState('')
+    const [showOverlay, setShowOverlay] = useState(false)
     const context = useContext(store)
 
     const { language, setLanguage }: any = context
@@ -24,9 +24,6 @@ const Header = () => {
 
     const handleClickOutsideFn = () => {
         setOpenSideBar(false)
-        if (openSideBar) {
-            setCloseSideBar(classes.close)
-        }
     }
 
     useOnClickOutside(myRefElement1, handleClickOutsideFn, myRefElement2);
@@ -44,6 +41,17 @@ const Header = () => {
     const handleChangeLanguage = () => {
         setLanguage(language === 'spanish' ? 'english' : 'spanish')
     }
+
+    useEffect(() => {
+        if (openSideBar) {
+            setShowOverlay(true)
+        } else {
+            setTimeout(() => {
+                setShowOverlay(false)
+            }, 100)
+        }
+    }, [openSideBar])
+
 
     return (
         <>
@@ -68,7 +76,7 @@ const Header = () => {
                 <div className={classes.header__hamburguerMenu__toggleButton} onClick={handleSideBar}>
                     <Icon name='hamburguer' size={30} />
                 </div>
-                <div ref={myRefElement1} className={`${classes.mobileNav} ${openSideBar ? classes.open : closeSideBar}`}>
+                <div ref={myRefElement1} className={`${classes.mobileNav} ${openSideBar ? classes.open : classes.close}`}>
                     <NavBar
                         withHome={true}
                         hasPipes={false}
@@ -81,7 +89,7 @@ const Header = () => {
                     </NavBar>
                 </div>
             </div>
-            {openSideBar && (
+            {showOverlay && (
                 <div className={classes.overlay}>
                 </div>
             )}
