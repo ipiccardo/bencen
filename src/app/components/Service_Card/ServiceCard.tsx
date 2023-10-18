@@ -54,4 +54,4 @@ const ServiceCards = (): JSX.Element => {
   ) 
 };
 
-export default ServiceCards
+export default ServiceCards;
