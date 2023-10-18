@@ -8,6 +8,7 @@ import IconWithImages from "../IconWithImages/IconWithImages";
 import Link from "next/link";
 import Button from "../Ui/Button";
 import { store } from "@/app/context/context";
+import { FOOTER, NAVBAR } from "@/app/utils/constants";
 
 const Footer = () => {
 
@@ -36,7 +37,7 @@ const Footer = () => {
           <NavBar
             withHome={true}
             hasPipes={false}
-            linkTitles={language === 'english' ? ["About Us", "Services", "Projects", "News", "Contact"] : ['Sobre Nosotros', 'Servicios', 'Proyectos', 'Noticias', 'Contacto']}
+            linkTitles={language === 'english' ? NAVBAR.english : NAVBAR.spanish}
             father="footer"
           />
         </div>
@@ -44,7 +45,7 @@ const Footer = () => {
           <NavBar
             withHome={false}
             hasPipes={true}
-            linkTitles={language === 'english' ? ["BENCEN", "PRIVACY POLICY", "TERMS AND CONDITIONS"] : ["BENCEN", "POLÍTICA DE PRIVACIDAD", "TÉRMINOS Y CONDICIONES"]}
+            linkTitles={language === 'english' ? FOOTER.english : FOOTER.spanish}
           />
           <div className={classes.footer__icons}>
             <Icon name="facebook" size={20} />

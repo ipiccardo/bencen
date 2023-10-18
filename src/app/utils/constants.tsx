@@ -21,3 +21,13 @@ export const CONTACT: Object = {
   socials: ['socials', 'SOCIAL MEDIA', '']
 };
 
+export const NAVBAR: Object = {
+  english: ["About Us", "Services", "Projects", "News", "Contact"],
+  spanish: ['Sobre Nosotros', 'Servicios', 'Proyectos', 'Noticias', 'Contacto'],
+};
+
+export const FOOTER: Object = {
+  english: ["BENCEN", "PRIVACY POLICY", "TERMS AND CONDITIONS"],
+  spanish: ["BENCEN", "POLÍTICA DE PRIVACIDAD", "TÉRMINOS Y CONDICIONES"],
+};
+

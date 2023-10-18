@@ -8,6 +8,7 @@ import Icon from '../Icon/Icon';
 import useOnClickOutside from '../../hooks/useOnClickOutside'
 import { usePathname } from 'next/navigation';
 import { store } from '@/app/context/context';
+import { NAVBAR } from '@/app/utils/constants';
 
 const Header = () => {
     const pathName = usePathname();
@@ -63,7 +64,7 @@ const Header = () => {
                     <NavBar
                         withHome={true}
                         hasPipes={false}
-                        linkTitles={language === 'english' ? ["About Us", "Services", "Projects", "News", "Contact"] : ['Sobre Nosotros', 'Servicios', 'Proyectos', 'Noticias', 'Contacto']}
+                        linkTitles={language === 'english' ? NAVBAR.english : NAVBAR.spanish}
                         withLanguage={language}
                         handleChangeLanguage={handleChangeLanguage}
                     />
@@ -81,7 +82,7 @@ const Header = () => {
                         withHome={true}
                         hasPipes={false}
                         father='header'
-                        linkTitles={language === 'english' ? ["About Us", "Services", "Projects", "News", "Contact"] : ['Sobre Nosotros', 'Servicios', 'Proyectos', 'Noticias', 'Contacto']}
+                        linkTitles={language === 'english' ? NAVBAR.english : NAVBAR.spanish}
                         handleSideBar={handleSideBar}
                         handleChangeLanguage={handleChangeLanguage}
                         withLanguage={language}
