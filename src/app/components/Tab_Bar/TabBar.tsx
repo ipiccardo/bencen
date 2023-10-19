@@ -33,7 +33,7 @@ const TabBar = ({}: Props): JSX.Element => {
         </div>
         <div className={`${classes.boxRight} ${clickR ? classes.boxRightClick : ""}`} onClick={handleClickR}>
             <div className={`${classes.headerRight} ${clickR ? classes.headerRightClick : ""}`}>WORK WITH US</div>
-        </div>
+        </div> 
     </div>
   );
 };
