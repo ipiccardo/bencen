@@ -30,6 +30,11 @@
     align-items: center;
 }
 
+.tabRight {
+    width: 480px;
+    height: 672px;
+}
+
 .boxRight {
     height: 64px;
     width: 480px;
@@ -38,11 +43,19 @@
     border-color: var(--gray-color);
     border-radius: 0px 16px 0px 0px;
     border-top: none;
-    border-right: none;
+    border-left: none;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.ul {
+    list-style: none;
+}
+
+.ulBoxRight {
+    display: none;
 }
 
 .headerLeftClick {
@@ -67,6 +80,18 @@
     margin-top: 1rem;
 }
 
+.buttonSelect {
+    width: 160px;
+    height: 32px;
+    margin-top: 1rem;
+}
+
+.buttonApply {
+    width: 160px;
+    height: 48px;
+    margin-top: 4rem;
+}
+
 /* Tab Bar - Click State */
 .boxLeft{
     background-color: var(--white-color);
@@ -82,4 +107,8 @@
 
 .headerRightClick {
     color: var(--white-color);
+}
+
+.ulBoxLeft {
+    display: none;
 }
