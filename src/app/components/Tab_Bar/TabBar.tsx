@@ -5,7 +5,6 @@ import { TextField, MenuItem } from "@mui/material";
 import classes from './tabBar.module.css';
 import Button from '../Ui/Button';
 
-
 interface Props {
   
 }
@@ -21,6 +20,7 @@ const TabBar = ({}: Props): JSX.Element => {
   const [phoneNumberR, setPhoneNumberR] = useState("");
   const [emailR, setEmailR] = useState("");
   const [workArea, setWorkArea] = useState(""); 
+  const [messageSubmitted, setMessageSubmitted] = useState(false);
 
   const handleClickL = () => {
     if(!clickL){
@@ -60,29 +60,56 @@ const TabBar = ({}: Props): JSX.Element => {
     return message !== "";
   }
 
-  const handleSendClick = () => {
-    const isNameValid = validateName(nameL);
-    const isPhoneValid = validatePhone(phoneNumberL);
-    const isEmailValid = validateEmail(emailL);
-    const isMessageValid = validateMessage(message);
+  const handleSendClick = async () => {
+    if (validateName(nameL) && validatePhone(phoneNumberL) && validateEmail(emailL) && validateMessage(message)) {
+      // Prepare the data for the request:
+      const data : any = {
+        from: emailL,
+        to: 'webcraftersok@gmail.com',
+        subject: 'New message from your website',
+        text: `Hello Analía, you have a message from Bencen website,
+        \nName: ${nameL}\nPhone Number: ${phoneNumberL}\nMessage: ${message}`,
+      };
 
-    if (isNameValid && isPhoneValid && isEmailValid && isMessageValid) {
-      // Alert the user or handle form submission here
-      alert("Form submitted successfully!");
+      try {
+        const response = await fetch('/api/sendEmail', {
+          method: "POST",
+          body: JSON.stringify(data),
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          }
+        });
+
+        if (response.ok) {
+          setMessageSubmitted(true);
+        } else {
+          alert('Failed to send the email.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to send the email.');
+      }
     } else {
-      // Alert for incorrect values
-      if (!isNameValid) alert("Please enter a valid Full Name.");
-      if (!isPhoneValid) alert("Please enter a valid Phone Number.");
-      if (!isEmailValid) alert("Please enter a valid Email.");
-      if (!isMessageValid) alert("Please enter a message.");
+      // Alert for incorrect values:
+      if (!validateName(nameL)) alert("Please enter a valid Full Name.");
+      if (!validatePhone(phoneNumberL)) alert("Please enter a valid Phone Number.");
+      if (!validateEmail(emailL)) alert("Please enter a valid Email.");
+      if (!validateMessage(message)) alert("Please enter a message.");
     }
   };
 
   const handleApplyClick = () => {
-    validateName(nameR);
-    validatePhone(phoneNumberR);
-    validateEmail(emailR);
-    
+    if (validateName(nameR) && validatePhone(phoneNumberR) && validateEmail(emailR) && validateMessage(workArea)) {
+      // Handle Form Submission here:
+      alert("CV submitted successfully!");
+    } else {
+      // Alert for incorrect values:
+      if (!validateName(nameR)) alert("Please enter a valid Full Name.");
+      if (!validatePhone(phoneNumberR)) alert("Please enter a valid Phone Number.");
+      if (!validateEmail(emailR)) alert("Please enter a valid Email.");
+      if (!validateMessage(workArea)) alert("Please select a Work Area.");
+    }
   };
 
   return (
@@ -136,7 +163,19 @@ const TabBar = ({}: Props): JSX.Element => {
                 multiline={true}
                 rows={8} 
             /></li>
-            <li><Button href="" classNameButton={classes.button} text="SEND" onClick={handleSendClick} /></li>  
+            <li>
+              {messageSubmitted ? (
+                <div className={classes.successMessage}>
+                  Congratulations, your message was sent successfully!.
+                </div>
+              ) : (
+                <Button 
+                  href="" 
+                  classNameButton={classes.button} 
+                  text="SEND" onClick={handleSendClick} 
+                />
+              )}
+            </li>  
           </ul>
         </div>
           <div className={classes.tabRight}>
@@ -194,7 +233,7 @@ const TabBar = ({}: Props): JSX.Element => {
               </TextField></li>
               <li><div className={classes.buttonSelect}>Upload your CV</div></li>
               <li><Button href="" classNameButton={classes.buttonSelect} text="Select File" /></li>
-              <li><Button href="" classNameButton={classes.buttonApply} text="APPLY" /></li>  
+              <li><Button href="" classNameButton={classes.buttonApply} text="APPLY" onClick={handleApplyClick} /></li>  
             </ul>
           </div> 
       </div>

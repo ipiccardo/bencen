@@ -92,6 +92,10 @@
     margin-top: 4rem;
 }
 
+.successMessage {
+    margin-top: 1rem;
+}
+
 /* Tab Bar - Click State */
 .boxLeft{
     background-color: var(--white-color);
