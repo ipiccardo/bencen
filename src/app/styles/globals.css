@@ -27,7 +27,7 @@
   --bold-underline-font-weight: 700;
   --bold-underline-letter-spacing: 0px;
   --bold-underline-line-height: normal;
-  --contact-card-inner-shadow: ;
+  --contact-card-inner-shadow: inset 0px 0px 22px 5px rgba(255, 140, 66, 0.25);
   --drop-shadow-landing-about-us-image: 0px 2px 85px 4px rgba(0, 0, 0, 0.4);
   --drop-shadow-landing-background-logo: 0px 2px 30px 0px rgba(0, 0, 0, 0.25);
   --drop-shadow-logo-color: 0px 20px 60px 5px rgba(255, 140, 66, 0.45);
