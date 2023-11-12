@@ -55,6 +55,7 @@
     }
 
     .serviceImageWithText__item__last {
+        padding-bottom: 0px;
         border-bottom: none;
     }
 
