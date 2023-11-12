@@ -10,7 +10,12 @@
     display: flex;
     justify-content: center;
     gap: 47px;
-    margin: 0 auto;
+    margin: 0 auto 110px;
+}
+
+.right {
+    flex-direction: row-reverse;
+    text-align: right;
 }
 
 .serviceImageWithText__item__info {
