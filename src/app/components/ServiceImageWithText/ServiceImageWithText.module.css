@@ -1,0 +1,31 @@
+.serviceImageWithText__container {
+    max-width: 1200px;
+    margin: 150px auto 50px;
+    border: 1px solid red;
+}
+
+.serviceImageWithText__item {
+    width: 944px;
+    height: 386px;
+    display: flex;
+    justify-content: center;
+    gap: 47px;
+    margin: 0 auto;
+}
+
+.serviceImageWithText__item__info {
+    max-width: 510px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.serviceImageWithText__item__info h2{
+    font-size: 2rem;
+    margin: 0px;
+}
+
+.serviceImageWithText__item__info p{
+    color: var(--gray-dark-color);
+    line-height: 1.5;
+}

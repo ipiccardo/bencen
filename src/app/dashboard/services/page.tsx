@@ -1,3 +1,4 @@
+import ServiceImageWithText from "@/app/components/ServiceImageWithText/ServiceImageWithText";
 import ServiceCards from "@/app/components/Service_Card/ServiceCard";
 
 const Services = () => {
@@ -6,10 +7,11 @@ const Services = () => {
       <div className="center">INICIO SERVICES CON IMAGEN</div>
       <ServiceCards />
       <div>
-        <p>A LA IZQUIERDA</p>
+        <ServiceImageWithText alignTo="left" />
+        {/* <p>A LA IZQUIERDA</p>
         <p>A LA DERECHA</p>
         <p>A LA IZQUIERDA</p>
-        <p>A LA DERECHA</p>
+        <p>A LA DERECHA</p> */}
       </div>
     </>
   );
