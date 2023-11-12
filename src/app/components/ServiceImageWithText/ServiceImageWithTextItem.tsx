@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./ServiceImageWithText.module.css";
+import classes from "./ServiceImageWithText.module.css";
 import Button from "../Ui/Button";
 import { infoForCardsItemProps } from "./ServiceImageWithText";
 
@@ -10,18 +10,23 @@ const ServiceImageWithTextItem = ({
   imageAlt,
   h2Text,
   paragraphText,
+  last,
 }: infoForCardsItemProps) => {
   return (
-    <div className={`${styles.serviceImageWithText__item} ${styles[alignTo]}`}>
+    <div
+      className={`${classes.serviceImageWithText__item} ${classes[alignTo]} ${
+        last ? classes.serviceImageWithText__item__last : ""
+      }`}
+    >
       <div
-        className={`${styles.serviceImageWithText__item__image} ${styles.imageOutside}`}
+        className={`${classes.serviceImageWithText__item__image} ${classes.imageOutside}`}
       >
         <Image alt={imageAlt} src={imageSrc} layout="fill" objectFit="cover" />
       </div>
-      <div className={styles.serviceImageWithText__item__info}>
+      <div className={classes.serviceImageWithText__item__info}>
         <h2>{h2Text}</h2>
         <div
-          className={`${styles.serviceImageWithText__item__image} ${styles.imageInside}`}
+          className={`${classes.serviceImageWithText__item__image} ${classes.imageInside}`}
         >
           <Image
             alt={imageAlt}

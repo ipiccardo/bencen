@@ -1,4 +1,4 @@
-import styles from "./ServiceImageWithText.module.css";
+import classes from "./ServiceImageWithText.module.css";
 import ServiceImageWithTextItem from "./ServiceImageWithTextItem";
 
 export type infoForCardsItemProps = {
@@ -8,6 +8,7 @@ export type infoForCardsItemProps = {
   imageAlt: string;
   h2Text: string;
   paragraphText: string;
+  last: boolean;
 };
 
 type infoForCardsContainerProps = infoForCardsItemProps[];
@@ -30,6 +31,7 @@ const infoForCards: infoForCardsContainerProps = [
         only providing solutions but also harmonizing with the environment. In
         the industrial domain, we factor in all client-specific regulations,
         standards, and requirements as fundamental aspects of our planning.`,
+    last: false,
   },
   {
     id: 2,
@@ -41,6 +43,7 @@ const infoForCards: infoForCardsContainerProps = [
         We create projects of various scales, building strong relationships with our clients and addressing each of their needs.
         In the realm of urban planning, we design public spaces, green areas, recreational zones, etc., and efficiently develop urban areas, restructure them, and ensure the provision of various services.
         We employ the latest and most efficient technologies in the market, always aiming for maximum resource utilization, streamlined timelines, and minimal environmental impact.`,
+    last: false,
   },
   {
     id: 3,
@@ -51,6 +54,7 @@ const infoForCards: infoForCardsContainerProps = [
     paragraphText: `We specialize in tailored projects dedicated to environmental care, protection, and conservation. Our services encompass environmental impact assessments, analysis of physical-chemical and biological parameters, and projects focused on renewable energy generation, utilizing solar, wind, and other sources. We advocate for systems to utilize recyclable waste like PET, recovering and reintegrating them as reusable materials.
     We collaborate with strategic partners in academia, leveraging their state-of-the-art laboratories and expertise.
     Our clients receive top-notch service facilitated by our experienced professionals.`,
+    last: false,
   },
   {
     id: 4,
@@ -59,16 +63,24 @@ const infoForCards: infoForCardsContainerProps = [
     imageAlt: "Special Projects",
     h2Text: "Special Projects",
     paragraphText: `Often, the challenges we encounter demand interdisciplinary involvement and the collective knowledge of various disciplines. In this business unit, we delve into projects that actively involve multiple specialties. For each project, we assemble a team of professionals with specific skills and knowledge, ensuring the leader team can drive its development, supported by a strong team. This approach guarantees our clients receive the best service and tailored solutions for their needs.`,
+    last: true,
   },
 ];
 
 const ServiceImageWithTextContainer = () => {
   return (
     <>
-      <div className={styles.serviceImageWithText__container}>
-        {infoForCards.map((card, index) => {
-          const { id, alignTo, imageSrc, imageAlt, h2Text, paragraphText } =
-            card;
+      <div className={classes.serviceImageWithText__container}>
+        {infoForCards.map((card, index, array) => {
+          const {
+            id,
+            alignTo,
+            imageSrc,
+            imageAlt,
+            h2Text,
+            paragraphText,
+            last,
+          } = card;
           return (
             <ServiceImageWithTextItem
               key={new Date().getTime() + index}
@@ -78,6 +90,7 @@ const ServiceImageWithTextContainer = () => {
               imageAlt={imageAlt}
               h2Text={h2Text}
               paragraphText={paragraphText}
+              last={last}
             />
           );
         })}

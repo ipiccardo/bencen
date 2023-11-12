@@ -54,6 +54,10 @@
         border-bottom: 1px solid var(--gray-color);
     }
 
+    .serviceImageWithText__item__last {
+        border-bottom: none;
+    }
+
     .imageOutside {
         display: none;
     }
