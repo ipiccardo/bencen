@@ -56,7 +56,7 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 585px) {
   .navBarFooter {
     flex-direction: column;
     align-items: flex-end;
@@ -79,13 +79,19 @@
   }
 }
 
-@media (max-width: 303px) {
+@media (max-width: 360px) {
   .navBar__linkWithPipes {
     font-size: 8px;
   }
   .navBar__pipes {
     font-size: 10px;
     top: 5px;
+  }
+}
+
+@media (max-width: 295px) {
+  .navBar__linkWithPipes {
+    font-size: 7px;
   }
 }
 

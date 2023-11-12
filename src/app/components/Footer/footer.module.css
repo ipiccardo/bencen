@@ -47,7 +47,7 @@
     }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1050px) {
     .footer {
         padding: 30px 80px;
     }
@@ -70,7 +70,7 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .footer, .quotation__item {
         padding: 30px 1rem;
     }
@@ -79,7 +79,7 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 580px) {
     .footer__firstBlock {
         align-items: flex-start;
     }
