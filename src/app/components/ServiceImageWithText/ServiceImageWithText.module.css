@@ -1,7 +1,6 @@
 .serviceImageWithText__container {
     max-width: 1200px;
     margin: 150px auto 50px;
-    border: 1px solid red;
 }
 
 .serviceImageWithText__item {
@@ -16,6 +15,16 @@
 .right {
     flex-direction: row-reverse;
     text-align: right;
+}
+
+.serviceImageWithText__item__image {
+    position: relative;
+    width: 344px;
+    height: 386px;
+}
+
+.imageInside {
+    display: none;
 }
 
 .serviceImageWithText__item__info {
@@ -33,4 +42,54 @@
 .serviceImageWithText__item__info p{
     color: var(--gray-dark-color);
     line-height: 1.5;
+}
+
+@media (max-width: 970px) {
+
+    .serviceImageWithText__item {
+        width: 100%;
+        height: 100%;
+        margin: 0 auto 50px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid var(--gray-color);
+    }
+
+    .imageOutside {
+        display: none;
+    }
+
+    .imageInside {
+        display: block;
+    }
+
+    .serviceImageWithText__item__image {
+        position: relative;
+        width: 100%;
+        height: 386px;
+    }
+
+    .serviceImageWithText__item__info {
+        text-align: center;
+        max-width: 700px;
+        gap: 2rem;
+    }
+
+    .serviceImageWithText__item__info p {
+        text-align: left;
+    }
+
+    .right {
+        text-align: left;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .serviceImageWithText__item__image {
+        height: 350px;
+    }
+
+    .serviceImageWithText__item__info p {
+        padding: 0 1rem;
+    }
 }

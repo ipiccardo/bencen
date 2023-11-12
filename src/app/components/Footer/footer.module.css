@@ -1,13 +1,17 @@
-.footer, .quotation {
+.quotation__container {
+    width: 100%;
+    background-color: var(--black-color);
+}
+
+.footer, .quotation__item {
     padding: 60px 175px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.quotation {
-    margin-top: 200px;
+.quotation__item {
+    margin-top: 100px;
     min-height: 110px;
-    background-color: var(--black-color);
     color: var(--white-color);
     display: flex;
     justify-content: space-between;
@@ -54,7 +58,7 @@
         gap: 2rem;
     }
 
-    .quotation {
+    .quotation__item {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
@@ -67,7 +71,7 @@
 }
 
 @media (max-width: 600px) {
-    .footer, .quotation {
+    .footer, .quotation__item {
         padding: 30px 1rem;
     }
     .footer__secondBlock {

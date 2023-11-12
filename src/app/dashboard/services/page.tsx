@@ -5,7 +5,7 @@ const Services = () => {
   return (
     <>
       <div className="center">INICIO SERVICES CON IMAGEN</div>
-      <ServiceCards />
+      {/* <ServiceCards /> */}
       <div>
         <ServiceImageWithText />
         {/* <p>A LA IZQUIERDA</p>

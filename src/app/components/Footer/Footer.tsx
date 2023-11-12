@@ -9,15 +9,21 @@ import Button from "../Ui/Button";
 const Footer = () => {
   return (
     <>
-      <div className={classes.quotation}>
-        <div className={classes.quotation__texts}>
-          <h2>EXCELLENCE IN EVERY SERVICE, EVERY TIME.</h2>
-          <p>
-            A construction company specializing in quality, timely, and
-            cost-effective projects tailored to clients unique needs.
-          </p>
+      <div className={classes.quotation__container}>
+        <div className={classes.quotation__item}>
+          <div className={classes.quotation__texts}>
+            <h2>EXCELLENCE IN EVERY SERVICE, EVERY TIME.</h2>
+            <p>
+              A construction company specializing in quality, timely, and
+              cost-effective projects tailored to clients unique needs.
+            </p>
+          </div>
+          <Button
+            href={""}
+            text="GET FREE QUOTATION"
+            classNameContent="padding-20"
+          />
         </div>
-        <Button href={""} text="GET FREE QUOTATION" classNameContent="padding-20" />
       </div>
       <footer className={classes.footer}>
         <div className={classes.footer__firstBlock}>
