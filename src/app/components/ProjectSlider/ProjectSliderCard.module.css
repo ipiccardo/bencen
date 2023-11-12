@@ -1,0 +1,24 @@
+.projectSliderCard {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    margin: 0 10px;
+    transition: border-color 0.3s ease-in-out; /* Efecto de transición para el borde */
+  }
+  
+  .imageContainer {
+    position: relative;
+    height: 70%;
+  }
+  
+  .cardContent {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .activeCard {
+    border-color: #3498db; /* Borde destacado para la tarjeta activa */
+  }
+  
