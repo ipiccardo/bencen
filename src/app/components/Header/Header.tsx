@@ -1,21 +1,31 @@
 'use client'
 
-import React, { useRef, useState } from 'react'
-import NavBar from '../Footer/NavBar/NavBar';
+import React, { useContext, useEffect, useRef, useState } from 'react'
+import NavBar from '../NavBar/NavBar';
 import IconWithImages from '../IconWithImages/IconWithImages';
 import classes from './header.module.css';
 import Icon from '../Icon/Icon';
 import useOnClickOutside from '../../hooks/useOnClickOutside'
+import { usePathname } from 'next/navigation';
+import { store } from '@/app/context/context';
+import { NAVBAR } from '@/app/utils/constants';
 
 const Header = () => {
+    const pathName = usePathname();
+    const [openSideBar, setOpenSideBar] = useState(false)
+    const [showOverlay, setShowOverlay] = useState(false)
+    const context = useContext(store)
+
+    const { language, setLanguage }: any = context
+
+
 
     const myRefElement1 = useRef(null);
     const myRefElement2 = useRef(null);
 
-
-    const [openSideBar, setOpenSideBar] = useState(false)
-
-    const handleClickOutsideFn = () => setOpenSideBar(false)
+    const handleClickOutsideFn = () => {
+        setOpenSideBar(false)
+    }
 
     useOnClickOutside(myRefElement1, handleClickOutsideFn, myRefElement2);
 
@@ -23,6 +33,25 @@ const Header = () => {
         setOpenSideBar(!openSideBar)
     }
 
+    useEffect(() => {
+        if (openSideBar) {
+            setOpenSideBar(false)
+        }
+    }, [pathName])
+
+    const handleChangeLanguage = () => {
+        setLanguage(language === 'spanish' ? 'english' : 'spanish')
+    }
+
+    useEffect(() => {
+        if (openSideBar) {
+            setShowOverlay(true)
+        } else {
+            setTimeout(() => {
+                setShowOverlay(false)
+            }, 200)
+        }
+    }, [openSideBar])
 
 
     return (
@@ -35,11 +64,10 @@ const Header = () => {
                     <NavBar
                         withHome={true}
                         hasPipes={false}
-                        linkTitles={["About Us", "Services", "Projects", "News", "Contact"]}
+                        linkTitles={language === 'english' ? NAVBAR.english : NAVBAR.spanish}
+                        withLanguage={language}
+                        handleChangeLanguage={handleChangeLanguage}
                     />
-                    <div>
-                        <IconWithImages name='language' size={30} />
-                    </div>
                 </div>
             </div>
             <div className={classes.header__hamburguerMenu}>
@@ -49,26 +77,23 @@ const Header = () => {
                 <div className={classes.header__hamburguerMenu__toggleButton} onClick={handleSideBar}>
                     <Icon name='hamburguer' size={30} />
                 </div>
-                <nav ref={myRefElement1} className={`${classes.mobileNav} ${openSideBar ? classes.open : ''}`}>
-                    <ul className={classes.mobileNavItems}>
-                        <li className={classes.mobileNavItem}>
-                            About Us
-                        </li>
-                        <li className={classes.mobileNavItem}>
-                            Services
-                        </li>
-                        <li className={classes.mobileNavItem}>
-                            Projects
-                        </li>
-                        <li className={classes.mobileNavItem}>
-                            News
-                        </li>
-                        <li className={classes.mobileNavItem}>
-                            Contact
-                        </li>
-                    </ul>
-                </nav>
+                <div ref={myRefElement1} className={`${classes.mobileNav} ${openSideBar ? classes.open : classes.close}`}>
+                    <NavBar
+                        withHome={true}
+                        hasPipes={false}
+                        father='header'
+                        linkTitles={language === 'english' ? NAVBAR.english : NAVBAR.spanish}
+                        handleSideBar={handleSideBar}
+                        handleChangeLanguage={handleChangeLanguage}
+                        withLanguage={language}
+                    >
+                    </NavBar>
+                </div>
             </div>
+            {showOverlay && (
+                <div className={classes.overlay}>
+                </div>
+            )}
         </>
     )
 }

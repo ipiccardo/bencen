@@ -1,0 +1,74 @@
+/* Tab Bar - Normal State */
+.tab {
+    width: 960px;
+    height: 672px;
+    border-radius: 16px 16px 0px 0px;
+    position: relative;
+    border-color: var(--gray-color);
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+}
+
+.boxLeftClick {
+    height: 64px;
+    width: 480px;
+    background-color: var(--logo-color-dark);
+    border: 1px solid;
+    border-color: var(--gray-color);
+    border-radius: 16px 0px 0px 0px;
+    border-top: none;
+    border-right: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxRight {
+    height: 64px;
+    width: 480px;
+    background-color: var(--white-color);
+    border: 1px solid;
+    border-color: var(--gray-color);
+    border-radius: 0px 16px 0px 0px;
+    border-top: none;
+    border-right: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerLeftClick {
+    color: var(--white-color);
+    font-family: var(--h-1-font-family);
+    font-size: var(--h-1-font-size);
+    font-style: var(--h-1-font-style);
+    font-weight: var(--h-1-font-weight);
+}
+
+.headerRight {
+    color: var(--gray-color);
+    font-family: var(--h-1-font-family);
+    font-size: var(--h-1-font-size);
+    font-style: var(--h-1-font-style);
+    font-weight: var(--h-1-font-weight);
+}
+
+/* Tab Bar - Click State */
+.boxLeft{
+    background-color: var(--white-color);
+}
+
+.boxRightClick{
+    background-color: var(--logo-color-dark);
+}
+
+.headerLeft {
+    color: var(--gray-color);
+}
+
+.headerRightClick {
+    color: var(--white-color);
+}

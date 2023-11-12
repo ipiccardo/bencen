@@ -1,13 +1,14 @@
 export type IconProps = {
   name:
-    | "home"
-    | "facebook"
-    | "logo"
-    | "instagram"
-    | "linkedin"
-    | "language"
-    | "letra"
-    | "hamburguer";
+  | "home"
+  | "facebook"
+  | "logo"
+  | "instagram"
+  | "linkedin"
+  | "language"
+  | "languageEn"
+  | "letra"
+  | "hamburguer";
   size: number;
   onClick?: Function;
 };

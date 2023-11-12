@@ -1,12 +1,22 @@
-import React from "react";
+'use client'
+
+import React, { useContext } from "react";
 import classes from "./footer.module.css";
-import NavBar from "./NavBar/NavBar";
+import NavBar from "../NavBar/NavBar";
 import Icon from "../Icon/Icon";
 import IconWithImages from "../IconWithImages/IconWithImages";
 import Link from "next/link";
 import Button from "../Ui/Button";
+import { store } from "@/app/context/context";
+import { FOOTER, NAVBAR } from "@/app/utils/constants";
 
 const Footer = () => {
+
+
+  const context = useContext(store)
+
+  const { language, setLanguage }: any = context
+
   return (
     <>
       <div className={classes.quotation__container}>
@@ -33,7 +43,7 @@ const Footer = () => {
           <NavBar
             withHome={true}
             hasPipes={false}
-            linkTitles={["About Us", "Services", "Projects", "News", "Contact"]}
+            linkTitles={language === 'english' ? NAVBAR.english : NAVBAR.spanish}
             father="footer"
           />
         </div>
@@ -41,7 +51,7 @@ const Footer = () => {
           <NavBar
             withHome={false}
             hasPipes={true}
-            linkTitles={["BENCEN", "PRIVACY POLICY", "TERMS AND CONDITIONS"]}
+            linkTitles={language === 'english' ? FOOTER.english : FOOTER.spanish}
           />
           <div className={classes.footer__icons}>
             <Icon name="facebook" size={20} />
