@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer, { TransportOptions } from "nodemailer";
+import { promises as fsPromises } from 'fs';
 
 interface Props {
   req: {
@@ -10,18 +11,10 @@ interface Props {
   res: any;
 }
 
-type CustomTransportOptions = TransportOptions & {
-  host: string;
-  port: string;
-};
-
-// const transporter = nodemailer.createTransport({
-//   service: "gmail",
-//   auth: {
-//     user: "webcraftersok@gmail.com",
-//     pass: "uobz pdry qiyt gamo",
-//   },
-// });
+interface Attachment {
+  filename: string;
+  content: string;
+}
 
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || "",
@@ -35,14 +28,15 @@ const transporter = nodemailer.createTransport({
 
 transporter.verify(function (error) {
   if (error) {
-    console.log(error, "Inside de Error");
+    console.log(error, "Inside Error");
   } else {
     console.log("Server is ready to take our messages");
   }
 });
+
 export async function POST(request: NextRequest, res: NextApiResponse) {
   const req = await request.json();
-  const { from, to, subject, text } = req;
+  const { from, to, subject, text, attachments } = req;
 
   try {
     const mailOptions = {
@@ -50,6 +44,19 @@ export async function POST(request: NextRequest, res: NextApiResponse) {
       to,
       subject,
       text,
+      attachments: await Promise.all(attachments.map(async (attachment: Attachment) => {
+        // Assuming attachment.content is a base64-encoded string representing the file content
+        const fileContent = Buffer.from(attachment.content, 'base64');
+
+        // Use fs.promises.writeFile to write the file to the server
+        const filePath = `./path/to/save/${attachment.filename}`;
+        await fsPromises.writeFile(filePath, fileContent);
+
+        return {
+          filename: attachment.filename,
+          path: filePath,
+        };
+      })),
     };
 
     await new Promise((resolve, reject) => {

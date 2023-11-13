@@ -96,6 +96,10 @@
     margin-top: 1rem;
 }
 
+.successCv {
+    margin-top: 4rem;
+}
+
 /* Tab Bar - Click State */
 .boxLeft{
     background-color: var(--white-color);

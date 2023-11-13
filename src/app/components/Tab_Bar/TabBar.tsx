@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { TextField, MenuItem } from "@mui/material";
 import classes from './tabBar.module.css';
 import Button from '../Ui/Button';
@@ -20,7 +20,12 @@ const TabBar = ({ }: Props): JSX.Element => {
   const [phoneNumberR, setPhoneNumberR] = useState("");
   const [emailR, setEmailR] = useState("");
   const [workArea, setWorkArea] = useState("");
+  const [cvLoaded, setCvLoaded] = useState(false);
+  const [cvName, setCvName] = useState("")
+  const [cv, setCv] = useState<File | null>(null);
   const [messageSubmitted, setMessageSubmitted] = useState(false);
+  const [cvSubmitted, setCvSubmitted] = useState(false);
+  const cvRef = useRef<HTMLInputElement>(null);
 
   const handleClickL = () => {
     if (!clickL) {
@@ -62,25 +67,18 @@ const TabBar = ({ }: Props): JSX.Element => {
 
   const handleSendClick = async () => {
     if (validateName(nameL) && validatePhone(phoneNumberL) && validateEmail(emailL) && validateMessage(message)) {
-      // Prepare the data for the request:
-      const data: any = {
-        from: emailL,
-        to: 'webcraftersok@gmail.com',
-        subject: 'New message from your website',
-        text: `Hello Analía, you have a message from Bencen website,
-        \nName: ${nameL}\nPhone Number: ${phoneNumberL}\nMessage: ${message}`,
-      };
-
       try {
         const response = await fetch('/api/sendEmail', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          // body: JSON.stringify(data),
+          // body: JSON.stringify(data), change mail to Bencen later:
           body: JSON.stringify({
-            from: emailL, subject: 'New message from your website', to: 'webcraftersok@gmail.com', text: `Hello Analía, you have a message from Bencen website,
-          \nName: ${nameL}\nPhone Number: ${phoneNumberL}\nMessage: ${message}`,
+            from: emailL,
+            to: 'webcraftersok@gmail.com',
+            subject: 'New message from your website', 
+            text: `Hello Analía, you have a message from Bencen website,\n\nName: ${nameL}\nPhone Number: ${phoneNumberL}\nMessage: ${message}`
           }),
         });
 
@@ -102,16 +100,60 @@ const TabBar = ({ }: Props): JSX.Element => {
     }
   };
 
-  const handleApplyClick = () => {
-    if (validateName(nameR) && validatePhone(phoneNumberR) && validateEmail(emailR) && validateMessage(workArea)) {
-      // Handle Form Submission here:
-      alert("CV submitted successfully!");
+  const handleApplyClick = async () => {
+    if (validateName(nameR) && validatePhone(phoneNumberR) && validateEmail(emailR) && validateMessage(workArea) && (cvLoaded)) {
+      try {
+        const response = await fetch('/api/sendEmail', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          // body: JSON.stringify(data), change mail to Bencen later:
+          body: JSON.stringify({
+            from: emailR,
+            to: 'webcraftersok@gmail.com',
+            subject: `CV - ${nameR} - ${workArea}`, 
+            text: `Hello Analía, you have a new CV attached from Bencen website,\n\nName: ${nameR}\nPhone Number: ${phoneNumberR}\nWork Area: ${workArea}`,
+            attachments: [
+              {
+                filename: `CV - ${nameR} - ${workArea}`,
+                content: `${cv}`
+              }
+            ]
+          }),
+        });
+
+        if (response.ok) {
+          setCvSubmitted(true);
+        } else {
+          alert('Failed to send the email.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Failed to send the email.');
+      }
     } else {
       // Alert for incorrect values:
       if (!validateName(nameR)) alert("Please enter a valid Full Name.");
       if (!validatePhone(phoneNumberR)) alert("Please enter a valid Phone Number.");
       if (!validateEmail(emailR)) alert("Please enter a valid Email.");
       if (!validateMessage(workArea)) alert("Please select a Work Area.");
+      if (!cvLoaded) alert("Please upload your CV.");
+    }
+  };
+
+  const handleSelectClick = () => {
+    // Programmatically trigger file input click:
+    if (cvRef.current) {
+      cvRef.current.click();
+    }
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files?.[0]) {
+      setCvLoaded(true);
+      setCvName(e.target.files?.[0].name);
+      setCv(e.target.files?.[0])
     }
   };
 
@@ -228,20 +270,45 @@ const TabBar = ({ }: Props): JSX.Element => {
               margin="normal"
               required={true}
             >
-              <MenuItem value={1}>Accountant</MenuItem>
-              <MenuItem value={2}>Architecture</MenuItem>
-              <MenuItem value={3}>Engineering</MenuItem>
-              <MenuItem value={4}>Human Resources</MenuItem>
-              <MenuItem value={5}>Safety</MenuItem>
+              <MenuItem value={'Accountant'}>Accountant</MenuItem>
+              <MenuItem value={'Architecture'}>Architecture</MenuItem>
+              <MenuItem value={'Engineering'}>Engineering</MenuItem>
+              <MenuItem value={'Human Resources'}>Human Resources</MenuItem>
+              <MenuItem value={'Safety'}>Safety</MenuItem>
             </TextField></li>
             <li><div className={classes.buttonSelect}>Upload your CV</div></li>
-            <li><Button href="" classNameButton={classes.buttonSelect} text="Select File" /></li>
-            <li><Button href="" classNameButton={classes.buttonApply} text="APPLY" onClick={handleApplyClick} /></li>
+            <li>
+              {cvLoaded ? (
+                <div className={classes.buttonSelect}>
+                `{cvName}`
+              </div>
+                ) : (
+                  <div>
+                    <Button href="" classNameButton={classes.buttonSelect} text="Select File" onClick={handleSelectClick} />
+                    <input
+                      type="file"
+                      ref={cvRef}
+                      style={{ display: 'none' }}
+                      accept=".pdf"
+                      onChange={handleFileChange}
+                    />
+                  </div>
+              )}
+            </li>
+            <li>
+              {cvSubmitted ? (
+                  <div className={classes.successCv}>
+                    Congratulations, your CV was sent successfully!.
+                  </div>
+                ) : (
+                <Button href="" classNameButton={classes.buttonApply} text="APPLY" onClick={handleApplyClick} />
+              )}
+            </li>
           </ul>
         </div>
       </div>
     </div>
   );
-};
+  };
 
 export default TabBar;
