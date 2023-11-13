@@ -1,0 +1,47 @@
+.homePageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.homePageContainer section {
+  height: 960px;
+}
+
+.firstSectionContainer {
+  background-image: url("/images/homePage_backgroundOne.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.secondSectionContainer {
+  position: relative;
+  background-image: url("/images/homePage_backgroundTwo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.headerContainer {
+  position: absolute;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 76px;
+}
+
+.secondImage {
+  margin-top: -150px;
+}
+
+.serviceCardContainer {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  top: calc(784px - 28px);
+  z-index: 1;
+}
