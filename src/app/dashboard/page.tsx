@@ -28,6 +28,11 @@ const HomePage = () => {
             <Image width={1296} height={960} src={"/images/FrameTwoInside.png"} alt={""} />
           </div>
         </section>
+        <section className={classes.ThirdSectionContainer}>
+          <div className={`${classes.imageContainer} ${classes.secondImage}`}>
+            <Image width={1296} height={960} src={"/images/FrameThree.png"} alt={""} />
+          </div>
+        </section>
         {/* <ServiceCards />
       <UnmatchedCards /> */}
       </div>

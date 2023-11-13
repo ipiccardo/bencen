@@ -45,3 +45,11 @@
   top: calc(784px - 28px);
   z-index: 1;
 }
+
+.ThirdSectionContainer {
+  position: relative;
+  background-image: url("/images/homePage_backgroundTwo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
