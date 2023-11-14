@@ -22,7 +22,7 @@ const TabBar = ({ }: Props): JSX.Element => {
   const [workArea, setWorkArea] = useState("");
   const [cvLoaded, setCvLoaded] = useState(false);
   const [cvName, setCvName] = useState("")
-  const [cv, setCv] = useState<File | null>(null);
+  const [cv, setCv] = useState<Buffer | string>("");
   const [messageSubmitted, setMessageSubmitted] = useState(false);
   const [cvSubmitted, setCvSubmitted] = useState(false);
   const cvRef = useRef<HTMLInputElement>(null);
@@ -68,7 +68,7 @@ const TabBar = ({ }: Props): JSX.Element => {
   const handleSendClick = async () => {
     if (validateName(nameL) && validatePhone(phoneNumberL) && validateEmail(emailL) && validateMessage(message)) {
       try {
-        const response = await fetch('/api/sendEmail', {
+        const response = await fetch('/api/sendMessageEmail', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -103,7 +103,7 @@ const TabBar = ({ }: Props): JSX.Element => {
   const handleApplyClick = async () => {
     if (validateName(nameR) && validatePhone(phoneNumberR) && validateEmail(emailR) && validateMessage(workArea) && (cvLoaded)) {
       try {
-        const response = await fetch('/api/sendEmail', {
+        const response = await fetch('/api/sendCvEmail', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -116,8 +116,8 @@ const TabBar = ({ }: Props): JSX.Element => {
             text: `Hello Analía, you have a new CV attached from Bencen website,\n\nName: ${nameR}\nPhone Number: ${phoneNumberR}\nWork Area: ${workArea}`,
             attachments: [
               {
-                filename: `CV - ${nameR} - ${workArea}`,
-                content: `${cv}`
+                filename: `CV - ${nameR} - ${workArea}.pdf`,
+                content: Buffer.from(cv).toString('base64')
               }
             ]
           }),
@@ -149,14 +149,25 @@ const TabBar = ({ }: Props): JSX.Element => {
     }
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files?.[0]) {
       setCvLoaded(true);
       setCvName(e.target.files?.[0].name);
-      setCv(e.target.files?.[0])
+      // setCv(e.target.files?.[0]);
+
+      try {
+        const dataBuffer = await e.target.files?.[0].arrayBuffer();
+        if (dataBuffer){
+          // Convert Uint8Array to Buffer:
+          const data = Buffer.from(new Uint8Array(dataBuffer));
+          setCv(data);
+        }
+      } catch (error) {
+        console.error('Error reading PDF file:', error);
+      }
     }
   };
-
+  
   return (
     <div>
       <div className={classes.tab}>
@@ -279,8 +290,8 @@ const TabBar = ({ }: Props): JSX.Element => {
             <li><div className={classes.buttonSelect}>Upload your CV</div></li>
             <li>
               {cvLoaded ? (
-                <div className={classes.buttonSelect}>
-                `{cvName}`
+                <div className={classes.cvName}>
+                {cvName}
               </div>
                 ) : (
                   <div>

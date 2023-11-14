@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer, { TransportOptions } from "nodemailer";
-import { promises as fsPromises } from 'fs';
+import pdfParse from 'pdf-parse';
+import { promises as fs } from "fs";
 
 interface Props {
   req: {
@@ -13,7 +14,7 @@ interface Props {
 
 interface Attachment {
   filename: string;
-  content: string;
+  content: any;
 }
 
 const transporter = nodemailer.createTransport({
@@ -37,7 +38,7 @@ transporter.verify(function (error) {
 export async function POST(request: NextRequest, res: NextApiResponse) {
   const req = await request.json();
   const { from, to, subject, text, attachments } = req;
-
+  
   try {
     const mailOptions = {
       from,
@@ -45,20 +46,13 @@ export async function POST(request: NextRequest, res: NextApiResponse) {
       subject,
       text,
       attachments: await Promise.all(attachments.map(async (attachment: Attachment) => {
-        // Assuming attachment.content is a base64-encoded string representing the file content
-        const fileContent = Buffer.from(attachment.content, 'base64');
-
-        // Use fs.promises.writeFile to write the file to the server
-        const filePath = `./path/to/save/${attachment.filename}`;
-        await fsPromises.writeFile(filePath, fileContent);
-
         return {
           filename: attachment.filename,
-          path: filePath,
+          content: Buffer.from(attachment.content, 'base64')
         };
       })),
     };
-
+    
     await new Promise((resolve, reject) => {
       transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
@@ -68,7 +62,7 @@ export async function POST(request: NextRequest, res: NextApiResponse) {
         }
       });
     });
-    // await transporter.sendMail({ ...mailOptions });
+    
     return NextResponse.json(
       { message: "Email sent succesfully" },
       { status: 200 }
