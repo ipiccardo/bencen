@@ -119,6 +119,10 @@
   /* margin-top: -96px; */
 }
 
+.threeSectionContainer .containerAbsolute {
+  top: 90px;
+}
+
 .unmatchedServicesContainer {
   max-width: 241px;
   height: 114px;
@@ -159,6 +163,7 @@
   position: relative;
   gap: 82px;
   flex-wrap: wrap;
+  margin-top: 34px;
 }
 
 .clientCardContainer .aboutUsParagraphContainer h1 {
