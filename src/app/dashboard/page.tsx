@@ -12,6 +12,7 @@ import Image from "next/image";
 import Button from "../components/Ui/Button";
 import AboutUsCard from "../components/AboutUs_Card/AboutUsCard";
 import ClientCard from "../components/Clients_Card/ClientCard";
+import NewsCard from "../components/News_Card/NewsCard";
 
 
 const HomePage = () => {
@@ -29,7 +30,7 @@ const HomePage = () => {
     if (screenWidth >= 1400) {
       setPantallaPequeña(false);
       setPantallaMediana(false)
-      setFirstAndLastImage({ width: 1344, heigth: 960 });
+      setFirstAndLastImage({ width: 1344, heigth: 888 });
       setOtherImages({ width: 1344, heigth: 960 })
     } else if (screenWidth >= 941) {
       setPantallaPequeña(false);
@@ -56,6 +57,7 @@ const HomePage = () => {
 
   return (
     <>
+      {/* <NewsCard /> */}
       <div className={classes.homePageContainer}>
         <div className={classes.headerContainer}>
           <Header />
@@ -141,6 +143,17 @@ const HomePage = () => {
           </section>
           <section className={classes.fiveSectionContainer}>
             <div className={`${classes.imageContainer} ${classes.otherImage}`}>
+              <div className={classes.containerAbsolute}>
+                <div className={classes.contactContainer}>
+                  <h1>CONTACT</h1>
+                  <p>Have questions or interested in collaborating with us? We'd love to hear from you! Our team is ready to assist you.</p>
+                  <p>Click the 'Contact Us' button below to get in touch. Whether you're looking for information, exploring partnership opportunities, or want to join our team, we're here to help. Your inquiry is important to us, and we'll respond promptly. Let's connect and make great things happen together!</p>
+                  <div className={classes.buttonContainer}>
+                    <button className={classes.aboutUsButton}>CONTACT US</button>
+                    <button className={classes.aboutUsButton}>WORK WITH US</button>
+                  </div>
+                </div>
+              </div>
               {!pantallaMediana ?
                 <Image width={otherImages.width + 2} height={720} src={"/images/FrameFive.png"} alt={""} />
                 :
@@ -150,6 +163,13 @@ const HomePage = () => {
           </section>
           <section className={classes.sixSectionContainers}>
             <div className={`${classes.imageContainer} ${classes.otherImage}`}>
+              <div className={classes.containerAbsolute}>
+
+                <div className={classes.newsContainer}>
+                  <h1>LATEST NEWS</h1>
+                  <NewsCard />
+                </div>
+              </div>
               {!pantallaMediana ?
                 <Image width={otherImages.width} height={720} src={"/images/FrameSix.png"} alt={""} />
                 :

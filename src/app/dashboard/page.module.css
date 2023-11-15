@@ -45,6 +45,16 @@
   height: 100%;
 }
 
+.FirstimageContainer img {
+  margin-top: -70px;
+}
+
+@media (max-width: 840px) {
+  .FirstimageContainer img {
+    margin-top: -70px;
+  }
+}
+
 .secondImage {
   margin-top: -200px;
 }
@@ -54,7 +64,7 @@
 }
 
 .otherImage {
-  margin-top: -60px;
+  /* margin-top: -60px; */
   position: relative;
   display: flex;
   justify-content: center;
@@ -157,9 +167,50 @@
   line-height: 1.5;
 }
 
-/* .widthoutMargin-top {
-  margin-top: 0px;
-} */
+.contactContainer {
+  position: relative;
+  color: white;
+  width: 416px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 404px;
+  top: 190px;
+  left: 150px;
+}
+
+.contactContainer h1 {
+  font-size: 36px;
+  line-height: 1.5;
+  font-weight: 800;
+  width: 420px;
+}
+
+.contactContainer p {
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.newsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  margin-top: 76px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 64px;
+}
+
+.buttonContainer button {
+  width: 176px;
+  height: 48px;
+}
 
 @media (max-width: 940px) {
   .secondSectionContainer {
