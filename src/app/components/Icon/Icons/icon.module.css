@@ -6,3 +6,12 @@
     fill: var(--logo-color);
     cursor: pointer;
 }
+
+.fillColorVariant{
+    fill: var(--second-alpha-color);
+}
+
+.fillColorVariant:hover {
+    fill: var(--link-color);
+    cursor: pointer;
+}
