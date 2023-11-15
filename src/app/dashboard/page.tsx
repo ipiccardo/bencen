@@ -10,12 +10,14 @@ import classes from './page.module.css'
 import Header from "../components/Header/Header";
 import Image from "next/image";
 import Button from "../components/Ui/Button";
-import AboutUsCard from "../components/aboutUs_Card/AboutUsCard";
+import AboutUsCard from "../components/AboutUs_Card/AboutUsCard";
+import ClientCard from "../components/Clients_Card/ClientCard";
 
 
 const HomePage = () => {
 
   const [pantallaPequeña, setPantallaPequeña] = useState(false);
+  const [pantallaMediana, setPantallaMediana] = useState(false);
   const [firtAndLastImage, setFirstAndLastImage] = useState({ width: 1344, heigth: 888 })
   const [otherImages, setOtherImages] = useState({ width: 1296, heigth: 960 })
 
@@ -26,14 +28,17 @@ const HomePage = () => {
 
     if (screenWidth >= 1400) {
       setPantallaPequeña(false);
-      setFirstAndLastImage({ width: 1344, heigth: 888 });
+      setPantallaMediana(false)
+      setFirstAndLastImage({ width: 1344, heigth: 960 });
       setOtherImages({ width: 1344, heigth: 960 })
     } else if (screenWidth >= 941) {
       setPantallaPequeña(false);
+      setPantallaMediana(true)
       setFirstAndLastImage({ width: 938, heigth: 888 });
       setOtherImages({ width: 938, heigth: 960 })
     } else {
       setPantallaPequeña(true);
+      setPantallaMediana(false)
     }
   };
   useEffect(() => {
@@ -51,7 +56,6 @@ const HomePage = () => {
 
   return (
     <>
-      {/* <AboutUsCard /> */}
       <div className={classes.homePageContainer}>
         <div className={classes.headerContainer}>
           <Header />
@@ -59,8 +63,10 @@ const HomePage = () => {
         <div className={classes.firstSectionContainer}>
           <section>
             <div className={`${classes.FirstimageContainer} ${classes.widthImage}`}>
-              {!pantallaPequeña &&
+              {!pantallaMediana ?
                 <Image width={firtAndLastImage.width} height={firtAndLastImage.heigth} src={"/images/withoutMark.png"} alt={""} />
+                :
+                <Image src={"/images/withoutMark.png"} alt={""} layout="fill" objectFit="cover" />
               }
             </div>
           </section>
@@ -86,9 +92,12 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              {!pantallaPequeña &&
+              {!pantallaMediana ?
                 <Image width={otherImages.width} height={otherImages.heigth} src={"/images/FrameTwoInside.png"} alt={""} />
+                :
+                <Image src={"/images/FrameTwoInside.png"} alt={""} layout="fill" objectFit="cover" />
               }
+
             </div>
           </section>
           <section className={classes.threeSectionContainer}>
@@ -100,43 +109,67 @@ const HomePage = () => {
                 </div>
                 <UnmatchedCards />
               </div>
-              {!pantallaPequeña &&
-                <Image width={otherImages.width} height={otherImages.heigth} src={"/images/FrameThree.png"} alt={""} />
+              {!pantallaMediana ?
+                <Image width={1346} height={otherImages.heigth} src={"/images/FrameThree.png"} alt={""} />
+                :
+                <Image src={"/images/FrameThree.png"} alt={""} layout="fill" objectFit="cover" />
               }
             </div>
           </section>
           <section className={classes.fourSectionContainer}>
             <div className={`${classes.imageContainer} ${classes.otherImage}`}>
-              {!pantallaPequeña &&
+              <div className={classes.containerAbsolute}>
+
+                <div className={classes.clientCardContainer}>
+                  <ClientCard />
+                  <div className={classes.aboutUsParagraphContainer}>
+                    <h1>SATISFIED CLIENTS WE SERVED FOR YEARS</h1>
+                    <p>Our commitment to excellence and unwavering dedication have enabled us to build lasting relationships with individuals and businesses alike. Our track record of delivering exceptional service has not only met but exceeded the expectations of our valued clients.
+
+                    </p>
+                    <p>Their satisfaction is a testament to our expertise, reliability, and a deep-rooted commitment to their success.</p>
+                    <button className={classes.aboutUsButton}>SEE ALL PROJECTS</button>
+                  </div>
+                </div>
+              </div>
+              {!pantallaMediana ?
                 <Image width={otherImages.width} height={720} src={"/images/FrameFour.png"} alt={""} />
+                :
+                <Image src={"/images/FrameFour.png"} alt={""} layout="fill" objectFit="cover" />
               }
             </div>
           </section>
           <section className={classes.fiveSectionContainer}>
             <div className={`${classes.imageContainer} ${classes.otherImage}`}>
-              {!pantallaPequeña &&
+              {!pantallaMediana ?
                 <Image width={otherImages.width + 2} height={720} src={"/images/FrameFive.png"} alt={""} />
+                :
+                <Image src={"/images/FrameFive.png"} alt={""} layout="fill" objectFit="cover" />
               }
             </div>
           </section>
           <section className={classes.sixSectionContainers}>
             <div className={`${classes.imageContainer} ${classes.otherImage}`}>
-              {!pantallaPequeña &&
+              {!pantallaMediana ?
                 <Image width={otherImages.width} height={720} src={"/images/FrameSix.png"} alt={""} />
+                :
+                <Image src={"/images/FrameSix.png"} alt={""} layout="fill" objectFit="cover" />
               }
             </div>
           </section>
           <section className={classes.SevenSectionContainer}>
             <div className={`${classes.imageContainer} ${classes.otherImage}`}>
-              {!pantallaPequeña &&
+              {!pantallaPequeña ?
                 <Image width={firtAndLastImage.width} height={firtAndLastImage.heigth} src={"/images/FrameSevenInside.png"} alt={""} />
+                :
+                <Image src={"/images/FrameSevenInside.png"} alt={""} layout="fill" objectFit="cover" />
               }
             </div>
           </section>
-          {/* <ServiceCards />
-      <UnmatchedCards /> */}
         </div>
       </div >
+      {/* <ServiceCards />
+      <UnmatchedCards /> */}
     </>
   );
 };
