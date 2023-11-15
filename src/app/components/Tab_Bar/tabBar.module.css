@@ -86,16 +86,36 @@
     margin-top: 1rem;
 }
 
+.buttonSelectHide {
+    display: none;
+}
+
+.cvNameContainer {
+    display: flex;
+    list-style: none;
+    gap: 4px;
+}
+
 .cvName {
-    width: 250px;
     height: 32px;
     margin-top: 1rem;
+    font-size: var(--normal-small-font-size);
+    font-style: var(--small-text-italic-font-style);
+    text-size-adjust:calc();
+    display: inline-flex;
+    padding: 0 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color:rgb(218, 213, 213);
+    border: 2px dotted darkgray;
+    border-radius: 4px;
 }
 
 .buttonApply {
     width: 160px;
     height: 48px;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 .successMessage {
@@ -103,7 +123,7 @@
 }
 
 .successCv {
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 /* Tab Bar - Click State */

@@ -5,11 +5,7 @@ import { TextField, MenuItem } from "@mui/material";
 import classes from './tabBar.module.css';
 import Button from '../Ui/Button';
 
-interface Props {
-
-}
-
-const TabBar = ({ }: Props): JSX.Element => {
+const TabBar = (): JSX.Element => {
   const [clickL, setClickL] = useState(true)
   const [clickR, setClickR] = useState(false)
   const [nameL, setNameL] = useState("");
@@ -78,7 +74,7 @@ const TabBar = ({ }: Props): JSX.Element => {
             from: emailL,
             to: 'webcraftersok@gmail.com',
             subject: 'New message from your website', 
-            text: `Hello Analía, you have a message from Bencen website,\n\nName: ${nameL}\nPhone Number: ${phoneNumberL}\nMessage: ${message}`
+            text: `Hello Analía, you have a message from Bencen website,\n\nName: ${nameL}\nPhone Number: ${phoneNumberL}\nMessage: \n${message}`
           }),
         });
 
@@ -153,7 +149,6 @@ const TabBar = ({ }: Props): JSX.Element => {
     if (e.target.files?.[0]) {
       setCvLoaded(true);
       setCvName(e.target.files?.[0].name);
-      // setCv(e.target.files?.[0]);
 
       try {
         const dataBuffer = await e.target.files?.[0].arrayBuffer();
@@ -166,6 +161,12 @@ const TabBar = ({ }: Props): JSX.Element => {
         console.error('Error reading PDF file:', error);
       }
     }
+  };
+
+  const handleCancelCvClick = () => {
+    setCvLoaded(false);
+    setCvName("");
+    setCv("");
   };
   
   return (
@@ -287,12 +288,14 @@ const TabBar = ({ }: Props): JSX.Element => {
               <MenuItem value={'Human Resources'}>Human Resources</MenuItem>
               <MenuItem value={'Safety'}>Safety</MenuItem>
             </TextField></li>
-            <li><div className={classes.buttonSelect}>Upload your CV</div></li>
+            <li><div className={cvLoaded ? (classes.buttonSelectHide) : (classes.buttonSelect)}>Upload your CV:</div></li> 
             <li>
-              {cvLoaded ? (
-                <div className={classes.cvName}>
-                {cvName}
-              </div>
+            {!cvSubmitted ? (
+              cvLoaded ? (
+                <ul className={classes.cvNameContainer}>
+                  <li><div className={classes.cvName}>{cvName}</div></li>
+                  <li><div className={classes.cvName} onClick={handleCancelCvClick} style={{ cursor: 'pointer' }}>X</div></li>
+                </ul>
                 ) : (
                   <div>
                     <Button href="" classNameButton={classes.buttonSelect} text="Select File" onClick={handleSelectClick} />
@@ -304,7 +307,8 @@ const TabBar = ({ }: Props): JSX.Element => {
                       onChange={handleFileChange}
                     />
                   </div>
-              )}
+              )):(<div></div>)
+            }
             </li>
             <li>
               {cvSubmitted ? (
