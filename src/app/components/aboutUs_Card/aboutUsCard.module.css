@@ -1,0 +1,16 @@
+.container {
+  height: 280px;
+  width: 376px;
+  background-image: url("/images/imageBefore.png");
+  margin-top: -95px;
+}
+
+.container div:first-child {
+  position: relative;
+  z-index: -1;
+  left: 42px;
+  bottom: 45px;
+  background-image: url("/images/imageBehind.png");
+  height: 280px;
+  width: 376px;
+}

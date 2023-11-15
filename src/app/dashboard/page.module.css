@@ -8,10 +8,8 @@
 }
 
 .firstSectionContainer {
-  background-image: url("/images/homePage_backgroundOne.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-x: center;
+  background-color: black;
+  position: relative;
 }
 
 .secondSectionContainer {
@@ -36,8 +34,15 @@
   position: relative;
 }
 
+.FirstimageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
 .secondImage {
-  margin-top: -150px;
+  margin-top: -200px;
 }
 
 .thirdImage {
@@ -67,7 +72,7 @@
   justify-content: center;
   position: absolute;
   width: 100%;
-  top: calc(784px - 28px);
+  top: calc(784px - 108px);
   z-index: 1;
 }
 
@@ -106,6 +111,31 @@
   height: 114px;
   color: #ffff;
   margin-top: 20px;
+}
+
+.aboutCardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 82px;
+  flex-wrap: wrap;
+  margin-top: 300px;
+}
+
+.aboutUsParagraphContainer {
+  width: 30%;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.aboutUsButton {
+  height: 48px;
+  width: 256px;
+  background-color: #f99005;
+  color: white;
+  border: 0px;
+  margin-top: 33px;
 }
 
 @media (max-width: 940px) {
