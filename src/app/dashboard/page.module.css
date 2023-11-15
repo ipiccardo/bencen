@@ -24,6 +24,8 @@
 
 .headerContainer {
   position: absolute;
+  width: 100%;
+  top: 75px;
 }
 
 .imageContainer {
@@ -31,10 +33,33 @@
   justify-content: center;
   align-items: center;
   margin-top: 76px;
+  position: relative;
 }
 
 .secondImage {
   margin-top: -150px;
+}
+
+.thirdImage {
+  margin-top: -10px;
+}
+
+.otherImage {
+  margin-top: -60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.containerAbsolute {
+  position: absolute;
+  top: 20px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: flex-start;
+  max-width: 1296px;
 }
 
 .serviceCardContainer {
@@ -52,4 +77,60 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
+}
+
+.SevenSectionContainer {
+  position: relative;
+  background-image: url("/images/FooterImage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.threeSectionContainer,
+.fourSectionContainer,
+.fiveSectionContainer,
+.sixSectionContainers {
+  position: relative;
+  background-image: url("/images/homePage_backgroundTwo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  height: 720px !important;
+  /* margin-top: -150px; */
+  margin-top: -96px;
+}
+
+.unmatchedServicesContainer {
+  max-width: 241px;
+  height: 114px;
+  color: #ffff;
+  margin-top: 20px;
+}
+
+@media (max-width: 940px) {
+  .secondSectionContainer {
+    background-image: url("/images/FrameTwoInside.png");
+    background-size: cover;
+  }
+  .threeSectionContainer {
+    background-image: url("/images/FrameThree.png");
+    background-size: cover;
+  }
+  .fourSectionContainer {
+    background-image: url("/images/FrameFour.png");
+    background-size: cover;
+  }
+  .fiveSectionContainer {
+    background-image: url("/images/FrameFive.png");
+    background-size: cover;
+  }
+  .sixSectionContainer {
+    background-image: url("/images/FrameSix.png");
+    background-size: cover;
+  }
+  .sevenSectionContainer {
+    background-image: url("/images/FrameSevenInside.png");
+    background-size: cover;
+  }
 }
