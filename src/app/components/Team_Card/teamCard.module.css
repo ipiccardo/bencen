@@ -13,7 +13,7 @@
   position: relative;
 }
 
-.text {
+.cardText {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -68,7 +68,31 @@
 }
 
 /* Team Cards */
+.text{
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  width: 928px;
+  margin: 0 auto;
+}
+
+.text h1 {
+  font-size: var(--h-1-font-size);
+  font-style: var(--h-1-font-style);
+  font-weight: var(--h-1-font-weight);
+  margin-bottom: 32px;
+}
+
+.text p {
+  color: var(--gray-dark-color);
+  font-size: var(--text-font-size);
+  font-style: var(--text-font-style);
+  font-weight: var(--text-font-weight);
+}
+
 .teamCards {
+  margin-top: 26px;
+  align-items: center;
   display: flex;
   list-style: none;
   gap: 32px;
