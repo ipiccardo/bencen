@@ -1,5 +1,5 @@
 import React from 'react'
-import ConnectWithUs from '../../components/ConnectWithUs/ConnectWithUs';
+import ConnectWithUs from '../../components/Contact_Hero/ConnectWithUs';
 import ContactCards from '../../components/Contact_Card/ContactCard';
 import TabBar from '../../components/Tab_Bar/TabBar';
 

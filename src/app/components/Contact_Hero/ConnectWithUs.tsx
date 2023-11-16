@@ -20,7 +20,7 @@ return (
           <br></br>
           <br></br>
           {CONNECT_WITH_US['english'][3]}
-          </p>
+        </p>
     </section>
 ) 
 };
