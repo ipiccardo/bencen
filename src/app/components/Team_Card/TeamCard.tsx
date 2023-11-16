@@ -32,7 +32,7 @@ const TeamCard = ({ imageName, position, name, description, url }: Props): JSX.E
           <div className={classes.description}>{description}</div>
         </div>
         <div className={classes.icon}>
-          <Link href={url}>
+          <Link href={url} target="_blank" rel="noopener noreferrer">
             <Icon name="linkedinBlue" size={23} />
           </Link>
         </div> 

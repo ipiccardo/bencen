@@ -4,6 +4,7 @@ import React, { useState, useRef } from "react";
 import { TextField, MenuItem } from "@mui/material";
 import classes from './tabBar.module.css';
 import Button from '../Ui/Button';
+import { TAB_BAR, WORK_AREA } from '../../utils/constants';
 
 const TabBar = (): JSX.Element => {
   const [clickL, setClickL] = useState(true)
@@ -174,13 +175,13 @@ const TabBar = (): JSX.Element => {
       <div className={classes.tab}>
         <div className={classes.tabLeft}>
           <div className={`${classes.boxLeftClick} ${clickL ? "" : classes.boxLeft}`} onClick={handleClickL}>
-            <div className={`${classes.headerLeftClick} ${clickL ? "" : classes.headerLeft}`}>CONTACT US</div>
+            <div className={`${classes.headerLeftClick} ${clickL ? "" : classes.headerLeft}`}>{TAB_BAR['english'][0]}</div>
           </div>
           <ul className={`${classes.ul} ${clickL ? "" : classes.ulBoxLeft}`}>
-            <li><div>Send us a message and we will respond as soon as possible.</div></li>
+            <li><div>{TAB_BAR['english'][1]}</div></li>
             <li><TextField
               value={nameL}
-              label="Full Name"
+              label={TAB_BAR['english'][2]}
               onChange={(e) => {
                 setNameL(e.target.value);
               }}
@@ -190,7 +191,7 @@ const TabBar = (): JSX.Element => {
             /></li>
             <li><TextField
               value={phoneNumberL}
-              label="Phone Number"
+              label={TAB_BAR['english'][3]}
               onChange={(e) => {
                 setPhoneNumberL(e.target.value);
               }}
@@ -200,7 +201,7 @@ const TabBar = (): JSX.Element => {
             /></li>
             <li><TextField
               value={emailL}
-              label="Email"
+              label={TAB_BAR['english'][4]}
               onChange={(e) => {
                 setEmailL(e.target.value);
               }}
@@ -210,7 +211,7 @@ const TabBar = (): JSX.Element => {
             /></li>
             <li><TextField
               value={message}
-              label="Message"
+              label={TAB_BAR['english'][5]}
               onChange={(e) => {
                 setMessage(e.target.value);
               }}
@@ -223,13 +224,13 @@ const TabBar = (): JSX.Element => {
             <li>
               {messageSubmitted ? (
                 <div className={classes.successMessage}>
-                  Congratulations, your message was sent successfully!.
+                  {TAB_BAR['english'][7]}
                 </div>
               ) : (
                 <Button
                   href=""
                   classNameButton={classes.button}
-                  text="SEND" onClick={handleSendClick}
+                  text={TAB_BAR['english'][6]} onClick={handleSendClick}
                 />
               )}
             </li>
@@ -237,13 +238,13 @@ const TabBar = (): JSX.Element => {
         </div>
         <div className={classes.tabRight}>
           <div className={`${classes.boxRight} ${clickR ? classes.boxRightClick : ""}`} onClick={handleClickR}>
-            <div className={`${classes.headerRight} ${clickR ? classes.headerRightClick : ""}`}>WORK WITH US</div>
+            <div className={`${classes.headerRight} ${clickR ? classes.headerRightClick : ""}`}>{TAB_BAR['english'][8]}</div>
           </div>
           <ul className={`${classes.ul} ${clickR ? "" : classes.ulBoxRight}`}>
-            <li><div>Share your resume with our Human Resources Team.</div></li>
+            <li><div>{TAB_BAR['english'][9]}</div></li>
             <li><TextField
               value={nameR}
-              label="Full Name"
+              label={TAB_BAR['english'][2]}
               onChange={(e) => {
                 setNameR(e.target.value);
               }}
@@ -253,7 +254,7 @@ const TabBar = (): JSX.Element => {
             /></li>
             <li><TextField
               value={phoneNumberR}
-              label="Phone Number"
+              label={TAB_BAR['english'][3]}
               onChange={(e) => {
                 setPhoneNumberR(e.target.value);
               }}
@@ -263,7 +264,7 @@ const TabBar = (): JSX.Element => {
             /></li>
             <li><TextField
               value={emailR}
-              label="Email"
+              label={TAB_BAR['english'][4]}
               onChange={(e) => {
                 setEmailR(e.target.value);
               }}
@@ -274,7 +275,7 @@ const TabBar = (): JSX.Element => {
             <li><TextField
               select
               value={workArea}
-              label="Work Area"
+              label={TAB_BAR['english'][10]}
               onChange={(e) => {
                 setWorkArea(e.target.value);
               }}
@@ -282,13 +283,15 @@ const TabBar = (): JSX.Element => {
               margin="normal"
               required={true}
             >
-              <MenuItem value={'Accountant'}>Accountant</MenuItem>
-              <MenuItem value={'Architecture'}>Architecture</MenuItem>
-              <MenuItem value={'Engineering'}>Engineering</MenuItem>
-              <MenuItem value={'Human Resources'}>Human Resources</MenuItem>
-              <MenuItem value={'Safety'}>Safety</MenuItem>
+              <ul>
+                {WORK_AREA['english'].map((value: string, index: number) => (
+                <li key={index}>
+                  <MenuItem value={value}>{value}</MenuItem>
+                </li>
+                ))}
+              </ul>
             </TextField></li>
-            <li><div className={cvLoaded ? (classes.buttonSelectHide) : (classes.buttonSelect)}>Upload your CV:</div></li> 
+            <li><div className={cvLoaded ? (classes.buttonSelectHide) : (classes.buttonSelect)}>{TAB_BAR['english'][11]}</div></li> 
             <li>
             {!cvSubmitted ? (
               cvLoaded ? (
@@ -298,7 +301,7 @@ const TabBar = (): JSX.Element => {
                 </ul>
                 ) : (
                   <div>
-                    <Button href="" classNameButton={classes.buttonSelect} text="Select File" onClick={handleSelectClick} />
+                    <Button href="" classNameButton={classes.buttonSelect} text={TAB_BAR['english'][12]} onClick={handleSelectClick} />
                     <input
                       type="file"
                       ref={cvRef}
@@ -312,11 +315,9 @@ const TabBar = (): JSX.Element => {
             </li>
             <li>
               {cvSubmitted ? (
-                  <div className={classes.successCv}>
-                    Congratulations, your CV was sent successfully!.
-                  </div>
+                  <div className={classes.successCv}>{TAB_BAR['english'][14]}</div>
                 ) : (
-                <Button href="" classNameButton={classes.buttonApply} text="APPLY" onClick={handleApplyClick} />
+                <Button href="" classNameButton={classes.buttonApply} text={TAB_BAR['english'][13]} onClick={handleApplyClick} />
               )}
             </li>
           </ul>

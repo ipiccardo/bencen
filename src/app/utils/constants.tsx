@@ -47,6 +47,10 @@ export const COLLABORATORS: Object = {
 }
 
 // Contact:
+export const CONNECT_WITH_US : Object = {
+  english: ['Connect With Us', 'At our core, we believe our most valuable asset is our people. Our dedicated and skilled team forms the bedrock of our success in delivering exceptional projects. ', "If you're passionate about construction, architecture, the environment, or tackling special projects, we invite you to share your expertise with us.", "Feel free to reach out using the contact form or explore opportunities to work with us by uploading your resume. Let's craft excellence together. Get in touch today!."]
+}
+
 export const CONTACT: Object = {
   location: ['location', 'ADDRESS', 'Av. Maipú 2649, Olivos,\n Buenos Aires, Argentina'],
   phone: ['phone', 'PHONE NUMBER', '+54 11 4790 - 5791'],
@@ -54,4 +58,11 @@ export const CONTACT: Object = {
   socials: ['socials', 'SOCIAL MEDIA', '']
 };
 
+export const TAB_BAR : Object = {
+  english: ['CONTACT US', 'Send us a message and we will respond as soon as possible.', 'Full Name', 'Phone Number', 'Email', 'Message', 'SEND', 'Congratulations, your message was sent successfully!.', 'WORK WITH US', 'Share your resume with our Human Resources Team.', 'Work Area', 'Upload your CV:', 'Select File', 'APPLY', 'Congratulations, your CV was sent successfully!.']
+}
+
+export const WORK_AREA : Object = {
+  english: ['Accountant', 'Architecture', 'Engineering', 'Human Resources', 'Safety']
+}
 
