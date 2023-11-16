@@ -123,11 +123,26 @@
   top: 90px;
 }
 
+.threeSectionContainer button {
+  height: 56px;
+  background-color: #f99005;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+  border: 0;
+  padding: 10px;
+}
+
 .unmatchedServicesContainer {
   max-width: 241px;
   height: 114px;
   color: #ffff;
   margin-top: 20px;
+}
+
+.unmatchedServicesContainer h1 {
+  width: 241px;
 }
 
 .aboutCardContainer {
@@ -215,6 +230,10 @@
 .buttonContainer button {
   width: 176px;
   height: 48px;
+}
+
+.widthOutMarginTop {
+  margin-top: 0px;
 }
 
 @media (max-width: 940px) {

@@ -103,7 +103,7 @@ const HomePage = () => {
             </div>
           </section>
           <section className={classes.threeSectionContainer}>
-            <div className={`${classes.imageContainer} ${classes.otherImage}`}>
+            <div className={`${classes.imageContainer} ${classes.otherImage} ${pantallaMediana && classes.widthOutMarginTop} ${pantallaMediana && classes.widthOutMarginTop}`}>
               <div className={classes.containerAbsolute}>
                 <div className={classes.unmatchedServicesContainer}>
                   <h1>UNMATCHED SERVICES</h1>
