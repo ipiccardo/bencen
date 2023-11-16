@@ -42,6 +42,10 @@ export const TEAM: Object = {
   member_3: ['member_3', 'Position_3', 'Name and Surname_3', 'Brief Job Description_3', 'https://www.linkedin.com/in/julian-giudice-940771a1/']
 }
 
+export const COLLABORATORS: Object = {
+  english: ['Our Trusted Collaborators', 'Powering progress through strong collaborations. Dive into our network of satisfied clients, a testament to our quality and commitment.', 'Join us on a journey of shared successes and outstanding projects.']
+}
+
 // Contact:
 export const CONTACT: Object = {
   location: ['location', 'ADDRESS', 'Av. Maipú 2649, Olivos,\n Buenos Aires, Argentina'],
