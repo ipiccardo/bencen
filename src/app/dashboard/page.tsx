@@ -112,7 +112,7 @@ const HomePage = () => {
                 <UnmatchedCards />
               </div>
               {!pantallaMediana ?
-                <Image width={1346} height={720} src={"/images/FrameThree.png"} alt={""} />
+                <Image width={1346} height={960} src={"/images/FrameThree.png"} alt={""} />
                 :
                 <Image src={"/images/FrameThree.png"} alt={""} layout="fill" objectFit="cover" />
               }
