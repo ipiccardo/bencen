@@ -177,7 +177,7 @@ const HomePage = () => {
               }
             </div>
           </section>
-          <section className={classes.SevenSectionContainer}>
+          {/* <section className={classes.SevenSectionContainer}>
             <div className={`${classes.imageContainer} ${classes.otherImage}`}>
               {!pantallaPequeña ?
                 <Image width={firtAndLastImage.width} height={firtAndLastImage.heigth} src={"/images/FrameSevenInside.png"} alt={""} />
@@ -185,7 +185,7 @@ const HomePage = () => {
                 <Image src={"/images/FrameSevenInside.png"} alt={""} layout="fill" objectFit="cover" />
               }
             </div>
-          </section>
+          </section> */}
         </div>
       </div >
       {/* <ServiceCards />
