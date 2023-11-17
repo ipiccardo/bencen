@@ -4,7 +4,7 @@ import ExploreOurPortfolio from '../../components/Projects_Hero/ExploreOurPortfo
 
 const Projects = () => {
     return (
-        <div className={classes.text}>
+        <div>
           <ExploreOurPortfolio/>
         </div>
     )

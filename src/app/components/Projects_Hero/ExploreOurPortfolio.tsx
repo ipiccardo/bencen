@@ -13,17 +13,17 @@ const ExploreOurPortfolio = (): JSX.Element => {
 return (
     <section className={classes.text}>
         <h1>{EXPLORE_OUR_PORTFOLIO['english'][0]}</h1>
-        <p>{EXPLORE_OUR_PORTFOLIO['english'][1]}</p>
+        <p className={classes.p1}>{EXPLORE_OUR_PORTFOLIO['english'][1]}</p>
         <ul>
-        {CATEGORIES['english'].map((value: string, index: number) => (
-        <li key={index}>
-            <Button 
-                href=""
-                classNameButton={classes.button}
-                text={value}
-                // onClick={}
+            {CATEGORIES['english'].map((value: string, index: number) => (
+            <li key={index}>
+                <Button 
+                    href=""
+                    classNameButton={classes.button}
+                    text={value}
+                    // onClick={}
                 />
-        </li>
+            </li>
         ))}
         </ul>
         <p>{EXPLORE_OUR_PORTFOLIO['english'][2]}</p>

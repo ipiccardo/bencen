@@ -26,6 +26,10 @@ export const FOOTER: Object = {
 };
 
 // About Us:
+export const DISCOVER_OUR_ROOTS: Object = {
+  english: ['Discover Our Roots', 'In this pivotal corner of our digital space, we unveil our journey and values, grounded in a commitment to excellence, ethical conduct, and surpassing expectations. ', 'Dive into our history, a tapestry of milestones propelling us towards our vision. ISO Standards guide our dedication to global quality benchmarks, while our dynamic team and esteemed clients fuel our drive for continuous advancement.', 'Our travel continues beyond words and embraces every project, every client, and every challenge.', 'Here, we invite you to explore the essence of who we are and what propels us forward.']
+}
+
 export const MISION_VISION_VALUES: Object = {
   mision: ['mission', 'We are a construction enterprise, driven by principles of quality, timeliness, scope, and cost-effectiveness. We tailor technical specifications and plans to meet diverse client requirements. Our team operates in a conducive environment, fostering growth, and remains environmentally conscious.'],
   vision: ['vision', "To be acknowledged as the premier company in Engineering, Construction, Supervision, and Project Management for all contracts we undertake. We seek recognition for our team's exceptional performance, dedication to quality, safety, environmental responsibility, and timely project completion.Our founding purpose is to bring comfort and specialized designs to our clients, ensuring the highest quality and compliance with technical and safety standards."],
@@ -44,6 +48,11 @@ export const TEAM: Object = {
 
 export const COLLABORATORS: Object = {
   english: ['Our Trusted Collaborators', 'Powering progress through strong collaborations. Dive into our network of satisfied clients, a testament to our quality and commitment.', 'Join us on a journey of shared successes and outstanding projects.']
+}
+
+// Services:
+export const UNLOCKING_POSSIBILITES: Object = {
+  english: ['Unlocking Possibilities', 'Discover our diversified services meticulously designed to suit every need.', "From civil works to groundbreaking architecture, we're your partners in realizing extraordinary projects.", 'Dive into our tailored service offerings and redefine your vision with us.']
 }
 
 // Projects:
