@@ -6,6 +6,10 @@ export const NAVBAR: Object = {
   spanish: ['Sobre Nosotros', 'Servicios', 'Proyectos', 'Noticias', 'Contacto'],
 };
 
+export const BUILDING_TOMORROW: Object = {
+  english: ['Building Tomorrow, Today', 'Welcome to Bencen, where innovation meets excellence in construction and services.', 'Our digital space is a portal into our values, built on a commitment to excellence and a relentless pursuit of surpassing expectations.']
+}
+
 export const SERVICES: Object = {
   civilWorks: ['excavator', 'CIVIL WORKS', 'Excellence in construction, your trusted partner'],
   architecture: ['building', 'ARCHITECTURE', 'Innovation, shaping your dream spaces'],
