@@ -9,7 +9,7 @@ const projects = [
     id: 1,
     imageSrc: "",
     // imageSrc: "/img/project1.jpg",
-    projectName: "Proyecto 1",
+    projectName: "Proyecto 1.",
     projectYear: "2022",
   },
   {
