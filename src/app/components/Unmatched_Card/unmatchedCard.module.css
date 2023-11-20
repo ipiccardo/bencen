@@ -67,3 +67,10 @@
   flex-wrap: wrap;
   width: 50%;
 }
+
+@media (max-width: 1217px) {
+  .unmatchedCards {
+    width: 80%;
+    justify-content: center;
+  }
+}
