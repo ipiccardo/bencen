@@ -1,90 +1,93 @@
 .quotation__container {
-    width: 100%;
-    background-color: var(--black-color);
+  width: 100%;
+  background-color: var(--black-color);
 }
 
-.footer, .quotation__item {
-    padding: 60px 175px;
-    max-width: 1200px;
-    margin: 0 auto;
+.footer,
+.quotation__item {
+  padding: 60px 175px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .quotation__item {
-    margin-top: 5000px;
-    min-height: 110px;
-    color: var(--white-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin-top: 5000px;
+  min-height: 110px;
+  color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .quotation__texts p {
-    color: var(--gray-light-color);
+  color: var(--gray-light-color);
 }
 
 .footer {
-    min-height: 200px;
+  min-height: 200px;
 }
 
-.footer__firstBlock, .footer__secondBlock {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.footer__firstBlock,
+.footer__secondBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer__secondBlock {
-    margin-top: 5rem;
+  margin-top: 5rem;
 }
 
 .footer__icons {
-    display: flex;
-    gap: 40px
+  display: flex;
+  gap: 40px;
 }
 
 @media (max-width: 1450px) {
-    .quotation__texts {
-        width: 60%;
-    }
+  .quotation__texts {
+    width: 60%;
+  }
 }
 
 @media (max-width: 1050px) {
-    .footer {
-        padding: 30px 80px;
-    }
+  .footer {
+    padding: 30px 80px;
+  }
 
-    .footer__secondBlock {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-    }
+  .footer__secondBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
 
-    .quotation__item {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
-        padding: 40px 80px;
-    }
+  .quotation__item {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 40px 80px;
+  }
 
-    .quotation__texts {
-        width: 100%;
-    }
+  .quotation__texts {
+    width: 100%;
+  }
 }
 
 @media (max-width: 800px) {
-    .footer, .quotation__item {
-        padding: 30px 1rem;
-    }
-    .footer__secondBlock {
-        margin-top: 3rem;
-    }
+  .footer,
+  .quotation__item {
+    padding: 30px 1rem;
+  }
+  .footer__secondBlock {
+    margin-top: 3rem;
+  }
 }
 
 @media (max-width: 580px) {
-    .footer__firstBlock {
-        align-items: flex-start;
-    }
-    .footer__secondBlock {
-        margin-top: 1rem;
-        gap: 1rem;
-    }
+  .footer__firstBlock {
+    align-items: flex-start;
+  }
+  .footer__secondBlock {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
 }

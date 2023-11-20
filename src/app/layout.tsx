@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeContextProvider>
-          <Header />
+          {/* <Header /> */}
           {children}
           <Footer />
         </ThemeContextProvider>

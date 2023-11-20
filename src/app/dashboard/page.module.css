@@ -1,0 +1,499 @@
+.homePageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.homePageContainer section {
+  height: 960px;
+  overflow: hidden;
+}
+
+.firstSectionContainer {
+  background-color: black;
+  position: relative;
+}
+
+.secondSectionContainer {
+  position: relative;
+  background-image: url("/images/homePage_backgroundTwo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  margin-top: -80px;
+  height: 880px !important;
+}
+
+.headerContainer {
+  position: absolute;
+  width: 100%;
+  top: 75px;
+}
+
+.headerContainer svg g {
+  fill: white;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 76px; */
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.FirstimageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  /* background-image: url("/images/withoutMark.png"); */
+  background-size: cover;
+  background-position: center;
+}
+
+.FirstimageContainer img {
+  margin-top: -70px;
+}
+
+@media (max-width: 840px) {
+  .FirstimageContainer img {
+    margin-top: -70px;
+  }
+}
+
+.secondImage {
+  margin-top: -200px;
+}
+
+.thirdImage {
+  margin-top: -10px;
+}
+
+.otherImage {
+  /* margin-top: -60px; */
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.containerAbsolute {
+  position: absolute;
+  top: 20px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: flex-start;
+  max-width: 1296px;
+}
+
+.serviceCardContainer {
+  /* display: flex;
+  justify-content: center; */
+  position: absolute;
+  width: 100%;
+  top: calc(784px - 108px);
+  z-index: 1;
+}
+
+.ThirdSectionContainer {
+  position: relative;
+  background-image: url("/images/homePage_backgroundTwo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  margin-top: -210px;
+}
+
+.SevenSectionContainer {
+  position: relative;
+  background-image: url("/images/FooterImage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.threeSectionContainer {
+  margin-top: -210px;
+}
+
+.threeSectionContainer,
+.fourSectionContainer,
+.fiveSectionContainer,
+.sixSectionContainers {
+  position: relative;
+  background-image: url("/images/homePage_backgroundTwo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  height: 720px !important;
+  /* margin-top: -96px; */
+}
+
+.sixSectionContainer .imageContainer {
+  height: auto;
+}
+
+.threeSectionContainer .containerAbsolute {
+  top: 90px;
+}
+
+.threeSectionContainer .show {
+  margin-top: 80px;
+}
+
+.threeSectionContainer button {
+  height: 56px;
+  background-color: #f99005;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 700;
+  border: 0;
+  padding: 10px;
+}
+
+.unmatchedServicesContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.unmatchedServicesParagraphContainer {
+  max-width: 241px;
+  height: 114px;
+  color: #ffff;
+  margin-top: 20px;
+}
+
+.unmatchedServicesParagraohContainer h1 {
+  width: 241px;
+}
+
+.aboutCardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: 82px;
+  flex-wrap: wrap;
+  margin-top: 300px;
+}
+
+.aboutUsParagraphContainer {
+  width: 30%;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.aboutUsButton {
+  height: 48px;
+  width: 256px;
+  background-color: #f99005;
+  color: white;
+  border: 0px;
+  margin-top: 33px;
+}
+
+/* CLIENT SECCION */
+
+.clientCardContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  align-items: center;
+  position: relative;
+  gap: 82px;
+  flex-wrap: wrap;
+  margin-top: 34px;
+}
+.clientParagraphContainer {
+  width: 30%;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.clientButton {
+  height: 48px;
+  width: 256px;
+  background-color: #f99005;
+  color: white;
+  border: 0px;
+  margin-top: 33px;
+}
+
+.clientCardContainer .clientParagraphContainer h1 {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+/* CONTACT SECCION */
+.contactContainer {
+  position: relative;
+  color: white;
+  width: 416px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 404px;
+  top: 190px;
+  left: 150px;
+}
+
+.contactContainer h1 {
+  font-size: 36px;
+  line-height: 1.5;
+  font-weight: 800;
+  width: 420px;
+}
+
+.contactContainer p {
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.newsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  margin-top: 76px;
+}
+
+.newsContainer h1 + div {
+  width: 900px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 64px;
+}
+
+.buttonContainer button {
+  width: 176px;
+  height: 48px;
+}
+
+.widthOutMarginTop {
+  margin-top: 0px;
+}
+
+.paddingBottom {
+  padding-bottom: 100px;
+}
+
+@media (max-width: 1217px) {
+  .unmatchedServicesContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -100px;
+  }
+  .unmatchedServicesParagraphContainer {
+    max-width: 100%;
+    height: auto;
+  }
+  .threeSectionContainer button {
+    position: absolute;
+    top: 600px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 1200px) {
+  .show {
+    display: none;
+  }
+  .FirstimageContainer {
+    background-image: url(/images/withoutMark.png) !important;
+    background-size: cover;
+    background-position: center;
+  }
+  .secondSectionContainer {
+    background-image: url("/images/FrameTwoInside.png");
+    background-size: cover;
+  }
+  .threeSectionContainer {
+    background-image: url("/images/FrameThree.png");
+    background-size: cover;
+    height: 760px !important;
+  }
+  .fourSectionContainer {
+    background-image: url("/images/FrameFour.png");
+    background-size: cover;
+    height: 100% !important;
+    padding-bottom: 100px;
+  }
+
+  .fourSectionContainer .containerAbsolute {
+    position: relative;
+  }
+
+  .fourSectionContainer .imageContainer {
+    margin-top: 0px;
+  }
+
+  .fiveSectionContainer {
+    background-image: url("/images/FrameFive.png");
+    background-size: cover;
+  }
+
+  .sixSectionContainer {
+    background-image: url("/images/FrameSix.png");
+    background-size: cover;
+  }
+  .sevenSectionContainer {
+    background-image: url("/images/FrameSevenInside.png");
+    background-size: cover;
+  }
+  .buttonContainer button {
+    width: 255px;
+  }
+}
+
+@media (max-width: 940px) {
+  .firstSectionContainer {
+    background-color: white;
+  }
+  .FirstimageContainer {
+    background-image: url(/images/withoutMark.png) !important;
+    background-size: cover;
+    background-position: center;
+  }
+  .secondSectionContainer {
+    background-image: url("/images/FrameTwoInside.png");
+    background-size: cover;
+    margin-top: 0;
+    height: 1200px !important;
+  }
+  .threeSectionContainer {
+    background-image: url("/images/FrameThree.png");
+    background-size: cover;
+  }
+
+  .unmatchedServicesContainer {
+    padding-bottom: 100px;
+  }
+
+  .threeSectionContainer button {
+    bottom: 0;
+    top: auto !important;
+  }
+
+  .fourSectionContainer {
+    background-image: url("/images/FrameFour.png");
+    background-size: cover;
+    height: 100% !important;
+    padding-bottom: 100px;
+  }
+
+  .fourSectionContainer .containerAbsolute {
+    padding-bottom: 100px;
+    /* margin-top: 100px; */
+  }
+
+  .fourSectionContainer .containerAbsolute {
+    position: relative;
+  }
+
+  .fiveSectionContainer {
+    background-image: url("/images/FrameFive.png");
+    background-size: cover;
+  }
+  .sixSectionContainer {
+    background-image: url("/images/FrameSix.png");
+    background-size: cover;
+    height: 780px !important;
+  }
+  .sevenSectionContainer {
+    background-image: url("/images/FrameSevenInside.png");
+    background-size: cover;
+  }
+  .serviceCardContainer {
+    position: absolute;
+    width: 100%;
+    /* top: calc(784px - 108px); */
+    top: 784px;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 500px;
+  }
+  .aboutUsParagraphContainer {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: -50px;
+  }
+  .imageContainer {
+    margin-top: 0;
+  }
+  .clientCardContainer {
+    flex-direction: column-reverse;
+  }
+  .clientParagraphContainer {
+    width: 80%;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .clientButton {
+    position: absolute;
+    bottom: -100px;
+  }
+
+  .contactContainer {
+    position: relative;
+    color: white;
+    width: auto;
+    max-width: 416px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 404px;
+    top: 190px;
+    left: 0;
+    padding: 0 10px;
+    text-align: left;
+  }
+
+  .contactContainer h1 {
+    width: auto;
+  }
+
+  .buttonContainer {
+    display: flex;
+    gap: 64px;
+    flex-direction: column;
+  }
+
+  .buttonContainer button {
+    width: 255px;
+  }
+}
+
+@media (max-width: 759px) {
+  .threeSectionContainer {
+    height: 1300px !important;
+  }
+  .threeSectionContainer button {
+    top: 100px;
+  }
+}
