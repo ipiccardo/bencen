@@ -5,6 +5,7 @@ import FacebookIcon from "./Icons/FacebookIcon";
 import HomeIcon from "./Icons/HomeIcon";
 import InstagramIcon from "./Icons/InstagramIcon";
 import LinkedinIcon from "./Icons/LinkedinIcon";
+import LinkedinIconBlue from "./Icons/LinkedinIconBlue";
 import LogoIcon from "./Icons/LogoIcon";
 import HamburguerIcon from "./Icons/HamburguerIcon";
 
@@ -16,6 +17,8 @@ const Icons = (name: string, size: number) => {
       return <FacebookIcon size={size} />;
     case "instagram":
       return <InstagramIcon size={size} />;
+    case "linkedinBlue":
+      return <LinkedinIconBlue size={size} />;
     case "linkedin":
       return <LinkedinIcon size={size} />;
     case "logo":

@@ -4,6 +4,7 @@ export type IconProps = {
   | "facebook"
   | "logo"
   | "instagram"
+  | "linkedinBlue"
   | "linkedin"
   | "language"
   | "languageEn"

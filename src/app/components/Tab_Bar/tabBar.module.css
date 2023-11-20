@@ -10,6 +10,11 @@
     display: flex;
 }
 
+.tabLeft {
+    width: 480px;
+    height: 672px;
+}
+
 .boxLeftClick {
     height: 64px;
     width: 480px;
@@ -25,6 +30,11 @@
     align-items: center;
 }
 
+.tabRight {
+    width: 480px;
+    height: 672px;
+}
+
 .boxRight {
     height: 64px;
     width: 480px;
@@ -33,11 +43,19 @@
     border-color: var(--gray-color);
     border-radius: 0px 16px 0px 0px;
     border-top: none;
-    border-right: none;
+    border-left: none;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.ul {
+    list-style: none;
+}
+
+.ulBoxRight {
+    display: none;
 }
 
 .headerLeftClick {
@@ -56,6 +74,58 @@
     font-weight: var(--h-1-font-weight);
 }
 
+.button {
+    width: 160px;
+    height: 48px;
+    margin-top: 1rem;
+}
+
+.buttonSelect {
+    width: 160px;
+    height: 32px;
+    margin-top: 1rem;
+}
+
+.buttonSelectHide {
+    display: none;
+}
+
+.cvNameContainer {
+    display: flex;
+    list-style: none;
+    gap: 4px;
+}
+
+.cvName {
+    height: 32px;
+    margin-top: 1rem;
+    font-size: var(--normal-small-font-size);
+    font-style: var(--small-text-italic-font-style);
+    text-size-adjust:calc();
+    display: inline-flex;
+    padding: 0 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color:rgb(218, 213, 213);
+    border: 2px dotted darkgray;
+    border-radius: 4px;
+}
+
+.buttonApply {
+    width: 160px;
+    height: 48px;
+    margin-top: 2rem;
+}
+
+.successMessage {
+    margin-top: 1rem;
+}
+
+.successCv {
+    margin-top: 2rem;
+}
+
 /* Tab Bar - Click State */
 .boxLeft{
     background-color: var(--white-color);
@@ -71,4 +141,8 @@
 
 .headerRightClick {
     color: var(--white-color);
+}
+
+.ulBoxLeft {
+    display: none;
 }
