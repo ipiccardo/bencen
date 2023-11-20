@@ -7,19 +7,22 @@ import classes from "./ProjectSliderCard.module.css";
 const projects = [
   {
     id: 1,
-    imageSrc: "/img/project1.jpg",
+    imageSrc: "",
+    // imageSrc: "/img/project1.jpg",
     projectName: "Proyecto 1",
     projectYear: "2022",
   },
   {
     id: 2,
-    imageSrc: "/img/project2.jpg",
+    imageSrc: "",
+    // imageSrc: "/img/project2.jpg",
     projectName: "Proyecto 2",
     projectYear: "2023",
   },
   {
     id: 3,
-    imageSrc: "/img/project3.jpg",
+    imageSrc: "",
+    // imageSrc: "/img/project3.jpg",
     projectName: "Proyecto 3",
     projectYear: "2024",
   },
