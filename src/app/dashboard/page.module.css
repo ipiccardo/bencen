@@ -290,6 +290,10 @@
   padding-bottom: 100px;
 }
 
+.sixSectionContainer {
+  height: 760px !important;
+}
+
 @media (max-width: 1217px) {
   .unmatchedServicesContainer {
     display: flex;
@@ -365,6 +369,7 @@
   .firstSectionContainer {
     background-color: white;
   }
+
   .FirstimageContainer {
     background-image: url(/images/withoutMark.png) !important;
     background-size: cover;
@@ -399,7 +404,6 @@
 
   .fourSectionContainer .containerAbsolute {
     padding-bottom: 100px;
-    /* margin-top: 100px; */
   }
 
   .fourSectionContainer .containerAbsolute {
@@ -409,6 +413,8 @@
   .fiveSectionContainer {
     background-image: url("/images/FrameFive.png");
     background-size: cover;
+    background-color: black !important;
+    background-image: none;
   }
   .sixSectionContainer {
     background-image: url("/images/FrameSix.png");
@@ -422,7 +428,6 @@
   .serviceCardContainer {
     position: absolute;
     width: 100%;
-    /* top: calc(784px - 108px); */
     top: 784px;
     z-index: 1;
     left: 50%;
@@ -470,7 +475,7 @@
     height: 404px;
     top: 190px;
     left: 0;
-    padding: 0 10px;
+    padding: 0 1rem;
     text-align: left;
   }
 
@@ -480,7 +485,7 @@
 
   .buttonContainer {
     display: flex;
-    gap: 64px;
+    gap: 10px;
     flex-direction: column;
   }
 
