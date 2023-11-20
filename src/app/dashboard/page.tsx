@@ -45,7 +45,6 @@ const HomePage = () => {
 
   return (
     <>
-
       <div className={classes.homePageContainer}>
         <div className={classes.headerContainer}>
           <Header />
@@ -53,13 +52,9 @@ const HomePage = () => {
         <div className={classes.firstSectionContainer}>
           <section>
             <div className={`${classes.FirstimageContainer} ${classes.widthImage}`}>
-              {!pantallaMediana ?
-                <div className={classes.show}>
-                  <Image width={firtAndLastImage.width} height={firtAndLastImage.heigth} src={"/images/withoutMark.png"} alt={""} />
-                </div>
-                :
-                <></>
-              }
+              <div className={classes.show}>
+                <Image width={firtAndLastImage.width} height={firtAndLastImage.heigth} src={"/images/withoutMark.png"} alt={""} />
+              </div>
             </div>
           </section>
           <div className={classes.serviceCardContainer}>
@@ -84,15 +79,9 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              {!pantallaMediana ?
-                <div className={classes.show}>
-                  <Image width={otherImages.width} height={otherImages.heigth} src={"/images/FrameTwoInside.png"} alt={""} />
-                </div>
-                :
-                <></>
-                // <Image src={"/images/FrameTwoInside.png"} alt={""} layout="fill" objectFit="cover" />
-              }
-
+              <div className={classes.show}>
+                <Image width={otherImages.width} height={otherImages.heigth} src={"/images/FrameTwoInside.png"} alt={""} />
+              </div>
             </div>
           </section>
           <section className={classes.threeSectionContainer}>
@@ -106,14 +95,9 @@ const HomePage = () => {
                   <UnmatchedCards />
                 </div>
               </div>
-              {!pantallaMediana ?
-                <div className={classes.show}>
-                  <Image width={1200} height={960} src={"/images/FrameThree.png"} alt={""} />
-                </div>
-                :
-                <></>
-                // <Image src={"/images/FrameThree.png"} alt={""} layout="fill" objectFit="cover" />
-              }
+              <div className={classes.show}>
+                <Image width={1200} height={960} src={"/images/FrameThree.png"} alt={""} />
+              </div>
             </div>
           </section>
           <section className={classes.fourSectionContainer}>
@@ -131,14 +115,9 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              {!pantallaMediana ?
-                <div className={classes.show}>
-                  <Image width={otherImages.width} height={720} src={"/images/FrameFour.png"} alt={""} />
-                </div>
-                :
-                <></>
-                // <Image src={"/images/FrameFour.png"} alt={""} layout="fill" objectFit="cover" />
-              }
+              <div className={classes.show}>
+                <Image width={otherImages.width} height={720} src={"/images/FrameFour.png"} alt={""} />
+              </div>
             </div>
           </section>
           <section className={classes.fiveSectionContainer}>
@@ -154,33 +133,22 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              {!pantallaMediana ?
-                <div className={classes.show} >
-                  <Image width={otherImages.width + 2} height={720} src={"/images/FrameFive.png"} alt={""} />
-                </div>
-                :
-                <></>
-                // <Image src={"/images/FrameFive.png"} alt={""} layout="fill" objectFit="cover" />
-              }
+              <div className={classes.show} >
+                <Image width={otherImages.width + 2} height={720} src={"/images/FrameFive.png"} alt={""} />
+              </div>
             </div>
           </section>
           <section className={classes.sixSectionContainer}>
             <div className={`${classes.imageContainer} ${classes.otherImage}`}>
               <div className={classes.containerAbsolute}>
-
                 <div className={classes.newsContainer}>
                   <h1>LATEST NEWS</h1>
                   <NewsCard />
                 </div>
               </div>
-              {!pantallaMediana ?
-                <div className={classes.show}>
-                  <Image width={otherImages.width} height={720} src={"/images/FrameSix.png"} alt={""} />
-                </div>
-                :
-                <></>
-                // <Image src={"/images/FrameSix.png"} alt={""} layout="fill" objectFit="cover" />
-              }
+              <div className={classes.show}>
+                <Image width={otherImages.width} height={720} src={"/images/FrameSix.png"} alt={""} />
+              </div>
             </div>
           </section>
         </div>

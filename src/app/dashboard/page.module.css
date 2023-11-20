@@ -131,6 +131,10 @@
   top: 90px;
 }
 
+.threeSectionContainer .show {
+  margin-top: 80px;
+}
+
 .threeSectionContainer button {
   height: 56px;
   background-color: #f99005;
