@@ -1,7 +1,7 @@
-.cardsContainer {
+/* .cardsContainer {
   display: flex;
   gap: 32px;
-}
+} */
 
 .cardContainer {
   display: flex;
@@ -37,23 +37,15 @@
   margin-top: 80px;
 }
 
-.showSlider {
-  display: none;
+.sliderContainer button + div {
+  height: 466px;
 }
 
-.sliderContainer {
-  display: none;
-}
-
-.hideSlider {
-  display: flex;
-  gap: 10px;
+.sliderContainer button + div div ~ div {
+  margin: 0 10px;
 }
 
 @media (max-width: 1000px) {
-  .hideSlider {
-    display: none;
-  }
   .sliderContainer {
     display: block;
     max-width: 310px;
@@ -69,10 +61,13 @@
   .sliderContainer button::before {
     color: grey;
   }
+  .sliderContainer button + div div ~ div {
+    margin: 0;
+  }
 }
 
 @media (max-width: 400px) {
   .sliderContainer div:first-child {
-    width: 250px;
+    min-width: 250px;
   }
 }

@@ -71,7 +71,7 @@ const Header = () => {
                 </div>
             </div>
             <div className={classes.header__hamburguerMenu}>
-                <div>
+                <div className={`${showOverlay && classes.bencenIconContainer}`}>
                     <IconWithImages name='logo' size={150} />
                 </div>
                 <div className={classes.header__hamburguerMenu__toggleButton} onClick={handleSideBar}>

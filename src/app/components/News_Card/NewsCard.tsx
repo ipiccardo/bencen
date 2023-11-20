@@ -11,17 +11,20 @@ const NewsCard = (): JSX.Element => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
-
-    const hideScreenSliderSettings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 1,
-    }
+        slidesToScroll: 3,
+        responsive: [
+            {
+                breakpoint: 1000,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+                },
+            },
+        ]
+    };
 
     return (
         <>
@@ -52,33 +55,15 @@ const NewsCard = (): JSX.Element => {
                             </div>
                             <button>READ MORE</button>
                         </div>
+                        <div className={classes.cardContainer}>
+                            <div></div>
+                            <div>
+                                <h2>TÍTULO</h2>
+                                <p>Fecha xx/xx/xx</p>
+                            </div>
+                            <button>READ MORE</button>
+                        </div>
                     </Slider>
-                </div>
-                <div className={classes.hideSlider}>
-                    <div className={classes.cardContainer}>
-                        <div></div>
-                        <div>
-                            <h2>TÍTULO</h2>
-                            <p>Fecha xx/xx/xx</p>
-                        </div>
-                        <button>READ MORE</button>
-                    </div>
-                    <div className={classes.cardContainer}>
-                        <div></div>
-                        <div>
-                            <h2>TÍTULO</h2>
-                            <p>Fecha xx/xx/xx</p>
-                        </div>
-                        <button>READ MORE</button>
-                    </div>
-                    <div className={classes.cardContainer}>
-                        <div></div>
-                        <div>
-                            <h2>TÍTULO</h2>
-                            <p>Fecha xx/xx/xx</p>
-                        </div>
-                        <button>READ MORE</button>
-                    </div>
                 </div>
             </div>
         </>
