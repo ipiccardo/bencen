@@ -23,14 +23,14 @@ const HomePage = () => {
     setPantallaMediana(window.innerWidth < 768)
     const screenWidth = window.innerWidth;
 
-    if (screenWidth > 1400) {
+    if (screenWidth > 1200) {
       setPantallaMediana(false)
-      setFirstAndLastImage({ width: 1344, heigth: 888 });
-      setOtherImages({ width: 1344, heigth: 960 })
+      setFirstAndLastImage({ width: 1200, heigth: 888 });
+      setOtherImages({ width: 1200, heigth: 960 })
     } else {
       setPantallaMediana(true)
-      setFirstAndLastImage({ width: 938, heigth: 888 });
-      setOtherImages({ width: 938, heigth: 960 })
+      setFirstAndLastImage({ width: 1200, heigth: 888 });
+      setOtherImages({ width: 1200, heigth: 960 })
     }
   };
   useEffect(() => {
@@ -108,7 +108,7 @@ const HomePage = () => {
               </div>
               {!pantallaMediana ?
                 <div className={classes.show}>
-                  <Image width={1346} height={960} src={"/images/FrameThree.png"} alt={""} />
+                  <Image width={1200} height={960} src={"/images/FrameThree.png"} alt={""} />
                 </div>
                 :
                 <></>
