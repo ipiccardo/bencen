@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import classes from "./button.module.css";
 import Link from "next/link";
@@ -11,7 +13,14 @@ interface Props {
   style?: any;
 }
 
-const Button = ({ href, classNameButton, classNameContent, text, onClick, style }: Props): JSX.Element => {
+const Button = ({
+  href,
+  classNameButton,
+  classNameContent,
+  text,
+  onClick,
+  style,
+}: Props): JSX.Element => {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     if (onClick) {
       onClick(); // Execute the provided onClick function
@@ -21,8 +30,15 @@ const Button = ({ href, classNameButton, classNameContent, text, onClick, style 
 
   return (
     <Link href={href}>
-      <button type="button" className={`${classes.button} ${classNameButton || ""}`} onClick={handleClick} style={style}>
-        <div className={`${classes.text} ${classNameContent || ""}`}>{text}</div>
+      <button
+        type="button"
+        className={`${classes.button} ${classNameButton || ""}`}
+        onClick={handleClick}
+        style={style}
+      >
+        <div className={`${classes.text} ${classNameContent || ""}`}>
+          {text}
+        </div>
       </button>
     </Link>
   );
