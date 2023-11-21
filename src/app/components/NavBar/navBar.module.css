@@ -97,7 +97,7 @@
 
 /* NavBar en HEADER */
 
-@media (max-width: 800px) {
+@media (max-width: 880px) {
   .navBarHeader {
     flex-direction: column;
     align-items: flex-end;
