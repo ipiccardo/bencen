@@ -53,7 +53,7 @@ const HomePage = () => {
         <div className={classes.firstSectionContainer}>
           <section>
             <div className={`${classes.FirstimageContainer} ${classes.widthImage}`}>
-              <div className={classes.show}>
+              <div className={classes.firstImageShow}>
                 <Image width={firtAndLastImage.width} height={firtAndLastImage.heigth} src={"/images/withoutMark.png"} alt={""} />
               </div>
             </div>
