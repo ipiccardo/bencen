@@ -27,9 +27,3 @@
     width: 300px;
   }
 }
-
-@media (min-width: 940px) {
-  .aboutCardContainer {
-    margin-top: 350px;
-  }
-}

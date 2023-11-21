@@ -120,7 +120,19 @@
   color: grey;
 }
 
+.showSlider {
+  display: none;
+}
+
 @media (max-width: 1000px) {
+  .hideSlider {
+    display: none;
+  }
+
+  .showSlider {
+    display: block;
+  }
+
   .serviceCard {
     height: 299px;
   }

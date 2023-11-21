@@ -45,21 +45,28 @@ const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
 
 const ServiceCards = (): JSX.Element => {
 
-  const isMobile = window.innerWidth < 1000;
+
+  // const isMobile = window.innerWidth < 1000;
 
   // Configuración del slider
   const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: isMobile ? 1 : 4,
-    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ]
   };
 
 
   return (
     <div>
-      {isMobile ? (
+      <div className={classes.showSlider}>
         <div className={classes.sliderContainer}>
           <Slider {...sliderSettings}>
             {Object.keys(SERVICES).map((key) => {
@@ -72,7 +79,8 @@ const ServiceCards = (): JSX.Element => {
             })}
           </Slider>
         </div>
-      ) : (
+      </div>
+      <div className={classes.hideSlider}>
         <ul className={classes.serviceCards}>
           {Object.keys(SERVICES).map((key) => {
             const [imageName, header, content] = SERVICES[key];
@@ -83,7 +91,7 @@ const ServiceCards = (): JSX.Element => {
             );
           })}
         </ul>
-      )}
+      </div>
     </div>
   )
 };
