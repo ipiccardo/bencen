@@ -11,6 +11,7 @@ import Image from "next/image";
 import AboutUsCard from '../components/aboutUs_Card/AboutUsCard'
 import ClientCard from "../components/Clients_Card/ClientCard";
 import NewsCard from "../components/News_Card/NewsCard";
+import Button from "../components/Ui/Button";
 
 
 const HomePage = () => {
@@ -75,7 +76,11 @@ const HomePage = () => {
                       innovation, quality, and client aspirations. Join us in shaping a world where vision meets
                       reality.
                     </p>
-                    <button className={classes.aboutUsButton}>DISCOVER MORE ABOUT US</button>
+                    <Button
+                      href={""}
+                      text="DISCOVER MORE ABOUT US"
+                      classNameContent="padding-20"
+                    />
                   </div>
                 </div>
               </div>
@@ -90,7 +95,12 @@ const HomePage = () => {
                 <div className={classes.unmatchedServicesContainer}>
                   <div className={classes.unmatchedServicesParagraphContainer}>
                     <h1>UNMATCHED SERVICES</h1>
-                    <button>GET FREE QUOTATION</button>
+                    <Button
+                      href={""}
+                      text="GET FREE QUOTATION"
+                      classNameContent="padding-10"
+                    />
+
                   </div>
                   <UnmatchedCards />
                 </div>
@@ -111,7 +121,11 @@ const HomePage = () => {
 
                     </p>
                     <p>Their satisfaction is a testament to our expertise, reliability, and a deep-rooted commitment to their success.</p>
-                    <button className={classes.clientButton}>SEE ALL PROJECTS</button>
+                    <Button
+                      href={""}
+                      text="SEE ALL PROJECTS"
+                      classNameContent="padding-20"
+                    />
                   </div>
                 </div>
               </div>
@@ -128,8 +142,16 @@ const HomePage = () => {
                   <p>Have questions or interested in collaborating with us? We'd love to hear from you! Our team is ready to assist you.</p>
                   <p>Click the 'Contact Us' button below to get in touch. Whether you're looking for information, exploring partnership opportunities, or want to join our team, we're here to help. Your inquiry is important to us, and we'll respond promptly. Let's connect and make great things happen together!</p>
                   <div className={classes.buttonContainer}>
-                    <button className={classes.aboutUsButton}>CONTACT US</button>
-                    <button className={classes.aboutUsButton}>WORK WITH US</button>
+                    <Button
+                      href={""}
+                      text="CONTACT US"
+                      classNameContent="padding-10"
+                    />
+                    <Button
+                      href={""}
+                      text="WORK WITH US"
+                      classNameContent="padding-10"
+                    />
                   </div>
                 </div>
               </div>

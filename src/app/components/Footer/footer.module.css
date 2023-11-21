@@ -1,6 +1,7 @@
 .quotation__container {
   width: 100%;
   background-color: var(--black-color);
+  margin-top: -10px;
 }
 
 .footer,

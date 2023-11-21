@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.homePageContainer button {
+  margin: 10px 0;
+}
+
 .homePageContainer section {
   height: 960px;
   overflow: hidden;
@@ -149,13 +153,11 @@
 
 .threeSectionContainer button {
   height: 56px;
-  background-color: #f99005;
-  color: #ffffff;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 700;
   border: 0;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .unmatchedServicesContainer {
@@ -170,7 +172,7 @@
   margin-top: 20px;
 }
 
-.unmatchedServicesParagraohContainer h1 {
+.unmatchedServicesParagraphContainer h1 {
   width: 241px;
 }
 
@@ -193,8 +195,6 @@
 .aboutUsButton {
   height: 48px;
   width: 256px;
-  background-color: #f99005;
-  color: white;
   border: 0px;
   margin-top: 33px;
 }
@@ -220,8 +220,6 @@
 .clientButton {
   height: 48px;
   width: 256px;
-  background-color: #f99005;
-  color: white;
   border: 0px;
   margin-top: 33px;
 }
@@ -294,6 +292,10 @@
   height: 760px !important;
 }
 
+.threeSectionContainer {
+  padding-bottom: 20px;
+}
+
 @media (max-width: 1217px) {
   .unmatchedServicesContainer {
     display: flex;
@@ -306,11 +308,16 @@
     max-width: 100%;
     height: auto;
   }
+
   .threeSectionContainer button {
     position: absolute;
     top: 600px;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+  .unmatchedServicesParagraphContainer h1 {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -331,6 +338,9 @@
     background-image: url("/images/FrameThree.png");
     background-size: cover;
     height: 760px !important;
+  }
+  .threeSectionContainer {
+    padding-bottom: 0px;
   }
   .fourSectionContainer {
     background-image: url("/images/FrameFour.png");
@@ -403,7 +413,7 @@
     background-image: url("/images/FrameFour.png");
     background-size: cover;
     height: 100% !important;
-    padding-bottom: 100px;
+    padding-bottom: 0;
   }
 
   .fourSectionContainer .containerAbsolute {
@@ -452,6 +462,7 @@
   }
   .clientCardContainer {
     flex-direction: column-reverse;
+    gap: 32px;
   }
   .clientParagraphContainer {
     width: 80%;
@@ -460,6 +471,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .clientParagraphContainer h1 {
+    text-wrap: balance;
+    text-align: center;
   }
 
   .clientButton {
