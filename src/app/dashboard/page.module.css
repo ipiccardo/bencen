@@ -55,7 +55,7 @@
   width: 100%;
   height: 100%;
   background-color: black;
-  /* background-image: url("/images/withoutMark.png"); */
+  /* background-image: url("/images/FrameOneWithoutMark.png"); */
   background-size: cover;
   background-position: center;
 }
@@ -153,21 +153,6 @@
 
 .firstImageShow {
   margin-top: 0px;
-}
-
-.firstImageShow::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  pointer-events: none;
 }
 
 .threeSectionContainer button {
@@ -348,24 +333,9 @@
     display: none;
   }
   .FirstimageContainer {
-    background-image: url(/images/withoutMark.png) !important;
+    background-image: url(/images/FrameOneWithoutMark.png) !important;
     background-size: cover;
     background-position: center;
-  }
-
-  .FirstimageContainer::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    pointer-events: none;
   }
 
   .secondSectionContainer {
@@ -423,7 +393,7 @@
   }
 
   .FirstimageContainer {
-    background-image: url(/images/withoutMark.png) !important;
+    background-image: url(/images/FrameOneWithoutMark.png) !important;
     background-size: cover;
     background-position: center;
   }
