@@ -2,8 +2,8 @@ type Object = Record<string, any>;
 
 // Home:
 export const NAVBAR: Object = {
-  english: ["About Us", "Services", "Projects", "News", "Contact"],
-  spanish: ['Sobre Nosotros', 'Servicios', 'Proyectos', 'Noticias', 'Contacto'],
+  english: ["ABOUT US", "SERVICES", "PROJECTS", "NEWS", "CONTACT"],
+  spanish: ['SOBRE NOSOTROS', 'SERVICIOS', 'PROYECTOS', 'NOTICIAS', 'CONTACTO'],
 };
 
 export const BUILDING_TOMORROW: Object = {
@@ -60,16 +60,16 @@ export const UNLOCKING_POSSIBILITES: Object = {
 }
 
 // Projects:
-export const EXPLORE_OUR_PORTFOLIO : Object = {
+export const EXPLORE_OUR_PORTFOLIO: Object = {
   english: ['Explore Our Portfolio', 'We pride ourselves on a rich and varied portfolio that showcases our expertise in the construction industry. With a keen focus on quality, time efficiency, scope, and cost-effectiveness, we tailor each project to align with the unique needs of our clients. Our projects are categorized into four core domains:', 'Browse through our projects and envision what we can create together!.']
 }
 
-export const CATEGORIES : Object = {
+export const CATEGORIES: Object = {
   english: ['CIVIL WORKS', 'ARCHITECTURE', 'ENVIRONMENT', 'SPECIAL PROJECTS']
 }
 
 // Contact:
-export const CONNECT_WITH_US : Object = {
+export const CONNECT_WITH_US: Object = {
   english: ['Connect With Us', 'At our core, we believe our most valuable asset is our people. Our dedicated and skilled team forms the bedrock of our success in delivering exceptional projects. ', "If you're passionate about construction, architecture, the environment, or tackling special projects, we invite you to share your expertise with us.", "Feel free to reach out using the contact form or explore opportunities to work with us by uploading your resume. Let's craft excellence together. Get in touch today!."]
 }
 
@@ -80,11 +80,11 @@ export const CONTACT: Object = {
   socials: ['socials', 'SOCIAL MEDIA', '']
 };
 
-export const TAB_BAR : Object = {
+export const TAB_BAR: Object = {
   english: ['CONTACT US', 'Send us a message and we will respond as soon as possible.', 'Full Name', 'Phone Number', 'Email', 'Message', 'SEND', 'Congratulations, your message was sent successfully!.', 'WORK WITH US', 'Share your resume with our Human Resources Team.', 'Work Area', 'Upload your CV:', 'Select File', 'APPLY', 'Congratulations, your CV was sent successfully!.']
 }
 
-export const WORK_AREA : Object = {
+export const WORK_AREA: Object = {
   english: ['Accountant', 'Architecture', 'Engineering', 'Human Resources', 'Safety']
 }
 
