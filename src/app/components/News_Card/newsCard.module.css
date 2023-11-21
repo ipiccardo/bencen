@@ -45,6 +45,10 @@
   margin: 0 10px;
 }
 
+.sliderContainer button::before {
+  color: black;
+}
+
 @media (max-width: 1000px) {
   .sliderContainer {
     display: block;
