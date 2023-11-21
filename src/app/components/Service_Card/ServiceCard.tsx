@@ -21,9 +21,8 @@ const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
 
   return (
     <div
-      className={`${classes.serviceCard} ${hover ? classes.hover : ""}`}
-    // onMouseEnter={() => setHover(true)}
-    // onMouseLeave={() => setHover(false)}
+      className={`${classes.serviceCard}`}
+
     >
       <div className={classes.group}>
         <Image
@@ -44,9 +43,6 @@ const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
 };
 
 const ServiceCards = (): JSX.Element => {
-
-
-  // const isMobile = window.innerWidth < 1000;
 
   // Configuración del slider
   const sliderSettings = {

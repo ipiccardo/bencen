@@ -5,11 +5,15 @@
   list-style: none;
   padding: 0 1rem;
   align-items: center;
-  /* max-width: 1200px; */
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in, opacity 0.3s ease-in,
+    color 0.3s ease-in;
+  height: 80px;
+  padding: 0 100px;
 }
 
 .header:hover {
@@ -20,6 +24,7 @@
   left: 0;
   right: 0;
   padding: 0 100px;
+  height: 80px;
 }
 
 .header:hover a {
@@ -43,6 +48,8 @@
 
 .header a {
   color: #ffffff;
+  transition: background-color 0.3s ease-in, opacity 0.3s ease-in,
+    color 0.3s ease-in;
 }
 
 .header a:visited {
@@ -53,7 +60,7 @@
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 880px) {
   .header__hamburguerMenu {
     display: flex;
     justify-content: space-between;

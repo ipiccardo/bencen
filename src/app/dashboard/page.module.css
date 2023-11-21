@@ -101,8 +101,8 @@
   justify-content: center; */
   position: absolute;
   width: 100%;
-  top: calc(784px - 108px);
-  z-index: 1;
+  top: calc(784px - 50px);
+  z-index: 2;
 }
 
 .ThirdSectionContainer {
