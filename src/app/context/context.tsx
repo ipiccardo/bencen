@@ -16,7 +16,7 @@ interface storeProps {
 export const store = createContext<storeProps | null>(null);
 
 
-export default function storeContextProvider({ children }: storeContextProvider) {
+export default function StoreContextProvider({ children }: storeContextProvider) {
     const [language, setLanguage] = useState('english')
 
     return (

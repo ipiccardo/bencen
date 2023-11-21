@@ -54,7 +54,7 @@ const HomePage = () => {
           <section>
             <div className={`${classes.FirstimageContainer} ${classes.widthImage}`}>
               <div className={classes.firstImageShow}>
-                <Image width={firtAndLastImage.width} height={firtAndLastImage.heigth} src={"/images/withoutMark.png"} alt={""} />
+                <Image width={firtAndLastImage.width} height={firtAndLastImage.heigth} src={"/images/FrameOneWithoutMark.png"} alt={""} />
               </div>
             </div>
           </section>
@@ -139,8 +139,8 @@ const HomePage = () => {
               <div className={classes.containerAbsolute}>
                 <div className={classes.contactContainer}>
                   <h1>CONTACT</h1>
-                  <p>Have questions or interested in collaborating with us? We'd love to hear from you! Our team is ready to assist you.</p>
-                  <p>Click the 'Contact Us' button below to get in touch. Whether you're looking for information, exploring partnership opportunities, or want to join our team, we're here to help. Your inquiry is important to us, and we'll respond promptly. Let's connect and make great things happen together!</p>
+                  <p>Have questions or interested in collaborating with us? We{`'`}d love to hear from you! Our team is ready to assist you.</p>
+                  <p>Click the {`'`}Contact Us{`'`} button below to get in touch. Whether you{`'`}re looking for information, exploring partnership opportunities, or want to join our team, we{`'`}re here to help. Your inquiry is important to us, and we{`'`}ll respond promptly. Let{`'`}s connect and make great things happen together!</p>
                   <div className={classes.buttonContainer}>
                     <Button
                       href={""}

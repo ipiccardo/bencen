@@ -13,8 +13,9 @@ type NavBarProps = {
   linkTitles: string[];
   father?: string;
   withLanguage?: string
-  handleSideBar?: () => void
-  handleChangeLanguage?: () => void
+  handleSideBar?: any
+  handleChangeLanguage?: any
+  children?: React.ReactNode;
 };
 
 const NavBar = ({
@@ -25,6 +26,7 @@ const NavBar = ({
   withLanguage,
   handleSideBar,
   handleChangeLanguage,
+  children
 }: NavBarProps) => {
   const pathName = usePathname();
 
