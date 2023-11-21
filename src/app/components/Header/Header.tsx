@@ -37,7 +37,7 @@ const Header = () => {
         if (openSideBar) {
             setOpenSideBar(false)
         }
-    }, [pathName, openSideBar])
+    }, [pathName])
 
     const handleChangeLanguage = () => {
         setLanguage(language === 'spanish' ? 'english' : 'spanish')
