@@ -181,7 +181,7 @@
   position: relative;
   gap: 82px;
   flex-wrap: wrap;
-  margin-top: 300px;
+  margin-top: 350px;
 }
 
 .aboutUsParagraphContainer {
@@ -366,6 +366,10 @@
 }
 
 @media (max-width: 940px) {
+  .aboutCardContainer {
+    margin-top: 300px;
+  }
+
   .firstSectionContainer {
     background-color: white;
   }
@@ -500,5 +504,11 @@
   }
   .threeSectionContainer button {
     top: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  .aboutCardContainer {
+    margin-top: 270px;
   }
 }
