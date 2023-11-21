@@ -12,6 +12,28 @@
   z-index: 1;
 }
 
+.header:hover {
+  background-color: white;
+  opacity: 0.7;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0 100px;
+}
+
+.header:hover a {
+  color: black;
+}
+
+.header:hover a:hover {
+  color: var(--first-color);
+}
+
+.header:hover a:visited {
+  text-decoration: underline;
+}
+
 .header div + div {
   display: flex;
   justify-content: center;
