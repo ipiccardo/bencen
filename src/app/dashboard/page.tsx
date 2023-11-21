@@ -8,7 +8,7 @@ import UnmatchedCards from "../components/Unmatched_Card/UnmatchedCard";
 import classes from './page.module.css'
 import Header from "../components/Header/Header";
 import Image from "next/image";
-import AboutUsCard from "../components/AboutUs_Card/AboutUsCard";
+import AboutUsCard from '../components/aboutUs_Card/AboutUsCard'
 import ClientCard from "../components/Clients_Card/ClientCard";
 import NewsCard from "../components/News_Card/NewsCard";
 
