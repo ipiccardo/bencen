@@ -57,7 +57,17 @@ const HomePage = () => {
         <div className={classes.firstSectionContainer}>
           <section>
             <div className={`${classes.FirstimageContainer} ${classes.widthImage}`}>
+              <div className={classes.showHeaderParagraphContainer}>
+                <h1>Building Tomorrow, Today</h1>
+                <p>Welcome to Bencen, where innovation meets excellence in construction and services.</p>
+                <p>Our digital space is a portal into our values, built on a commitment to excellence and a relentless pursuit of surpassing expectations.</p>
+              </div>
               <div className={classes.firstImageShow}>
+                <div className={classes.headerParagraphContainer}>
+                  <h1>Building Tomorrow, Today</h1>
+                  <p>Welcome to Bencen, where innovation meets excellence in construction and services.</p>
+                  <p>Our digital space is a portal into our values, built on a commitment to excellence and a relentless pursuit of surpassing expectations.</p>
+                </div>
                 <Image width={firtAndLastImage.width} height={firtAndLastImage.heigth} src={"/images/FrameOneWithoutMark.png"} alt={""} />
               </div>
             </div>
