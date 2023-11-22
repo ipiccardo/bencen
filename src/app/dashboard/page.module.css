@@ -206,6 +206,10 @@
   line-height: 24px;
 }
 
+.aboutUsParagraphContainer p {
+  color: var(--gray-dark-color);
+}
+
 .aboutUsButton {
   height: 48px;
   width: 256px;
@@ -213,7 +217,7 @@
   margin-top: 33px;
 }
 
-/* CLIENT SECCION */
+/* CLIENT SECTION */
 
 .clientCardContainer {
   display: flex;
@@ -247,7 +251,6 @@
 /* CONTACT SECCION */
 .contactContainer {
   position: relative;
-  color: white;
   width: 416px;
   display: flex;
   flex-direction: column;
@@ -259,6 +262,7 @@
 }
 
 .contactContainer h1 {
+  color: var(--white-color);
   font-size: 36px;
   line-height: 1.5;
   font-weight: 800;
@@ -266,6 +270,7 @@
 }
 
 .contactContainer p {
+  color: var(--gray-light-color);
   line-height: 1.5;
   font-size: 16px;
   font-weight: 400;
@@ -286,7 +291,6 @@
 
 .buttonContainer {
   display: flex;
-  gap: 64px;
 }
 
 .buttonContainer button {
@@ -397,7 +401,6 @@
   }
   .showHeaderParagraphContainer {
     display: flex;
-    color: white;
     position: absolute;
     z-index: 2;
     top: 350px;
@@ -415,6 +418,14 @@
     border-radius: 10px;
   }
 }
+
+  .showHeaderParagraphContainer h1 {
+    color: var(--white-color);
+  }
+
+  .showHeaderParagraphContainer p {
+    color: var(--gray-light-color);
+  }
 
 @media (max-width: 940px) {
   .aboutCardContainer {
@@ -526,7 +537,6 @@
 
   .contactContainer {
     position: relative;
-    color: white;
     width: auto;
     max-width: 416px;
     display: flex;
@@ -541,7 +551,12 @@
   }
 
   .contactContainer h1 {
+    color: var(--white-color);
     width: auto;
+  }
+
+  .contactContainer p {
+    color: var(--gray-light-color);
   }
 
   .buttonContainer {
@@ -571,7 +586,6 @@
 }
 
 .headerParagraphContainer {
-  color: white;
   position: absolute;
   z-index: 2;
   top: 200px;
@@ -581,4 +595,16 @@
   line-height: 24px;
   font-size: 1rem;
   font-weight: 400;
+}
+
+.clientParagraphContainer p {
+  color: var(--gray-dark-color);
+}
+
+.headerParagraphContainer h1 {
+  color: var(--white-color);
+}
+
+.headerParagraphContainer p {
+  color: var(--gray-light-color);
 }

@@ -37,6 +37,10 @@
   margin-top: 80px;
 }
 
+.cardContainer p {
+  color: var(--gray-dark-color);
+}
+
 .sliderContainer button + div {
   height: 466px;
 }
