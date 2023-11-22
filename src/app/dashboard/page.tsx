@@ -1,8 +1,9 @@
 'use client'
 
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "../styles/globals.css";
+import BuildingTomorrow from '../components/Home_Hero/BuildingTomorrow';
 import ServiceCards from "../components/Service_Card/ServiceCard";
 import UnmatchedCards from "../components/Unmatched_Card/UnmatchedCard";
 import classes from './page.module.css'
@@ -12,13 +13,16 @@ import AboutUsCard from '../components/aboutUs_Card/AboutUsCard'
 import ClientCard from "../components/Clients_Card/ClientCard";
 import NewsCard from "../components/News_Card/NewsCard";
 import Button from "../components/Ui/Button";
+import { ABOUT_US, ABOUT_US_BUTTON, UNMATCHED_SERVICES_TITLE, UNMATCHED_SERVICES_BUTTON, PROJECTS, PROJECTS_BUTTON, CONTACT, CONTACT_BUTTON, NEWS } from "../utils/constants"
+import { store } from '@/app/context/context';
 
 
 const HomePage = () => {
-
   const [pantallaMediana, setPantallaMediana] = useState(false);
   const [firtAndLastImage, setFirstAndLastImage] = useState({ width: 1344, heigth: 888 })
   const [otherImages, setOtherImages] = useState({ width: 1296, heigth: 960 })
+  const context = useContext(store)
+  const { language, setLanguage }: any = context
 
   const handleResize = () => {
     setPantallaMediana(window.innerWidth < 768)
@@ -77,18 +81,12 @@ const HomePage = () => {
                 <div className={classes.aboutCardContainer}>
                   <AboutUsCard />
                   <div className={classes.aboutUsParagraphContainer}>
-                    <h1>ABOUT US</h1>
-                    <p>All Bencen, we are more than builders, we are creators of spaces that imspire.
-                      Our journey in the realm of construction has been fueled by a passion for excellence.
-                    </p>
-                    <p>
-                      From the drawing board to the final brick, we meticulously craft every project to reflect
-                      innovation, quality, and client aspirations. Join us in shaping a world where vision meets
-                      reality.
-                    </p>
+                    <h1>{ABOUT_US[language][0]}</h1>
+                    <p>{ABOUT_US[language][1]}</p>
+                    <p>{ABOUT_US[language][2]}</p>
                     <Button
                       href={""}
-                      text="DISCOVER MORE ABOUT US"
+                      text={ABOUT_US_BUTTON[language]}
                       classNameContent="padding-20"
                     />
                   </div>
@@ -104,10 +102,10 @@ const HomePage = () => {
               <div className={classes.containerAbsolute}>
                 <div className={classes.unmatchedServicesContainer}>
                   <div className={classes.unmatchedServicesParagraphContainer}>
-                    <h1>UNMATCHED SERVICES</h1>
+                    <h1>{UNMATCHED_SERVICES_TITLE[language]}</h1>
                     <Button
                       href={""}
-                      text="GET FREE QUOTATION"
+                      text={UNMATCHED_SERVICES_BUTTON[language]}
                       classNameContent="padding-10"
                     />
 
@@ -126,14 +124,12 @@ const HomePage = () => {
                 <div className={classes.clientCardContainer}>
                   <ClientCard />
                   <div className={classes.clientParagraphContainer}>
-                    <h1>SATISFIED CLIENTS WE SERVED FOR YEARS</h1>
-                    <p>Our commitment to excellence and unwavering dedication have enabled us to build lasting relationships with individuals and businesses alike. Our track record of delivering exceptional service has not only met but exceeded the expectations of our valued clients.
-
-                    </p>
-                    <p>Their satisfaction is a testament to our expertise, reliability, and a deep-rooted commitment to their success.</p>
+                    <h1>{PROJECTS[language][0]}</h1>
+                    <p>{PROJECTS[language][1]}</p>
+                    <p>{PROJECTS[language][2]}</p>
                     <Button
                       href={""}
-                      text="SEE ALL PROJECTS"
+                      text={PROJECTS_BUTTON[language]}
                       classNameContent="padding-20"
                     />
                   </div>
@@ -148,18 +144,18 @@ const HomePage = () => {
             <div className={`${classes.imageContainer} ${classes.otherImage}`}>
               <div className={classes.containerAbsolute}>
                 <div className={classes.contactContainer}>
-                  <h1>CONTACT</h1>
-                  <p>Have questions or interested in collaborating with us? We{`'`}d love to hear from you! Our team is ready to assist you.</p>
-                  <p>Click the {`'`}Contact Us{`'`} button below to get in touch. Whether you{`'`}re looking for information, exploring partnership opportunities, or want to join our team, we{`'`}re here to help. Your inquiry is important to us, and we{`'`}ll respond promptly. Let{`'`}s connect and make great things happen together!</p>
+                  <h1>{CONTACT[language][0]}</h1>
+                  <p>{CONTACT[language][1]}</p>
+                  <p>{CONTACT[language][2]}</p>
                   <div className={classes.buttonContainer}>
                     <Button
                       href={""}
-                      text="CONTACT US"
+                      text={CONTACT_BUTTON[language][0]}
                       classNameContent="padding-10"
                     />
                     <Button
                       href={""}
-                      text="WORK WITH US"
+                      text={CONTACT_BUTTON[language][1]}
                       classNameContent="padding-10"
                     />
                   </div>
@@ -174,7 +170,7 @@ const HomePage = () => {
             <div className={`${classes.imageContainer} ${classes.otherImage}`}>
               <div className={classes.containerAbsolute}>
                 <div className={classes.newsContainer}>
-                  <h1>LATEST NEWS</h1>
+                  <h1>{NEWS[language][0]}</h1>
                   <NewsCard />
                 </div>
               </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import classes from './contactCard.module.css';
-import { CONTACT } from '../../utils/constants';
+import { CONTACT_CARD } from '../../utils/constants';
 import Icon from "../Icon/Icon";
 
 interface Props {
@@ -43,8 +43,8 @@ const ContactCard = ({ imageName, header, content }: Props): JSX.Element => {
 const ContactCards = (): JSX.Element => {
   return (
     <ul className={classes.contactCards}>
-    {Object.keys(CONTACT).map((key) => {
-      const [imageName, header, content] = CONTACT[key];
+    {Object.keys(CONTACT_CARD).map((key) => {
+      const [imageName, header, content] = CONTACT_CARD[key];
       return (
        <li key={key}>
          <ContactCard imageName={imageName} header={header} content={content} />
