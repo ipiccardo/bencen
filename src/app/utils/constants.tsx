@@ -113,13 +113,51 @@ export const FOOTER: Object = {
 
 // About Us:
 export const DISCOVER_OUR_ROOTS: Object = {
-  english: ['Discover Our Roots', 'In this pivotal corner of our digital space, we unveil our journey and values, grounded in a commitment to excellence, ethical conduct, and surpassing expectations. ', 'Dive into our history, a tapestry of milestones propelling us towards our vision. ISO Standards guide our dedication to global quality benchmarks, while our dynamic team and esteemed clients fuel our drive for continuous advancement.', 'Our travel continues beyond words and embraces every project, every client, and every challenge.', 'Here, we invite you to explore the essence of who we are and what propels us forward.']
+  english: [
+    'Discover Our Roots', 
+    'In this pivotal corner of our digital space, we unveil our journey and values, grounded in a commitment to excellence, ethical conduct, and surpassing expectations.', 
+    'Dive into our history, a tapestry of milestones propelling us towards our vision. ISO Standards guide our dedication to global quality benchmarks, while our dynamic team and esteemed clients fuel our drive for continuous advancement.', 
+    'Our travel continues beyond words and embraces every project, every client, and every challenge.', 
+    'Here, we invite you to explore the essence of who we are and what propels us forward.'
+  ],
+  spanish: [
+    'Descubre Nuestras Raíces',
+    'En este rincón crucial de nuestro espacio digital, revelamos nuestro viaje y valores, fundamentados en un compromiso con la excelencia, conducta ética y superación de expectativas.', 
+    'Sumérgete en nuestra historia, un tapiz de hitos que nos impulsa hacia nuestra visión. Las normas ISO guían nuestra dedicación a los estándares globales de calidad, mientras que nuestro equipo dinámico y nuestros estimados clientes alimentan nuestro impulso hacia el avance continuo.',
+    'Nuestro viaje continúa más allá de las palabras y abarca cada proyecto, cada cliente y cada desafío.',
+    'Aquí te invitamos a explorar la esencia de quiénes somos y qué nos impulsa hacia adelante.'
+  ]
 }
 
 export const MISION_VISION_VALUES: Object = {
-  mision: ['mission', 'We are a construction enterprise, driven by principles of quality, timeliness, scope, and cost-effectiveness. We tailor technical specifications and plans to meet diverse client requirements. Our team operates in a conducive environment, fostering growth, and remains environmentally conscious.'],
-  vision: ['vision', "To be acknowledged as the premier company in Engineering, Construction, Supervision, and Project Management for all contracts we undertake. We seek recognition for our team's exceptional performance, dedication to quality, safety, environmental responsibility, and timely project completion.Our founding purpose is to bring comfort and specialized designs to our clients, ensuring the highest quality and compliance with technical and safety standards."],
-  values: ['values', '• Integrity at Core: Guided by unwavering values of discipline, order, respect, and honesty. • Innovative Service: Open to fresh ideas, committed to enhancing services to meet diverse client needs. • Efficient Productivity: Prioritizing resource and time optimization for effective service, highly valued by clients. • Reliable Compliance: Dedication to fulfilling commitments, ensuring client satisfaction and repeat business. • Proactive Client Care: Beyond tasks, we prioritize friendly communication and address all client concerns promptly.']
+  english: {
+    mision: [
+      'mission', 
+      'We are a construction enterprise, driven by principles of quality, timeliness, scope, and cost-effectiveness. We tailor technical specifications and plans to meet diverse client requirements. Our team operates in a conducive environment, fostering growth, and remains environmentally conscious.'
+    ],
+    vision: [
+      'vision', 
+      "To be acknowledged as the premier company in Engineering, Construction, Supervision, and Project Management for all contracts we undertake. We seek recognition for our team's exceptional performance, dedication to quality, safety, environmental responsibility, and timely project completion.Our founding purpose is to bring comfort and specialized designs to our clients, ensuring the highest quality and compliance with technical and safety standards."
+    ],
+    values: [
+      'values', 
+      '• Integrity at Core: Guided by unwavering values of discipline, order, respect, and honesty. • Innovative Service: Open to fresh ideas, committed to enhancing services to meet diverse client needs. • Efficient Productivity: Prioritizing resource and time optimization for effective service, highly valued by clients. • Reliable Compliance: Dedication to fulfilling commitments, ensuring client satisfaction and repeat business. • Proactive Client Care: Beyond tasks, we prioritize friendly communication and address all client concerns promptly.'
+    ]
+  },
+  spanish: {
+    mision: [
+      'misión', 
+      'Somos una empresa de construcción, guiada por los principios de calidad, puntualidad, alcance y rentabilidad. Adaptamos las especificaciones técnicas y los planes para satisfacer las diversas necesidades de los clientes. Nuestro equipo opera en un entorno propicio, fomentando el crecimiento y manteniendo la conciencia ambiental.'
+    ],
+    vision: [
+      'visión', 
+      "Ser reconocidos como la empresa líder en Ingeniería, Construcción, Supervisión y Gestión de Proyectos para todos los contratos que emprendemos. Buscamos reconocimiento por el rendimiento excepcional de nuestro equipo, la dedicación a la calidad, la seguridad, la responsabilidad ambiental y la finalización oportuna de los proyectos. Nuestro propósito fundacional es brindar comodidad y diseños especializados a nuestros clientes, garantizando la más alta calidad y el cumplimiento de los estándares técnicos y de seguridad."
+    ],
+    values: [
+      'valores', 
+      '• Integridad en el núcleo: Guiados por valores inquebrantables de disciplina, orden, respeto y honestidad. • Servicio Innovador: Abiertos a nuevas ideas, comprometidos a mejorar los servicios para satisfacer las diversas necesidades del cliente. • Productividad Eficiente: Priorizando la optimización de recursos y tiempo para un servicio eficaz, altamente valorado por los clientes. • Cumplimiento Confiable: Dedicación para cumplir compromisos, asegurando la satisfacción del cliente y negocios repetidos. • Atención Proactiva al Cliente: Más allá de las tareas, priorizamos la comunicación amistosa y abordamos todas las inquietudes del cliente de manera pronta.'
+    ]
+  }
 };
 
 export const TEAM_TEXT: Object = {
@@ -133,7 +171,16 @@ export const TEAM: Object = {
 }
 
 export const COLLABORATORS: Object = {
-  english: ['Our Trusted Collaborators', 'Powering progress through strong collaborations. Dive into our network of satisfied clients, a testament to our quality and commitment.', 'Join us on a journey of shared successes and outstanding projects.']
+  english: [
+    'Our Trusted Customers', 
+    'Powering progress through strong collaborations. Dive into our network of satisfied clients, a testament to our quality and commitment.', 
+    'Join us on a journey of shared successes and outstanding projects.'
+  ],
+  spanish: [
+    'Nuestros Clientes de Confianza',
+    'Impulsando el progreso a través de colaboraciones sólidas. Sumérgete en nuestra red de clientes satisfechos, un testimonio de nuestra calidad y compromiso.',
+    'Únete a nosotros en un viaje de éxitos compartidos y proyectos excepcionales'
+  ]
 }
 
 // Services:

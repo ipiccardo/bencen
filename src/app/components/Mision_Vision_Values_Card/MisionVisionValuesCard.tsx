@@ -1,9 +1,10 @@
 'use client'
 
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import Image from "next/image";
 import classes from './misionVisionValuesCard.module.css';
 import { MISION_VISION_VALUES } from '../../utils/constants';
+import { store } from '@/app/context/context';
 
 interface Props {
   imageName: string;
@@ -51,10 +52,13 @@ const MisionVisionValuesCard = ({ imageName, content }: Props): JSX.Element => {
 };
 
 const MisionVisionValuesCards = (): JSX.Element => {
+  const context = useContext(store)
+  const { language, setLanguage }: any = context
+
   return (
     <ul className={classes.misionVisionValuesCards}>
-    {Object.keys(MISION_VISION_VALUES).map((key) => {
-      const [imageName, content] = MISION_VISION_VALUES[key];
+    {Object.keys(MISION_VISION_VALUES[language]).map((key) => {
+      const [imageName, content] = MISION_VISION_VALUES[language][key];
       return (
        <li key={key}>
          <MisionVisionValuesCard imageName={imageName} content={content} />

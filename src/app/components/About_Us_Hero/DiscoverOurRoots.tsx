@@ -1,34 +1,38 @@
 'use client'
 
-import React from "react";
+import React, {useContext} from "react";
 import classes from './discoverOurRoots.module.css';
 import { DISCOVER_OUR_ROOTS } from '../../utils/constants';
+import { store } from '@/app/context/context';
 
 interface Props {
     
   }
 
 const DiscoverOurRoots = (): JSX.Element => {
-return (
+  const context = useContext(store)
+  const { language, setLanguage }: any = context
+
+  return (
     <section className={classes.text}>
-        <h1>{DISCOVER_OUR_ROOTS['english'][0]}</h1>
+        <h1>{DISCOVER_OUR_ROOTS[language][0]}</h1>
         <p>
-          {DISCOVER_OUR_ROOTS['english'][1]}
+          {DISCOVER_OUR_ROOTS[language][1]}
           <br></br>
           <br></br>
-          {DISCOVER_OUR_ROOTS['english'][2]}
+          {DISCOVER_OUR_ROOTS[language][2]}
           <br></br>
           <br></br>
-          {DISCOVER_OUR_ROOTS['english'][3]}
+          {DISCOVER_OUR_ROOTS[language][3]}
           <br></br>
           <br></br>
-          {DISCOVER_OUR_ROOTS['english'][4]}
+          {DISCOVER_OUR_ROOTS[language][4]}
           <br></br>
           <br></br>
-          {DISCOVER_OUR_ROOTS['english'][5]}
+          {DISCOVER_OUR_ROOTS[language][5]}
         </p>
     </section>
-) 
+  ) 
 };
   
 export default DiscoverOurRoots;
