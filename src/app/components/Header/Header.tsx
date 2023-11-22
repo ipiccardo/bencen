@@ -14,6 +14,7 @@ const Header = () => {
     const pathName = usePathname();
     const [openSideBar, setOpenSideBar] = useState(false)
     const [showOverlay, setShowOverlay] = useState(false)
+    const [scrolling, setScrolling] = useState(false);
     const context = useContext(store)
 
     const { language, setLanguage }: any = context
@@ -53,10 +54,27 @@ const Header = () => {
         }
     }, [openSideBar])
 
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setScrolling(true);
+            } else {
+                setScrolling(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [])
+
+    console.log(scrolling, 'scrolling')
 
     return (
         <>
-            <div className={classes.header}>
+            <div className={`${classes.header} ${scrolling ? classes.scrolling : ''}`}>
                 <div>
                     <IconWithImages name='logo' size={150} />
                 </div>
@@ -70,7 +88,7 @@ const Header = () => {
                     />
                 </div>
             </div>
-            <div className={classes.header__hamburguerMenu}>
+            <div className={`${classes.header__hamburguerMenu} ${scrolling ? classes.scrolling : ''}`}>
                 <div className={`${showOverlay && classes.bencenIconContainer}`}>
                     <IconWithImages name='logo' size={150} />
                 </div>

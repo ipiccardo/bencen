@@ -27,10 +27,20 @@
   height: 880px !important;
 }
 
-.headerContainer {
+/* .headerContainer {
   position: absolute;
   width: 100%;
   top: 75px;
+} */
+
+.headerContainer {
+  position: fixed;
+  width: 100%;
+  top: 75px;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  top: 0;
 }
 
 .headerContainer svg g {
