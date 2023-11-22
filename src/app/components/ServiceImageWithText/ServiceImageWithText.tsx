@@ -1,5 +1,13 @@
+"use client";
+
+import { SERVICES_SECTION } from "@/app/utils/constants";
 import classes from "./ServiceImageWithText.module.css";
 import ServiceImageWithTextItem from "./ServiceImageWithTextItem";
+import { useContext } from "react";
+import { store } from "@/app/context/context";
+import { languageRendering } from "@/app/utils";
+
+const servicesInfo = SERVICES_SECTION;
 
 export type infoForCardsItemProps = {
   id: number;
@@ -68,6 +76,12 @@ const infoForCards: infoForCardsContainerProps = [
 ];
 
 const ServiceImageWithTextContainer = () => {
+  const context = useContext(store);
+
+  const { language, setLanguage }: any = context;
+
+  // languageRendering(language, SERVICES_SECTION)
+
   return (
     <>
       <div className={classes.serviceImageWithText__container}>
