@@ -11,18 +11,94 @@ export const BUILDING_TOMORROW: Object = {
 }
 
 export const SERVICES: Object = {
-  civilWorks: ['excavator', 'CIVIL WORKS', 'Excellence in construction, your trusted partner'],
-  architecture: ['building', 'ARCHITECTURE', 'Innovation, shaping your dream spaces'],
-  environment: ['world', 'ENVIRONMENT', 'Creating sustainable solutions for our planet'],
-  specialProjects: ['blueprint', 'SPECIAL PROJECTS', 'Elevating vision to exceptional reality']
+  english: {
+    civilWorks: ['excavator', 'CIVIL WORKS', 'Excellence in construction, your trusted partner'],
+    architecture: ['building', 'ARCHITECTURE', 'Innovation, shaping your dream spaces'],
+    environment: ['world', 'ENVIRONMENT', 'Creating sustainable solutions for our planet'],
+    specialProjects: ['blueprint', 'SPECIAL PROJECTS', 'Elevating vision to exceptional reality']
+  },
+  spanish: {
+    civilWorks: ['excavator', 'OBRAS CIVILES', 'Excelencia en construcción, su socio de confianza'],
+    architecture: ['building', 'ARQUITECTURA', 'Innovación, dando forma a sus espacios soñados'],
+    environment: ['world', 'MEDIO AMBIENTE', 'Soluciones sostenibles para nuestro planeta'],
+    specialProjects: ['blueprint', 'PROYECTOS ESPECIALES', 'Elevando la visión a una realidad excepcional']
+  }
 };
 
+export const SERVICES_BUTTON: Object = {
+  english: "FIND OUT MORE",
+  spanish: "DESCUBRE MAS"
+}
+
+export const ABOUT_US: Object = {
+  english: ['ABOUT US', 'All Bencen, we are more than builders, we are creators of spaces that imspire. Our journey in the realm of construction has been fueled by a passion for excellence.', 'From the drawing board to the final brick, we meticulously craft every project to reflect innovation, quality, and client aspirations. Join us in shaping a world where vision meets reality.'],
+  spanish: ['NOSOTROS', 'En Bencen, somos más que constructores, somos creadores de espacios que inspiran. Nuestro viaje en el ámbito de la construcción ha sido alimentado por una pasión por la excelencia.', 'Desde el primer plano hasta el último ladrillo, elaboramos meticulosamente cada proyecto para reflejar innovación, calidad y aspiraciones del cliente. Unite a nosotros para dar forma a un mundo donde la visión se encuentra con la realidad.']
+}
+
+export const ABOUT_US_BUTTON: Object = {
+  english: 'DISCOVER MORE ABOUT US',
+  spanish: 'DESCUBRE MAS SOBRE NOSOTROS'
+}
+
+export const UNMATCHED_SERVICES_TITLE: Object = {
+  english: 'UNMATCHED SERVICES',
+  spanish: 'SERVICIOS INIGUALABLES'
+}
+
 export const UNMATCHED_SERVICES: Object = {
-  technical: ['project', 'TECHNICAL ADVISORY EXPERTS', 'Technical advice on civil construction projects. Detailed budgeting. Site inspections to ensure quality.'],
-  maintenance: ['brickwall', 'COMPREHENSIVE MAINTENANCE', 'General maintenance, including masonry, plumbing, and electrical work. Ironwork and metal structures. Restoration and maintenance of facades.'],
-  construction: ['crane', 'QUALITY CONSTRUCTION', 'Construction and renovation of civil works. Including commercial, residential, and industrial projects. Specialists in electrical and hydraulic works.'],
-  infrastructure: ['motorway', 'INFRASTRUCTURE AND SYSTEMS', 'Earthmoving for infrastructure projects. Waterproofing and road rehabilitation. Construction and maintenance of sewer and aqueduct systems.']
-};
+  english: {
+    technical: ['project', 'TECHNICAL ADVISORY EXPERTS', 'Technical advice on civil construction projects. Detailed budgeting. Site inspections to ensure quality.'],
+    maintenance: ['brickwall', 'COMPREHENSIVE MAINTENANCE', 'General maintenance, including masonry, plumbing, and electrical work. Ironwork and metal structures. Restoration and maintenance of facades.'],
+    construction: ['crane', 'QUALITY CONSTRUCTION', 'Construction and renovation of civil works. Including commercial, residential, and industrial projects. Specialists in electrical and hydraulic works.'],
+    infrastructure: ['motorway', 'INFRASTRUCTURE AND SYSTEMS', 'Earthmoving for infrastructure projects. Waterproofing and road rehabilitation. Construction and maintenance of sewer and aqueduct systems.']
+  },
+  spanish: {
+    technical: ['project', 'EXPERTOS EN ASESORÍA TÉCNICA', 'Asesoría técnica en proyectos de construcción civil. Presupuestos detallados. Inspecciones en el sitio para garantizar calidad.'],
+    maintenance: ['brickwall', 'MANTENIMIENTO INTEGRAL', 'Mantenimiento general, incluyendo albañilería, fontanería y trabajos eléctricos. Trabajos de herrería y estructuras metálicas. Restauración y mantenimiento de fachadas.'],
+    construction: ['crane', 'CONSTRUCCIÓN DE CALIDAD', 'Construcción y renovación de obras civiles. Incluyendo proyectos comerciales, residenciales e industriales. Especialistas en trabajos eléctricos e hidráulicos.'],
+    infrastructure: ['motorway', 'INFRAESTRUCTURA Y SISTEMAS', 'Movimiento de tierras para proyectos. Impermeabilización y rehabilitación de carreteras. Construcción y mantenimiento de sistemas de alcantarillado y acueducto.']
+  }
+  };
+
+export const UNMATCHED_SERVICES_BUTTON: Object = {
+  english: 'GET FREE QUOTATION',
+  spanish: 'OBTENER PRESUPUESTO'
+}
+
+export const PROJECTS: Object = {
+  english: ['SATISFIED CLIENTS WE SERVED FOR YEARS', 'Our commitment to excellence and unwavering dedication have enabled us to build lasting relationships with individuals and businesses alike. Our track record of delivering exceptional service has not only met but exceeded the expectations of our valued clients.', 'Their satisfaction is a testament to our expertise, reliability, and a deep-rooted commitment to their success.', 'Title', 'Brief Project Description'],
+  spanish: ['CLIENTES SATISFECHOS DURANTE AÑOS', 'Nuestro compromiso con la excelencia y dedicación inquebrantable nos ha permitido construir relaciones duraderas tanto con individuos como con empresas. Nuestro historial de ofrecer un servicio excepcional no solo ha cumplido, sino que ha superado las expectativas de nuestros apreciados clientes.', 'Su satisfacción es un testimonio de nuestra experiencia, confiabilidad y un compromiso arraigado con su éxito.', 'Título', 'Breve descripción del Proyecto']
+}
+
+export const PROJECTS_BUTTON: Object = {
+  english: 'SEE ALL PROJECTS',
+  spanish: 'VER TODOS LOS PROYECTOS'
+}
+
+export const PROJECTS_CARD: Object = {
+  english: ['Title', 'Brief Project Description'],
+  spanish: ['Título', 'Breve descripción del Proyecto']
+}
+
+export const CONTACT: Object = {
+  english: ['CONTACT', "Have questions or interested in collaborating with us? We'd love to hear from you! Our team is ready to assist you.", "Click the 'Contact Us' button below to get in touch. Whether you're looking for information, exploring partnership opportunities, or want to join our team, we're here to help. Your inquiry is important to us, and we'll respond promptly. Let's connect and make great things happen together!"],
+  spanish: ['CONTACTO', '¿Tenes preguntas o estás interesado en colaborar con nosotros? ¡Nos encantaría saber de vos! Nuestro equipo está listo para ayudarte.', "Haz clic en el botón 'Contáctanos' a continuación para ponerte en contacto. Ya sea que estés buscando información, explorando oportunidades de colaboración o quieras unirte a nuestro equipo, estamos aquí para ayudarte. Tu consulta es importante para nosotros y responderemos rápidamente. ¡Conectemos y hagamos cosas increíbles juntos!"]
+}
+
+export const CONTACT_BUTTON: Object = {
+  english: ['CONTACT US', 'WORK WITH US'],
+  spanish: ['CONTÁCTANOS', 'TRABAJÁ CON NOSOTROS']
+}
+
+export const NEWS: Object = {
+  english: ['LATEST NEWS', 'TITLE', 'Date xx/xx/xx'],
+  spanish: ['ÚLTIMAS NOTICIAS', 'TÍTULO', 'Fecha xx/xx/xx']
+}
+
+export const NEWS_BUTTON: Object = {
+  english: 'READ MORE',
+  spanish: 'LEER MÁS'
+}
 
 export const FOOTER: Object = {
   english: ["BENCEN", "PRIVACY POLICY", "TERMS AND CONDITIONS"],
@@ -73,7 +149,7 @@ export const CONNECT_WITH_US: Object = {
   english: ['Connect With Us', 'At our core, we believe our most valuable asset is our people. Our dedicated and skilled team forms the bedrock of our success in delivering exceptional projects. ', "If you're passionate about construction, architecture, the environment, or tackling special projects, we invite you to share your expertise with us.", "Feel free to reach out using the contact form or explore opportunities to work with us by uploading your resume. Let's craft excellence together. Get in touch today!."]
 }
 
-export const CONTACT: Object = {
+export const CONTACT_CARD: Object = {
   location: ['location', 'ADDRESS', 'Av. Maipú 2649, Olivos,\n Buenos Aires, Argentina'],
   phone: ['phone', 'PHONE NUMBER', '+54 11 4790 - 5791'],
   email: ['email', 'EMAIL', 'info@bencen.com.ar'],

@@ -1,8 +1,8 @@
-import React from "react";
+import React, {useContext} from "react";
 import Image from "next/image";
 import classes from './unmatchedCard.module.css';
 import { UNMATCHED_SERVICES } from '../../utils/constants';
-
+import { store } from '@/app/context/context';
 
 interface Props {
   imageName: string;
@@ -38,18 +38,21 @@ const UnmatchedCard = ({ imageName, header, content }: Props): JSX.Element => {
 };
 
 const UnmatchedCards = (): JSX.Element => {
-    return (
-        <ul className={classes.unmatchedCards}>
-        {Object.keys(UNMATCHED_SERVICES).map((key) => {
-          const [imageName, header, content] = UNMATCHED_SERVICES[key];
-          return (
-           <li key={key}>
-             <UnmatchedCard imageName={imageName} header={header} content={content} />
-           </li>
-           );
-        })}
-       </ul>
-    ) 
+  const context = useContext(store)
+  const { language, setLanguage }: any = context
+
+  return (
+      <ul className={classes.unmatchedCards}>
+      {Object.keys(UNMATCHED_SERVICES[language]).map((key) => {
+        const [imageName, header, content] = UNMATCHED_SERVICES[language][key];
+        return (
+          <li key={key}>
+            <UnmatchedCard imageName={imageName} header={header} content={content} />
+          </li>
+          );
+      })}
+      </ul>
+  ) 
   };
 
 export default UnmatchedCards

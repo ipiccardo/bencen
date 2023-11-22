@@ -1,11 +1,14 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import classes from './newsCard.module.css'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import { store } from '@/app/context/context';
+import { NEWS, NEWS_BUTTON} from '../../utils/constants'
 
 const NewsCard = (): JSX.Element => {
+    const context = useContext(store)
+    const { language, setLanguage }: any = context
 
     const sliderSettings = {
         dots: true,
@@ -34,34 +37,34 @@ const NewsCard = (): JSX.Element => {
                         <div className={classes.cardContainer}>
                             <div></div>
                             <div>
-                                <h2>TÍTULO</h2>
-                                <p>Fecha xx/xx/xx</p>
+                                <h2>{NEWS[language][1]}</h2>
+                                <p>{NEWS[language][2]}</p>
                             </div>
-                            <button>READ MORE</button>
+                            <button>{NEWS_BUTTON[language]}</button>
                         </div>
                         <div className={classes.cardContainer}>
                             <div></div>
                             <div>
-                                <h2>TÍTULO</h2>
-                                <p>Fecha xx/xx/xx</p>
+                                <h2>{NEWS[language][1]}</h2>
+                                <p>{NEWS[language][2]}</p>
                             </div>
-                            <button>READ MORE</button>
+                            <button>{NEWS_BUTTON[language]}</button>
                         </div>
                         <div className={classes.cardContainer}>
                             <div></div>
                             <div>
-                                <h2>TÍTULO</h2>
-                                <p>Fecha xx/xx/xx</p>
+                                <h2>{NEWS[language][1]}</h2>
+                                <p>{NEWS[language][2]}</p>
                             </div>
-                            <button>READ MORE</button>
+                            <button>{NEWS_BUTTON[language]}</button>
                         </div>
                         <div className={classes.cardContainer}>
                             <div></div>
                             <div>
-                                <h2>TÍTULO</h2>
-                                <p>Fecha xx/xx/xx</p>
+                                <h2>{NEWS[language][1]}</h2>
+                                <p>{NEWS[language][2]}</p>
                             </div>
-                            <button>READ MORE</button>
+                            <button>{NEWS_BUTTON[language]}</button>
                         </div>
                     </Slider>
                 </div>
