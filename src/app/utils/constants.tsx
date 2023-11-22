@@ -6,8 +6,9 @@ export const NAVBAR: Object = {
   spanish: ['SOBRE NOSOTROS', 'SERVICIOS', 'PROYECTOS', 'NOTICIAS', 'CONTACTO'],
 };
 
-export const BUILDING_TOMORROW: Object = {
-  english: ['Building Tomorrow, Today', 'Welcome to Bencen, where innovation meets excellence in construction and services.', 'Our digital space is a portal into our values, built on a commitment to excellence and a relentless pursuit of surpassing expectations.']
+export const HOME_TEXT: Object = {
+  english: ['Building Tomorrow, Today', 'Welcome to Bencen, where innovation meets excellence in construction and services.', 'Our digital space is a portal into our values, built on a commitment to excellence and a relentless pursuit of surpassing expectations.'],
+  spanish: ['Construyendo el Mañana, Hoy', 'Bienvenido a Bencen, donde la innovación se encuentra con la excelencia en construcción y servicios.', 'Nuestro espacio digital es un portal hacia nuestros valores, construido sobre un compromiso con la excelencia y una búsqueda implacable de superar las expectativas.']
 }
 
 export const SERVICES: Object = {
@@ -32,7 +33,7 @@ export const SERVICES_BUTTON: Object = {
 
 export const ABOUT_US: Object = {
   english: ['ABOUT US', 'All Bencen, we are more than builders, we are creators of spaces that imspire. Our journey in the realm of construction has been fueled by a passion for excellence.', 'From the drawing board to the final brick, we meticulously craft every project to reflect innovation, quality, and client aspirations. Join us in shaping a world where vision meets reality.'],
-  spanish: ['NOSOTROS', 'En Bencen, somos más que constructores, somos creadores de espacios que inspiran. Nuestro viaje en el ámbito de la construcción ha sido alimentado por una pasión por la excelencia.', 'Desde el primer plano hasta el último ladrillo, elaboramos meticulosamente cada proyecto para reflejar innovación, calidad y aspiraciones del cliente. Unite a nosotros para dar forma a un mundo donde la visión se encuentra con la realidad.']
+  spanish: ['SOBRE NOSOTROS', 'En Bencen, somos más que constructores, somos creadores de espacios que inspiran. Nuestro viaje en el ámbito de la construcción ha sido alimentado por una pasión por la excelencia.', 'Desde el primer plano hasta el último ladrillo, elaboramos meticulosamente cada proyecto para reflejar innovación, calidad y aspiraciones del cliente. Unite a nosotros para dar forma a un mundo donde la visión se encuentra con la realidad.']
 }
 
 export const ABOUT_US_BUTTON: Object = {
@@ -98,6 +99,11 @@ export const NEWS: Object = {
 export const NEWS_BUTTON: Object = {
   english: 'READ MORE',
   spanish: 'LEER MÁS'
+}
+
+export const TOP_FOOTER: Object = {
+  english: ['EXCELLENCE IN EVERY SERVICE, EVERY TIME.', 'A construction company specializing in quality, timely, and cost-effective projects tailored to clients unique needs.'],
+  spanish: ['EXCELENCIA EN CADA SERVICIO, EN TODO MOMENTO.', 'Una empresa de construcción especializada en proyectos de calidad, oportunos y rentables, adaptados a las necesidades únicas de los clientes.']
 }
 
 export const FOOTER: Object = {

@@ -34,6 +34,7 @@
 }
 
 .paragraphContainer p {
+  color: var(--gray-dark-color);
   font-size: 12px;
 }
 

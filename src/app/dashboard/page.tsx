@@ -3,7 +3,6 @@
 
 import React, { useEffect, useState, useContext } from "react";
 import "../styles/globals.css";
-import BuildingTomorrow from '../components/Home_Hero/BuildingTomorrow';
 import ServiceCards from "../components/Service_Card/ServiceCard";
 import UnmatchedCards from "../components/Unmatched_Card/UnmatchedCard";
 import classes from './page.module.css'
@@ -13,7 +12,7 @@ import AboutUsCard from '../components/aboutUs_Card/AboutUsCard'
 import ClientCard from "../components/Clients_Card/ClientCard";
 import NewsCard from "../components/News_Card/NewsCard";
 import Button from "../components/Ui/Button";
-import { ABOUT_US, ABOUT_US_BUTTON, UNMATCHED_SERVICES_TITLE, UNMATCHED_SERVICES_BUTTON, PROJECTS, PROJECTS_BUTTON, CONTACT, CONTACT_BUTTON, NEWS } from "../utils/constants"
+import { HOME_TEXT, ABOUT_US, ABOUT_US_BUTTON, UNMATCHED_SERVICES_TITLE, UNMATCHED_SERVICES_BUTTON, PROJECTS, PROJECTS_BUTTON, CONTACT, CONTACT_BUTTON, NEWS } from "../utils/constants"
 import { store } from '@/app/context/context';
 
 
@@ -58,15 +57,15 @@ const HomePage = () => {
           <section>
             <div className={`${classes.FirstimageContainer} ${classes.widthImage}`}>
               <div className={classes.showHeaderParagraphContainer}>
-                <h1>Building Tomorrow, Today</h1>
-                <p>Welcome to Bencen, where innovation meets excellence in construction and services.</p>
-                <p>Our digital space is a portal into our values, built on a commitment to excellence and a relentless pursuit of surpassing expectations.</p>
+                <h1>{HOME_TEXT[language][0]}</h1>
+                <p>{HOME_TEXT[language][1]}</p>
+                <p>{HOME_TEXT[language][2]}</p>
               </div>
               <div className={classes.firstImageShow}>
                 <div className={classes.headerParagraphContainer}>
-                  <h1>Building Tomorrow, Today</h1>
-                  <p>Welcome to Bencen, where innovation meets excellence in construction and services.</p>
-                  <p>Our digital space is a portal into our values, built on a commitment to excellence and a relentless pursuit of surpassing expectations.</p>
+                  <h1>{HOME_TEXT[language][0]}</h1>
+                  <p>{HOME_TEXT[language][1]}</p>
+                  <p>{HOME_TEXT[language][2]}</p>
                 </div>
                 <Image width={firtAndLastImage.width} height={firtAndLastImage.heigth} src={"/images/FrameOneWithoutMark.png"} alt={""} />
               </div>
@@ -153,11 +152,11 @@ const HomePage = () => {
                       text={CONTACT_BUTTON[language][0]}
                       classNameContent="padding-10"
                     />
-                    <Button
+                    {/* <Button
                       href={""}
                       text={CONTACT_BUTTON[language][1]}
                       classNameContent="padding-10"
-                    />
+                    /> */}
                   </div>
                 </div>
               </div>

@@ -8,13 +8,10 @@ import IconWithImages from "../IconWithImages/IconWithImages";
 import Link from "next/link";
 import Button from "../Ui/Button";
 import { store } from "@/app/context/context";
-import { FOOTER, NAVBAR } from "@/app/utils/constants";
+import { TOP_FOOTER, FOOTER, NAVBAR, UNMATCHED_SERVICES_BUTTON } from "@/app/utils/constants";
 
 const Footer = () => {
-
-
   const context = useContext(store)
-
   const { language, setLanguage }: any = context
 
   return (
@@ -22,15 +19,12 @@ const Footer = () => {
       <div className={classes.quotation__container}>
         <div className={classes.quotation__item}>
           <div className={classes.quotation__texts}>
-            <h2>EXCELLENCE IN EVERY SERVICE, EVERY TIME.</h2>
-            <p>
-              A construction company specializing in quality, timely, and
-              cost-effective projects tailored to clients unique needs.
-            </p>
+            <h2>{TOP_FOOTER[language][0]}</h2>
+            <p>{TOP_FOOTER[language][1]}</p>
           </div>
           <Button
             href={""}
-            text="GET FREE QUOTATION"
+            text={UNMATCHED_SERVICES_BUTTON[language]}
             classNameContent="padding-20"
           />
         </div>
