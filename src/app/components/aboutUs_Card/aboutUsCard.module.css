@@ -8,9 +8,9 @@
 .container div:first-child {
   position: relative;
   z-index: -1;
-  left: 42px;
-  bottom: 45px;
-  background-image: url("/images/imageBehind.png");
+  left: 32px;
+  bottom: 29px;
+  background-image: url(/images/imageBehind.png);
   height: 280px;
   width: 376px;
 }

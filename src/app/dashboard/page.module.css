@@ -259,6 +259,7 @@
   height: 404px;
   top: 190px;
   left: 150px;
+  margin-left: 45px;
 }
 
 .contactContainer h1 {
@@ -548,6 +549,7 @@
     left: 0;
     padding: 0 1rem;
     text-align: left;
+    margin-left: 0;
   }
 
   .contactContainer h1 {
