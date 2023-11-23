@@ -160,15 +160,15 @@ export const MISION_VISION_VALUES: Object = {
   }
 };
 
-export const TEAM_TEXT: Object = {
+/* export const TEAM_TEXT: Object = {
   english: ['Meet Our Team', 'A blend of respect and professionalism fuels our client relationships. Understanding your needs, striving to exceed expectations in every project.', "Dedicated, quick, detail-oriented approaching each project as a personal challenge. Because we're passionate about what we do."]
-}
+} */
 
-export const TEAM: Object = {
-  member_1: ['member_1', 'Position_1', 'Name and Surname_1', 'Brief Job Description_1', 'https://www.linkedin.com/in/julian-giudice-940771a1/'],
-  member_2: ['member_2', 'Position_2', 'Name and Surname_2', 'Brief Job Description_2', 'https://www.linkedin.com/in/julian-giudice-940771a1/'],
-  member_3: ['member_3', 'Position_3', 'Name and Surname_3', 'Brief Job Description_3', 'https://www.linkedin.com/in/julian-giudice-940771a1/']
-}
+/* export const TEAM: Object = {
+  member_1: ['member_1', 'Position_1', 'Name and Surname_1', 'Brief Job Description_1', ''],
+  member_2: ['member_2', 'Position_2', 'Name and Surname_2', 'Brief Job Description_2', ''],
+  member_3: ['member_3', 'Position_3', 'Name and Surname_3', 'Brief Job Description_3', '']
+} */
 
 export const COLLABORATORS: Object = {
   english: [
@@ -199,21 +199,74 @@ export const CATEGORIES: Object = {
 
 // Contact:
 export const CONNECT_WITH_US: Object = {
-  english: ['Connect With Us', 'At our core, we believe our most valuable asset is our people. Our dedicated and skilled team forms the bedrock of our success in delivering exceptional projects. ', "If you're passionate about construction, architecture, the environment, or tackling special projects, we invite you to share your expertise with us.", "Feel free to reach out using the contact form or explore opportunities to work with us by uploading your resume. Let's craft excellence together. Get in touch today!."]
+  english: [
+    'Connect With Us', 
+    'At our core, we believe our most valuable asset is our people. Our dedicated and skilled team forms the bedrock of our success in delivering exceptional projects.', 
+    "If you're passionate about construction, architecture, the environment, or tackling special projects, we invite you to share your expertise with us.",
+    "Feel free to reach out using the contact form or explore opportunities to work with us by uploading your resume. Let's craft excellence together. Get in touch today!."
+  ],
+  spanish: [
+    'Conectate con nosotros', 
+    'En nuestra esencia, creemos que nuestro activo más valioso es nuestra gente. Nuestro equipo dedicado y habilidoso constituye la base de nuestro éxito en la entrega de proyectos excepcionales.',
+    'Si sientes pasión por la construcción, la arquitectura, el medio ambiente o abordar proyectos especiales, te invitamos a compartir tu experiencia con nosotros.',
+    'No dudes en ponerte en contacto mediante el formulario o explora oportunidades para trabajar con nosotros subiendo tu currículum. Construyamos la excelencia juntos. ¡Ponte en contacto hoy!'
+  ]
 }
 
 export const CONTACT_CARD: Object = {
-  location: ['location', 'ADDRESS', 'Av. Maipú 2649, Olivos,\n Buenos Aires, Argentina'],
-  phone: ['phone', 'PHONE NUMBER', '+54 11 4790 - 5791'],
-  email: ['email', 'EMAIL', 'info@bencen.com.ar'],
-  socials: ['socials', 'SOCIAL MEDIA', '']
+  english: {
+    location: ['location', 'ADDRESS', 'Maipú Av. 2649, Olivos,\n Buenos Aires, Argentina'],
+    phone: ['phone', 'PHONE NUMBER', '+54 11 4790 - 5791'],
+    email: ['email', 'EMAIL', 'info@bencen.com.ar'],
+    socials: ['socials', 'SOCIAL MEDIA', '']
+  },
+  spanish: {
+    location: ['location', 'DIRECCIÓN', 'Av. Maipú 2649, Olivos,\n Buenos Aires, Argentina'],
+    phone: ['phone', 'TELÉFONO', '+54 11 4790 - 5791'],
+    email: ['email', 'EMAIL', 'info@bencen.com.ar'],
+    socials: ['socials', 'REDES SOCIALES', '']
+  }
 };
 
 export const TAB_BAR: Object = {
-  english: ['CONTACT US', 'Send us a message and we will respond as soon as possible.', 'Full Name', 'Phone Number', 'Email', 'Message', 'SEND', 'Congratulations, your message was sent successfully!.', 'WORK WITH US', 'Share your resume with our Human Resources Team.', 'Work Area', 'Upload your CV:', 'Select File', 'APPLY', 'Congratulations, your CV was sent successfully!.']
+  english: [
+    'CONTACT US',
+    'Send us a message and we will respond as soon as possible.',
+    'Full Name', 
+    'Phone Number',
+    'Email',
+    'Message',
+    'SEND',
+    'Congratulations, your message was sent successfully!.',
+    'WORK WITH US',
+    'Share your resume with our Human Resources team.',
+    'Work Area',
+    'Upload your CV:',
+    'Select File',
+    'APPLY',
+    'Congratulations, your CV was sent successfully!.'
+  ],
+  spanish: [
+    'CONTÁCTANOS',
+    'Envíanos un mensaje y responderemos tan pronto como sea posible.',
+    'Nombre Completo',
+    'Teléfono',
+    'Email',
+    'Mensaje',
+    'ENVIAR',
+    '¡Felicidades, tu mensaje se envió con éxito!.',
+    'TRABAJA CON NOSOTROS',
+    'Comparte tu currículum con nuestro equipo de Recursos Humanos.',
+    'Área de Trabajo',
+    'Cargá tu CV:',
+    'Seleccionar Archivo',
+    'ENVIAR',
+    '¡Felicidades, tu CV se envió con éxito!.'
+  ]
 }
 
 export const WORK_AREA: Object = {
-  english: ['Accountant', 'Architecture', 'Engineering', 'Human Resources', 'Safety']
+  english: ['Accountant', 'Administration', 'Architecture', 'Engineering', 'Human Resources', 'Safety'],
+  spanish: ['Administración', 'Arquitectura', 'Contable', 'Ingeniería', 'Recursos Humanos', 'Seg. e Higiene']
 }
 
