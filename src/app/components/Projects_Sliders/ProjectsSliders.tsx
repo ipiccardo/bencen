@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const ProjectsSliders = (): JSX.Element => {
+const ProjectsSliders = (): any => {
   const sliderSettings = {
     dots: true,
     infinite: true,
