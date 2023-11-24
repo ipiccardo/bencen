@@ -4,11 +4,34 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const ProjectsSliders = (): JSX.Element => {
+const CustomPrevArrow = (props: any) => (
+  <div
+    {...props}
+    style={{
+      ...props.style,
+      left: "10px",
+      zIndex: 1,
+      cursor: "pointer",
+    }}
+  >
+    {"<"}
+  </div>
+);
+
+const CustomNextArrow = (props: any) => (
+  <div
+    {...props}
+    style={{ ...props.style, right: "30px", zIndex: 1, cursor: "pointer" }}
+  >
+    {">"}
+  </div>
+);
+
+const ProjectsSliders = (): any => {
   const sliderSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 500,
+    speed: 100,
     slidesToShow: 3,
     slidesToScroll: 3,
     responsive: [
@@ -22,6 +45,8 @@ const ProjectsSliders = (): JSX.Element => {
         },
       },
     ],
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
   };
 
   return (
@@ -29,38 +54,18 @@ const ProjectsSliders = (): JSX.Element => {
       <div className={classes.cardsContainer}>
         <div className={classes.sliderContainer}>
           <Slider {...sliderSettings}>
-            <div className={classes.cardContainer}>
-              <div></div>
-              <div>
-                <h2>TÍTULO</h2>
-                <p>Fecha xx/xx/xx</p>
-              </div>
-              <button>READ MORE</button>
-            </div>
-            <div className={classes.cardContainer}>
-              <div></div>
-              <div>
-                <h2>TÍTULO</h2>
-                <p>Fecha xx/xx/xx</p>
-              </div>
-              <button>READ MORE</button>
-            </div>
-            <div className={classes.cardContainer}>
-              <div></div>
-              <div>
-                <h2>TÍTULO</h2>
-                <p>Fecha xx/xx/xx</p>
-              </div>
-              <button>READ MORE</button>
-            </div>
-            <div className={classes.cardContainer}>
-              <div></div>
-              <div>
-                <h2>TÍTULO</h2>
-                <p>Fecha xx/xx/xx</p>
-              </div>
-              <button>READ MORE</button>
-            </div>
+            {Array(4)
+              .fill(1)
+              .map((_, index) => {
+                return (
+                  <div key={index + 3000} className={classes.cardContainer}>
+                    <div className={classes.textContainer}>
+                      <h2>PROJECT NAME</h2>
+                      <p>Project Year</p>
+                    </div>
+                  </div>
+                );
+              })}
           </Slider>
         </div>
       </div>
