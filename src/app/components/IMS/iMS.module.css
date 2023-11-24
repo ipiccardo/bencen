@@ -1,0 +1,34 @@
+/* Team Cards */
+.text{
+    display: flex;
+    max-width: 959px;
+    margin: 0 auto;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+    gap: 0px;
+  }
+  
+  .text h1 {
+    font-size: var(--h-1-font-size);
+    font-style: var(--h-1-font-style);
+    font-weight: var(--h-1-font-weight);
+    margin-bottom: 32px;
+    padding: 0 16px;
+  }
+  
+  .text p {
+    color: var(--gray-dark-color);
+    font-size: var(--text-font-size);
+    font-style: var(--text-font-style);
+    font-weight: var(--text-font-weight);
+    padding: 0 16px;
+  }
+
+  .text .column {
+    flex: 1;
+  }
+  
+  /* Optional: Adjust spacing between columns */
+  .text .column + .column {
+    margin-left: 16px;
+  }

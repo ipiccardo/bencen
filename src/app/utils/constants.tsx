@@ -160,6 +160,53 @@ export const MISION_VISION_VALUES: Object = {
   }
 };
 
+export const IMS_TITLE: Object = {
+  english: 'Integrated Management System',
+  spanish: 'Sistema Integrado de Gestión'
+}
+
+export const IMS_LEFT: Object = {
+  english: [
+    'At Bencen, we meticulously assess and manage inherent risks in our operations, prioritizing employee training in Health, Safety, Environment, and Community Risks.',
+    'We steadfastly uphold safety, environmental consciousness, and health, never compromising them for production goals or deadlines while reducing costs.',
+    'Continuous evaluation of our internal procedures drives ongoing improvements, acting as a tool for efficient pollution prevention and risk control.',
+    'Our prudent management includes handling hazardous substances, waste, and pollutants to prevent adverse environmental impact.',
+    'We provide thorough training to our workforce on risk prevention systems, ensuring objectives are met and responsibilities are allocated throughout the organization.'
+  ],
+  spanish: [
+    'En Bencen, evaluamos meticulosamente y gestionamos los riesgos inherentes en nuestras operaciones, priorizando la formación de empleados en Salud, Seguridad, Medio Ambiente y Riesgos Comunitarios.',
+    'Defendemos con firmeza la seguridad, la conciencia ambiental y la salud, sin comprometerlos por metas de producción o plazos, al tiempo que reducimos los costos.',
+    'La evaluación continua de nuestros procedimientos internos impulsa mejoras constantes, sirviendo como una herramienta para la prevención eficiente de la contaminación y el control de riesgos.',
+    'Nuestra gestión prudente incluye el manejo de sustancias peligrosas, residuos y contaminantes para prevenir impactos ambientales adversos.',
+    'Proporcionamos una capacitación exhaustiva a nuestra fuerza laboral sobre sistemas de prevención de riesgos, asegurando que se cumplan los objetivos y se asignen responsabilidades en toda la organización.'
+  ]
+}
+
+export const IMS_RIGHT: Object = {
+  english: [
+    "We're dedicated to:",
+    '• Quality and Precision: Adapting projects to precise client specifications, upholding quality and timely delivery.',
+    '• Resourceful and Compliant Operations: Efficiently aligning processes with contracts and regulations, utilizing our ample resources.',
+    '• Continuous Enhancement: Listening to clients and stakeholders for ongoing process improvement.',
+    '• Environmental Responsibility: Actively taking measures to prevent pollution and safeguard the environment.',
+    '• Safety and Well-being: Prioritizing employee safety and health, minimizing risks.',
+    '• Energy Efficiency: Working towards energy objectives through smarter practices and choices.',
+    '• Collaborative Environment: Encouraging active participation and collaboration among our team members.',
+    '• Compliance and Standards: Adhering to ISO 9001, ISO 14001, ISO 45001, and ISO 50001 standards.'
+  ],
+  spanish: [
+    'Nos dedicamos a:',
+    '• Calidad y Precisión: Adaptar proyectos a especificaciones precisas del cliente, manteniendo la calidad y la entrega oportuna.',
+    '• Operaciones Recursivas y Cumplimiento: Alinear eficientemente procesos con contratos y regulaciones, utilizando nuestros amplios recursos.',
+    '• Mejora Continua: Escuchar a clientes y partes interesadas para la mejora continua del proceso.',
+    '• Responsabilidad Ambiental: Tomar medidas activas para prevenir la contaminación y salvaguardar el medio ambiente.',
+    '• Seguridad y Bienestar: Priorizar la seguridad y la salud de los empleados, minimizando los riesgos.',
+    '• Eficiencia Energética: Trabajar hacia objetivos energéticos mediante prácticas y elecciones más inteligentes.',
+    '• Ambiente Colaborativo: Fomentar la participación activa y la colaboración entre los miembros de nuestro equipo.',
+    '• Cumplimiento y Normas: Cumplir con las normas ISO 9001, ISO 14001, ISO 45001 e ISO 50001.'
+  ]
+}
+
 /* export const TEAM_TEXT: Object = {
   english: [
     "Meet Our Team",
