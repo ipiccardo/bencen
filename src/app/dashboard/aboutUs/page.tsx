@@ -10,7 +10,7 @@ const AboutUs = () => {
         <>
           <DiscoverOurRoots/>
           <MisionVisionValuesCards/>
-          <TeamCards/>
+          {/*<TeamCards/>*/}
           <Collaborators/>
         </>
     )

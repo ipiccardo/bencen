@@ -1,8 +1,11 @@
-import React from "react";
+'use client'
+
+import React, { useContext } from "react";
 import Image from "next/image";
 import classes from './contactCard.module.css';
 import { CONTACT_CARD } from '../../utils/constants';
 import Icon from "../Icon/Icon";
+import { store } from '@/app/context/context';
 
 interface Props {
   imageName: string;
@@ -17,7 +20,7 @@ const ContactCard = ({ imageName, header, content }: Props): JSX.Element => {
         <div className={classes.imageGroup}>
           <Image
               className={classes.image} 
-              alt={`${header}`.toLowerCase() + " icon"}
+              alt={`${header}`.toLowerCase()}
               src={`/icons/Contact/${imageName}.svg`}
               width={96} 
               height={96}
@@ -41,10 +44,13 @@ const ContactCard = ({ imageName, header, content }: Props): JSX.Element => {
 };
 
 const ContactCards = (): JSX.Element => {
+  const context = useContext(store)
+  const { language, setLanguage }: any = context
+
   return (
     <ul className={classes.contactCards}>
-    {Object.keys(CONTACT_CARD).map((key) => {
-      const [imageName, header, content] = CONTACT_CARD[key];
+    {Object.keys(CONTACT_CARD[language]).map((key) => {
+      const [imageName, header, content] = CONTACT_CARD[language][key];
       return (
        <li key={key}>
          <ContactCard imageName={imageName} header={header} content={content} />
