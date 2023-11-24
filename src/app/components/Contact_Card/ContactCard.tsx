@@ -20,7 +20,7 @@ const ContactCard = ({ imageName, header, content }: Props): JSX.Element => {
         <div className={classes.imageGroup}>
           <Image
               className={classes.image} 
-              alt={`${header}`.toLowerCase() + " icon"}
+              alt={`${header}`.toLowerCase()}
               src={`/icons/Contact/${imageName}.svg`}
               width={96} 
               height={96}

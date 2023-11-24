@@ -183,6 +183,21 @@ export const COLLABORATORS: Object = {
   ]
 }
 
+export const CUSTOMERS: Object = {
+  presidency: ['Presidencia de la Nacion', '192', '112'],
+  bsasCity: ['Gobierno de la Ciudad de Buenos Aires', '112', '112'],
+  bsasProvince: ['Gobierno de la Provincia de Buenos Aires', '208', '112'],
+  municipalityLanus: ['Municipio de Lanus', '160', '112'],
+  municipalityQuilmes: ['Municipio de Quilmes', '160', '112'],
+  municipalityMoreno: ['Municipio de Moreno', '160', '76'],
+  municipalityLobos: ['Municipio de Lobos', '176', '112'],
+  bankProvincia: ['Banco Provincia', '192', '112'],
+  bankSantander: ['Banco Santander', '160', '96'],
+  bankSupervielle: ['Banco Supervielle', '170', '70'],
+  cencosud: ['Cencosud', '144', '108'],
+  northBaires: ['North Baires', '176', '110']
+}
+
 // Services:
 export const UNLOCKING_POSSIBILITES: Object = {
   english: ['Unlocking Possibilities', 'Discover our diversified services meticulously designed to suit every need.', "From civil works to groundbreaking architecture, we're your partners in realizing extraordinary projects.", 'Dive into our tailored service offerings and redefine your vision with us.']
