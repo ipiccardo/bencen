@@ -3,7 +3,7 @@ type Object = Record<string, any>;
 // Home:
 export const NAVBAR: Object = {
   english: ["ABOUT US", "SERVICES", "PROJECTS", "NEWS", "CONTACT"],
-  spanish: ['SOBRE NOSOTROS', 'SERVICIOS', 'PROYECTOS', 'NOTICIAS', 'CONTACTO'],
+  spanish: ["SOBRE NOSOTROS", "SERVICIOS", "PROYECTOS", "NOTICIAS", "CONTACTO"],
 };
 
 export const HOME_TEXT: Object = {
@@ -200,17 +200,79 @@ export const CUSTOMERS: Object = {
 
 // Services:
 export const UNLOCKING_POSSIBILITES: Object = {
-  english: ['Unlocking Possibilities', 'Discover our diversified services meticulously designed to suit every need.', "From civil works to groundbreaking architecture, we're your partners in realizing extraordinary projects.", 'Dive into our tailored service offerings and redefine your vision with us.']
-}
+  english: [
+    "Unlocking Possibilities",
+    "Discover our diversified services meticulously designed to suit every need.",
+    "From civil works to groundbreaking architecture, we're your partners in realizing extraordinary projects.",
+    "Dive into our tailored service offerings and redefine your vision with us.",
+  ],
+};
+
+export const SERVICES_SECTION: Object = {
+  english: [
+    {
+      h2Text: "Civil Works",
+      paragraphText:
+        "Dedicated to the design, planning, and execution of Civil Engineering projects in urban, industrial, and rural settings. Our team of specialized professionals is committed to enhancing the efficiency of our developments continually, surpassing our clients expectations. We craft tailored solutions, integrating various engineering specialties, while upholding the highest standards of quality, safety, and environmental consciousness. Our projects are meticulously designed and executed, striking a delicate balance with their surroundings, not only providing solutions but also harmonizing with the environment. In the industrial domain, we factor in all client-specific regulations, standards, and requirements as fundamental aspects of our planning.",
+    },
+    {
+      h2Text: "Architecture",
+      paragraphText:
+        "We have a dedicated team of professionals focused on the design, planning, and execution of architectural projects, as well as the development, planning, and execution of urban projects. We create projects of various scales, building strong relationships with our clients and addressing each of their needs. In the realm of urban planning, we design public spaces, green areas, recreational zones, etc., and efficiently develop urban areas, restructure them, and ensure the provision of various services. We employ the latest and most efficient technologies in the market, always aiming for maximum resource utilization, streamlined timelines, and minimal environmental impact.",
+    },
+    {
+      h2Text: "Environment",
+      paragraphText:
+        "We specialize in tailored projects dedicated to environmental care, protection, and conservation. Our services encompass environmental impact assessments, analysis of physical-chemical and biological parameters, and projects focused on renewable energy generation, utilizing solar, wind, and other sources. We advocate for systems to utilize recyclable waste like PET, recovering and reintegrating them as reusable materials. We collaborate with strategic partners in academia, leveraging their state-of-the-art laboratories and expertise. Our clients receive top-notch service facilitated by our experienced professionals.",
+    },
+    {
+      h2Text: "Special Projects",
+      paragraphText:
+        "Often, the challenges we encounter demand interdisciplinary involvement and the collective knowledge of various disciplines. In this business unit, we delve into projects that actively involve multiple specialties. For each project, we assemble a team of professionals with specific skills and knowledge, ensuring the leader team can drive its development, supported by a strong team. This approach guarantees our clients receive the best service and tailored solutions for their needs.",
+    },
+  ],
+  spanish: [
+    {
+      h2Text: "Obras civiles",
+      paragraphText:
+        "Dedicada al diseño, planificación y ejecución de proyectos de Ingeniería Civil en entornos urbanos, industriales y rurales. Nuestro equipo de profesionales especializados está comprometido a mejorar continuamente la eficiencia de nuestros desarrollos, superando las expectativas de nuestros clientes. Creamos soluciones a la medida, integrando diversas especialidades de ingeniería, manteniendo los más altos estándares de calidad, seguridad y conciencia ambiental. Nuestros proyectos están meticulosamente diseñados y ejecutados, logrando un delicado equilibrio con su entorno, no sólo aportando soluciones sino también armonizando con el entorno. En el ámbito industrial, tenemos en cuenta todas las regulaciones, normas y requisitos específicos del cliente como aspectos fundamentales de nuestra planificación.",
+    },
+    {
+      h2Text: "Arquitectura",
+      paragraphText:
+        "Contamos con un equipo dedicado de profesionales enfocados en el diseño, planificación y ejecución de proyectos arquitectónicos, así como en el desarrollo, planificación y ejecución de proyectos urbanos. Creamos proyectos de diversas escalas, construyendo relaciones sólidas con nuestros clientes y atendiendo cada una de sus necesidades. En el ámbito del urbanismo diseñamos espacios públicos, áreas verdes, zonas recreativas, etc., y desarrollamos eficientemente las áreas urbanas, las reestructuramos y aseguramos la prestación de diversos servicios. Empleamos las últimas y más eficientes tecnologías del mercado, buscando siempre la máxima utilización de recursos, tiempos optimizados y un mínimo impacto ambiental.",
+    },
+    {
+      h2Text: "Medio ambiente",
+      paragraphText:
+        "Nos especializamos en proyectos a medida dedicados al cuidado, protección y conservación del medio ambiente. Nuestros servicios abarcan evaluaciones de impacto ambiental, análisis de parámetros físico-químicos y biológicos, y proyectos enfocados en la generación de energía renovable, utilizando fuentes solares, eólicas y otras. Abogamos por sistemas que aprovechen residuos reciclables como el PET, recuperándolos y reintegrándolos como materiales reutilizables. Colaboramos con socios estratégicos en el mundo académico, aprovechando sus laboratorios y experiencia de última generación. Nuestros clientes reciben un servicio de primer nivel facilitado por nuestros profesionales experimentados.",
+    },
+    {
+      h2Text: "Proyectos especiales",
+      paragraphText:
+        "A menudo, los desafíos que enfrentamos exigen una participación interdisciplinaria y el conocimiento colectivo de diversas disciplinas. En esta unidad de negocio profundizamos en proyectos que involucran activamente múltiples especialidades. Para cada proyecto, reunimos un equipo de profesionales con habilidades y conocimientos específicos, asegurando que el equipo líder pueda impulsar su desarrollo, apoyado por un equipo sólido. Este enfoque garantiza que nuestros clientes reciban el mejor servicio y soluciones personalizadas para sus necesidades.",
+    },
+  ],
+};
 
 // Projects:
 export const EXPLORE_OUR_PORTFOLIO: Object = {
-  english: ['Explore Our Portfolio', 'We pride ourselves on a rich and varied portfolio that showcases our expertise in the construction industry. With a keen focus on quality, time efficiency, scope, and cost-effectiveness, we tailor each project to align with the unique needs of our clients. Our projects are categorized into four core domains:', 'Browse through our projects and envision what we can create together!.']
-}
+  english: [
+    "Explore Our Portfolio",
+    "We pride ourselves on a rich and varied portfolio that showcases our expertise in the construction industry. With a keen focus on quality, time efficiency, scope, and cost-effectiveness, we tailor each project to align with the unique needs of our clients. Our projects are categorized into four core domains:",
+    "Browse through our projects and envision what we can create together!.",
+  ],
+};
 
 export const CATEGORIES: Object = {
-  english: ['CIVIL WORKS', 'ARCHITECTURE', 'ENVIRONMENT', 'SPECIAL PROJECTS']
-}
+  english: ["CIVIL WORKS", "ARCHITECTURE", "ENVIRONMENT", "SPECIAL PROJECTS"],
+  spanish: [
+    "OBRAS CIVILES",
+    "ARQUITECTURA",
+    "MEDIO AMBIENTE",
+    "PROYECTOS ESPECIALES",
+  ],
+};
 
 // Contact:
 export const CONNECT_WITH_US: Object = {
