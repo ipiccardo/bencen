@@ -11,15 +11,29 @@ import AboutUsCard from "../components/aboutUs_Card/AboutUsCard";
 import ClientCard from "../components/Clients_Card/ClientCard";
 import NewsCard from "../components/News_Card/NewsCard";
 import Button from "../components/Ui/Button";
-import { HOME_TEXT, ABOUT_US, ABOUT_US_BUTTON, UNMATCHED_SERVICES_TITLE, UNMATCHED_SERVICES_BUTTON, PROJECTS, PROJECTS_BUTTON, CONTACT, CONTACT_BUTTON, NEWS } from "../utils/constants"
-import { store } from '@/app/context/context';
+import {
+  HOME_TEXT,
+  ABOUT_US,
+  ABOUT_US_BUTTON,
+  UNMATCHED_SERVICES_TITLE,
+  UNMATCHED_SERVICES_BUTTON,
+  PROJECTS,
+  PROJECTS_BUTTON,
+  CONTACT,
+  CONTACT_BUTTON,
+  NEWS,
+} from "../utils/constants";
+import { store } from "@/app/context/context";
 
 const HomePage = () => {
   const [pantallaMediana, setPantallaMediana] = useState(false);
-  const [firtAndLastImage, setFirstAndLastImage] = useState({ width: 1344, heigth: 888 })
-  const [otherImages, setOtherImages] = useState({ width: 1296, heigth: 960 })
-  const context = useContext(store)
-  const { language, setLanguage }: any = context
+  const [firtAndLastImage, setFirstAndLastImage] = useState({
+    width: 1200,
+    heigth: 888,
+  });
+  const [otherImages, setOtherImages] = useState({ width: 1200, heigth: 960 });
+  const context = useContext(store);
+  const { language, setLanguage }: any = context;
 
   const handleResize = () => {
     setPantallaMediana(window.innerWidth < 768);
