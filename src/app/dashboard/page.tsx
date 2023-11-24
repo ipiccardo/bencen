@@ -15,10 +15,10 @@ import Button from "../components/Ui/Button";
 const HomePage = () => {
   const [pantallaMediana, setPantallaMediana] = useState(false);
   const [firtAndLastImage, setFirstAndLastImage] = useState({
-    width: 1344,
+    width: 1200,
     heigth: 888,
   });
-  const [otherImages, setOtherImages] = useState({ width: 1296, heigth: 960 });
+  const [otherImages, setOtherImages] = useState({ width: 1200, heigth: 960 });
 
   const handleResize = () => {
     setPantallaMediana(window.innerWidth < 768);
@@ -50,7 +50,7 @@ const HomePage = () => {
         <div className={classes.headerContainer}>
           <Header />
         </div>
-        <div className={classes.firstSectionContainer}>
+        <div className={classes.sectionsContainer}>
           <section>
             <div
               className={`${classes.FirstimageContainer} ${classes.widthImage}`}
