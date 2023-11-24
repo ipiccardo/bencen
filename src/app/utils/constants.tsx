@@ -191,6 +191,12 @@ export const EXPLORE_OUR_PORTFOLIO: Object = {
 
 export const CATEGORIES: Object = {
   english: ["CIVIL WORKS", "ARCHITECTURE", "ENVIRONMENT", "SPECIAL PROJECTS"],
+  spanish: [
+    "OBRAS CIVILES",
+    "ARQUITECTURA",
+    "MEDIO AMBIENTE",
+    "PROYECTOS ESPECIALES",
+  ],
 };
 
 // Contact:

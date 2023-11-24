@@ -230,3 +230,12 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* Ajuste de Arrow sliders en Projects */
+/* .sliderContainer .slick-prev:before, .slick-next:before {
+  font-size: 40px !important;
+} */
+
+.slick-prev:before, .slick-next:before {
+  font-size: 40px !important;
+}

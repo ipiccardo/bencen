@@ -2,17 +2,15 @@
 
 import React from "react";
 import ExploreOurPortfolio from "../../components/Projects_Hero/ExploreOurPortfolio";
-import ProjectsSliders from "@/app/components/Projects_Sliders/ProjectsSliders";
+import ProjectsSlidersContainer from "@/app/components/Projects_Sliders/ProjectsSlidersContainer";
 
 const Projects = () => {
   return (
     <>
-      <div style={{ marginTop: "50px" }}></div>
       <div>
-        {/* <ExploreOurPortfolio /> */}
-        <ProjectsSliders />
+        <ExploreOurPortfolio />
+        <ProjectsSlidersContainer />
       </div>
-      <div style={{ marginBottom: "100px" }}></div>
     </>
   );
 };
