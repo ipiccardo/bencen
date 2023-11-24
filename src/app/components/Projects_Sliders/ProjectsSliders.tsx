@@ -45,8 +45,8 @@ const ProjectsSliders = (): any => {
         },
       },
     ],
-    prevArrow: <CustomPrevArrow />, // Personaliza según tus necesidades
-    nextArrow: <CustomNextArrow />, // Personaliza según tus necesidades
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
   };
 
   return (
