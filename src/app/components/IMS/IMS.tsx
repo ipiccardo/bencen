@@ -12,8 +12,8 @@ const ISOImage = (): JSX.Element => {
         className={classes.image} 
         alt={'ISO'}
         src={'/icons/IMS/ISO.png'}
-        width={96} 
-        height={96}
+        width={112} 
+        height={112}
         />
     )
 }
@@ -24,28 +24,30 @@ const IMS = (): JSX.Element => {
 
   return (
     <section className={classes.text}>
-        {/* <h1>{IMS_TITLE[language]}</h1> */}
-        {/* <ISOImage/> */}
-        <div className={`${classes.column} ${classes.text}`}>
-        <p>
-            {IMS_LEFT[language].map((text: number, index: string) => (
-                <div key={index}>
-                    {text}
-                    <br />
-                    <br />
-                </div>
-        ))}
-        </p>
+        <div className={`${classes.title} ${classes.text}`}>
+            <h1>{IMS_TITLE[language]}</h1>
+            <ISOImage/>
         </div>
         <div className={`${classes.column} ${classes.text}`}>
-        <p>
-            {IMS_RIGHT[language].map((text: number, index: string) => (
-                <div key={index}>
-                    {text}
-                    <br />
-                </div>
-        ))}
-        </p>
+            <p>
+                {IMS_LEFT[language].map((text: number, index: string) => (
+                    <div key={index}>
+                        {text}
+                        <br />
+                        <br />
+                    </div>
+            ))}
+            </p>
+        </div>
+        <div className={`${classes.column} ${classes.text}`}>
+            <p>
+                {IMS_RIGHT[language].map((text: number, index: string) => (
+                    <div key={index}>
+                        {text}
+                        <br />
+                    </div>
+            ))}
+            </p>
         </div>
     </section>
   )
