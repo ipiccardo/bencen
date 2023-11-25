@@ -5,7 +5,7 @@ import classes from "./ServiceImageWithText.module.css";
 import ServiceImageWithTextItem from "./ServiceImageWithTextItem";
 import { useContext } from "react";
 import { store } from "@/app/context/context";
-import { languageRendering, returnImageForServicePath } from "@/app/utils";
+import { languageRendering } from "@/app/utils";
 
 const servicesInfo = SERVICES_SECTION;
 
@@ -30,11 +30,11 @@ const ServiceImageWithTextContainer = () => {
     language,
     servicesInfo
   ).map((object: any, index: number, array: any) => {
-    const { h2Text, paragraphText } = object;
+    const { h2Text, paragraphText, imageSrc } = object;
     return {
       id: index + 1,
       alignTo: index === 0 || index === 2 ? "left" : "right",
-      imageSrc: returnImageForServicePath(h2Text),
+      imageSrc: imageSrc,
       imageAlt: h2Text,
       h2Text: h2Text,
       paragraphText: paragraphText,

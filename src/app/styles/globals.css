@@ -231,12 +231,12 @@ body {
   display: none;
 }
 
-/* Ajuste de Arrow sliders en Projects */
+/* Ajuste de Arrow sliders en diferentes vistas*/
 
 .slick-prev:before, .slick-next:before {
   font-size: 40px !important;
 }
 
-.newsContainer .slick-prev:before, .newsContainer .slick-next:before {
+.serviceCardSliderContainer .slick-prev:before, .serviceCardSliderContainer .slick-next:before, .newsContainerSliderContainer .slick-prev:before, .newsContainerSliderContainer .slick-next:before {
   font-size: 20px !important;
 }
