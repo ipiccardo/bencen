@@ -4,6 +4,44 @@ export const convertLinkString = (string: string): string => {
     .replace(/[^a-zA-Z0-9]+(.)/g, (match, chr) => chr.toUpperCase());
 };
 
+export const navigateTo = (linkString: string) => {
+  const stringToUpperCase = linkString.toUpperCase();
+  switch (stringToUpperCase) {
+    case "BENCEN":
+      return "/";
+    case "SOBRE NOSOTROS":
+      return "/dashboard/aboutUs";
+    case "ABOUT US":
+      return "/dashboard/aboutUs";
+    case "SERVICIOS":
+      return "/dashboard/services";
+    case "SERVICES":
+      return "/dashboard/services";
+    case "NOTICIAS":
+      return "/dashboard/news";
+    case "NEWS":
+      return "/dashboard/news";
+    case "CONTACTO":
+      return "/dashboard/contact";
+    case "CONTACT":
+      return "/dashboard/contact";
+    case "PROYECTOS":
+      return "/dashboard/projects";
+    case "PROJECTS":
+      return "/dashboard/projects";
+    case "POLÍTICA DE PRIVACIDAD":
+      return "/dashboard/privacyPolicy";
+    case "PRIVACY POLICY":
+      return "/dashboard/privacyPolicy";
+    case "TÉRMINOS Y CONDICIONES":
+      return "/dashboard/termsAndConditions";
+    case "TERMS AND CONDITIONS":
+      return "/dashboard/termsAndConditions";
+    default:
+      return convertLinkString(stringToUpperCase);
+  }
+};
+
 export const changeFolderPath = (string: string) => {
   switch (string) {
     case "Sobre Nosotros":
@@ -27,18 +65,3 @@ export const changeFolderPath = (string: string) => {
 
 export const languageRendering = (language: string, object: any) =>
   language === "english" ? object.english : object.spanish;
-
-export const returnImageForServicePath = (stringTitle: string) => {
-  switch (stringTitle) {
-    case "Civil Works" || "Obras Civiles":
-      return "/img/civil-works.jpg";
-    case "Architecture" || "Arquitectura":
-      return "/img/architecture.jpg";
-    case "Environment" || "Medio ambiente":
-      return "/img/environment.jpg";
-    case "Special Projects" || "Proyectos especiales":
-      return "/img/special-projects.jpg";
-    default:
-      return "";
-  }
-};

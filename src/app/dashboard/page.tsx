@@ -212,7 +212,9 @@ const HomePage = () => {
           <section className={classes.sixSectionContainer}>
             <div className={`${classes.imageContainer} ${classes.otherImage}`}>
               <div className={classes.containerAbsolute}>
-                <div className={classes.newsContainer}>
+                <div
+                  className={`${classes.newsContainer} newsContainerSliderContainer`}
+                >
                   <h1>{NEWS[language][0]}</h1>
                   <NewsCard />
                 </div>
