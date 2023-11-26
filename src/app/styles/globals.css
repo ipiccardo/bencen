@@ -231,6 +231,21 @@ body {
   display: none;
 }
 
+/* Header */
+
+.headerContainer {
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  top: 0;
+}
+
+.headerContainer svg g {
+  fill: white;
+}
+
 /* Ajuste de Arrow sliders en diferentes vistas*/
 
 .slick-prev:before, .slick-next:before {

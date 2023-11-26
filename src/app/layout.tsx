@@ -17,6 +17,9 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning={true}>
         <ThemeContextProvider>
+          <div className="headerContainer">
+            <Header />
+          </div>
           {children}
           <Footer />
         </ThemeContextProvider>

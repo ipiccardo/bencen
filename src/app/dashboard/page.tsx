@@ -62,9 +62,6 @@ const HomePage = () => {
   return (
     <>
       <div className={classes.homePageContainer}>
-        <div className={classes.headerContainer}>
-          <Header />
-        </div>
         <div className={classes.sectionsContainer}>
           <section>
             <div
