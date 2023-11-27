@@ -49,6 +49,7 @@ const HomePage = () => {
       setOtherImages({ width: 1200, heigth: 960 });
     }
   };
+  //Hace Hook de Windows Resize
   useEffect(() => {
     handleResize();
 
