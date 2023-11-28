@@ -31,9 +31,7 @@ const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
         <Image
           className={classes.image}
           alt={`${header}`.toLowerCase() + " icon"}
-          src={`/icons/Services/${
-            hover ? imageName + "_hover" : imageName
-          }.png`}
+          src={`/icons/Services/${hover ? imageName + "_hover" : imageName}.png`}
           width={96}
           height={96}
         />
@@ -55,7 +53,7 @@ const ServiceCards = (): JSX.Element => {
   const context = useContext(store);
   const { language, setLanguage }: any = context;
 
-  // Configuración del slider
+  // Slider configuration:
   const sliderSettings = {
     responsive: [
       {

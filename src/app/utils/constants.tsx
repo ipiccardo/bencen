@@ -460,13 +460,13 @@ export const CATEGORIES: Object = {
 // Contact:
 export const CONNECT_WITH_US: Object = {
   english: [
-    "Connect With Us",
+    "Connect with Us",
     "At our core, we believe our most valuable asset is our people. Our dedicated and skilled team forms the bedrock of our success in delivering exceptional projects.",
     "If you're passionate about construction, architecture, the environment, or tackling special projects, we invite you to share your expertise with us.",
     "Feel free to reach out using the contact form or explore opportunities to work with us by uploading your resume. Let's craft excellence together. Get in touch today!.",
   ],
   spanish: [
-    "Conectate con nosotros",
+    "Conectate con Nosotros",
     "En nuestra esencia, creemos que nuestro activo más valioso es nuestra gente. Nuestro equipo dedicado y habilidoso constituye la base de nuestro éxito en la entrega de proyectos excepcionales.",
     "Si sientes pasión por la construcción, la arquitectura, el medio ambiente o abordar proyectos especiales, te invitamos a compartir tu experiencia con nosotros.",
     "No dudes en ponerte en contacto mediante el formulario o explora oportunidades para trabajar con nosotros subiendo tu currículum. Construyamos la excelencia juntos. ¡Ponte en contacto hoy!",

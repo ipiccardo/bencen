@@ -1,78 +1,76 @@
 "use client";
 
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import ConnectWithUs from "../../components/Contact_Hero/ConnectWithUs";
 import ContactCards from "../../components/Contact_Card/ContactCard";
 import TabBar from "../../components/Tab_Bar/TabBar";
 import classes from "./page.module.css";
 import Image from "next/image";
-import { store } from "@/app/context/context";
 
 const Contact = () => {
-  const [pantallaMediana, setPantallaMediana] = useState(false);
-  const [firtAndLastImage, setFirstAndLastImage] = useState({
-    width: 1200,
-    heigth: 888,
-  });
-  // const [otherImages, setOtherImages] = useState({ width: 1200, heigth: 960 });
-  const context = useContext(store);
-  const { language, setLanguage }: any = context;
-
+  const [mediumScreen, setMediumScreen] = useState(false);
+  const [Resolution, setResolution] = useState({ width: 0, heigth: 0,});
+  const [widthPercentage, SetWidthPercentage] = useState(1);
+  const [heightPercentage, SetHeightPercentage] = useState(1);
+  
   const handleResize = () => {
-    setPantallaMediana(window.innerWidth < 768);
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth > 1200) {
-      setPantallaMediana(false);
-      setFirstAndLastImage({ width: 1200, heigth: 888 });
-      // setOtherImages({ width: 1200, heigth: 960 });
-    } else {
-      setPantallaMediana(true);
-      setFirstAndLastImage({ width: 1200, heigth: 888 });
-      // setOtherImages({ width: 1200, heigth: 960 });
+    // setMediumScreen(window.innerWidth < 768);
+    // Set dimensions based on a percentage of the screen width and height:
+    if (window.innerWidth >= 1440){
+      SetWidthPercentage(1);
+      SetHeightPercentage(1);
+    } else if (window.innerWidth > 1000) {
+      SetWidthPercentage(1);
+      SetHeightPercentage(1 - (1- window.innerWidth/1440)/2);
     }
+
+    setResolution({ 
+      width: Math.floor(window.innerWidth * widthPercentage), 
+      heigth: Math.floor(window.innerHeight * heightPercentage)
+    });
   };
-  //Hace Hook de Windows Resize
+  
   useEffect(() => {
     handleResize();
-
     window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [widthPercentage, heightPercentage]);
 
   return (
     <>
-      <div className={classes.contactPageContainer}>
+      <div className={classes.page}>
         <div className={classes.sectionsContainer}>
           <section>
-            <div
-              className={`${classes.FirstimageContainer} ${classes.widthImage}`}
-            >
+            <div className={`${classes.FirstimageContainer} ${classes.widthImage}`}>
               <div className={classes.showHeaderParagraphContainer}>
                 <ConnectWithUs />
               </div>
-              {/* ESTO QUE SIGUE EN DESKTOP */}
+              {/* DESKTOP FOLLOWS */}
               <div className={classes.firstImageShow}>
-                <div className={classes.headerParagraphContainer}>
+                <div className={classes.text}>
                   <ConnectWithUs />
                 </div>
                 <Image
-                  width={firtAndLastImage.width}
-                  height={firtAndLastImage.heigth}
-                  src={"/images/backgrounds/contact/contactBig1440x960.png"}
+                  width={Resolution.width}
+                  height={Resolution.heigth}
+                  src={"/images/backgrounds/contact/FrameOne.png"}
                   alt={""}
                 />
               </div>
             </div>
           </section>
+          <div className={classes.contactCard}>
+            <ContactCards />
+          </div>
         </div>
+        <section>
+            {/*<TabBar />*/}
+        </section>
       </div>
-
-      <ContactCards />
-      <TabBar />
+      
     </>
   );
 };
