@@ -42,7 +42,7 @@ const Contact = () => {
   return (
     <>
       <div className={classes.page}>
-        <div className={classes.sectionsContainer}>
+        <div className={classes.firstSection}>
           <section>
             <div className={`${classes.FirstimageContainer} ${classes.widthImage}`}>
               <div className={classes.showHeaderParagraphContainer}>
@@ -65,10 +65,13 @@ const Contact = () => {
           <div className={classes.contactCard}>
             <ContactCards />
           </div>
+          <div className={classes.preTab} style={{ width: Resolution.width * 0.9 }}></div>
         </div>
-        <section>
-            {/*<TabBar />*/}
-        </section>
+        <div className={classes.secondSection}>
+          <section className={classes.tab} style={{ width: Resolution.width * 0.9 }}>
+            <TabBar />
+          </section>
+        </div>
       </div>
       
     </>

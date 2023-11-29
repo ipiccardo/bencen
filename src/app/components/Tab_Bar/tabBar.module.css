@@ -8,6 +8,7 @@
     border-style: solid;
     border-width: 1px;
     display: flex;
+    background-color: white;
 }
 
 .tabLeft {
@@ -52,6 +53,10 @@
 
 .ul {
     list-style: none;
+}
+
+.ul li {
+    margin-left: 16px;
 }
 
 .ulBoxRight {

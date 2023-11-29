@@ -175,7 +175,7 @@ const TabBar = (): JSX.Element => {
   
   return (
     <div>
-      <div className={classes.tab}>
+      <div className={classes.tab} style={{ top: window.innerWidth * 1/6 * 4/15 + 32 + 'px' }}>
         <div className={classes.tabLeft}>
           <div className={`${classes.boxLeftClick} ${clickL ? "" : classes.boxLeft}`} onClick={handleClickL}>
             <div className={`${classes.headerLeftClick} ${clickL ? "" : classes.headerLeft}`}>{TAB_BAR[language][0]}</div>

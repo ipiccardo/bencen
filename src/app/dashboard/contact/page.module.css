@@ -1,17 +1,17 @@
 .page {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Esta clase sirve para menos de 1200px */
+/* Esta clase sirve para menos de 1200px
 .page section {
-    height: 960px; 
-    overflow: hidden;
-}
+  height: 960px;
+  overflow: hidden;
+} */
 
-.sectionsContainer {
-    background-color: black;
-    position: relative;
+.firstSection {
+  background-color: black;
+  position: relative;
 }
 
 .FirstimageContainer {
@@ -26,55 +26,80 @@
   margin-top: -2%;
 } */
 
-  .firstImageShow {
-    margin-top: 0px;
-    position: relative;
-  }
+.firstImageShow {
+  margin-top: 0px;
+  position: relative;
+}
  
-  .showHeaderParagraphContainer {
-    display: none;
-  }
+.showHeaderParagraphContainer {
+  display: none;
+}
   
-  .showHeaderParagraphContainer h1 {
-      color: var(--white-color);
-      font-size: var(--h-1-font-size);
-      line-height: 1.5;
-    }
+.showHeaderParagraphContainer h1 {
+  color: var(--white-color);
+  font-size: var(--h-1-font-size);
+  line-height: 1.5;
+}
     
-    .showHeaderParagraphContainer p {
-        color: var(--gray-light-color);
-    }
+.showHeaderParagraphContainer p {
+    color: var(--gray-light-color);
+}
 
-    .text {
-        position: absolute;
-        z-index: 2;
-        top: 18%;
-        left: 15%;
-        /*
-        top: 192px;
-        left: 240px;
-        */
-        width: 80%;
-        max-width: 364px;
-        padding: 20px;
-        line-height: 24px;
-    }
+.text {
+    position: absolute;
+    z-index: 2;
+    top: 18%;
+    left: 15%;
+    /*
+    top: 192px;
+    left: 240px;
+    */
+    width: 80%;
+    max-width: 364px;
+    padding: 20px;
+    line-height: 24px;
+}
 
-    .text h1 {
-        color: var(--white-color);
-        font-size: var(--h-1-font-size);
-    }
+.text h1 {
+    color: var(--white-color);
+    font-size: var(--h-1-font-size);
+}
 
-    .text p {
-        color: var(--gray-light-color);
-    }
+.text p {
+    color: var(--gray-light-color);
+}
 
 .contactCard {
   position: absolute;
   top: 80%;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 4;
+}
+
+.preTab {
+  height: 120px;
   z-index: 3;
+  background-color: white;
+  /*left: 10%;*/
+  transform: translateX(5%);
+}
+
+.secondSection {
+  background-color: black;
+  position: relative;
+}
+
+.tab {
+  position: relative;
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  height: 840px;
+  z-index: 2;
+  /*left: 0%;*/
+  transform: translateX(5%);
+  background-color: white;
 }
 
 @media (max-width: 840px) {
@@ -84,7 +109,7 @@
 }
 
 @media (max-width: 940px) {
-  .sectionsContainer {
+  .firstSection {
     background-color: white;
   }
   
