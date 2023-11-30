@@ -44,7 +44,7 @@ const Contact = () => {
       <div className={classes.page}>
         <div className={classes.firstSection}>
           <section>
-            <div className={`${classes.FirstimageContainer} ${classes.widthImage}`}>
+            {/*<div className={classes.FirstimageContainer}>*/}
               <div className={classes.showHeaderParagraphContainer}>
                 <ConnectWithUs />
               </div>
@@ -60,9 +60,9 @@ const Contact = () => {
                   alt={""}
                 />
               </div>
-            </div>
+            {/*</div>*/}
           </section>
-          <div className={classes.contactCard}>
+          <div className={classes.contactCard} style={{ width: Resolution.width * 0.9 }}>
             <ContactCards />
           </div>
           <div className={classes.preTab} style={{ width: Resolution.width * 0.9 }}></div>

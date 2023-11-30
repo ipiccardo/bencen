@@ -106,7 +106,7 @@
     margin-top: 1rem;
     font-size: var(--normal-small-font-size);
     font-style: var(--small-text-italic-font-style);
-    text-size-adjust:calc();
+    /*text-size-adjust:calc();*/
     display: inline-flex;
     padding: 0 8px;
     align-items: center;
@@ -150,4 +150,39 @@
 
 .ulBoxLeft {
     display: none;
+}
+
+@media (max-width: 1100px) {
+    /* Tab Bar - Normal State */
+    .tab {
+        width: 480px;
+        height: 672px;
+        /*border-radius: 16px 16px 0px 0px;*/
+    }
+
+    .responsiveTab {
+        display: flex;
+    }
+
+    .boxLeftClick {
+        width: 240px;
+    }
+    
+    .boxRight {
+        width: 240px;
+    }
+
+    .headerLeftClick {
+        font-family: var(--h-2-font-family);
+        font-size: var(--h-2-font-size);
+        font-style: var(--h-2-font-style);
+        font-weight: var(--h-2-font-weight);
+    }
+    
+    .headerRight {
+        font-family: var(--h-2-font-family);
+        font-size: var(--h-2-font-size);
+        font-style: var(--h-2-font-style);
+        font-weight: var(--h-2-font-weight);
+    }
 }

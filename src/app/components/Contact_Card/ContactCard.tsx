@@ -22,8 +22,6 @@ const ContactCard = ({ imageName, header, content }: Props): JSX.Element => {
   useEffect(() => {
     if (window.innerWidth >= 1440) {
       setWidth(window.innerWidth * 1/6);
-    } else if (window.innerWidth > 1000) {
-      setWidth(240);
     } else {
       setWidth(240);
     }
@@ -66,7 +64,7 @@ const ContactCards = (): JSX.Element => {
   const sliderSettings = {
     responsive: [
       {
-        breakpoint: 1000,
+        breakpoint: 1100,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
