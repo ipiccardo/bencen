@@ -25,6 +25,7 @@
     border-radius: 16px 0px 0px 0px;
     border-top: none;
     border-right: none;
+    border-left: none;
     position: relative;
     display: flex;
     justify-content: center;
@@ -57,6 +58,7 @@
 
 .ul li {
     margin-left: 16px;
+    margin-right: 16px;
 }
 
 .ulBoxRight {
@@ -153,11 +155,8 @@
 }
 
 @media (max-width: 1100px) {
-    /* Tab Bar - Normal State */
     .tab {
         width: 480px;
-        height: 672px;
-        /*border-radius: 16px 16px 0px 0px;*/
     }
 
     .responsiveTab {
@@ -184,5 +183,79 @@
         font-size: var(--h-2-font-size);
         font-style: var(--h-2-font-style);
         font-weight: var(--h-2-font-weight);
+    }
+}
+
+@media (max-width: 600px) {
+    .tab {
+        width: 360px;
+    }
+
+    .boxLeftClick {
+        width: 180px;
+    }
+    
+    .boxRight {
+        width: 180px;
+    }
+
+    .headerLeftClick {
+        font-family: var(--h-3-font-family);
+        font-size: var(--h-3-font-size);
+        font-style: var(--h-3-font-style);
+        font-weight: var(--h-3-font-weight);
+    }
+    
+    .headerRight {
+        font-family: var(--h-3-font-family);
+        font-size: var(--h-3-font-size);
+        font-style: var(--h-3-font-style);
+        font-weight: var(--h-3-font-weight);
+    }
+}
+
+@media (max-width: 450px) {
+    .tab {
+        width: 300px;
+    }
+
+    .responsiveTab {
+        display: flex;
+    }
+
+    .boxLeftClick {
+        width: 150px;
+    }
+    
+    .boxRight {
+        width: 150px;
+    }
+
+    .ul li {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 360px) {
+    .tab {
+        width: 270px;
+    }
+
+    .responsiveTab {
+        display: flex;
+    }
+
+    .boxLeftClick {
+        width: 135px;
+    }
+    
+    .boxRight {
+        width: 135px;
+    }
+
+    .ul li {
+        margin-left: 6px;
+        margin-right: 6px;
     }
 }

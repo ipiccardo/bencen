@@ -14,7 +14,6 @@ const Contact = () => {
   const [heightPercentage, SetHeightPercentage] = useState(1);
   
   const handleResize = () => {
-    // setMediumScreen(window.innerWidth < 768);
     // Set dimensions based on a percentage of the screen width and height:
     if (window.innerWidth >= 1440){
       SetWidthPercentage(1);
@@ -50,7 +49,7 @@ const Contact = () => {
               </div>
               {/* DESKTOP FOLLOWS */}
               <div className={classes.firstImageShow}>
-                <div className={classes.text}>
+                <div className={classes.text} style={{ maxWidth: Resolution.width * 91/360, left: 15 + "%" }} >
                   <ConnectWithUs />
                 </div>
                 <Image

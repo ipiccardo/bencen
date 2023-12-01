@@ -7,14 +7,6 @@ import Button from '../Ui/Button';
 import { TAB_BAR, WORK_AREA } from '../../utils/constants';
 import { store } from '@/app/context/context';
 
-interface Props {
-  key: number,
-  value: any,
-  label: string,
-  onChange: any,
-  options: any
-}
-
 const TabBar = (): JSX.Element => {
   const [clickL, setClickL] = useState(true)
   const [clickR, setClickR] = useState(false)
@@ -181,41 +173,6 @@ const TabBar = (): JSX.Element => {
     setCv("");
   };
 
-  const renderMessageItem = (items: any) => {
-    return items.map((item: any, index: any) => (
-      <li key={index}>
-        {item.component ? (
-          item.component
-        ) : (
-          <TextField
-            value={item.value}
-            label={item.label}
-            onChange={(e) => item.onChange(e.target.value)}
-            fullWidth={true}
-            margin="normal"
-            required={true}
-            multiline={item.multiline || false}
-            rows={item.rows || 1}
-          />
-        )}
-      </li>
-    ));
-  };
-  
-  const messageItems = [
-    { value: nameL, label: TAB_BAR[language][2], onChange: setNameL },
-    { value: phoneNumberL, label: TAB_BAR[language][3], onChange: setPhoneNumberL },
-    { value: emailL, label: TAB_BAR[language][4], onChange: setEmailL },
-    { value: message, label: TAB_BAR[language][5], onChange: setMessage, multiline: true, rows: 8 },
-    {
-      component: messageSubmitted ? (
-        <div className={classes.successMessage}>{TAB_BAR[language][7]}</div>
-      ) : (
-        <Button href="" classNameButton={classes.button} text={TAB_BAR[language][6]} onClick={handleSendClick} />
-      ),
-    },
-  ];
-
   const renderTextField = (item: any) => (
     <TextField
       value={item.value}
@@ -229,18 +186,17 @@ const TabBar = (): JSX.Element => {
     />
   );
   
-  const renderSelectField = ({ key, value, label, onChange, options } : Props) => (
+  const renderSelectField = (item: any) => (
     <TextField
-      key={key}
       select
-      value={value}
-      label={label}
-      onChange={(e) => onChange(e.target.value)}
+      value={item.value}
+      label={item.label}
+      onChange={(e) => item.onChange(e.target.value)}
       fullWidth={true}
       margin="normal"
       required={true}
     >
-      {options.map((value: string, index: number) => (
+      {item.options.map((value: string, index: number) => (
         <MenuItem key={index} value={value}>
           {value}
         </MenuItem>
@@ -248,40 +204,57 @@ const TabBar = (): JSX.Element => {
     </TextField>
   );
   
+  type TabItem = {
+    key: number;
+    content: React.ReactNode;
+  };
+
+  const messageItems: TabItem[] = [
+    {key: 1, content: renderTextField({ value: nameL, label: TAB_BAR[language][2], onChange: setNameL })},
+    {key: 2, content: renderTextField({ value: phoneNumberL, label: TAB_BAR[language][3], onChange: setPhoneNumberL })},
+    {key: 3, content: renderTextField({ value: emailL, label: TAB_BAR[language][4], onChange: setEmailL })},
+    {key: 4, content: renderTextField({ value: message, label: TAB_BAR[language][5], onChange: setMessage, multiline: true, rows: 8 })},
+    {key: 5, content:
+      messageSubmitted ? (
+        <div className={classes.successMessage}>{TAB_BAR[language][7]}</div>
+      ) : (
+        <Button href="" classNameButton={classes.button} text={TAB_BAR[language][6]} onClick={handleSendClick} />
+      ),
+    },
+  ];
+
   const workWithUsItems = [
-    renderTextField({ key: 1, value: nameR, label: TAB_BAR[language][2], onChange: setNameR }),
-    renderTextField({ key: 2, value: phoneNumberR, label: TAB_BAR[language][3], onChange: setPhoneNumberR }),
-    renderTextField({ key: 3, value: emailR, label: TAB_BAR[language][4], onChange: setEmailR }),
-    renderSelectField({ key: 4, value: workArea, label: TAB_BAR[language][10], onChange: setWorkArea, options: WORK_AREA[language] }),
-    <div key={5} className={cvLoaded ? (classes.buttonSelectHide) : (classes.buttonSelect)}>{TAB_BAR[language][11]}</div>, 
-    <div key={6}>
-      {!cvSubmitted ? (
-        cvLoaded ? (
-          <ul className={classes.cvNameContainer}>
-            <li><div className={classes.cvName}>{cvName}</div></li>
-            <li><div className={classes.cvName} onClick={handleCancelCvClick} style={{ cursor: 'pointer' }}>X</div></li>
-          </ul>
-          ) : (
-            <div>
-              <Button href="" classNameButton={classes.buttonSelect} text={TAB_BAR[language][12]} onClick={handleSelectClick} />
-              <input
-                type="file"
-                ref={cvRef}
-                style={{ display: 'none' }}
-                accept=".pdf"
-                onChange={handleFileChange}
-              />
-            </div>
-          )):(<div></div>)
-      }
-      </div>,
-      <div key={7}>
-        {cvSubmitted ? (
-            <div className={classes.successCv}>{TAB_BAR[language][14]}</div>
-          ) : (
-          <Button href="" classNameButton={classes.buttonApply} text={TAB_BAR[language][13]} onClick={handleApplyClick} />
-        )}
-      </div>
+    {key: 1, content: renderTextField({ value: nameR, label: TAB_BAR[language][2], onChange: setNameR })},
+    {key: 2, content: renderTextField({ value: phoneNumberR, label: TAB_BAR[language][3], onChange: setPhoneNumberR })},
+    {key: 3, content: renderTextField({ value: emailR, label: TAB_BAR[language][4], onChange: setEmailR })},
+    {key: 4, content: renderSelectField({ value: workArea, label: TAB_BAR[language][10], onChange: setWorkArea, options: WORK_AREA[language] })},
+    {key: 5, content: <div className={cvLoaded ? classes.buttonSelectHide : classes.buttonSelect}>{TAB_BAR[language][11]}</div> },
+    {key: 6, content: !cvSubmitted ? (
+      cvLoaded ? (
+        <ul className={classes.cvNameContainer}>
+          <div className={classes.cvName}>{cvName}</div>
+          <div className={classes.cvName} onClick={handleCancelCvClick} style={{ cursor: 'pointer' }}>X</div>
+        </ul>
+        ) : (
+        <div>
+          <Button href="" classNameButton={classes.buttonSelect} text={TAB_BAR[language][12]} onClick={handleSelectClick} />
+          <input
+            type="file"
+            ref={cvRef}
+            style={{ display: 'none' }}
+            accept=".pdf"
+            onChange={handleFileChange}
+          />
+        </div>
+        )
+      ) : <div></div>,
+    },
+    {key: 7, content: cvSubmitted ? (
+      <div className={classes.successCv}>{TAB_BAR[language][14]}</div>
+      ) : (
+        <Button href="" classNameButton={classes.buttonApply} text={TAB_BAR[language][13]} onClick={handleApplyClick} />
+      ),
+    },
   ];
   
   return (
@@ -295,66 +268,10 @@ const TabBar = (): JSX.Element => {
               </div>
               <ul className={`${classes.ul} ${clickL ? "" : classes.ulBoxLeft}`}>
                 <li><div>{TAB_BAR[language][1]}</div></li>
-                {renderMessageItem(messageItems)}
+                {messageItems.map((item: any) => (
+                  <li key={item.key}>{item.content}</li>
+                ))}
               </ul>
-              {/*<ul className={`${classes.ul} ${clickL ? "" : classes.ulBoxLeft}`}>
-                <li><div>{TAB_BAR[language][1]}</div></li>
-                <li><TextField
-                  value={nameL}
-                  label={TAB_BAR[language][2]}
-                  onChange={(e) => {
-                    setNameL(e.target.value);
-                  }}
-                  fullWidth={true}
-                  margin="normal"
-                  required={true}
-                /></li>
-                <li><TextField
-                  value={phoneNumberL}
-                  label={TAB_BAR[language][3]}
-                  onChange={(e) => {
-                    setPhoneNumberL(e.target.value);
-                  }}
-                  fullWidth={true}
-                  margin="normal"
-                  required={true}
-                /></li>
-                <li><TextField
-                  value={emailL}
-                  label={TAB_BAR[language][4]}
-                  onChange={(e) => {
-                    setEmailL(e.target.value);
-                  }}
-                  fullWidth={true}
-                  margin="normal"
-                  required={true}
-                /></li>
-                <li><TextField
-                  value={message}
-                  label={TAB_BAR[language][5]}
-                  onChange={(e) => {
-                    setMessage(e.target.value);
-                  }}
-                  fullWidth={true}
-                  margin="normal"
-                  required={true}
-                  multiline={true}
-                  rows={8}
-                /></li>
-                <li>
-                  {messageSubmitted ? (
-                    <div className={classes.successMessage}>
-                      {TAB_BAR[language][7]}
-                    </div>
-                  ) : (
-                    <Button
-                      href=""
-                      classNameButton={classes.button}
-                      text={TAB_BAR[language][6]} onClick={handleSendClick}
-                    />
-                  )}
-                </li>
-                  </ul>*/}
             </div>
             <div className={classes.tabRight}>
               <div className={`${classes.boxRight} ${clickR ? classes.boxRightClick : ""}`} onClick={handleClickR}>
@@ -362,93 +279,10 @@ const TabBar = (): JSX.Element => {
               </div>
               <ul className={`${classes.ul} ${clickR ? "" : classes.ulBoxRight}`}>
                 <li><div>{TAB_BAR[language][9]}</div></li>
-                {workWithUsItems.map(item => (
-                  <li key={item.key}>
-                    {item}
-                  </li>
+                {workWithUsItems.map((item) => (
+                  <li key={item.key}>{item.content}</li>
                 ))}
               </ul>
-              {/*<ul className={`${classes.ul} ${clickR ? "" : classes.ulBoxRight}`}>
-                <li><div>{TAB_BAR[language][9]}</div></li>
-                <li><TextField
-                  value={nameR}
-                  label={TAB_BAR[language][2]}
-                  onChange={(e) => {
-                    setNameR(e.target.value);
-                  }}
-                  fullWidth={true}
-                  margin="normal"
-                  required={true}
-                /></li>
-                <li><TextField
-                  value={phoneNumberR}
-                  label={TAB_BAR[language][3]}
-                  onChange={(e) => {
-                    setPhoneNumberR(e.target.value);
-                  }}
-                  fullWidth={true}
-                  margin="normal"
-                  required={true}
-                /></li>
-                <li><TextField
-                  value={emailR}
-                  label={TAB_BAR[language][4]}
-                  onChange={(e) => {
-                    setEmailR(e.target.value);
-                  }}
-                  fullWidth={true}
-                  margin="normal"
-                  required={true}
-                /></li>
-                <li><TextField
-                  select
-                  value={workArea}
-                  label={TAB_BAR[language][10]}
-                  onChange={(e) => {
-                    setWorkArea(e.target.value);
-                  }}
-                  fullWidth={true}
-                  margin="normal"
-                  required={true}
-                >
-                  <ul>
-                    {WORK_AREA[language].map((value: string, index: number) => (
-                    <li key={index}>
-                      <MenuItem value={value}>{value}</MenuItem>
-                    </li>
-                    ))}
-                  </ul>
-                </TextField></li>
-                <li><div className={cvLoaded ? (classes.buttonSelectHide) : (classes.buttonSelect)}>{TAB_BAR[language][11]}</div></li> 
-                <li>
-                {!cvSubmitted ? (
-                  cvLoaded ? (
-                    <ul className={classes.cvNameContainer}>
-                      <li><div className={classes.cvName}>{cvName}</div></li>
-                      <li><div className={classes.cvName} onClick={handleCancelCvClick} style={{ cursor: 'pointer' }}>X</div></li>
-                    </ul>
-                    ) : (
-                      <div>
-                        <Button href="" classNameButton={classes.buttonSelect} text={TAB_BAR[language][12]} onClick={handleSelectClick} />
-                        <input
-                          type="file"
-                          ref={cvRef}
-                          style={{ display: 'none' }}
-                          accept=".pdf"
-                          onChange={handleFileChange}
-                        />
-                </div>
-                  )):(<div></div>)
-                }
-                </li>
-                <li>
-                  {cvSubmitted ? (
-                      <div className={classes.successCv}>{TAB_BAR[language][14]}</div>
-                    ) : (
-                    <Button href="" classNameButton={classes.buttonApply} text={TAB_BAR[language][13]} onClick={handleApplyClick} />
-                  )}
-                </li>
-                    </ul>*/}
             </div>
           </>
          ) : (
@@ -464,142 +298,15 @@ const TabBar = (): JSX.Element => {
                 </div>
               <ul className={`${classes.ul} ${clickL ? "" : classes.ulBoxLeft}`}>
                 <li><div>{TAB_BAR[language][1]}</div></li>
-                <li><TextField
-                  value={nameL}
-                  label={TAB_BAR[language][2]}
-                  onChange={(e) => {
-                    setNameL(e.target.value);
-                  }}
-                  fullWidth={true}
-                  margin="normal"
-                  required={true}
-                /></li>
-                <li><TextField
-                  value={phoneNumberL}
-                  label={TAB_BAR[language][3]}
-                  onChange={(e) => {
-                    setPhoneNumberL(e.target.value);
-                  }}
-                  fullWidth={true}
-                  margin="normal"
-                  required={true}
-                /></li>
-                <li><TextField
-                  value={emailL}
-                  label={TAB_BAR[language][4]}
-                  onChange={(e) => {
-                    setEmailL(e.target.value);
-                  }}
-                  fullWidth={true}
-                  margin="normal"
-                  required={true}
-                /></li>
-                <li><TextField
-                  value={message}
-                  label={TAB_BAR[language][5]}
-                  onChange={(e) => {
-                    setMessage(e.target.value);
-                  }}
-                  fullWidth={true}
-                  margin="normal"
-                  required={true}
-                  multiline={true}
-                  rows={8}
-                /></li>
-                <li>
-                  {messageSubmitted ? (
-                    <div className={classes.successMessage}>
-                      {TAB_BAR[language][7]}
-                    </div>
-                  ) : (
-                    <Button
-                      href=""
-                      classNameButton={classes.button}
-                      text={TAB_BAR[language][6]} onClick={handleSendClick}
-                    />
-                  )}
-                </li>
+                {messageItems.map((item: any) => (
+                  <li key={item.key}>{item.content}</li>
+                ))}
               </ul>
               <ul className={`${classes.ul} ${clickR ? "" : classes.ulBoxRight}`}>
                 <li><div>{TAB_BAR[language][9]}</div></li>
-                <li><TextField
-                  value={nameR}
-                  label={TAB_BAR[language][2]}
-                  onChange={(e) => {
-                    setNameR(e.target.value);
-                  }}
-                  fullWidth={true}
-                  margin="normal"
-                  required={true}
-                /></li>
-                <li><TextField
-                  value={phoneNumberR}
-                  label={TAB_BAR[language][3]}
-                  onChange={(e) => {
-                    setPhoneNumberR(e.target.value);
-                  }}
-                  fullWidth={true}
-                  margin="normal"
-                  required={true}
-                /></li>
-                <li><TextField
-                  value={emailR}
-                  label={TAB_BAR[language][4]}
-                  onChange={(e) => {
-                    setEmailR(e.target.value);
-                  }}
-                  fullWidth={true}
-                  margin="normal"
-                  required={true}
-                /></li>
-                <li><TextField
-                  select
-                  value={workArea}
-                  label={TAB_BAR[language][10]}
-                  onChange={(e) => {
-                    setWorkArea(e.target.value);
-                  }}
-                  fullWidth={true}
-                  margin="normal"
-                  required={true}
-                >
-                  <ul>
-                    {WORK_AREA[language].map((value: string, index: number) => (
-                    <li key={index}>
-                      <MenuItem value={value}>{value}</MenuItem>
-                    </li>
-                    ))}
-                  </ul>
-                </TextField></li>
-                <li><div className={cvLoaded ? (classes.buttonSelectHide) : (classes.buttonSelect)}>{TAB_BAR[language][11]}</div></li> 
-                <li>
-                {!cvSubmitted ? (
-                  cvLoaded ? (
-                    <ul className={classes.cvNameContainer}>
-                      <li><div className={classes.cvName}>{cvName}</div></li>
-                      <li><div className={classes.cvName} onClick={handleCancelCvClick} style={{ cursor: 'pointer' }}>X</div></li>
-                    </ul>
-                    ) : (
-                      <div>
-                        <Button href="" classNameButton={classes.buttonSelect} text={TAB_BAR[language][12]} onClick={handleSelectClick} />
-                        <input
-                          type="file"
-                          ref={cvRef}
-                          style={{ display: 'none' }}
-                          accept=".pdf"
-                          onChange={handleFileChange}
-                        />
-                </div>
-                  )):(<div></div>)
-                }
-                </li>
-                <li>
-                  {cvSubmitted ? (
-                      <div className={classes.successCv}>{TAB_BAR[language][14]}</div>
-                    ) : (
-                    <Button href="" classNameButton={classes.buttonApply} text={TAB_BAR[language][13]} onClick={handleApplyClick} />
-                  )}
-                </li>
+                {workWithUsItems.map((item) => (
+                  <li key={item.key}>{item.content}</li>
+                ))}
               </ul>
             </div>
           </>
