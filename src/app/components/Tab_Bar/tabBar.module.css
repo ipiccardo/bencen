@@ -156,7 +156,7 @@
 
 @media (max-width: 1100px) {
     .tab {
-        width: 480px;
+        width: 720px;
     }
 
     .responsiveTab {
@@ -164,11 +164,11 @@
     }
 
     .boxLeftClick {
-        width: 240px;
+        width: 360px;
     }
     
     .boxRight {
-        width: 240px;
+        width: 360px;
     }
 
     .headerLeftClick {
@@ -183,6 +183,20 @@
         font-size: var(--h-2-font-size);
         font-style: var(--h-2-font-style);
         font-weight: var(--h-2-font-weight);
+    }
+}
+
+@media (max-width: 850px) {
+    .tab {
+        width: 480px;
+    }
+
+    .boxLeftClick {
+        width: 240px;
+    }
+    
+    .boxRight {
+        width: 240px;
     }
 }
 

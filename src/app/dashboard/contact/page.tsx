@@ -8,33 +8,35 @@ import classes from "./page.module.css";
 import Image from "next/image";
 
 const Contact = () => {
-  const [mediumScreen, setMediumScreen] = useState(false);
-  const [Resolution, setResolution] = useState({ width: 0, heigth: 0,});
+  const [Resolution, setResolution] = useState({ width: 0, height: 0,});
   const [widthPercentage, SetWidthPercentage] = useState(1);
   const [heightPercentage, SetHeightPercentage] = useState(1);
   
-  const handleResize = () => {
+  const handleResolution = () => {
     // Set dimensions based on a percentage of the screen width and height:
     if (window.innerWidth >= 1440){
       SetWidthPercentage(1);
-      SetHeightPercentage(1);
-    } else if (window.innerWidth > 1000) {
-      SetWidthPercentage(1);
+    } else {
       SetHeightPercentage(1 - (1- window.innerWidth/1440)/2);
-    }
+    } 
+    /*else if (window.innerWidth > 900) {
+      SetHeightPercentage(1 - (1- window.innerWidth/1440)/2);
+    } else {
+      SetWidthPercentage(1);
+    }*/
 
     setResolution({ 
       width: Math.floor(window.innerWidth * widthPercentage), 
-      heigth: Math.floor(window.innerHeight * heightPercentage)
+      height: Math.floor(window.innerHeight * heightPercentage)
     });
   };
   
   useEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
+    handleResolution();
+    window.addEventListener("resize", handleResolution);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", handleResolution);
     };
   }, [widthPercentage, heightPercentage]);
 
@@ -43,23 +45,18 @@ const Contact = () => {
       <div className={classes.page}>
         <div className={classes.firstSection}>
           <section>
-            {/*<div className={classes.FirstimageContainer}>*/}
-              <div className={classes.showHeaderParagraphContainer}>
+            {/* DESKTOP FOLLOWS */}
+            <div className={classes.firstImage}>
+              <div className={classes.text}>
                 <ConnectWithUs />
               </div>
-              {/* DESKTOP FOLLOWS */}
-              <div className={classes.firstImageShow}>
-                <div className={classes.text} style={{ maxWidth: Resolution.width * 91/360, left: 15 + "%" }} >
-                  <ConnectWithUs />
-                </div>
-                <Image
-                  width={Resolution.width}
-                  height={Resolution.heigth}
-                  src={"/images/backgrounds/contact/FrameOne.png"}
-                  alt={""}
-                />
-              </div>
-            {/*</div>*/}
+              <Image
+                width={Resolution.width > 900 ? Resolution.width : 900}
+                height={Resolution.width > 900 ? Resolution.height : 756}
+                src={`/images/backgrounds/contact/${window.innerWidth > 900 ? '1' : '1-R'}.png`}
+                alt={""}
+              />
+            </div>
           </section>
           <div className={classes.contactCard} style={{ width: Resolution.width * 0.9 }}>
             <ContactCards />
@@ -72,7 +69,6 @@ const Contact = () => {
           </section>
         </div>
       </div>
-      
     </>
   );
 };
