@@ -7,8 +7,7 @@ import { store } from '@/app/context/context';
 import { NEWS, NEWS_BUTTON} from '../../utils/constants'
 
 const NewsCard = (): JSX.Element => {
-    const context = useContext(store)
-    const { language, setLanguage }: any = context
+    const { language }: any = useContext(store)
 
     const sliderSettings = {
         dots: true,

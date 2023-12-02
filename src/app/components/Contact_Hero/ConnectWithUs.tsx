@@ -4,11 +4,8 @@ import React, { useContext } from "react";
 import { CONNECT_WITH_US } from "../../utils/constants";
 import { store } from "@/app/context/context";
 
-interface Props {}
-
 const ConnectWithUs = (): JSX.Element => {
-  const context = useContext(store);
-  const { language, setLanguage }: any = context;
+  const { language }: any = useContext(store)
 
   return (
     <>

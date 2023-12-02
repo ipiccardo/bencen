@@ -18,8 +18,7 @@ interface Props {
 
 const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
   const [hover, setHover] = useState(false);
-  const context = useContext(store);
-  const { language, setLanguage }: any = context;
+  const { language }: any = useContext(store);
 
   return (
     <div
@@ -50,8 +49,7 @@ const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
 };
 
 const ServiceCards = (): JSX.Element => {
-  const context = useContext(store);
-  const { language, setLanguage }: any = context;
+  const { language }: any = useContext(store)
 
   // Slider configuration:
   const sliderSettings = {

@@ -52,8 +52,7 @@ const MisionVisionValuesCard = ({ imageName, content }: Props): JSX.Element => {
 };
 
 const MisionVisionValuesCards = (): JSX.Element => {
-  const context = useContext(store)
-  const { language, setLanguage }: any = context
+  const { language }: any = useContext(store)
 
   return (
     <ul className={classes.misionVisionValuesCards}>

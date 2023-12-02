@@ -74,8 +74,10 @@
 }
 
 .sliderContainer {
-  max-width: 240px;
+  width: 240px;
   height: 240px;
+  margin: 0 auto;
+  padding-bottom: 30px;
 }
 
 .sliderContainer button::before {
@@ -83,16 +85,5 @@
 }
 
 .showSlider {
-  display: none;
+  display: block;
 }
-
-@media (max-width: 1100px) {
-  .hideSlider {
-    display: none;
-  }
-
-  .showSlider {
-    display: block;
-  }
-}
-  

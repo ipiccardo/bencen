@@ -6,8 +6,7 @@ import { store } from '@/app/context/context';
 import {PROJECTS_CARD} from '../../utils/constants';
 
 const ClientCard = () => {
-    const context = useContext(store)
-    const { language, setLanguage }: any = context
+    const { language }: any = useContext(store)
 
     return (
         <div className={classes.clientCardsContainer}>

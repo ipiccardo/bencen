@@ -38,8 +38,7 @@ const UnmatchedCard = ({ imageName, header, content }: Props): JSX.Element => {
 };
 
 const UnmatchedCards = (): JSX.Element => {
-  const context = useContext(store)
-  const { language, setLanguage }: any = context
+  const { language }: any = useContext(store)
 
   return (
       <ul className={classes.unmatchedCards}>

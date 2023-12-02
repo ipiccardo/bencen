@@ -24,8 +24,7 @@ const TabBar = (): JSX.Element => {
   const [messageSubmitted, setMessageSubmitted] = useState(false);
   const [cvSubmitted, setCvSubmitted] = useState(false);
   const cvRef = useRef<HTMLInputElement>(null);
-  const context = useContext(store)
-  const { language, setLanguage }: any = context
+  const { language }: any = useContext(store)
   
   const handleClickL = () => {
     if (!clickL) {

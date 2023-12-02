@@ -30,8 +30,7 @@ const Customer = ({ imageName, width, height }: Props): JSX.Element => {
 }
 
 const Collaborators = (): JSX.Element => {
-  const context = useContext(store)
-  const { language, setLanguage }: any = context
+  const { language }: any = useContext(store)
 
   return (
     <section className={classes.text}>

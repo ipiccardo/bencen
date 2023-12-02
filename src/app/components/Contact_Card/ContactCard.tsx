@@ -56,11 +56,8 @@ const ContactCard = ({ imageName, header, content }: Props): JSX.Element => {
   );
 };
 
-const ContactCards = (): JSX.Element => {
-  const context = useContext(store)
-  const { language, setLanguage }: any = context
-
-  // Slider configuration:
+const ContactCardSlider = (): JSX.Element => {
+  const { language }: any = useContext(store);
   const sliderSettings = {
     responsive: [
       {
@@ -76,34 +73,48 @@ const ContactCards = (): JSX.Element => {
   };
 
   return (
-    <div>
-      <div className={`${classes.showSlider} serviceCardSliderContainer`}>
-        <div className={classes.sliderContainer}>
-          <Slider {...sliderSettings}>
-            {Object.keys(CONTACT_CARD[language]).map((key) => {
-              const [imageName, header, content] = CONTACT_CARD[language][key];
-              return (
-                <div key={key}>
-                  <ContactCard imageName={imageName} header={header} content={content} />
-                </div>
-              );
-            })}
-          </Slider>
-        </div>
-      </div>
-      <div className={classes.hideSlider}>
-        <ul className={classes.contactCards}>
-        {Object.keys(CONTACT_CARD[language]).map((key) => {
-          const [imageName, header, content] = CONTACT_CARD[language][key];
-          return (
-          <li key={key}>
+    <Slider {...sliderSettings}>
+      {Object.keys(CONTACT_CARD[language]).map((key) => {
+        const [imageName, header, content] = CONTACT_CARD[language][key];
+        return (
+          <div key={key}>
             <ContactCard imageName={imageName} header={header} content={content} />
-          </li>
-          );
-        })}
-      </ul>
-    </div>
-   </div>
+          </div>
+        );
+      })}
+    </Slider>
+  );
+}
+
+const ContactCards = (): JSX.Element => {
+  const { language }: any = useContext(store);
+
+  const renderContactCards = () => {
+    return Object.keys(CONTACT_CARD[language]).map((key) => {
+      const [imageName, header, content] = CONTACT_CARD[language][key];
+      return (
+        <li key={key}>
+          <ContactCard imageName={imageName} header={header} content={content} />
+        </li>
+      );
+    });
+  };
+
+  return (
+    <>
+      {window.innerWidth > 1100 ? 
+        (
+          <ul className={classes.contactCards}>
+            {renderContactCards()}
+          </ul>
+        ) : (
+          <div className={`${classes.showSlider} serviceCardSliderContainer`}>
+            <div className={classes.sliderContainer}>
+              <ContactCardSlider/>
+            </div>
+          </div>
+        )}
+    </>
   ) 
 };
 
