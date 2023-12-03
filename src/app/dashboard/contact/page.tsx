@@ -19,12 +19,7 @@ const Contact = () => {
     } else {
       SetHeightPercentage(1 - (1- window.innerWidth/1440)/2);
     } 
-    /*else if (window.innerWidth > 900) {
-      SetHeightPercentage(1 - (1- window.innerWidth/1440)/2);
-    } else {
-      SetWidthPercentage(1);
-    }*/
-
+    
     setResolution({ 
       width: Math.floor(window.innerWidth * widthPercentage), 
       height: Math.floor(window.innerHeight * heightPercentage)
@@ -44,23 +39,18 @@ const Contact = () => {
     <>
       <div className={classes.page}>
         <div className={classes.firstSection}>
-          <section>
-            {/* DESKTOP FOLLOWS */}
-            <div className={classes.firstImage}>
-              <div className={classes.text}>
-                <ConnectWithUs />
-              </div>
-              <Image
-                width={Resolution.width > 900 ? Resolution.width : 900}
-                height={Resolution.width > 900 ? Resolution.height : 756}
-                src={`/images/backgrounds/contact/${window.innerWidth > 900 ? '1' : '1-R'}.png`}
-                alt={""}
-              />
-            </div>
-          </section>
+          <div className={classes.text}>
+            <ConnectWithUs />
+          </div>
           <div className={classes.contactCard} style={{ width: Resolution.width * 0.9 }}>
             <ContactCards />
           </div>
+          <Image
+            width={Resolution.width > 900 ? Resolution.width : 900}
+            height={Resolution.width > 900 ? Resolution.height : 756}
+            src={`/images/backgrounds/contact/${window.innerWidth > 900 ? '1' : '1-R'}.png`}
+            alt={""}
+          />
           <div className={classes.preTab} style={{ width: Resolution.width * 0.9 }}></div>
         </div>
         <div className={classes.secondSection}>

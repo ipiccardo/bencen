@@ -21,7 +21,7 @@ const ContactCard = ({ imageName, header, content }: Props): JSX.Element => {
 
   useEffect(() => {
     if (window.innerWidth >= 1440) {
-      setWidth(window.innerWidth * 1/6);
+      setWidth(280);
     } else {
       setWidth(240);
     }

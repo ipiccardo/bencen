@@ -7,22 +7,17 @@
   background-color: black;
   position: relative;
 }
-
-.firstImage {
-  margin-top: 0px;
-  position: relative;
-}
  
 .text {
-    position: absolute;
-    z-index: 2;
-    top: 18%;
-    left: 15%;
-    /* top: 192px;
-    left: 240px; */
-    max-width: 364px;
-    padding: 20px;
-    line-height: 24px;
+  position: absolute;
+  z-index: 2;
+  top: 18%;
+  left: 15%;
+  /* top: 192px;
+  left: 240px; */
+  max-width: 364px;
+  padding: 20px;
+  line-height: 24px;
 }
 
 .text h1 {
@@ -41,12 +36,12 @@
   flex-direction: column;
   top: 80%;
   transform: translateX(5%);
-  z-index: 4;
+  z-index: 3;
 }
 
 .preTab {
   height: 120px;
-  z-index: 3;
+  z-index: 2;
   background-color: white;
   transform: translateX(5%);
 }
@@ -65,6 +60,7 @@
   z-index: 2;
   transform: translateX(5%);
   background-color: white;
+  padding-top: 16px;
 }
 
 @media (max-width: 1440px) {
@@ -79,6 +75,13 @@
   }
 }
 
+@media (max-width: 1100px) {
+  .tab {
+    height: 800px;
+    padding-top: 32px;
+  }
+}
+
 @media (max-width: 1000px) {
   .text {
     max-width: 280px;
@@ -89,10 +92,19 @@
   .text {
     left: 5%;
   }
+
+  .tab {
+    height: 768px;
+    padding-top: 64px;
+  }
 }
 
 @media (max-width: 350px) {
   .text {
     left: 1%;
+  }
+
+  .tab {
+    height: 736px;
   }
 }
