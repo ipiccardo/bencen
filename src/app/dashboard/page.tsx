@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState, useContext } from "react";
 import "../styles/globals.css";
+import BuildingTomorrow from "../components/Home_Hero/BuildingTomorrow";
 import ServiceCards from "../components/Service_Card/ServiceCard";
 import UnmatchedCards from "../components/Unmatched_Card/UnmatchedCard";
 import classes from "./page.module.css";
@@ -11,29 +12,35 @@ import AboutUsCard from "../components/aboutUs_Card/AboutUsCard";
 import ClientCard from "../components/Clients_Card/ClientCard";
 import NewsCard from "../components/News_Card/NewsCard";
 import Button from "../components/Ui/Button";
-import {
-  HOME_TEXT,
-  ABOUT_US,
-  ABOUT_US_BUTTON,
-  UNMATCHED_SERVICES_TITLE,
-  UNMATCHED_SERVICES_BUTTON,
-  PROJECTS,
-  PROJECTS_BUTTON,
-  CONTACT,
-  CONTACT_BUTTON,
-  NEWS,
-} from "../utils/constants";
+import { ABOUT_US, ABOUT_US_BUTTON, UNMATCHED_SERVICES_TITLE, UNMATCHED_SERVICES_BUTTON, PROJECTS, PROJECTS_BUTTON, CONTACT, CONTACT_BUTTON, NEWS } from "../utils/constants";
 import { store } from "@/app/context/context";
 
 const HomePage = () => {
+  const [Resolution, setResolution] = useState({ width: 0, height: 0,});
+  const [widthPercentage, SetWidthPercentage] = useState(1);
+  const [heightPercentage, SetHeightPercentage] = useState(1);
+  const { language }: any = useContext(store)
+  
+  const handleResolution = () => {
+    // Set dimensions based on a percentage of the screen width and height:
+    if (window.innerWidth >= 1440){
+      SetWidthPercentage(1);
+    } else {
+      SetHeightPercentage(1 - (1- window.innerWidth/1440)/2);
+    } 
+    
+    setResolution({ 
+      width: Math.floor(window.innerWidth * widthPercentage), 
+      height: Math.floor(window.innerHeight * heightPercentage)
+    });
+  };
+  /*
   const [pantallaMediana, setPantallaMediana] = useState(false);
   const [firtAndLastImage, setFirstAndLastImage] = useState({
     width: 1200,
     heigth: 888,
   });
   const [otherImages, setOtherImages] = useState({ width: 1200, heigth: 960 });
-  const context = useContext(store);
-  const { language, setLanguage }: any = context;
 
   const handleResize = () => {
     setPantallaMediana(window.innerWidth < 768);
@@ -48,20 +55,47 @@ const HomePage = () => {
       setFirstAndLastImage({ width: 1200, heigth: 888 });
       setOtherImages({ width: 1200, heigth: 960 });
     }
-  };
-  //Hace Hook de Windows Resize
-  useEffect(() => {
-    handleResize();
+  };*/
 
-    window.addEventListener("resize", handleResize);
+  // Hook Windows Resize:
+  useEffect(() => {
+    handleResolution();
+
+    window.addEventListener("resize", handleResolution);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", handleResolution);
     };
-  }, []);
+  }, [widthPercentage, heightPercentage]);
 
   return (
     <>
+      <div className={classes.page}>
+        <div className={classes.firstSection}>
+          <div className={classes.text}>
+            <BuildingTomorrow />
+          </div>
+          <div className={classes.serviceCard} style={{ width: Resolution.width * 0.9 }}>
+            <ServiceCards />
+          </div>
+          <Image
+            width={Resolution.width > 900 ? Resolution.width : 900}
+            height={Resolution.width > 900 ? Resolution.height : 756}
+            src={`/images/backgrounds/home/${window.innerWidth > 900 ? '1' : '1-R'}.png`}
+            alt={""}
+          />
+          <div className={classes.preAboutUs} style={{ width: Resolution.width * 0.9 }}></div>
+        </div>
+        <div className={classes.secondSection}>
+          <section className={classes.aboutUs} style={{ width: Resolution.width * 0.9 }}>
+            {/*<TabBar />*/}
+          </section>
+        </div>
+      </div>
+    </>
+    );
+  }
+    {/*<>
       <div className={classes.homePageContainer}>
         <div className={classes.sectionsContainer}>
           <section>
@@ -193,7 +227,7 @@ const HomePage = () => {
                       href={""}
                       text={CONTACT_BUTTON[language][1]}
                       classNameContent="padding-10"
-                    /> */}
+                    /> 
                   </div>
                 </div>
               </div>
@@ -229,8 +263,6 @@ const HomePage = () => {
           </section>
         </div>
       </div>
-    </>
-  );
-};
+    </>*/}
 
 export default HomePage;

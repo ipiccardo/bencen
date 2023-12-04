@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Image from "next/image";
 import classes from "./serviceCard.module.css";
 import Button from "../Ui/Button";
@@ -19,22 +19,33 @@ interface Props {
 const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
   const [hover, setHover] = useState(false);
   const { language }: any = useContext(store);
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    if (window.innerWidth >= 1440) {
+      setWidth(280);
+    } else {
+      setWidth(240);
+    }
+  }, [window.innerWidth]);
 
   return (
     <div
-      className={`${classes.serviceCard}`}
+      className={classes.serviceCard} style={{width: `${width}px`, height: `${width}px`}}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
       <div className={classes.group}>
-        <Image
-          className={classes.image}
-          alt={`${header}`.toLowerCase() + " icon"}
-          src={`/icons/Services/${hover ? imageName + "_hover" : imageName}.png`}
-          width={96}
-          height={96}
-        />
-        <div className={classes.text}>
+        <div className={classes.imageGroup}>
+          <Image
+            className={classes.image}
+            alt={`${header}`.toLowerCase() + " icon"}
+            src={`/icons/Services/${hover ? imageName + "_hover" : imageName}.png`}
+            width={96}
+            height={96}
+          />
+        </div>
+        <div className={classes.text} style={{width: `${width * 13/15}px`}}>
           <div className={classes.header}>{header}</div>
           <div className={classes.content}>{content}</div>
         </div>

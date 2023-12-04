@@ -2,70 +2,90 @@
 .serviceCard {
   background-color: #ffffff;
   box-shadow: 0px 1.5px 22.5px 0.75px #00000040;
-  width: 240px;
-  height: 240px;
+  /*width: 240px;
+  height: 240px;*/
   transition: opacity 300ms ease;
 }
 
-.serviceCard .group {
-  width: 208px;
-  height: 192px;
-  left: 16px;
-  top: 16px;
-  position: relative;
-}
+  .serviceCard .group {
+    /*
+    width: 208px;
+    height: 192px;
+    left: 16px;
+    top: 16px;*/
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    left: 6.67%;
+    top: 6.67%;
+  }
 
-.serviceCard .image {
-  background-position: 50% 50%;
-  background-size: cover;
-  left: 56px;
-  top: 0;
-  position: absolute;
-}
+  .serviceCard .imageGroup{
+    width: 96px;
+    height: 96px;
+    justify-content: center;
+    align-items: center;
+  }
 
-.serviceCard .text {
-  width: 212px;
-  height: 80px;
-  left: 0;
-  top: 112px;
-  position: absolute;
-}
+  .serviceCard .image {
+    align-self: center;
+    /*
+    background-position: 50% 50%;
+    background-size: cover;
+    left: 56px;
+    top: 0;
+    position: absolute;*/
+  }
 
-.serviceCard .header {
-  color: #000000;
-  font-family: var(--h-3-font-family);
-  font-size: var(--h-3-font-size);
-  font-style: var(--h-3-font-style);
-  font-weight: var(--h-3-font-weight);
-  width: 210px;
-  height: 24px;
-  left: 0;
-  top: 0;
-  letter-spacing: var(--h-3-letter-spacing);
-  line-height: var(--h-3-line-height);
-  position: absolute;
-  text-align: center;
-}
+  .serviceCard .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    /*
+    width: 212px;
+    height: 80px;
+    left: 0;
+    top: 112px;
+    position: absolute;*/
+  }
 
-.serviceCard .content {
-  color: var(--gray-dark-color);
-  font-family: var(--text-font-family);
-  font-size: var(--text-font-size);
-  font-style: var(--text-font-style);
-  font-weight: var(--text-font-weight);
-  width: 210px;
-  height: 48px;
-  left: 0;
-  top: 32px;
-  letter-spacing: var(--text-letter-spacing);
-  line-height: var(--text-line-height);
-  position: absolute;
-  text-align: center;
-}
+  .serviceCard .header {
+    color: #000000;
+    font-family: var(--h-3-font-family);
+    font-size: var(--h-3-font-size);
+    font-style: var(--h-3-font-style);
+    font-weight: var(--h-3-font-weight);
+    width: 210px;
+    height: 24px;
+    left: 0;
+    top: 0;
+    letter-spacing: var(--h-3-letter-spacing);
+    line-height: var(--h-3-line-height);
+    position: absolute;
+    text-align: center;
+  }
 
-.serviceCard .button {
-  visibility: hidden;
-}
+  .serviceCard .content {
+    color: var(--gray-dark-color);
+    font-family: var(--text-font-family);
+    font-size: var(--text-font-size);
+    font-style: var(--text-font-style);
+    font-weight: var(--text-font-weight);
+    width: 210px;
+    height: 48px;
+    left: 0;
+    top: 32px;
+    letter-spacing: var(--text-letter-spacing);
+    line-height: var(--text-line-height);
+    position: absolute;
+    text-align: center;
+  }
+
+  .serviceCard .button {
+    visibility: hidden;
+  }
 
 /* Service Card - Hover State */
 .serviceCard:hover {
