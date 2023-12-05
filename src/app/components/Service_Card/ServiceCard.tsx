@@ -31,7 +31,8 @@ const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
 
   return (
     <div
-      className={classes.serviceCard} style={{width: `${width}px`, height: `${width}px`}}
+      className={classes.serviceCard} 
+      style={{width: `${width}px`, height: hover && window.innerWidth > 1100 ? `${width * 399/320}px` : `${width}px`}}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
@@ -59,14 +60,12 @@ const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
   );
 };
 
-const ServiceCards = (): JSX.Element => {
-  const { language }: any = useContext(store)
-
-  // Slider configuration:
+const ServiceCardSlider = (): JSX.Element => {
+  const { language }: any = useContext(store);
   const sliderSettings = {
     responsive: [
       {
-        breakpoint: 1000,
+        breakpoint: 1100,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -78,10 +77,7 @@ const ServiceCards = (): JSX.Element => {
   };
 
   return (
-    <div>
-      <div className={`${classes.showSlider} serviceCardSliderContainer`}>
-        <div className={classes.sliderContainer}>
-          <Slider {...sliderSettings}>
+    <Slider {...sliderSettings}>
             {Object.keys(SERVICES[language]).map((key) => {
               const [imageName, header, content] = SERVICES[language][key];
               return (
@@ -94,27 +90,43 @@ const ServiceCards = (): JSX.Element => {
                 </div>
               );
             })}
-          </Slider>
-        </div>
-      </div>
-      <div className={classes.hideSlider}>
-        <ul className={classes.serviceCards}>
-          {Object.keys(SERVICES[language]).map((key) => {
-            const [imageName, header, content] = SERVICES[language][key];
-            return (
-              <li key={key}>
-                <ServiceCard
-                  imageName={imageName}
-                  header={header}
-                  content={content}
-                />
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </div>
+    </Slider>
   );
-};
+}
 
+const ServiceCards = (): JSX.Element => {
+  const { language }: any = useContext(store);
+
+  const renderServiceCards = () => {
+    return Object.keys(SERVICES[language]).map((key) => {
+      const [imageName, header, content] = SERVICES[language][key];
+      return (
+        <li key={key}>
+          <ServiceCard
+            imageName={imageName}
+            header={header}
+            content={content}
+          />
+        </li>
+      );
+    })};
+
+  return (
+    <>
+      {window.innerWidth > 1100 ? 
+        (
+          <ul className={classes.serviceCards}>
+            {renderServiceCards()}
+          </ul>
+        ) : (
+          <div className={`${classes.showSlider} serviceCardSliderContainer`}>
+            <div className={classes.sliderContainer}>
+              <ServiceCardSlider/>
+            </div>
+          </div>
+        )}
+    </>
+  ) 
+};
+  
 export default ServiceCards;

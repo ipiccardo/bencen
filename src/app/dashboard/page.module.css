@@ -12,21 +12,21 @@
   position: absolute;
   z-index: 2;
   top: 18%;
-  left: 15%;
-  /* top: 192px;
-  left: 240px; */
-  max-width: 364px;
+  left: 10%;
   padding: 20px;
   line-height: 24px;
 }
 
 .text h1 {
-    color: var(--white-color);
-    font-size: var(--h-1-font-size);
+  max-width: 420px;
+  color: var(--white-color);
+  font-size: var(--h-1-font-size);
+  line-height: var(--h-1-line-height);
 }
 
 .text p {
-    color: var(--gray-light-color);
+  max-width: 420px;
+  color: var(--gray-light-color);
 }
 
 .serviceCard {
@@ -65,35 +65,69 @@
 
 @media (max-width: 1440px) {
   .text {
-    max-width: 320px;
+    left: 8%;
+  }
+
+  .text p{
+    max-width: 350px;
   }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1300px) {
   .text {
-    left: 10%;
+    left: 6%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .text h1 {
+    max-width: 350px;
+  }
+
+  .text p {
+    max-width: 300px;
   }
 }
 
 @media (max-width: 1100px) {
-  .tab {
+  .serviceCard {
+    top: 76%;
+  }
+
+  .aboutUs {
     height: 800px;
     padding-top: 32px;
   }
 }
 
-@media (max-width: 1000px) {
-  .text {
-    max-width: 280px;
-  }
-}
-
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
   .text {
     left: 5%;
   }
 
-  .tab {
+  .text p {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .text h1 {
+    max-width: 250px;
+  }
+
+  .text p {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .text {
+    top: 10%;
+  }
+}
+
+@media (max-width: 850px) {
+  .aboutUs {
     height: 768px;
     padding-top: 64px;
   }
@@ -104,7 +138,11 @@
     left: 1%;
   }
 
-  .tab {
+  .text p {
+    max-width: 220px;
+  }
+
+  .aboutUs {
     height: 736px;
   }
 }
