@@ -38,6 +38,8 @@ const Contact = () => {
   return (
     <>
       <div className={classes.page}>
+
+        {/* FIRST SECTION */}
         <div className={classes.firstSection}>
           <div className={classes.text}>
             <ConnectWithUs />
@@ -53,6 +55,8 @@ const Contact = () => {
           />
           <div className={classes.preTab} style={{ width: Resolution.width * 0.9 }}></div>
         </div>
+
+        {/* SECOND SECTION */}
         <div className={classes.secondSection}>
           <section className={classes.tab} style={{ width: Resolution.width * 0.9 }}>
             <TabBar />

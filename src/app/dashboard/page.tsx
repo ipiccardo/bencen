@@ -4,6 +4,7 @@ import React, { useEffect, useState, useContext } from "react";
 import "../styles/globals.css";
 import BuildingTomorrow from "../components/Home_Hero/BuildingTomorrow";
 import ServiceCards from "../components/Service_Card/ServiceCard";
+import AboutUs from "../components/Home_About_Us/AboutUs";
 import UnmatchedCards from "../components/Unmatched_Card/UnmatchedCard";
 import classes from "./page.module.css";
 import Header from "../components/Header/Header";
@@ -12,11 +13,11 @@ import AboutUsCard from "../components/aboutUs_Card/AboutUsCard";
 import ClientCard from "../components/Clients_Card/ClientCard";
 import NewsCard from "../components/News_Card/NewsCard";
 import Button from "../components/Ui/Button";
-import { ABOUT_US, ABOUT_US_BUTTON, UNMATCHED_SERVICES_TITLE, UNMATCHED_SERVICES_BUTTON, PROJECTS, PROJECTS_BUTTON, CONTACT, CONTACT_BUTTON, NEWS } from "../utils/constants";
+import { UNMATCHED_SERVICES_TITLE, UNMATCHED_SERVICES_BUTTON, PROJECTS, PROJECTS_BUTTON, CONTACT, CONTACT_BUTTON, NEWS } from "../utils/constants";
 import { store } from "@/app/context/context";
 
 const HomePage = () => {
-  const [Resolution, setResolution] = useState({ width: 0, height: 0,});
+  const [resolution, setResolution] = useState({ width: 0, height: 0,});
   const [widthPercentage, SetWidthPercentage] = useState(1);
   const [heightPercentage, SetHeightPercentage] = useState(1);
   const { language }: any = useContext(store)
@@ -71,24 +72,44 @@ const HomePage = () => {
   return (
     <>
       <div className={classes.page}>
+
+        {/* FIRST SECTION */}
         <div className={classes.firstSection}>
           <div className={classes.text}>
             <BuildingTomorrow />
           </div>
-          <div className={classes.serviceCard} style={{ width: Resolution.width * 0.9 }}>
+          <div className={classes.serviceCard} style={{ width: resolution.width * 0.9 }}>
             <ServiceCards />
           </div>
           <Image
-            width={Resolution.width > 900 ? Resolution.width : 900}
-            height={Resolution.width > 900 ? Resolution.height : 756}
+            width={resolution.width > 900 ? resolution.width : 900}
+            height={resolution.width > 900 ? resolution.height : 756}
             src={`/images/backgrounds/home/${window.innerWidth > 900 ? '1' : '1-R'}.png`}
             alt={""}
           />
-          <div className={classes.preAboutUs} style={{ width: Resolution.width * 0.9 }}></div>
+          <div className={classes.preAboutUs} style={{ width: resolution.width * 0.9 }}></div>
         </div>
+
+        {/* SECOND SECTION */}
         <div className={classes.secondSection}>
-          <section className={classes.aboutUs} style={{ width: Resolution.width * 0.9 }}>
-            {/*<TabBar />*/}
+          <section className={classes.aboutUs} style={{ width: resolution.width * 0.9 }}>
+            <Image
+              width={resolution.width > 900 ? resolution.width * 0.9 : 900}
+              height={resolution.width > 900 ? resolution.height : resolution.width > 700 ? 756 : 928}
+              src={`/images/backgrounds/home/2.png`}
+              alt={""}
+            />
+            <div className={classes.secondImage}>
+              <Image
+                width={resolution.width > 900 ? resolution.width * 0.36 : 324}
+                height={resolution.width > 900 ? resolution.width * 0.32 : 288}
+                src={`/images/backgrounds/home/2-1.png`}
+                alt={""}
+              />
+            </div>
+            <div className={classes.aboutUsText}>
+              <AboutUs/>
+            </div>
           </section>
         </div>
       </div>

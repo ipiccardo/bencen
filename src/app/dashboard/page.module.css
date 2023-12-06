@@ -56,11 +56,43 @@
   align-items: center;
   display: inline-flex;
   flex-direction: column;
-  height: 840px;
   z-index: 2;
   transform: translateX(5%);
-  background-color: white;
-  padding-top: 16px;
+  top: -120px;
+}
+
+.secondImage {
+  position: absolute;
+  z-index: 2;
+  /*left: 240px;*/
+  /*top: 360px;*/
+  top: 26%;
+  left: 8%;
+}
+
+.aboutUsText {
+  position: absolute;
+  z-index: 2;
+  top: 31%;
+  left: 48%;
+  line-height: 24px;
+}
+  
+.aboutUsText h1 {
+  max-width: 400px;
+  font-size: var(--h-1-font-size);
+  line-height: var(--h-1-line-height);
+}
+  
+.aboutUsText p {
+  max-width: 400px;
+  color: var(--gray-dark-color);
+}
+
+.aboutUsText Button {
+  width: 256px;
+  height: 48px;
+  margin-top: 16px;
 }
 
 @media (max-width: 1440px) {
@@ -70,6 +102,15 @@
 
   .text p{
     max-width: 350px;
+  }
+
+  .aboutUsText {
+    top: 29%;
+    left: 46%;
+  }
+
+  .aboutUsText p {
+    max-width: 336px;
   }
 }
 
@@ -89,14 +130,29 @@
   }
 }
 
+@media (max-width: 1150px) {
+  .aboutUsText p {
+    max-width: 256px;
+  }
+}
+
 @media (max-width: 1100px) {
   .serviceCard {
     top: 76%;
   }
 
-  .aboutUs {
-    height: 800px;
-    padding-top: 32px;
+  .secondImage {
+    top: 20%;
+    left: 6%;
+  }
+
+  .aboutUsText {
+    top: 23%;
+    left: 47%;
+  }
+
+  .aboutUsText h1 {
+    margin-bottom: 0px;
   }
 }
 
@@ -118,18 +174,67 @@
   .text p {
     max-width: 200px;
   }
+
+  .secondImage {
+    left: 4%;
+  }
+
+  .aboutUsText {
+    left: 44%;
+  }
 }
 
 @media (max-width: 900px) {
   .text {
     top: 10%;
   }
+
+  .secondImage {
+    top: 24%;
+    left: 2%;
+  }
+
+  .aboutUsText {
+    top: 26%;
+  }
 }
 
 @media (max-width: 850px) {
-  .aboutUs {
-    height: 768px;
-    padding-top: 64px;
+  .secondImage {
+    left: -4%;
+  }
+}
+
+@media (max-width: 700px) {
+  .secondImage {
+    top: 18%;
+    left: 25%;
+  }
+
+  .aboutUsText {
+    top: 46%;
+    left: 35%;
+  }
+}
+
+@media (max-width: 500px) {
+  .secondImage {
+    left: 15%;
+  }
+
+  .aboutUsText {
+    left: 25%;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .secondImage {
+    left: 7%;
+  }
+
+  .aboutUsText {
+    left: 17%;
   }
 }
 
@@ -140,10 +245,6 @@
 
   .text p {
     max-width: 220px;
-  }
-
-  .aboutUs {
-    height: 736px;
   }
 }
 
