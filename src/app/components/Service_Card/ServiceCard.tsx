@@ -18,8 +18,8 @@ interface Props {
 
 const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
   const [hover, setHover] = useState(false);
-  const { language }: any = useContext(store);
   const [width, setWidth] = useState(0);
+  const { language }: any = useContext(store);
 
   useEffect(() => {
     if (window.innerWidth >= 1440) {

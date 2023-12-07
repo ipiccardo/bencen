@@ -99,7 +99,7 @@ export const UNMATCHED_SERVICES: Object = {
     technical: [
       "project",
       "TECHNICAL ADVISORY EXPERTS",
-      "Technical advice on civil construction projects. Detailed budgeting. Site inspections to ensure quality.",
+      "Technical advice on civil construction projects.\n Detailed budgeting.\n Site inspections to ensure quality.",
     ],
     maintenance: [
       "brickwall",

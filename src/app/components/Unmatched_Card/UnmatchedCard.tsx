@@ -1,4 +1,4 @@
-import React, {useContext} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import Image from "next/image";
 import classes from './unmatchedCard.module.css';
 import { UNMATCHED_SERVICES } from '../../utils/constants';
@@ -11,22 +11,32 @@ interface Props {
 }
 
 const UnmatchedCard = ({ imageName, header, content }: Props): JSX.Element => {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    if (window.innerWidth >= 1440) {
+      setWidth(360);
+    } else {
+      setWidth(288);
+    }
+  }, [window.innerWidth]);
+
   return (
-    <div className={classes.unmatchedCard}>
+    <div className={classes.unmatchedCard} style={{width: `${width}px`, height: `${width * 5/6}px`}}>
       <div className={classes.overlapGroup}>
         <Image
             className={classes.subtract} 
             alt="Subtract" 
             src={"/icons/Unmatched_Services/subtract.svg"}
-            width={288} 
-            height={208}
+            width={width} 
+            height={width * 13/18}
         />
         <Image 
           className={classes.image} 
           alt={`${header}`.toLowerCase() + " icon"} 
           src={`/icons/Unmatched_Services/${imageName}.png`} 
-          width={80} 
-          height={80} 
+          width={width * 5/18} 
+          height={width * 5/18} 
         />
         <div className={classes.text}>
           <div className={classes.header}>{header}</div>
@@ -52,6 +62,6 @@ const UnmatchedCards = (): JSX.Element => {
       })}
       </ul>
   ) 
-  };
+};
 
 export default UnmatchedCards

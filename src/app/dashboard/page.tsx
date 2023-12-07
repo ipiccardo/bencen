@@ -5,6 +5,7 @@ import "../styles/globals.css";
 import BuildingTomorrow from "../components/Home_Hero/BuildingTomorrow";
 import ServiceCards from "../components/Service_Card/ServiceCard";
 import AboutUs from "../components/Home_About_Us/AboutUs";
+import UnmatchedServices from "../components/Home_Unmatched_Services/UnmatchedServices";
 import UnmatchedCards from "../components/Unmatched_Card/UnmatchedCard";
 import classes from "./page.module.css";
 import Header from "../components/Header/Header";
@@ -91,7 +92,7 @@ const HomePage = () => {
         </div>
 
         {/* SECOND SECTION */}
-        <div className={classes.secondSection}>
+        <div className={classes.secondSection} style={{ height: resolution.width > 900 ? resolution.height - 124 : resolution.width > 700 ? 756 - 124 : 928 - 124}}>
           <section className={classes.aboutUs} style={{ width: resolution.width * 0.9 }}>
             <Image
               width={resolution.width > 900 ? resolution.width * 0.9 : 900}
@@ -112,10 +113,28 @@ const HomePage = () => {
             </div>
           </section>
         </div>
+
+        {/* THIRD SECTION */}
+        <div className={classes.thirdSection}>
+          <section className={classes.unmatched} style={{ width: resolution.width * 0.9 }}>
+            <Image
+              width={resolution.width > 900 ? resolution.width * 0.9 : 900}
+              height={resolution.width > 900 ? resolution.height : resolution.width > 700 ? 720 : 720}
+              src={`/images/backgrounds/home/3.png`}
+              alt={""}
+            />
+            <div className={classes.unmatchedCards}>
+              <UnmatchedCards/>
+            </div>
+            <div className={classes.unmatchedText}>
+              <UnmatchedServices/>
+            </div>
+          </section>
+        </div>
       </div>
     </>
-    );
-  }
+  );
+}
     {/*<>
       <div className={classes.homePageContainer}>
         <div className={classes.sectionsContainer}>

@@ -58,7 +58,7 @@
   flex-direction: column;
   z-index: 2;
   transform: translateX(5%);
-  top: -120px;
+  top: -124px;
 }
 
 .secondImage {
@@ -92,6 +92,52 @@
 .aboutUsText Button {
   width: 256px;
   height: 48px;
+  margin-top: 16px;
+}
+
+.thirdSection {
+  background-color: black;
+  position: relative;
+}
+
+.unmatched {
+  position: relative;
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  z-index: 2;
+  transform: translateX(5%);
+}
+
+.unmatchedCards {
+  position: absolute;
+  z-index: 2;
+  /*left: 592px;*/
+  /*top: 104px;*/
+  top: 15%;
+  left: 41%;
+}
+
+.unmatchedText {
+  position: absolute;
+  z-index: 2;
+  /*left: 256px;*/
+  /*top: 136px;*/
+  top: 19%;
+  left: 17%;
+  line-height: 24px;
+}
+
+.unmatchedText h1 {
+  max-width: 300px;
+  color: var(--white-color);
+  font-size: var(--h-1-font-size);
+  line-height: var(--h-1-line-height);
+}
+
+.unmatchedText Button {
+  width: 224px;
+  height: 56px;
   margin-top: 16px;
 }
 
@@ -226,7 +272,6 @@
     left: 25%;
   }
 }
-
 
 @media (max-width: 380px) {
   .secondImage {
