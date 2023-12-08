@@ -119,7 +119,7 @@ const HomePage = () => {
           <section className={classes.unmatched} style={{ width: resolution.width * 0.9 }}>
             <Image
               width={resolution.width > 900 ? resolution.width * 0.9 : 900}
-              height={resolution.width > 900 ? resolution.height : resolution.width > 700 ? 720 : 720}
+              height={resolution.width > 800 ? resolution.height : resolution.width > 700 ? 912 : 1392}
               src={`/images/backgrounds/home/3.png`}
               alt={""}
             />

@@ -121,10 +121,8 @@
 .unmatchedText {
   position: absolute;
   z-index: 2;
-  /*left: 256px;*/
-  /*top: 136px;*/
   top: 19%;
-  left: 17%;
+  left: 16%;
   line-height: 24px;
 }
 
@@ -174,6 +172,14 @@
   .text p {
     max-width: 300px;
   }
+
+  .unmatchedCards {
+    left: 34%;
+  }
+
+  .unmatchedText {
+    left: 7%;
+  }
 }
 
 @media (max-width: 1150px) {
@@ -199,6 +205,14 @@
 
   .aboutUsText h1 {
     margin-bottom: 0px;
+  }
+
+  .unmatchedCards {
+    left: 30%;
+  }
+
+  .unmatchedText {
+    left: 2%;
   }
 }
 
@@ -228,6 +242,25 @@
   .aboutUsText {
     left: 44%;
   }
+
+  .unmatchedCards {
+    top: 30%;
+    left: 14%;
+  }
+
+  .unmatchedText {
+    top: 7%;
+    left: 15%;
+  } 
+
+  .unmatchedText h1 {
+    margin-top: 0px;
+    margin-bottom: 8px;
+  }
+
+  .unmatchedText Button {
+    margin-top: 0px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -251,6 +284,17 @@
   }
 }
 
+@media (max-width: 800px) {
+  .unmatchedCards {
+    top: 26%;
+    left: 2%;
+  }
+
+  .unmatchedText {
+    left: 30%;
+  } 
+}
+
 @media (max-width: 700px) {
   .secondImage {
     top: 18%;
@@ -260,6 +304,11 @@
   .aboutUsText {
     top: 46%;
     left: 35%;
+  }
+
+  .unmatchedCards {
+    top: 20%;
+    left: 28%;
   }
 }
 
@@ -271,6 +320,14 @@
   .aboutUsText {
     left: 25%;
   }
+
+  .unmatchedCards {
+    left: 14%;
+  }
+
+  .unmatchedText {
+    left: 14%;
+  } 
 }
 
 @media (max-width: 380px) {
@@ -281,6 +338,14 @@
   .aboutUsText {
     left: 17%;
   }
+
+  .unmatchedCards {
+    left: 5%;
+  }
+
+  .unmatchedText {
+    left: 5%;
+  } 
 }
 
 @media (max-width: 350px) {
