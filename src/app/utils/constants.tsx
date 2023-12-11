@@ -381,6 +381,12 @@ export const UNLOCKING_POSSIBILITES: Object = {
     "From civil works to groundbreaking architecture, we're your partners in realizing extraordinary projects.",
     "Dive into our tailored service offerings and redefine your vision with us.",
   ],
+  spanish: [
+    "Desbloqueando posibilidades",
+    "Descubra nuestros servicios diversificados meticulosamente diseñados para adaptarse a cada necesidad.",
+    "Desde obras civiles hasta arquitectura innovadora, somos sus socios para realizar proyectos extraordinarios.",
+    "Sumérjase en nuestras ofertas de servicios personalizados y redefina su visión con nosotros.",
+  ],
 };
 
 export const SERVICES_SECTION: Object = {
