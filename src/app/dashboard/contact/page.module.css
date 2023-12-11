@@ -4,8 +4,9 @@
 }
 
 .firstSection {
-  background-color: black;
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
 }
  
 .text {
@@ -30,12 +31,11 @@
 }
 
 .contactCard {
-  position: absolute;
   align-items: center;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
+  margin: 0 auto;
   top: 80%;
-  transform: translateX(5%);
   z-index: 3;
 }
 
@@ -43,12 +43,13 @@
   height: 120px;
   z-index: 2;
   background-color: white;
-  transform: translateX(5%);
 }
 
 .secondSection {
   background-color: black;
   position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .tab {
@@ -58,7 +59,6 @@
   flex-direction: column;
   height: 840px;
   z-index: 2;
-  transform: translateX(5%);
   background-color: white;
   padding-top: 16px;
 }
