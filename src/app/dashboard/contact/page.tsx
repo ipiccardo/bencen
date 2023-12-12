@@ -53,7 +53,14 @@ const Contact = () => {
             }.png`}
             alt={""}
           />
-          <div className={classes.preTab}></div>
+          <div
+            className={classes.preTab}
+            style={{
+              width: Resolution.width * 0.9,
+              height: (Resolution.height * 4) / 31,
+              marginTop: -(Resolution.height * 4) / 31,
+            }}
+          ></div>
           <div className={classes.contactCard}>
             <ContactCards />
           </div>

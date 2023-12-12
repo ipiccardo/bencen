@@ -34,15 +34,18 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: -206px auto 0;
   top: 80%;
   z-index: 3;
+  position: relative;
 }
 
 .preTab {
   height: 120px;
   z-index: 2;
+  position: relative;
   background-color: white;
+  margin: 0 auto;
 }
 
 .secondSection {
@@ -85,6 +88,26 @@
 @media (max-width: 1000px) {
   .text {
     max-width: 280px;
+  }
+  .contactCard {
+    margin-top: -170px;
+  }
+}
+
+@media (max-width: 950px) {
+  .contactCard {
+    margin-top: -140px;
+  }
+}
+
+@media (max-width: 900px) {
+  .preTab {
+    display: none;
+  }
+  .contactCard {
+    margin: -100px 0 0 3px;
+    justify-content: center;
+    width: 100vw;
   }
 }
 
