@@ -3,6 +3,11 @@
   flex-direction: column;
 }
 
+.firstSectionContainer {
+  width: 100%;
+  background-color: var(--black-color);
+}
+
 .firstSection {
   position: relative;
   max-width: 1440px;
@@ -52,13 +57,13 @@
   background-color: black;
   position: relative;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 0 auto 12px;
 }
 
 .tab {
   position: relative;
   align-items: center;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   height: 840px;
   z-index: 2;
@@ -118,7 +123,6 @@
 
   .tab {
     height: 768px;
-    padding-top: 64px;
   }
 }
 

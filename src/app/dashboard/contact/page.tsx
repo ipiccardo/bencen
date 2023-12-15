@@ -36,33 +36,42 @@ const Contact = () => {
     return () => {
       window.removeEventListener("resize", handleResolution);
     };
-  }, [widthPercentage, heightPercentage]);
+  }, []);
 
   return (
     <>
       <div className={classes.page}>
-        <div className={classes.firstSection}>
-          <div className={classes.text}>
-            <ConnectWithUs />
-          </div>
-          <Image
-            width={Resolution.width > 900 ? Resolution.width : 900}
-            height={Resolution.width > 900 ? Resolution.height : 756}
-            src={`/images/backgrounds/contact/${
-              window.innerWidth > 900 ? "1" : "1-R"
-            }.png`}
-            alt={""}
-          />
-          <div
-            className={classes.preTab}
-            style={{
-              width: Resolution.width * 0.9,
-              height: (Resolution.height * 4) / 31,
-              marginTop: -(Resolution.height * 4) / 31,
-            }}
-          ></div>
-          <div className={classes.contactCard}>
-            <ContactCards />
+        <div className={classes.firstSectionContainer}>
+          <div className={classes.firstSection}>
+            <div className={classes.text}>
+              <ConnectWithUs />
+            </div>
+            <div
+              style={{
+                width: "100%",
+                overflow: "hidden",
+              }}
+            >
+              <Image
+                src={`/images/backgrounds/contact/${
+                  window.innerWidth > 900 ? "1" : "1-R"
+                }.png`}
+                alt={""}
+                width={Resolution.width > 900 ? Resolution.width : 900}
+                height={Resolution.width > 900 ? Resolution.height : 756}
+              />
+              {/* <div
+              className={classes.preTab}
+              style={{
+                width: Resolution.width * 0.9,
+                height: (Resolution.height * 4) / 31,
+                marginTop: -(Resolution.height * 4) / 31,
+              }}
+            ></div> */}
+            </div>
+            <div className={classes.contactCard}>
+              <ContactCards />
+            </div>
           </div>
         </div>
         <div className={classes.secondSection}>

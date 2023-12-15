@@ -74,6 +74,7 @@
   display: flex;
   list-style: none;
   box-shadow: 0px 1.5px 22.5px 0.75px #00000040;
+  margin: 0;
 }
 
 .sliderContainer {
