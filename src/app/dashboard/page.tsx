@@ -91,7 +91,7 @@ const HomePage = () => {
           <div className={classes.serviceCardContainer}>
             <ServiceCards />
           </div>
-          <section className={classes.secondSectionContainer}>
+          <section className={classes.secondSectionContainer} style={{ background: 'white' }}>
             <div className={`${classes.imageContainer} ${classes.secondImage}`}>
               <div className={classes.containerAbsolute}>
                 <div className={classes.aboutCardContainer}>
@@ -120,11 +120,9 @@ const HomePage = () => {
           </section>
           <section className={classes.threeSectionContainer}>
             <div
-              className={`${classes.imageContainer} ${classes.otherImage} ${
-                classes.paddingBottom
-              } ${pantallaMediana && classes.widthOutMarginTop} ${
-                pantallaMediana && classes.widthOutMarginTop
-              }`}
+              className={`${classes.imageContainer} ${classes.otherImage} ${classes.paddingBottom
+                } ${pantallaMediana && classes.widthOutMarginTop} ${pantallaMediana && classes.widthOutMarginTop
+                }`}
             >
               <div className={classes.containerAbsolute}>
                 <div className={classes.unmatchedServicesContainer}>
@@ -149,7 +147,7 @@ const HomePage = () => {
               </div>
             </div>
           </section>
-          <section className={classes.fourSectionContainer}>
+          <section className={classes.fourSectionContainer} style={{ background: 'white' }}>
             <div className={`${classes.imageContainer} ${classes.otherImage}`}>
               <div className={classes.containerAbsolute}>
                 <div className={classes.clientCardContainer}>
@@ -207,7 +205,7 @@ const HomePage = () => {
               </div>
             </div>
           </section>
-          <section className={classes.sixSectionContainer}>
+          <section className={classes.sixSectionContainer} style={{ background: 'white' }}>
             <div className={`${classes.imageContainer} ${classes.otherImage}`}>
               <div className={classes.containerAbsolute}>
                 <div

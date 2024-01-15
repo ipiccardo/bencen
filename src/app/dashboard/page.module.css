@@ -398,14 +398,14 @@
   }
 }
 
-  .showHeaderParagraphContainer h1 {
-    color: var(--white-color);
-    line-height: 1.5;
-  }
+.showHeaderParagraphContainer h1 {
+  color: var(--white-color);
+  line-height: 1.5;
+}
 
-  .showHeaderParagraphContainer p {
-    color: var(--gray-light-color);
-  }
+.showHeaderParagraphContainer p {
+  color: var(--gray-light-color);
+}
 
 @media (max-width: 940px) {
   .aboutCardContainer {
