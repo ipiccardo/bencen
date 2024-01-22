@@ -36,10 +36,10 @@ export const SERVICES: Object = {
       "ENVIRONMENT",
       "Creating sustainable solutions for our planet",
     ],
-    specialProjects: [
-      "blueprint",
-      "SPECIAL PROJECTS",
-      "Elevating vision to exceptional reality",
+    cleaning: [
+      "cleaning",
+      "INTEGRATED SERVICES",
+      "Uncover perfection in every detail",
     ],
   },
   spanish: {
@@ -58,10 +58,10 @@ export const SERVICES: Object = {
       "MEDIO AMBIENTE",
       "Soluciones sostenibles para nuestro planeta",
     ],
-    specialProjects: [
-      "blueprint",
-      "PROYECTOS ESPECIALES",
-      "Elevando la visión a una realidad excepcional",
+    cleaning: [
+      "cleaning",
+      "SERVICIOS INTEGRALES",
+      "Descubre la perfección en cada detalle",
     ],
   },
 };
@@ -90,8 +90,8 @@ export const ABOUT_US_BUTTON: Object = {
 };
 
 export const UNMATCHED_SERVICES_TITLE: Object = {
-  english: "UNMATCHED SERVICES",
-  spanish: "SERVICIOS INIGUALABLES",
+  english: ["UNMATCHED SERVICES", "Take a look into our brochures:"],
+  spanish: ["SERVICIOS INIGUALABLES", "Mirá nuestros folletos:"]
 };
 
 export const UNMATCHED_SERVICES: Object = {
@@ -142,8 +142,8 @@ export const UNMATCHED_SERVICES: Object = {
 };
 
 export const UNMATCHED_SERVICES_BUTTON: Object = {
-  english: "GET FREE QUOTATION",
-  spanish: "OBTENER PRESUPUESTO",
+  english: "DOWNLOAD BROCHURES",
+  spanish: "DESCARGAR FOLLETOS",
 };
 
 export const PROJECTS: Object = {
@@ -239,27 +239,33 @@ export const MISION_VISION_VALUES: Object = {
   english: {
     mision: [
       "mission",
+      "mission",
       "We are a construction enterprise, driven by principles of quality, timeliness, scope, and cost-effectiveness. We tailor technical specifications and plans to meet diverse client requirements. Our team operates in a conducive environment, fostering growth, and remains environmentally conscious.",
     ],
     vision: [
       "vision",
+      "vision",
       "To be acknowledged as the premier company in Engineering, Construction, Supervision, and Project Management for all contracts we undertake. We seek recognition for our team's exceptional performance, dedication to quality, safety, environmental responsibility, and timely project completion.Our founding purpose is to bring comfort and specialized designs to our clients, ensuring the highest quality and compliance with technical and safety standards.",
     ],
     values: [
+      "values",
       "values",
       "• Integrity at Core: Guided by unwavering values of discipline, order, respect, and honesty. • Innovative Service: Open to fresh ideas, committed to enhancing services to meet diverse client needs. • Efficient Productivity: Prioritizing resource and time optimization for effective service, highly valued by clients. • Reliable Compliance: Dedication to fulfilling commitments, ensuring client satisfaction and repeat business. • Proactive Client Care: Beyond tasks, we prioritize friendly communication and address all client concerns promptly.",
     ],
   },
   spanish: {
     mision: [
+      "mission",
       "misión",
       "Somos una empresa de construcción, guiada por los principios de calidad, puntualidad, alcance y rentabilidad. Adaptamos las especificaciones técnicas y los planes para satisfacer las diversas necesidades de los clientes. Nuestro equipo opera en un entorno propicio, fomentando el crecimiento y manteniendo la conciencia ambiental.",
     ],
     vision: [
+      "vision",
       "visión",
       "Ser reconocidos como la empresa líder en Ingeniería, Construcción, Supervisión y Gestión de Proyectos para todos los contratos que emprendemos. Buscamos reconocimiento por el rendimiento excepcional de nuestro equipo, la dedicación a la calidad, la seguridad, la responsabilidad ambiental y la finalización oportuna de los proyectos. Nuestro propósito fundacional es brindar comodidad y diseños especializados a nuestros clientes, garantizando la más alta calidad y el cumplimiento de los estándares técnicos y de seguridad.",
     ],
     values: [
+      "values",
       "valores",
       "• Integridad en el núcleo: Guiados por valores inquebrantables de disciplina, orden, respeto y honestidad. • Servicio Innovador: Abiertos a nuevas ideas, comprometidos a mejorar los servicios para satisfacer las diversas necesidades del cliente. • Productividad Eficiente: Priorizando la optimización de recursos y tiempo para un servicio eficaz, altamente valorado por los clientes. • Cumplimiento Confiable: Dedicación para cumplir compromisos, asegurando la satisfacción del cliente y negocios repetidos. • Atención Proactiva al Cliente: Más allá de las tareas, priorizamos la comunicación amistosa y abordamos todas las inquietudes del cliente de manera pronta.",
     ],
@@ -404,10 +410,10 @@ export const SERVICES_SECTION: Object = {
         "We specialize in tailored projects dedicated to environmental care, protection, and conservation. Our services encompass environmental impact assessments, analysis of physical-chemical and biological parameters, and projects focused on renewable energy generation, utilizing solar, wind, and other sources. We advocate for systems to utilize recyclable waste like PET, recovering and reintegrating them as reusable materials. We collaborate with strategic partners in academia, leveraging their state-of-the-art laboratories and expertise. Our clients receive top-notch service facilitated by our experienced professionals.",
     },
     {
-      h2Text: "Special Projects",
+      h2Text: "Integrated Services",
       imageSrc: "/img/special-projects.jpg",
       paragraphText:
-        "Often, the challenges we encounter demand interdisciplinary involvement and the collective knowledge of various disciplines. In this business unit, we delve into projects that actively involve multiple specialties. For each project, we assemble a team of professionals with specific skills and knowledge, ensuring the leader team can drive its development, supported by a strong team. This approach guarantees our clients receive the best service and tailored solutions for their needs.",
+        "Dedicated professionals with expertise in providing comprehensive solutions under the umbrella of integrated services. Specialized in delivering excellence in cleaning, maintenance, and general upkeep, including proficiency in masonry, plumbing, electrical work, ironwork, metal structures, and restoration and maintenance of facades. Proven track record of ensuring optimal functionality and aesthetics in diverse environments through a holistic approach to facility management.",
     },
   ],
   spanish: [
@@ -430,10 +436,10 @@ export const SERVICES_SECTION: Object = {
         "Nos especializamos en proyectos a medida dedicados al cuidado, protección y conservación del medio ambiente. Nuestros servicios abarcan evaluaciones de impacto ambiental, análisis de parámetros físico-químicos y biológicos, y proyectos enfocados en la generación de energía renovable, utilizando fuentes solares, eólicas y otras. Abogamos por sistemas que aprovechen residuos reciclables como el PET, recuperándolos y reintegrándolos como materiales reutilizables. Colaboramos con socios estratégicos en el mundo académico, aprovechando sus laboratorios y experiencia de última generación. Nuestros clientes reciben un servicio de primer nivel facilitado por nuestros profesionales experimentados.",
     },
     {
-      h2Text: "Proyectos especiales",
+      h2Text: "Servicios Integrales",
       imageSrc: "/img/special-projects.jpg",
       paragraphText:
-        "A menudo, los desafíos que enfrentamos exigen una participación interdisciplinaria y el conocimiento colectivo de diversas disciplinas. En esta unidad de negocio profundizamos en proyectos que involucran activamente múltiples especialidades. Para cada proyecto, reunimos un equipo de profesionales con habilidades y conocimientos específicos, asegurando que el equipo líder pueda impulsar su desarrollo, apoyado por un equipo sólido. Este enfoque garantiza que nuestros clientes reciban el mejor servicio y soluciones personalizadas para sus necesidades.",
+        "Profesionales dedicados con experiencia en proporcionar soluciones integrales bajo el paraguas de servicios integrados. Especializado en ofrecer excelencia en limpieza, mantenimiento y cuidado general, incluyendo habilidades en albañilería, fontanería, trabajos eléctricos, herrería, estructuras metálicas, y restauración y mantenimiento de fachadas. Historial comprobado de asegurar funcionalidad y estética óptimas en diversos entornos mediante un enfoque integral de la gestión de instalaciones.",
     },
   ],
 };
@@ -445,15 +451,20 @@ export const EXPLORE_OUR_PORTFOLIO: Object = {
     "We pride ourselves on a rich and varied portfolio that showcases our expertise in the construction industry. With a keen focus on quality, time efficiency, scope, and cost-effectiveness, we tailor each project to align with the unique needs of our clients. Our projects are categorized into four core domains:",
     "Browse through our projects and envision what we can create together!.",
   ],
+  spanish: [
+    "Explora Nuestro Portafolio",
+    "Nos enorgullece contar con un portafolio amplio y variado que muestra nuestra experiencia en la industria de la construcción. Con un enfoque especial en calidad, eficiencia en el tiempo, alcance y rentabilidad, adaptamos cada proyecto para alinearlo con las necesidades únicas de nuestros clientes. Nuestros proyectos se categorizan en cuatro dominios principales:",
+    "Explora nuestros proyectos y visualiza lo que podemos crear juntos.",
+  ],
 };
 
 export const CATEGORIES: Object = {
-  english: ["CIVIL WORKS", "ARCHITECTURE", "ENVIRONMENT", "SPECIAL PROJECTS"],
+  english: ["CIVIL WORKS", "ARCHITECTURE", "ENVIRONMENT", "INTEGRATED SERVICES"],
   spanish: [
     "OBRAS CIVILES",
     "ARQUITECTURA",
     "MEDIO AMBIENTE",
-    "PROYECTOS ESPECIALES",
+    "SERVICIOS INTEGRALES",
   ],
 };
 

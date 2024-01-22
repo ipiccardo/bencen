@@ -25,6 +25,7 @@ const Button = ({
     if (onClick) {
       onClick(); // Execute the provided onClick function
     }
+
     event.preventDefault(); // Prevent the default button behavior
   };
 

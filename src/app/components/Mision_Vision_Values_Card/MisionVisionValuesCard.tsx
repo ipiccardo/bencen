@@ -8,10 +8,11 @@ import { store } from '@/app/context/context';
 
 interface Props {
   imageName: string;
+  header: string;
   content: string;
 }
 
-const MisionVisionValuesCard = ({ imageName, content }: Props): JSX.Element => {
+const MisionVisionValuesCard = ({ imageName, header, content }: Props): JSX.Element => {
   const [hover, setHover] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
 
@@ -44,7 +45,7 @@ const MisionVisionValuesCard = ({ imageName, content }: Props): JSX.Element => {
           width={192} 
           height={192}
         />
-        <div className={classes.title}>{imageName.toUpperCase()}</div>
+        <div className={classes.title}>{header.toUpperCase()}</div>
       </div>
       )}
     </div>
@@ -57,10 +58,10 @@ const MisionVisionValuesCards = (): JSX.Element => {
   return (
     <ul className={classes.misionVisionValuesCards}>
     {Object.keys(MISION_VISION_VALUES[language]).map((key) => {
-      const [imageName, content] = MISION_VISION_VALUES[language][key];
+      const [imageName, header, content] = MISION_VISION_VALUES[language][key];
       return (
        <li key={key}>
-         <MisionVisionValuesCard imageName={imageName} content={content} />
+         <MisionVisionValuesCard imageName={imageName} header={header} content={content} />
        </li>
        );
     })}

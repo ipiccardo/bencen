@@ -28,7 +28,7 @@ const ContactCard = ({ imageName, header, content }: Props): JSX.Element => {
   }, [window.innerWidth]);
 
   return (
-    <div className={classes.contactCard} style={{width: `${width}px`, height: `${width}px`}}>
+    <div className={classes.contactCard} style={{ width: `${width}px`, height: `${width}px`}}>
       <div className={classes.group}>
         <div className={classes.imageGroup}>
           <Image

@@ -1,17 +1,20 @@
 'use client'
 
-import React from "react";
+import React, {useContext} from "react";
 import classes from './exploreOurPortfolio.module.css';
 import Button from '../Ui/Button';
 import { EXPLORE_OUR_PORTFOLIO, CATEGORIES } from '../../utils/constants';
+import { store } from '@/app/context/context';
 
 const ExploreOurPortfolio = (): JSX.Element => {
+    const { language }: any = useContext(store)
+
     return (
         <section className={classes.text}>
-            <h1>{EXPLORE_OUR_PORTFOLIO['english'][0]}</h1>
-            <p className={classes.p1}>{EXPLORE_OUR_PORTFOLIO['english'][1]}</p>
+            <h1>{EXPLORE_OUR_PORTFOLIO[language][0]}</h1>
+            <p className={classes.p1}>{EXPLORE_OUR_PORTFOLIO[language][1]}</p>
             <ul>
-                {CATEGORIES['english'].map((value: string, index: number) => (
+                {CATEGORIES[language].map((value: string, index: number) => (
                 <li key={index}>
                     <Button 
                         href=""
@@ -22,7 +25,7 @@ const ExploreOurPortfolio = (): JSX.Element => {
                 </li>
             ))}
             </ul>
-            <p>{EXPLORE_OUR_PORTFOLIO['english'][2]}</p>
+            <p>{EXPLORE_OUR_PORTFOLIO[language][2]}</p>
         </section>
     ) 
 };

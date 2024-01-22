@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer, { TransportOptions } from "nodemailer";
-import pdfParse from 'pdf-parse';
-import { promises as fs } from "fs";
 
 interface Props {
   req: {

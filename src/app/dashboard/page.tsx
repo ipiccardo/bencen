@@ -129,9 +129,10 @@ const HomePage = () => {
               <div className={classes.containerAbsolute}>
                 <div className={classes.unmatchedServicesContainer}>
                   <div className={classes.unmatchedServicesParagraphContainer}>
-                    <h1>{UNMATCHED_SERVICES_TITLE[language]}</h1>
+                    <h1>{UNMATCHED_SERVICES_TITLE[language][0]}</h1>
+                    <p>{UNMATCHED_SERVICES_TITLE[language][1]}</p>
                     <Button
-                      href={""}
+                      href="../brochure"
                       text={UNMATCHED_SERVICES_BUTTON[language]}
                       classNameContent="padding-10"
                     />
