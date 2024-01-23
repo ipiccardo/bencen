@@ -46,19 +46,16 @@ const Contact = () => {
             <div className={classes.text}>
               <ConnectWithUs />
             </div>
-            <div
-              style={{
-                width: "100%",
-                overflow: "hidden",
-              }}
-            >
+            <div className={classes.backgroundContainer}>
               <Image
                 src={`/images/backgrounds/contact/${
                   window.innerWidth > 900 ? "1" : "1-R"
                 }.png`}
                 alt={""}
-                width={Resolution.width > 900 ? Resolution.width : 900}
-                height={Resolution.width > 900 ? Resolution.height : 756}
+                // width={Resolution.width > 900 ? Resolution.width : 900}
+                // height={Resolution.width > 900 ? Resolution.height : 756}
+                layout="fill"
+                objectFit="cover"
               />
               {/* <div
               className={classes.preTab}
@@ -68,9 +65,9 @@ const Contact = () => {
                 marginTop: -(Resolution.height * 4) / 31,
               }}
             ></div> */}
-            </div>
-            <div className={classes.contactCard}>
-              <ContactCards />
+              <div className={classes.contactCard}>
+                <ContactCards />
+              </div>
             </div>
           </div>
         </div>
