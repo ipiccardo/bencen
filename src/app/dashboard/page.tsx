@@ -11,6 +11,7 @@ import AboutUsCard from "../components/aboutUs_Card/AboutUsCard";
 import ClientCard from "../components/Clients_Card/ClientCard";
 import NewsCard from "../components/News_Card/NewsCard";
 import Button from "../components/Ui/Button";
+import LinkButton from "../components/Ui/LinkButton";
 import {
   HOME_TEXT,
   ABOUT_US,
@@ -24,6 +25,7 @@ import {
   NEWS,
 } from "../utils/constants";
 import { store } from "@/app/context/context";
+import Link from "next/link";
 
 const HomePage = () => {
   const [pantallaMediana, setPantallaMediana] = useState(false);
@@ -129,8 +131,8 @@ const HomePage = () => {
                   <div className={classes.unmatchedServicesParagraphContainer}>
                     <h1>{UNMATCHED_SERVICES_TITLE[language][0]}</h1>
                     <p>{UNMATCHED_SERVICES_TITLE[language][1]}</p>
-                    <Button
-                      href="../brochure"
+                    <LinkButton
+                      href="/brochure/Folleto_Bencen.pdf"
                       text={UNMATCHED_SERVICES_BUTTON[language]}
                       classNameContent="padding-10"
                     />

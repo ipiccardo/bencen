@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import classes from "./button.module.css";
+import classes from "./linkButton.module.css";
 import Link from "next/link";
 
 interface Props {
@@ -13,7 +13,7 @@ interface Props {
   style?: any;
 }
 
-const Button = ({
+const LinkButton = ({
   href,
   classNameButton,
   classNameContent,
@@ -22,16 +22,10 @@ const Button = ({
   style,
 }: Props): JSX.Element => {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-
-    // if (onClick) {
-    //   onClick(); // Execute the provided onClick function
-    // }
-
-    // event.preventDefault(); // Prevent the default button behavior
   };
 
   return (
-    <Link href={href}>
+    <Link href={href} target="_blank">
       <button
         type="button"
         className={`${classes.button} ${classNameButton || ""}`}
@@ -46,4 +40,4 @@ const Button = ({
   );
 };
 
-export default Button;
+export default LinkButton;
