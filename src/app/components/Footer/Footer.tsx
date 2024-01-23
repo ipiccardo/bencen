@@ -6,7 +6,7 @@ import NavBar from "../NavBar/NavBar";
 import Icon from "../Icon/Icon";
 import IconWithImages from "../IconWithImages/IconWithImages";
 import Link from "next/link";
-import Button from "../Ui/Button";
+import LinkButton from "../Ui/LinkButton";
 import { store } from "@/app/context/context";
 import { TOP_FOOTER, FOOTER, NAVBAR, UNMATCHED_SERVICES_BUTTON } from "@/app/utils/constants";
 
@@ -22,8 +22,8 @@ const Footer = () => {
             <h2>{TOP_FOOTER[language][0]}</h2>
             <p>{TOP_FOOTER[language][1]}</p>
           </div>
-          <Button
-            href={""}
+          <LinkButton
+            href="/brochure/Folleto_Bencen.pdf"
             text={UNMATCHED_SERVICES_BUTTON[language]}
             classNameContent="padding-20"
           />
