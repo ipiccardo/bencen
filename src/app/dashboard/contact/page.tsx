@@ -29,15 +29,6 @@ const Contact = () => {
     }
   };
 
-  useEffect(() => {
-    handleResolution();
-    window.addEventListener("resize", handleResolution);
-
-    return () => {
-      window.removeEventListener("resize", handleResolution);
-    };
-  }, []);
-
   return (
     <>
       <div className={classes.page}>
@@ -52,19 +43,9 @@ const Contact = () => {
                   window.innerWidth > 900 ? "1" : "1-R"
                 }.png`}
                 alt={""}
-                // width={Resolution.width > 900 ? Resolution.width : 900}
-                // height={Resolution.width > 900 ? Resolution.height : 756}
                 layout="fill"
                 objectFit="cover"
               />
-              {/* <div
-              className={classes.preTab}
-              style={{
-                width: Resolution.width * 0.9,
-                height: (Resolution.height * 4) / 31,
-                marginTop: -(Resolution.height * 4) / 31,
-              }}
-            ></div> */}
               <div className={classes.contactCard}>
                 <ContactCards />
               </div>
