@@ -8,7 +8,7 @@ import classes from "./page.module.css";
 import Image from "next/image";
 
 const Contact = () => {
-  const [Resolution, setResolution] = useState({ width: 0, height: 0 });
+  // const [Resolution, setResolution] = useState({ width: 0, height: 0 });
   const [widthPercentage, SetWidthPercentage] = useState(1);
   const [heightPercentage, SetHeightPercentage] = useState(1);
 
@@ -16,18 +16,19 @@ const Contact = () => {
     // Set dimensions based on a percentage of the screen width and height:
     if (window.innerWidth >= 1440) {
       SetWidthPercentage(1);
-      setResolution({
-        width: 1440,
-        height: Math.floor(window.innerHeight * heightPercentage),
-      });
     } else {
       SetHeightPercentage(1 - (1 - window.innerWidth / 1440) / 2);
-      setResolution({
-        width: Math.floor(window.innerWidth * widthPercentage),
-        height: Math.floor(window.innerHeight * heightPercentage),
-      });
     }
   };
+
+  useEffect(() => {
+    handleResolution();
+    window.addEventListener("resize", handleResolution);
+
+    return () => {
+      window.removeEventListener("resize", handleResolution);
+    };
+  }, []);
 
   return (
     <>
