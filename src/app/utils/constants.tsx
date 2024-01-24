@@ -468,6 +468,27 @@ export const CATEGORIES: Object = {
   ],
 };
 
+export const CIVILWORKS: Object = {
+  english: [
+    {
+      title: "",
+      year: "",
+      description: "",
+      location: "",
+      src: ""
+    }
+  ],
+  spanish: [
+    {
+      title: "",
+      year: "",
+      description: "",
+      location: "",
+      src: ""
+    }
+  ]
+}
+
 // Contact:
 export const CONNECT_WITH_US: Object = {
   english: [

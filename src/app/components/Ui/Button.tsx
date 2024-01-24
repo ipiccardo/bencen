@@ -23,11 +23,11 @@ const Button = ({
 }: Props): JSX.Element => {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
 
-    // if (onClick) {
-    //   onClick(); // Execute the provided onClick function
-    // }
+    if (onClick) {
+      onClick(); // Execute the provided onClick function
+    }
 
-    // event.preventDefault(); // Prevent the default button behavior
+    event.preventDefault(); // Prevent the default button behavior
   };
 
   return (
