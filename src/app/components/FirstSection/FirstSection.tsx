@@ -40,7 +40,7 @@ const FirstSection = () => {
           {/* Hacer dinamico el Image Path src */}
           <Image
             src={`/images/backgrounds/contact/${
-              window.innerWidth > 900 ? "5" : "5-R"
+              window.innerWidth > 900 ? "1" : "1-R"
             }.png`}
             alt={""}
             layout="fill"
