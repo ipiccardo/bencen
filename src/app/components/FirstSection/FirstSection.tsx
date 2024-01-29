@@ -33,9 +33,11 @@ const FirstSection = () => {
     <div className={classes.firstSectionContainer}>
       <div className={classes.firstSection}>
         <div className={classes.text}>
+          {/* 1° CHILD CON LOS TEXTOS DEL BACKGROUND */}
           <ConnectWithUs />
         </div>
         <div className={classes.backgroundContainer}>
+          {/* Hacer dinamico el Image Path src */}
           <Image
             src={`/images/backgrounds/contact/${
               window.innerWidth > 900 ? "5" : "5-R"
@@ -44,6 +46,7 @@ const FirstSection = () => {
             layout="fill"
             objectFit="cover"
           />
+          {/* Poner un condicional hasContactCard como boolean --> Poner false como valor por defecto */}
           <div className={classes.contactCard}>
             <ContactCards />
           </div>
