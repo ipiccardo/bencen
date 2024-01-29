@@ -32,6 +32,10 @@
     align-items: center;
 }
 
+.boxLeftClick:hover {
+    cursor: pointer;
+}
+
 .tabRight {
     width: 560px;
     height: 672px;
@@ -50,6 +54,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.boxRight:hover {
+    cursor: pointer;
 }
 
 .ul {
@@ -137,8 +145,16 @@
     background-color: var(--white-color);
 }
 
+.boxLeft:hover {
+    cursor: pointer;
+}
+
 .boxRightClick{
     background-color: var(--logo-color-dark);
+}
+
+.boxRightClick:hover {
+    cursor: pointer;
 }
 
 .headerLeft {
