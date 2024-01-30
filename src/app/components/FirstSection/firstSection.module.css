@@ -14,8 +14,6 @@
     z-index: 2;
     top: 18%;
     left: 15%;
-    /* top: 192px;
-    left: 240px; */
     max-width: 364px;
     padding: 20px;
     line-height: 24px;
@@ -29,6 +27,7 @@
   
   .text p {
       color: var(--gray-light-color);
+      letter-spacing: 1.1px;
   }
   
   .backgroundContainer {
@@ -38,7 +37,7 @@
       margin: 0 auto;
   }
   
-  .contactCard {
+  .cards {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -65,19 +64,19 @@
     .text {
       max-width: 280px;
     }
-    .contactCard {
+    .cards {
       margin-top: -170px;
     }
   }
   
   @media (max-width: 950px) {
-    .contactCard {
+    .cards {
       margin-top: -140px;
     }
   }
   
   @media (max-width: 900px) {
-    .contactCard {
+    .cards {
       margin: -100px 0 0 3px;
       justify-content: center;
       width: 100vw;

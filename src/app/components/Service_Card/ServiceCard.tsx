@@ -30,7 +30,9 @@ const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
         <Image
           className={classes.image}
           alt={`${header}`.toLowerCase() + " icon"}
-          src={`/icons/Services/${hover ? imageName + "_hover" : imageName}.png`}
+          src={`/icons/Services/${
+            hover ? imageName + "_hover" : imageName
+          }.png`}
           width={96}
           height={96}
         />
@@ -49,7 +51,7 @@ const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
 };
 
 const ServiceCards = (): JSX.Element => {
-  const { language }: any = useContext(store)
+  const { language }: any = useContext(store);
 
   // Slider configuration:
   const sliderSettings = {
@@ -67,7 +69,7 @@ const ServiceCards = (): JSX.Element => {
   };
 
   return (
-    <div>
+    <div className={`${classes.serviceCardContainer}`}>
       <div className={`${classes.showSlider} serviceCardSliderContainer`}>
         <div className={classes.sliderContainer}>
           <Slider {...sliderSettings}>
