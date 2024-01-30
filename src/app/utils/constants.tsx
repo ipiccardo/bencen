@@ -393,7 +393,7 @@ export const SERVICES_SECTION: Object = {
   english: [
     {
       h2Text: "Civil Works",
-      imageSrc: "/img/civil-works.jpg",
+      imageSrc: "/img/civil_works.jpg",
       paragraphText:
         "Dedicated to the design, planning, and execution of Civil Engineering projects in urban, industrial, and rural settings. Our team of specialized professionals is committed to enhancing the efficiency of our developments continually, surpassing our clients expectations. We craft tailored solutions, integrating various engineering specialties, while upholding the highest standards of quality, safety, and environmental consciousness. Our projects are meticulously designed and executed, striking a delicate balance with their surroundings, not only providing solutions but also harmonizing with the environment. In the industrial domain, we factor in all client-specific regulations, standards, and requirements as fundamental aspects of our planning.",
     },
@@ -411,7 +411,7 @@ export const SERVICES_SECTION: Object = {
     },
     {
       h2Text: "Integrated Services",
-      imageSrc: "/img/special-projects.jpg",
+      imageSrc: "/img/integrated_services.jpg",
       paragraphText:
         "Dedicated professionals with expertise in providing comprehensive solutions under the umbrella of integrated services. Specialized in delivering excellence in cleaning, maintenance, and general upkeep, including proficiency in masonry, plumbing, electrical work, ironwork, metal structures, and restoration and maintenance of facades. Proven track record of ensuring optimal functionality and aesthetics in diverse environments through a holistic approach to facility management.",
     },
@@ -419,7 +419,7 @@ export const SERVICES_SECTION: Object = {
   spanish: [
     {
       h2Text: "Obras civiles",
-      imageSrc: "/img/civil-works.jpg",
+      imageSrc: "/img/civil_works.jpg",
       paragraphText:
         "Dedicada al diseño, planificación y ejecución de proyectos de Ingeniería Civil en entornos urbanos, industriales y rurales. Nuestro equipo de profesionales especializados está comprometido a mejorar continuamente la eficiencia de nuestros desarrollos, superando las expectativas de nuestros clientes. Creamos soluciones a la medida, integrando diversas especialidades de ingeniería, manteniendo los más altos estándares de calidad, seguridad y conciencia ambiental. Nuestros proyectos están meticulosamente diseñados y ejecutados, logrando un delicado equilibrio con su entorno, no sólo aportando soluciones sino también armonizando con el entorno. En el ámbito industrial, tenemos en cuenta todas las regulaciones, normas y requisitos específicos del cliente como aspectos fundamentales de nuestra planificación.",
     },
@@ -437,7 +437,7 @@ export const SERVICES_SECTION: Object = {
     },
     {
       h2Text: "Servicios Integrales",
-      imageSrc: "/img/special-projects.jpg",
+      imageSrc: "/img/integrated_services.jpg",
       paragraphText:
         "Profesionales dedicados con experiencia en proporcionar soluciones integrales bajo el paraguas de servicios integrados. Especializado en ofrecer excelencia en limpieza, mantenimiento y cuidado general, incluyendo habilidades en albañilería, fontanería, trabajos eléctricos, herrería, estructuras metálicas, y restauración y mantenimiento de fachadas. Historial comprobado de asegurar funcionalidad y estética óptimas en diversos entornos mediante un enfoque integral de la gestión de instalaciones.",
     },
