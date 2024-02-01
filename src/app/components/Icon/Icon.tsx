@@ -17,8 +17,8 @@ const Icons = (name: string, size: number) => {
       return <FacebookIcon size={size} />;
     case "instagram":
       return <InstagramIcon size={size} />;
-    case "linkedinBlue":
-      return <LinkedinIconBlue size={size} />;
+    //case "linkedinBlue":
+      //return <LinkedinIconBlue size={size} />;
     case "linkedin":
       return <LinkedinIcon size={size} />;
     case "logo":
@@ -31,9 +31,9 @@ const Icons = (name: string, size: number) => {
 };
 
 /**
- * @param name Nombre del icono
- * @param size Tamaño del icono
- * @param onClick Función a ejecutar al hacer click
+ * @param name Icon Name
+ * @param size Icon Size
+ * @param onClick On-Click Function to execute
  */
 
 export default function Icon({ name, size = 20, onClick }: IconProps) {

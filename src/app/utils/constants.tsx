@@ -213,8 +213,8 @@ export const TOP_FOOTER: Object = {
 };
 
 export const FOOTER: Object = {
-  english: ["BENCEN", "PRIVACY POLICY", "TERMS AND CONDITIONS"],
-  spanish: ["BENCEN", "POLÍTICA DE PRIVACIDAD", "TÉRMINOS Y CONDICIONES"],
+  english: ["BENCEN"/*, "PRIVACY POLICY", "TERMS AND CONDITIONS"*/],
+  spanish: ["BENCEN"/*, "POLÍTICA DE PRIVACIDAD", "TÉRMINOS Y CONDICIONES"*/],
 };
 
 // About Us:
@@ -853,9 +853,9 @@ export const CONTACT_CARD: Object = {
     location: [
       "location",
       "ADDRESS",
-      "Maipú Av. 2649, Olivos,\n Buenos Aires, Argentina",
+      "Juan Carlos Cruz 1810,\n Vicente López, CP 1638,\nBuenos Aires, Argentina",
     ],
-    phone: ["phone", "PHONE NUMBER", "+54 11 4790 - 5791"],
+    phone: ["phone", "PHONE NUMBER", "+54 11 4824 - 8600"],
     email: ["email", "EMAIL", "info@bencen.com.ar"],
     socials: ["socials", "SOCIAL MEDIA", ""],
   },
@@ -863,9 +863,9 @@ export const CONTACT_CARD: Object = {
     location: [
       "location",
       "DIRECCIÓN",
-      "Av. Maipú 2649, Olivos,\n Buenos Aires, Argentina",
+      "Juan Carlos Cruz 1810,\n Vicente López, CP 1638,\nBuenos Aires, Argentina",
     ],
-    phone: ["phone", "TELÉFONO", "+54 11 4790 - 5791"],
+    phone: ["phone", "TELÉFONO", "+54 11 4824 - 8600"],
     email: ["email", "EMAIL", "info@bencen.com.ar"],
     socials: ["socials", "REDES SOCIALES", ""],
   },

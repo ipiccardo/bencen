@@ -48,7 +48,7 @@ const Footer = () => {
             linkTitles={language === 'english' ? FOOTER.english : FOOTER.spanish}
           />
           <div className={classes.footer__icons}>
-            <Icon name="facebook" size={20} />
+            {/*<Icon name="facebook" size={20} />*/}
             <Icon name="instagram" size={20} />
             <Icon name="linkedin" size={20} />
           </div>

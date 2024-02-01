@@ -45,7 +45,7 @@ const ContactCard = ({ imageName, header, content }: Props): JSX.Element => {
             <pre className={classes.content}>{content}</pre>
           ) : (
             <div className={classes.footer__icons}>
-              <Icon name="facebook" size={20} />
+              {/*<Icon name="facebook" size={20} />*/}
               <Icon name="instagram" size={20} />
               <Icon name="linkedin" size={20} />
             </div>

@@ -75,7 +75,7 @@ const TabBar = (): JSX.Element => {
           // body: JSON.stringify(data), change mail to Bencen later:
           body: JSON.stringify({
             from: emailL,
-            to: 'webcraftersok@gmail.com',
+            to: 'webcraftersok@gmail.com', // Real Email:  jefatura.rrhh@bencen.com.ar
             subject: 'New message from your website', 
             text: `Hello Analía, you have a message from Bencen website,\n\nName: ${nameL}\nPhone Number: ${phoneNumberL}\nMessage: \n${message}`
           }),
@@ -110,7 +110,7 @@ const TabBar = (): JSX.Element => {
           // body: JSON.stringify(data), change mail to Bencen later:
           body: JSON.stringify({
             from: emailR,
-            to: 'webcraftersok@gmail.com',
+            to: 'webcraftersok@gmail.com', // Real Email:  jefatura.rrhh@bencen.com.ar
             subject: `CV - ${nameR} - ${workArea}`, 
             text: `Hello Analía, you have a new CV attached from Bencen website,\n\nName: ${nameR}\nPhone Number: ${phoneNumberR}\nWork Area: ${workArea}`,
             attachments: [
