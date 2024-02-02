@@ -1,7 +1,7 @@
 .header {
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  justify-content: space-evenly;
+  gap: 15rem;
   list-style: none;
   align-items: center;
   /* max-width: 1200px; */
