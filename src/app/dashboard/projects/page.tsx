@@ -11,6 +11,7 @@ const Projects = () => {
       <FirstSection
         firstChild={<ExploreOurPortfolio />}
         folderName="projects"
+        textToTheRight={true}
       />
       <ProjectsSlidersContainer />
     </>
