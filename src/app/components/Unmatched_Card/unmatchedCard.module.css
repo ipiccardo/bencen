@@ -18,7 +18,7 @@
 .unmatchedCard .image {
   background-position: 50% 50%;
   background-size: cover;
-  top: 0;
+  top: -215px;
   left: 32px;
   position: absolute;
 }
