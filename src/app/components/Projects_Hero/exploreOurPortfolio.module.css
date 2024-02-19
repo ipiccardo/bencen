@@ -46,3 +46,9 @@
   width: 192px; 
   height: 48px;
 }
+
+@media (max-width: 400px) {
+  .text ul {
+    width: 100%;
+  }
+}

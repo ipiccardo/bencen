@@ -138,11 +138,17 @@
 
   @media (max-width: 450px) {
     .backgroundImageTranslated img {
-      transform: translateX(-90%);
+      transform: translateX(-100%);
     }
     .textRight {
       padding: 10px;
-      max-width: 250px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .textRight {
+      right: 5%;
+      max-width: 100%;
     }
   }
 
