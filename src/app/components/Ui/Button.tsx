@@ -23,6 +23,9 @@ const Button = ({
 }: Props): JSX.Element => {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
 
+    console.log('entro al click')
+    console.log(href, 'href')
+
     if (onClick) {
       onClick(); // Execute the provided onClick function
     }
@@ -35,7 +38,7 @@ const Button = ({
       <button
         type="button"
         className={`${classes.button} ${classNameButton || ""}`}
-        onClick={handleClick}
+        onClick={onClick && handleClick}
         style={style}
       >
         <div className={`${classes.text} ${classNameContent || ""}`}>

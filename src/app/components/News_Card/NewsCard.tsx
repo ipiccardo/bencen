@@ -1,10 +1,10 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import classes from './newsCard.module.css'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { store } from '@/app/context/context';
-import { NEWS, NEWS_BUTTON} from '../../utils/constants'
+import { NEWS, NEWS_BUTTON } from '../../utils/constants'
 
 const NewsCard = (): JSX.Element => {
     const { language }: any = useContext(store)

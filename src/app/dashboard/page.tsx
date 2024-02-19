@@ -26,6 +26,7 @@ import {
 } from "../utils/constants";
 import { store } from "@/app/context/context";
 import Link from "next/link";
+import Maintenance from "../components/Maintenance/Maintenance";
 
 const HomePage = () => {
   const [pantallaMediana, setPantallaMediana] = useState(false);
@@ -103,7 +104,7 @@ const HomePage = () => {
                     <p>{ABOUT_US[language][1]}</p>
                     <p>{ABOUT_US[language][2]}</p>
                     <Button
-                      href={""}
+                      href={"/dashboard/aboutUs"}
                       text={ABOUT_US_BUTTON[language]}
                       classNameContent="padding-20"
                     />
@@ -160,7 +161,7 @@ const HomePage = () => {
                     <p>{PROJECTS[language][1]}</p>
                     <p>{PROJECTS[language][2]}</p>
                     <Button
-                      href={""}
+                      href={"/dashboard/projects"}
                       text={PROJECTS_BUTTON[language]}
                       classNameContent="padding-20"
                     />
@@ -186,7 +187,7 @@ const HomePage = () => {
                   <p>{CONTACT[language][2]}</p>
                   <div className={classes.buttonContainer}>
                     <Button
-                      href={""}
+                      href={"/dashboard/contact"}
                       text={CONTACT_BUTTON[language][0]}
                       classNameContent="padding-10"
                     />
@@ -215,13 +216,19 @@ const HomePage = () => {
                   className={`${classes.newsContainer} newsContainerSliderContainer`}
                 >
                   <h1>{NEWS[language][0]}</h1>
-                  <NewsCard />
+                  {/* <NewsCard /> */}
+                  <div className={classes.maintenanceContainer}>
+                    <div className={classes.imageContainer}>
+                      <Image src="/img/building.jpg" fill alt={"Maintenance"} />
+                    </div>
+                    <Maintenance />
+                  </div>
                 </div>
               </div>
               <div className={classes.show}>
                 <Image
                   width={otherImages.width}
-                  height={720}
+                  height={820}
                   src={"/images/FrameSix.png"}
                   alt={""}
                 />
