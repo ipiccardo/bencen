@@ -62,7 +62,13 @@ const FirstSection = ({
             layout="fill"
             objectFit="cover"
           />
-          <div className={classes.cards}>{secondChild}</div>
+          <div
+            className={`${classes.cards} ${
+              folderName === "about_us" ? classes.withTranslate : ""
+            }`}
+          >
+            {secondChild}
+          </div>
         </div>
       </div>
     </div>

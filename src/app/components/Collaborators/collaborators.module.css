@@ -1,12 +1,12 @@
 /* Team Cards */
 .text{
     align-items: center;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 928px;
+    max-width: 1200px;
     margin: 0 auto;
-    
+    padding: 2rem 0;
   }
   
   .text h1 {
@@ -15,6 +15,7 @@
     font-weight: var(--h-1-font-weight);
     margin-bottom: 32px;
     padding: 0 16px;
+    text-align: center;
   }
   
   .text p {

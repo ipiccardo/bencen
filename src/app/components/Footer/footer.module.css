@@ -28,20 +28,22 @@
   min-height: 200px;
 }
 
-.footer__firstBlock,
-.footer__secondBlock {
+.footer__firstBlock {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .footer__secondBlock {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   margin-top: 5rem;
 }
 
 .footer__icons {
   display: flex;
-  gap: 40px;
+  gap: 36px;
 }
 
 @media (max-width: 1450px) {

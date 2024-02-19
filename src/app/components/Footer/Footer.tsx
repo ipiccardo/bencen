@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useContext } from "react";
 import classes from "./footer.module.css";
@@ -8,11 +8,16 @@ import IconWithImages from "../IconWithImages/IconWithImages";
 import Link from "next/link";
 import LinkButton from "../Ui/LinkButton";
 import { store } from "@/app/context/context";
-import { TOP_FOOTER, FOOTER, NAVBAR, UNMATCHED_SERVICES_BUTTON } from "@/app/utils/constants";
+import {
+  TOP_FOOTER,
+  // FOOTER,
+  NAVBAR,
+  UNMATCHED_SERVICES_BUTTON,
+} from "@/app/utils/constants";
 
 const Footer = () => {
-  const context = useContext(store)
-  const { language, setLanguage }: any = context
+  const context = useContext(store);
+  const { language, setLanguage }: any = context;
 
   return (
     <>
@@ -23,7 +28,7 @@ const Footer = () => {
             <p>{TOP_FOOTER[language][1]}</p>
           </div>
           <LinkButton
-            href="/brochure/Folleto_Bencen.pdf"
+            href="../brochure/Folleto_Bencen.pdf"
             text={UNMATCHED_SERVICES_BUTTON[language]}
             classNameContent="padding-20"
           />
@@ -37,16 +42,20 @@ const Footer = () => {
           <NavBar
             withHome={true}
             hasPipes={false}
-            linkTitles={language === 'english' ? NAVBAR.english : NAVBAR.spanish}
+            linkTitles={
+              language === "english" ? NAVBAR.english : NAVBAR.spanish
+            }
             father="footer"
           />
         </div>
         <div className={classes.footer__secondBlock}>
-          <NavBar
+          {/* <NavBar
             withHome={false}
             hasPipes={true}
-            linkTitles={language === 'english' ? FOOTER.english : FOOTER.spanish}
-          />
+            linkTitles={
+              language === "english" ? FOOTER.english : FOOTER.spanish
+            }
+          /> */}
           <div className={classes.footer__icons}>
             {/*<Icon name="facebook" size={20} />*/}
             <Icon name="instagram" size={20} />

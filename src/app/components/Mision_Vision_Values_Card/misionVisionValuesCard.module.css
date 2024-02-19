@@ -56,6 +56,7 @@
 /* Mision Vision Value Card - Hover State */
   .misionVisionValuesCard:hover {
     box-shadow: var(--contact-card-inner-shadow);
+    cursor: pointer
   }
 
 /* Mision Vision Value Cards */

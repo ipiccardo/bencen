@@ -26,3 +26,15 @@
     line-height: var(--text-line-height);
     margin: 0px;
   }
+
+  @media (max-width: 400px) {
+    .text {
+      width: 300px;
+    }
+  }
+
+  @media (max-width: 305px) {
+    .text {
+      width: 260px;
+    }
+  }

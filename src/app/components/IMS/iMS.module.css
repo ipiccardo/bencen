@@ -1,9 +1,15 @@
 /* Team Cards */
+.section {
+  background-color: black;
+  padding-bottom: 2rem;
+  padding-top: 560px;
+}
+
 .text{
   display: flex;
   flex-wrap: wrap;
-  max-width: 959px;
-  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
   letter-spacing: var(--text-letter-spacing);
   line-height: var(--text-line-height);
   gap: 0px;
@@ -24,6 +30,9 @@
   font-weight: var(--h-1-font-weight);
   margin-bottom: 32px;
   padding: 0 16px;
+  text-align: center;
+  line-height: 1.2;
+  color: white;
 }
   
 .text p {
@@ -32,14 +41,31 @@
   font-style: var(--text-font-style);
   font-weight: var(--text-font-weight);
   padding: 0 16px;
+  color: var(--gray-light-color);
 }
 
 .text .column {
-  flex: 1;
+  flex: 230px;
 }
 
   
 /* Optional: Adjust spacing between columns */
 .text .column + .column {
   margin-left: 16px;
+}
+
+@media (max-width: 700px) {
+  .image {
+    display: none;
+  }
+}
+
+@media (max-width: 475px) {
+  .text .column + .column {
+    margin-left: 0;
+  }
+
+  .divBullets {
+    margin-top: 1rem;
+  }
 }
