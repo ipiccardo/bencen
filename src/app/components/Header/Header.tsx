@@ -9,6 +9,7 @@ import useOnClickOutside from "../../hooks/useOnClickOutside";
 import { usePathname } from "next/navigation";
 import { store } from "@/app/context/context";
 import { NAVBAR } from "@/app/utils/constants";
+import Link from "next/link";
 
 const Header = () => {
   const pathName = usePathname();
@@ -68,15 +69,20 @@ const Header = () => {
     };
   }, []);
 
-  // console.log(scrolling, 'scrolling')
 
   return (
     <>
       <div
         className={`${classes.header} ${scrolling ? classes.scrolling : ""}`}
       >
+
+
         <div>
-          <IconWithImages name="logo" size={150} />
+          <Link
+            href="/"
+          >
+            <IconWithImages name="logo" size={150} />
+          </Link>
         </div>
         <div>
           <NavBar
@@ -89,11 +95,11 @@ const Header = () => {
             handleChangeLanguage={handleChangeLanguage}
           />
         </div>
+
       </div>
       <div
-        className={`${classes.header__hamburguerMenu} ${
-          scrolling ? classes.scrolling : ""
-        }`}
+        className={`${classes.header__hamburguerMenu} ${scrolling ? classes.scrolling : ""
+          }`}
       >
         <div className={`${showOverlay && classes.bencenIconContainer}`}>
           <IconWithImages name="logo" size={150} />
@@ -106,9 +112,8 @@ const Header = () => {
         </div>
         <div
           ref={myRefElement1}
-          className={`${classes.mobileNav} ${
-            openSideBar ? classes.open : classes.close
-          }`}
+          className={`${classes.mobileNav} ${openSideBar ? classes.open : classes.close
+            }`}
         >
           <NavBar
             withHome={true}
