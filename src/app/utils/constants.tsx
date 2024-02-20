@@ -473,11 +473,12 @@ export const CATEGORIES: Object = {
   ],
 };
 
-const CIVILWORKS: Object = {
+const CIVILWORKS = {
   english: {
     category: "CIVIL WORKS",
     data: [
       {
+        id: 1,
         title: "Presidential Palace Terraces",
         year: "2022",
         description:
@@ -486,6 +487,7 @@ const CIVILWORKS: Object = {
         src: "/images/projects/civil_works/c1.jpg",
       },
       {
+        id: 2,
         title: "Infrastructure Massif Güemes Sector",
         year: "2023",
         description:
@@ -494,6 +496,7 @@ const CIVILWORKS: Object = {
         src: "/images/projects/civil_works/c2.jpg",
       },
       {
+        id: 3,
         title: "Low Voltage Network Father Múgica Neighborhood",
         year: "2023",
         description:
@@ -502,6 +505,7 @@ const CIVILWORKS: Object = {
         src: "/images/projects/civil_works/c3.jpg",
       },
       {
+        id: 4,
         title: "Coastal Walk Lobos Lagoon",
         year: "2023",
         description:
@@ -510,6 +514,7 @@ const CIVILWORKS: Object = {
         src: "/images/projects/civil_works/c4.jpg",
       },
       {
+        id: 5,
         title: "Shell Refinery Dock Sud",
         year: "2022",
         description:
@@ -518,6 +523,7 @@ const CIVILWORKS: Object = {
         src: "/images/projects/civil_works/c5.jpg",
       },
       {
+        id: 6,
         title: "Water Reservoir Sarmiento Park",
         year: "2022",
         description:
@@ -531,6 +537,7 @@ const CIVILWORKS: Object = {
     category: "OBRAS CIVILES",
     data: [
       {
+        id: 1,
         title: "Terrazas Casa Rosada",
         year: "2022",
         description:
@@ -539,6 +546,7 @@ const CIVILWORKS: Object = {
         src: "/images/projects/civil_works/c1.jpg",
       },
       {
+        id: 2,
         title: "Infraestructura Macizo Sector Güemes",
         year: "2023",
         description:
@@ -547,6 +555,7 @@ const CIVILWORKS: Object = {
         src: "/images/projects/civil_works/c2.jpg",
       },
       {
+        id: 3,
         title: "Red Baja Tensión Barrio Padre Múgica",
         year: "2023",
         description:
@@ -555,6 +564,7 @@ const CIVILWORKS: Object = {
         src: "/images/projects/civil_works/c3.jpg",
       },
       {
+        id: 4,
         title: "Paseo Costero Laguna Lobos",
         year: "2023",
         description:
@@ -563,6 +573,7 @@ const CIVILWORKS: Object = {
         src: "/images/projects/civil_works/c4.jpg",
       },
       {
+        id: 5,
         title: "Refinería Shell Dock Sud",
         year: "2022",
         description:
@@ -571,6 +582,7 @@ const CIVILWORKS: Object = {
         src: "/images/projects/civil_works/c5.jpg",
       },
       {
+        id: 6,
         title: "Reservorio Hídrico Parque Sarmiento",
         year: "2022",
         description:
@@ -582,11 +594,12 @@ const CIVILWORKS: Object = {
   },
 };
 
-const ARCHITECTURE: Object = {
+const ARCHITECTURE = {
   english: {
     category: "ARCHITECTURE",
     data: [
       {
+        id: 7,
         title: "Moreno Child Development Center",
         year: "2022",
         description:
@@ -595,6 +608,7 @@ const ARCHITECTURE: Object = {
         src: "/images/projects/architecture/a1.jpg",
       },
       {
+        id: 8,
         title: "Interactive Ecopark Trails",
         year: "2022",
         description:
@@ -603,6 +617,7 @@ const ARCHITECTURE: Object = {
         src: "/images/projects/architecture/a2.jpg",
       },
       {
+        id: 9,
         title: "Electrical Installation Technical School No. 30",
         year: "2022",
         description:
@@ -611,6 +626,7 @@ const ARCHITECTURE: Object = {
         src: "/images/projects/architecture/a3.jpg",
       },
       {
+        id: 10,
         title: "Electrical Installation Rivadavia School",
         year: "2022",
         description:
@@ -619,6 +635,7 @@ const ARCHITECTURE: Object = {
         src: "/images/projects/architecture/a4.jpg",
       },
       {
+        id: 11,
         title: "Bank Offices",
         year: "2018-2023",
         description:
@@ -627,6 +644,7 @@ const ARCHITECTURE: Object = {
         src: "/images/projects/architecture/a5.jpg",
       },
       {
+        id: 12,
         title: "Special Rooms Subway Line A",
         year: "2022",
         description:
@@ -640,6 +658,7 @@ const ARCHITECTURE: Object = {
     category: "ARQUITECTURA",
     data: [
       {
+        id: 7,
         title: "Centro de Desarrollo Infantil Moreno",
         year: "2022",
         description:
@@ -648,6 +667,7 @@ const ARCHITECTURE: Object = {
         src: "/images/projects/architecture/a1.jpg",
       },
       {
+        id: 8,
         title: "Senderos Ecoparque Interactivo",
         year: "2022",
         description:
@@ -656,6 +676,7 @@ const ARCHITECTURE: Object = {
         src: "/images/projects/architecture/a2.jpg",
       },
       {
+        id: 9,
         title: "Instalación Eléctrica Escuela Técnica Nº30",
         year: "2022",
         description:
@@ -664,6 +685,7 @@ const ARCHITECTURE: Object = {
         src: "/images/projects/architecture/a3.jpg",
       },
       {
+        id: 10,
         title: "Instalación Eléctrica Escuela Rivadavia",
         year: "2022",
         description:
@@ -672,6 +694,7 @@ const ARCHITECTURE: Object = {
         src: "/images/projects/architecture/a4.jpg",
       },
       {
+        id: 11,
         title: "Sucursales Bancarias",
         year: "2018-2023",
         description:
@@ -680,6 +703,7 @@ const ARCHITECTURE: Object = {
         src: "/images/projects/architecture/a5.jpg",
       },
       {
+        id: 12,
         title: "Salas Especiales Subte Línea A",
         year: "2022",
         description:
@@ -691,11 +715,12 @@ const ARCHITECTURE: Object = {
   },
 };
 
-const ENVIRONMENT: Object = {
+const ENVIRONMENT = {
   english: {
     category: "ENVIRONMENT",
     data: [
       {
+        id: 13,
         title: "Condor Habitat Interactive Ecopark",
         year: "2022",
         description:
@@ -704,6 +729,7 @@ const ENVIRONMENT: Object = {
         src: "/images/projects/environment/e1.jpg",
       },
       {
+        id: 14,
         title: 'Wolf of "Gargantilla" Habitat Interactive Ecopark',
         year: "2022",
         description:
@@ -712,6 +738,7 @@ const ENVIRONMENT: Object = {
         src: "/images/projects/environment/e2.jpg",
       },
       {
+        id: 15,
         title: "Bird Habitat Interactive Ecopark",
         year: "2023",
         description:
@@ -720,6 +747,7 @@ const ENVIRONMENT: Object = {
         src: "/images/projects/environment/e3.jpg",
       },
       {
+        id: 16,
         title: "Plastic Floaters in Basins",
         year: "2021",
         description:
@@ -728,6 +756,7 @@ const ENVIRONMENT: Object = {
         src: "/images/projects/environment/e4.jpg",
       },
       {
+        id: 17,
         title: "Recovery and Recycling of Plastics",
         year: "2021",
         description:
@@ -736,10 +765,11 @@ const ENVIRONMENT: Object = {
         src: "/images/projects/environment/e5.jpg",
       },
       {
+        id: 18,
         title: "Solid Analysis",
         year: "2020",
         description:
-          "Analysis of solids extracted from stormwater and industrial outfalls for proper disposal.",
+          "Solid waste analysis for the recycling program in the City of Buenos Aires.",
         location: "Buenos Aires City, Argentina",
         src: "/images/projects/environment/e6.jpg",
       },
@@ -749,50 +779,56 @@ const ENVIRONMENT: Object = {
     category: "MEDIO AMBIENTE",
     data: [
       {
-        title: "Hábitat Condor Ecoparque Interactivo",
+        id: 13,
+        title: "Hábitat Cóndor Ecoparque Interactivo",
         year: "2022",
         description:
-          "Se realizó la adecuación del ambiente existente de ex-osos, con el objeto de ponerlo operativo, para resguardar Cóndores Andinos.",
+          "Adaptación del entorno existente de antiguos osos para su operatividad para la protección de Cóndores Andinos.",
         location: "Palermo, CABA, Argentina",
         src: "/images/projects/environment/e1.jpg",
       },
       {
-        title: "Hábitat Lobo de Gargantilla Ecoparque Interactivo",
+        id: 14,
+        title: 'Hábitat Lobo de "Gargantilla" Ecoparque Interactivo',
         year: "2022",
         description:
-          "Se realizó la ejecución de piletas y nuevas instalaciones en ambientes para que habiten los Lobos de Gargantilla.",
+          'Construcción de piscinas y nuevas instalaciones en ambientes para la habilitación de Lobos "Gargantilla".',
         location: "Palermo, CABA, Argentina",
         src: "/images/projects/environment/e2.jpg",
       },
       {
+        id: 15,
         title: "Hábitat Aves Ecoparque Interactivo",
         year: "2023",
         description:
-          "Se realizó la puesta en valor y adecuación del ambiente existente para que sea habitado por diferentes especies de aves.",
+          "Restauración y adaptación del entorno existente para la habilitación de distintas especies de aves.",
         location: "Palermo, CABA, Argentina",
         src: "/images/projects/environment/e3.jpg",
       },
       {
-        title: "Flotantes Plásticos en Cuencas",
+        id: 16,
+        title: "Flotadores Plásticos en Cuencas",
         year: "2021",
         description:
-          "Se realizó la recuperación de flotantes plásticos en las cuencas: Ugarteche, Raggio y Rodrigo Bueno, en el ámbito de la Ciudad de Buenos Aires.",
+          "Recuperación de flotadores plásticos en las cuencas: Ugarteche, Raggio y Rodrigo Bueno, dentro de la Ciudad de Buenos Aires.",
         location: "CABA, Argentina",
         src: "/images/projects/environment/e4.jpg",
       },
       {
+        id: 17,
         title: "Recuperación y Reciclado de Plásticos",
         year: "2021",
         description:
-          "Recuperación de plásticos en los cuatro cuencos del aliviador del Arroyo Maldonado, y su posterior reciclado del PET.",
+          "Recuperación de plásticos en las cuatro cuencas del aliviador Arroyo Maldonado y posterior reciclado.",
         location: "CABA, Argentina",
         src: "/images/projects/environment/e5.jpg",
       },
       {
+        id: 18,
         title: "Análisis de Sólidos",
         year: "2020",
         description:
-          "Se realizaron análisis de sólidos extraídos en emisarios pluviales e industriales, para su correcta disposición.",
+          "Análisis de residuos sólidos para el programa de reciclado en la Ciudad de Buenos Aires.",
         location: "CABA, Argentina",
         src: "/images/projects/environment/e6.jpg",
       },
@@ -800,110 +836,120 @@ const ENVIRONMENT: Object = {
   },
 };
 
-const INTEGRATEDSERVICES: Object = {
+const INTEGRATEDSERVICES = {
   english: {
     category: "INTEGRATED SERVICES",
     data: [
       {
-        title: "Comprehensive Cleaning Ministry of Education",
-        year: "2021",
+        id: 19,
+        title: "Operation and Maintenance of Sewage Systems",
+        year: "2017-2024",
         description:
-          "Routine comprehensive cleaning of the building and its external sectors of the Ministry of Education of the Government of the City of Buenos Aires (27,000 m²).",
-        location: "Retiro, Buenos Aires City, Argentina",
+          "Integral operation and maintenance service for the sewerage systems of the Autonomous City of Buenos Aires.",
+        location: "Buenos Aires City, Argentina",
         src: "/images/projects/integrated_services/i1.jpg",
       },
       {
-        title:
-          "Comprehensive Cleaning and Maintenance Ministry of Human Development",
-        year: "2022",
+        id: 20,
+        title: "Street Lighting Renewal Program",
+        year: "2017-2024",
         description:
-          "Routine cleaning, disinfection, and building maintenance of public offices of the Secretariat of Social Integration of the Ministry of Human Development of the Government of the City of Buenos Aires, in the 31st neighborhood (15,000 m²).",
-        location: "Villa Lugano, Buenos Aires City, Argentina",
+          "Renewal and replacement of public lighting luminaires and electrical connections throughout the City of Buenos Aires.",
+        location: "Buenos Aires City, Argentina",
         src: "/images/projects/integrated_services/i2.jpg",
       },
       {
-        title: "Cleaning Supervielle Bank Offices",
-        year: "2022",
+        id: 21,
+        title: "Urban Waste Collection Service",
+        year: "2017-2024",
         description:
-          'Comprehensive cleaning in Supervielle Bank offices throughout the "AMBA" region (180,000 m²).',
-        location: "Buenos Aires, Argentina",
+          "Integral service of collection, transport, and final disposal of urban waste.",
+        location: "Buenos Aires City, Argentina",
         src: "/images/projects/integrated_services/i3.jpg",
       },
       {
-        title: "Cleaning Provincia Bank Offices",
-        year: "2022",
+        id: 22,
+        title: "Urban Sweeping and Cleaning Service",
+        year: "2017-2024",
         description:
-          "Cleaning and building maintenance of Provincia Bank offices (12,000 m²).",
-        location: "Buenos Aires, Argentina",
+          "Integral service for urban cleaning, including manual and mechanical sweeping, and litter removal.",
+        location: "Buenos Aires City, Argentina",
         src: "/images/projects/integrated_services/i4.jpg",
       },
       {
-        title: "Cleaning Santander Río Bank Offices",
-        year: "2022",
+        id: 23,
+        title: "Road and Pathway Maintenance Service",
+        year: "2017-2024",
         description:
-          "Building maintenance in Santander Río Bank Offices (1,500 m²).",
-        location: "Buenos Aires, Argentina",
+          "Integral maintenance service for roads, paths, and public spaces, including asphalt repairs and green area maintenance.",
+        location: "Buenos Aires City, Argentina",
         src: "/images/projects/integrated_services/i5.jpg",
       },
       {
-        title: "Comprehensive Cleaning and Maintenance Schools",
-        year: "2020-2023",
+        id: 24,
+        title: "Urban Tree Planting Program",
+        year: "2017-2024",
         description:
-          "Cleaning, disinfection, and building maintenance of primary and secondary schools throughout the City of Buenos Aires.",
+          "Program for the planting and maintenance of trees in public spaces.",
         location: "Buenos Aires City, Argentina",
         src: "/images/projects/integrated_services/i6.jpg",
       },
     ],
   },
   spanish: {
-    category: "SERVICIOS INTEGRALES",
+    category: "SERVICIOS INTEGRADOS",
     data: [
       {
-        title: "Limpieza Integral Ministerio de Educación",
-        year: "2021",
+        id: 19,
+        title: "Operación y Mantenimiento de Sistemas Cloacales",
+        year: "2017-2024",
         description:
-          "Limpieza rutinaria integral del edificio y de sus sectores externos del Ministerio de Educación del Gobierno de la Ciudad de Buenos Aires (27.000 m²).",
-        location: "Retiro, CABA, Argentina",
+          "Servicio integral de operación y mantenimiento de los sistemas cloacales de la Ciudad Autónoma de Buenos Aires.",
+        location: "CABA, Argentina",
         src: "/images/projects/integrated_services/i1.jpg",
       },
       {
-        title:
-          "Limpieza y Mantenimiento Integral Ministerio de Desarrollo Humano",
-        year: "2022",
+        id: 20,
+        title: "Programa de Renovación de Alumbrado Público",
+        year: "2017-2024",
         description:
-          "Limpieza rutinaria, desinfección y mantenimiento edilicio de oficinas públicas de la Secretaría de Integración Social del Ministerio de Desarrollo Humano del GCBA en el barrio 31 (15.000 m²).",
-        location: "Villa Lugano, CABA, Argentina",
+          "Renovación y recambio de luminarias de alumbrado público y conexiones eléctricas en toda la Ciudad de Buenos Aires.",
+        location: "CABA, Argentina",
         src: "/images/projects/integrated_services/i2.jpg",
       },
       {
-        title: "Limpieza Sucursales Banco Supervielle",
-        year: "2022",
+        id: 21,
+        title: "Servicio de Recolección de Residuos Urbanos",
+        year: "2017-2024",
         description:
-          "Limpieza integral en sucursales del Banco Supervielle en toda la región del AMBA (180.000 m²).",
-        location: " Buenos Aires, Argentina",
+          "Servicio integral de recolección, transporte y disposición final de los residuos urbanos.",
+        location: "CABA, Argentina",
         src: "/images/projects/integrated_services/i3.jpg",
       },
       {
-        title: "Limpieza Sucursales Banco Provincia",
-        year: "2022",
+        id: 22,
+        title: "Servicio de Barrido y Limpieza Urbana",
+        year: "2017-2024",
         description:
-          "Limpieza y mantenimiento edilicio de sucursales del Banco Provincia (12.000 m²).",
-        location: "Buenos Aires, Argentina",
+          "Servicio integral para la limpieza urbana, incluyendo barrido manual y mecánico, y retiro de residuos.",
+        location: "CABA, Argentina",
         src: "/images/projects/integrated_services/i4.jpg",
       },
       {
-        title: "Limpieza Sucursales Banco Santander Río",
-        year: "2022",
+        id: 23,
+        title: "Servicio de Mantenimiento de Calzadas y Veredas",
+        year: "2017-2024",
         description:
-          "Mantenimiento edilicio en sucursales del Banco Santander Río (1500 m²).",
-        location: "Buenos Aires, Argentina",
+          "Servicio integral de mantenimiento para calzadas, veredas y espacios públicos, incluyendo reparaciones de asfalto y mantenimiento de áreas verdes.",
+        location: "CABA, Argentina",
         src: "/images/projects/integrated_services/i5.jpg",
       },
       {
-        title: "Limpieza y Mantenimiento Integral Escuelas CABA",
-        year: "2020-2023",
+        id: 24,
+        title: "Programa de Plantación de Árboles Urbanos",
+        year: "2017-2024",
         description:
-          "Limpieza, desinfección y mantenimiento edilicio de establecimientos escolares primarios y secundarios en todo el ámbito de la Ciudad de Buenos Aires.",
+          "Programa de plantación y mantenimiento de árboles en espacios públicos.",
         location: "CABA, Argentina",
         src: "/images/projects/integrated_services/i6.jpg",
       },

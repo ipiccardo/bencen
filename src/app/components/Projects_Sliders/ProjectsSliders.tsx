@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./projectsSliders.module.css";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Modal from "../Modal/Modal";
+import Image from "next/image";
 
 const CustomPrevArrow = (props: any) => (
   <div
@@ -27,7 +29,7 @@ const CustomNextArrow = (props: any) => (
   </div>
 );
 
-const ProjectsSliders = ({ categoryData }): any => {
+const ProjectsSliders = ({ categoryData }: any): any => {
   console.log("category en project sliders", categoryData);
   const sliderSettings = {
     dots: false,
@@ -50,16 +52,44 @@ const ProjectsSliders = ({ categoryData }): any => {
     nextArrow: <CustomNextArrow />,
   };
 
+  const [activeModalId, setActiveModalId] = useState(null);
+  const [projectInModal, setProjectInModal] = useState({
+    id: 0,
+    title: "",
+    year: "",
+    description: "",
+    location: "",
+    src: "",
+  });
+
+  const openModal = (projectId: any) => {
+    setActiveModalId(projectId);
+  };
+
+  const closeModal = () => {
+    setActiveModalId(null);
+  };
+
+  useEffect(() => {
+    setProjectInModal(
+      categoryData.find((project: any) => project.id === activeModalId)
+    );
+  }, [activeModalId, categoryData]);
+
   return (
     <>
       <div className={classes.cardsContainer}>
         <div className={classes.sliderContainer}>
           <Slider {...sliderSettings}>
             {categoryData.map((project: any, index: number) => {
-              const { title, year, description, src } = project;
-              console.log(src);
+              const { id, title, year, src } = project;
+
               return (
-                <div key={index + 3000} className={classes.cardContainer}>
+                <div
+                  key={index + 3000}
+                  className={classes.cardContainer}
+                  onClick={() => openModal(id)}
+                >
                   <div
                     className={classes.backgroundContainer}
                     style={{
@@ -82,6 +112,37 @@ const ProjectsSliders = ({ categoryData }): any => {
           </Slider>
         </div>
       </div>
+      <Modal
+        isOpen={activeModalId !== null}
+        onClose={closeModal}
+        title={projectInModal?.title}
+      >
+        <div
+          className={classes.backgroundImageContainer}
+          style={{
+            position: "relative",
+          }}
+        >
+          <Image
+            src={projectInModal?.src}
+            alt={projectInModal?.title}
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+        <p
+          style={{
+            fontSize: "1.2rem",
+          }}
+        >
+          {projectInModal?.description}
+        </p>
+        <p>
+          <b>
+            {projectInModal?.location} - {projectInModal?.year}
+          </b>
+        </p>
+      </Modal>
     </>
   );
 };
