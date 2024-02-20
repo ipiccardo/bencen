@@ -10,16 +10,15 @@ const ProjectsSlidersContainer = () => {
 
   const { language, setLanguage }: any = context;
 
-  // const categories = languageRendering(language, CATEGORIES);
-
-  console.log("CATEGORIES_WITH_DATA", CATEGORIES_WITH_DATA);
-
   return (
     <div className={classes.projectsSlidersContainer}>
       {CATEGORIES_WITH_DATA.map((category: any, index: number) => {
         return (
           <div className={classes.categoryContainer} key={2000 + index}>
-            <h2 className={classes.categoryContainer__title}>
+            <h2
+              id={index.toString()}
+              className={classes.categoryContainer__title}
+            >
               {category[language].category}
             </h2>
             <ProjectsSliders categoryData={category[language].data} />
