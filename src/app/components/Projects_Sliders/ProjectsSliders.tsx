@@ -27,14 +27,14 @@ const CustomNextArrow = (props: any) => (
   </div>
 );
 
-const ProjectsSliders = ({ category }): any => {
-  console.log("category en project sliders", category);
+const ProjectsSliders = ({ categoryData }): any => {
+  console.log("category en project sliders", categoryData);
   const sliderSettings = {
     dots: false,
     infinite: true,
     speed: 100,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1000,
@@ -55,18 +55,30 @@ const ProjectsSliders = ({ category }): any => {
       <div className={classes.cardsContainer}>
         <div className={classes.sliderContainer}>
           <Slider {...sliderSettings}>
-            {Array(4)
-              .fill(1)
-              .map((_, index) => {
-                return (
-                  <div key={index + 3000} className={classes.cardContainer}>
+            {categoryData.map((project: any, index: number) => {
+              const { title, year, description, src } = project;
+              console.log(src);
+              return (
+                <div key={index + 3000} className={classes.cardContainer}>
+                  <div
+                    className={classes.backgroundContainer}
+                    style={{
+                      backgroundImage: `url(${src})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                      width: "100%",
+                      height: "100%",
+                      borderRadius: "16px",
+                    }}
+                  >
                     <div className={classes.textContainer}>
-                      <h2>PROJECT NAME</h2>
-                      <p>Project Year</p>
+                      <h2>{title}</h2>
+                      <p>{year}</p>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              );
+            })}
           </Slider>
         </div>
       </div>

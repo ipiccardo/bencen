@@ -22,7 +22,7 @@ const ProjectsSlidersContainer = () => {
             <h2 className={classes.categoryContainer__title}>
               {category[language].category}
             </h2>
-            <ProjectsSliders category={category[language].data} />
+            <ProjectsSliders categoryData={category[language].data} />
           </div>
         );
       })}
