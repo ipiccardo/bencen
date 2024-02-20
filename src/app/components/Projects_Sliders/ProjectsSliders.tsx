@@ -27,7 +27,8 @@ const CustomNextArrow = (props: any) => (
   </div>
 );
 
-const ProjectsSliders = (): any => {
+const ProjectsSliders = ({ category }): any => {
+  console.log("category en project sliders", category);
   const sliderSettings = {
     dots: false,
     infinite: true,
