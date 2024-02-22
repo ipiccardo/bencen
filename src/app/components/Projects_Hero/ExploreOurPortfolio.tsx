@@ -5,17 +5,10 @@ import classes from "./exploreOurPortfolio.module.css";
 import Button from "../Ui/Button";
 import { EXPLORE_OUR_PORTFOLIO, CATEGORIES } from "../../utils/constants";
 import { store } from "@/app/context/context";
+import { scrollToId } from "@/app/utils";
 
 const ExploreOurPortfolio = (): JSX.Element => {
   const { language }: any = useContext(store);
-
-  const scrollToId = (id: number, offset: number) => {
-    const element = document.getElementById(`${id}`);
-    if (element) {
-      const y = element.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
-  };
 
   return (
     <section className={classes.text}>
