@@ -396,24 +396,28 @@ export const SERVICES_SECTION: Object = {
       imageSrc: "/img/civil_works.jpg",
       paragraphText:
         "Dedicated to the design, planning, and execution of Civil Engineering projects in urban, industrial, and rural settings. Our team of specialized professionals is committed to enhancing the efficiency of our developments continually, surpassing our clients expectations. We craft tailored solutions, integrating various engineering specialties, while upholding the highest standards of quality, safety, and environmental consciousness. Our projects are meticulously designed and executed, striking a delicate balance with their surroundings, not only providing solutions but also harmonizing with the environment. In the industrial domain, we factor in all client-specific regulations, standards, and requirements as fundamental aspects of our planning.",
+      buttonText: "SEE ALL PROJECTS",
     },
     {
       h2Text: "Architecture",
       imageSrc: "/img/architecture.jpg",
       paragraphText:
         "We have a dedicated team of professionals focused on the design, planning, and execution of architectural projects, as well as the development, planning, and execution of urban projects. We create projects of various scales, building strong relationships with our clients and addressing each of their needs. In the realm of urban planning, we design public spaces, green areas, recreational zones, etc., and efficiently develop urban areas, restructure them, and ensure the provision of various services. We employ the latest and most efficient technologies in the market, always aiming for maximum resource utilization, streamlined timelines, and minimal environmental impact.",
+      buttonText: "SEE ALL PROJECTS",
     },
     {
       h2Text: "Environment",
       imageSrc: "/img/environment.jpg",
       paragraphText:
         "We specialize in tailored projects dedicated to environmental care, protection, and conservation. Our services encompass environmental impact assessments, analysis of physical-chemical and biological parameters, and projects focused on renewable energy generation, utilizing solar, wind, and other sources. We advocate for systems to utilize recyclable waste like PET, recovering and reintegrating them as reusable materials. We collaborate with strategic partners in academia, leveraging their state-of-the-art laboratories and expertise. Our clients receive top-notch service facilitated by our experienced professionals.",
+      buttonText: "SEE ALL PROJECTS",
     },
     {
       h2Text: "Integrated Services",
       imageSrc: "/img/integrated_services.jpg",
       paragraphText:
         "Dedicated professionals with expertise in providing comprehensive solutions under the umbrella of integrated services. Specialized in delivering excellence in cleaning, maintenance, and general upkeep, including proficiency in masonry, plumbing, electrical work, ironwork, metal structures, and restoration and maintenance of facades. Proven track record of ensuring optimal functionality and aesthetics in diverse environments through a holistic approach to facility management.",
+      buttonText: "SEE ALL PROJECTS",
     },
   ],
   spanish: [
@@ -422,24 +426,28 @@ export const SERVICES_SECTION: Object = {
       imageSrc: "/img/civil_works.jpg",
       paragraphText:
         "Dedicada al diseño, planificación y ejecución de proyectos de Ingeniería Civil en entornos urbanos, industriales y rurales. Nuestro equipo de profesionales especializados está comprometido a mejorar continuamente la eficiencia de nuestros desarrollos, superando las expectativas de nuestros clientes. Creamos soluciones a la medida, integrando diversas especialidades de ingeniería, manteniendo los más altos estándares de calidad, seguridad y conciencia ambiental. Nuestros proyectos están meticulosamente diseñados y ejecutados, logrando un delicado equilibrio con su entorno, no sólo aportando soluciones sino también armonizando con el entorno. En el ámbito industrial, tenemos en cuenta todas las regulaciones, normas y requisitos específicos del cliente como aspectos fundamentales de nuestra planificación.",
+      buttonText: "VER PROYECTOS",
     },
     {
       h2Text: "Arquitectura",
       imageSrc: "/img/architecture.jpg",
       paragraphText:
         "Contamos con un equipo dedicado de profesionales enfocados en el diseño, planificación y ejecución de proyectos arquitectónicos, así como en el desarrollo, planificación y ejecución de proyectos urbanos. Creamos proyectos de diversas escalas, construyendo relaciones sólidas con nuestros clientes y atendiendo cada una de sus necesidades. En el ámbito del urbanismo diseñamos espacios públicos, áreas verdes, zonas recreativas, etc., y desarrollamos eficientemente las áreas urbanas, las reestructuramos y aseguramos la prestación de diversos servicios. Empleamos las últimas y más eficientes tecnologías del mercado, buscando siempre la máxima utilización de recursos, tiempos optimizados y un mínimo impacto ambiental.",
+      buttonText: "VER PROYECTOS",
     },
     {
       h2Text: "Medio ambiente",
       imageSrc: "/img/environment.jpg",
       paragraphText:
         "Nos especializamos en proyectos a medida dedicados al cuidado, protección y conservación del medio ambiente. Nuestros servicios abarcan evaluaciones de impacto ambiental, análisis de parámetros físico-químicos y biológicos, y proyectos enfocados en la generación de energía renovable, utilizando fuentes solares, eólicas y otras. Abogamos por sistemas que aprovechen residuos reciclables como el PET, recuperándolos y reintegrándolos como materiales reutilizables. Colaboramos con socios estratégicos en el mundo académico, aprovechando sus laboratorios y experiencia de última generación. Nuestros clientes reciben un servicio de primer nivel facilitado por nuestros profesionales experimentados.",
+      buttonText: "VER PROYECTOS",
     },
     {
       h2Text: "Servicios Integrales",
       imageSrc: "/img/integrated_services.jpg",
       paragraphText:
         "Profesionales dedicados con experiencia en proporcionar soluciones integrales bajo el paraguas de servicios integrados. Especializado en ofrecer excelencia en limpieza, mantenimiento y cuidado general, incluyendo habilidades en albañilería, fontanería, trabajos eléctricos, herrería, estructuras metálicas, y restauración y mantenimiento de fachadas. Historial comprobado de asegurar funcionalidad y estética óptimas en diversos entornos mediante un enfoque integral de la gestión de instalaciones.",
+      buttonText: "VER PROYECTOS",
     },
   ],
 };

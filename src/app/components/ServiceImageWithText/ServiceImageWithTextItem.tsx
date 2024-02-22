@@ -2,6 +2,8 @@ import Image from "next/image";
 import classes from "./ServiceImageWithText.module.css";
 import Button from "../Ui/Button";
 import { infoForCardsItemProps } from "./ServiceImageWithText";
+import { scrollToId } from "@/app/utils";
+import { useScroll } from "@/app/hooks/useScroll";
 
 const ServiceImageWithTextItem = ({
   id,
@@ -11,7 +13,10 @@ const ServiceImageWithTextItem = ({
   h2Text,
   paragraphText,
   last,
+  buttonText,
 }: infoForCardsItemProps) => {
+  const scrollear = useScroll((id - 1).toString(), 80);
+
   return (
     <div
       className={`${classes.serviceImageWithText__item} ${classes[alignTo]} ${
@@ -37,9 +42,11 @@ const ServiceImageWithTextItem = ({
         </div>
         <p>{paragraphText}</p>
         <Button
-          href={"/dashboard/projects"}
-          text="SEE ALL PROJECTS"
+          href={`/dashboard/projects#${id - 1}`}
+          text={buttonText}
           classNameContent="padding-10 padding-l-20 padding-r-20"
+          preventDefault={false}
+          onClick={() => scrollear}
         />
       </div>
     </div>
