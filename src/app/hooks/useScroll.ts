@@ -1,8 +1,7 @@
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
-export const useScroll = (id: string, offset: number) => {
+export const useScroll = (id: string, offset: number, desiredPath: string) => {
   const router = useRouter();
-  const pathname = usePathname();
 
   const scrollToElement = () => {
     const element = document.getElementById(`${id}`);
@@ -13,7 +12,7 @@ export const useScroll = (id: string, offset: number) => {
   };
 
   return () => {
-    router.replace(`/dashboard/projects`, {
+    router.replace(desiredPath, {
       scroll: true,
     });
     setTimeout(() => scrollToElement(), 1300);

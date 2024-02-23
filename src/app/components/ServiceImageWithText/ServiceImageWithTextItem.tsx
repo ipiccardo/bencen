@@ -14,7 +14,7 @@ const ServiceImageWithTextItem = ({
   last,
   buttonText,
 }: infoForCardsItemProps) => {
-  const scrollear = useScroll((id - 1).toString(), 100);
+  const scrollear = useScroll((id - 1).toString(), 100, "/dashboard/projects");
 
   return (
     <div
