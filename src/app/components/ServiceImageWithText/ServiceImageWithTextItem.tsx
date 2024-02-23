@@ -2,7 +2,6 @@ import Image from "next/image";
 import classes from "./ServiceImageWithText.module.css";
 import Button from "../Ui/Button";
 import { infoForCardsItemProps } from "./ServiceImageWithText";
-import { scrollToId } from "@/app/utils";
 import { useScroll } from "@/app/hooks/useScroll";
 
 const ServiceImageWithTextItem = ({
@@ -42,7 +41,7 @@ const ServiceImageWithTextItem = ({
         </div>
         <p>{paragraphText}</p>
         <Button
-          href={`/dashboard/projects#${id - 1}`}
+          href={""}
           text={buttonText}
           classNameContent="padding-10 padding-l-20 padding-r-20"
           preventDefault={false}
