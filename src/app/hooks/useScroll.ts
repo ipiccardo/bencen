@@ -1,17 +1,8 @@
-import { useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 
 export const useScroll = (id: string, offset: number) => {
   const router = useRouter();
   const pathname = usePathname();
-
-  // useEffect(() => {
-    
-
-  //   if (pathname.includes(`#${id}`)) {
-  //     setTimeout(scrollToElement, 100);
-  //   }
-  // }, [pathname, id, offset]);
 
   const scrollToElement = () => {
     const element = document.getElementById(`${id}`);
@@ -22,14 +13,9 @@ export const useScroll = (id: string, offset: number) => {
   };
 
   return () => {
-    // const href = `${pathname}#${id}`;
-    // console.log("pasa por scrollear")
-    // console.log(href)
-    router.replace(`/dashboard/projects#${id}`, {
-      scroll: false,
-       // Hacer scroll a la parte superior de la página después de la navegación
+    router.replace(`/dashboard/projects`, {
+      scroll: true,
     });
-    setTimeout(scrollToElement, 100);
-    console.log("hola")
+    setTimeout(() => scrollToElement(), 1300);
   };
 };

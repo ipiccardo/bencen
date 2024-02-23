@@ -184,14 +184,14 @@
   --white-color: rgba(255, 255, 255, 1);
 }
 
-* {
+/* {
   scroll-behavior: smooth;
 }
 
 #0, #1, #2, #3 {
   scroll-margin-top: 120px;
-  /* scroll-padding-top: 80px; */
-}
+  scroll-padding-top: 80px;
+} */
 
 body {
   font-family: "Roboto", sans-serif;
