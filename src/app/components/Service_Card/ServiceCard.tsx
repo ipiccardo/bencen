@@ -2,6 +2,7 @@
 
 import React, { useState, useContext } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import classes from "./serviceCard.module.css";
 import Button from "../Ui/Button";
 import { SERVICES, SERVICES_BUTTON } from "../../utils/constants";
@@ -9,16 +10,32 @@ import { store } from "@/app/context/context";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useScroll } from "@/app/hooks/useScroll";
 
 interface Props {
   imageName: string;
   header: string;
   content: string;
+  id: number;
 }
 
-const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
+const ServiceCard = ({
+  imageName,
+  header,
+  content,
+  id,
+}: Props): JSX.Element => {
   const [hover, setHover] = useState(false);
   const { language }: any = useContext(store);
+
+  const pathname = usePathname();
+
+  const scrollear = useScroll(
+    id,
+    100,
+    "/dashboard/services",
+    !pathname.includes("services")
+  );
 
   return (
     <div
@@ -41,9 +58,11 @@ const ServiceCard = ({ imageName, header, content }: Props): JSX.Element => {
           <div className={classes.content}>{content}</div>
         </div>
         <Button
-          href=""
+          href={""}
           classNameButton={classes.button}
           text={SERVICES_BUTTON[language]}
+          preventDefault={true}
+          onClick={scrollear}
         />
       </div>
     </div>
@@ -73,7 +92,7 @@ const ServiceCards = (): JSX.Element => {
       <div className={`${classes.showSlider} serviceCardSliderContainer`}>
         <div className={classes.sliderContainer}>
           <Slider {...sliderSettings}>
-            {Object.keys(SERVICES[language]).map((key) => {
+            {Object.keys(SERVICES[language]).map((key, index) => {
               const [imageName, header, content] = SERVICES[language][key];
               return (
                 <div key={key}>
@@ -81,6 +100,7 @@ const ServiceCards = (): JSX.Element => {
                     imageName={imageName}
                     header={header}
                     content={content}
+                    id={index}
                   />
                 </div>
               );
@@ -90,7 +110,7 @@ const ServiceCards = (): JSX.Element => {
       </div>
       <div className={classes.hideSlider}>
         <ul className={classes.serviceCards}>
-          {Object.keys(SERVICES[language]).map((key) => {
+          {Object.keys(SERVICES[language]).map((key, index) => {
             const [imageName, header, content] = SERVICES[language][key];
             return (
               <li key={key}>
@@ -98,6 +118,7 @@ const ServiceCards = (): JSX.Element => {
                   imageName={imageName}
                   header={header}
                   content={content}
+                  id={index}
                 />
               </li>
             );

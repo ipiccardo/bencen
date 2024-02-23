@@ -14,13 +14,14 @@ const ServiceImageWithTextItem = ({
   last,
   buttonText,
 }: infoForCardsItemProps) => {
-  const scrollear = useScroll((id - 1).toString(), 100, "/dashboard/projects");
+  const scrollear = useScroll(id - 1, 80, "/dashboard/projects", true);
 
   return (
     <div
       className={`${classes.serviceImageWithText__item} ${classes[alignTo]} ${
         last ? classes.serviceImageWithText__item__last : ""
       }`}
+      id={(id - 1).toString()}
     >
       <div
         className={`${classes.serviceImageWithText__item__image} ${classes.imageOutside}`}
