@@ -14,7 +14,7 @@ const ServiceImageWithTextItem = ({
   last,
   buttonText,
 }: infoForCardsItemProps) => {
-  const scrollear = useScroll((id - 1).toString(), 80);
+  const scrollear = useScroll((id - 1).toString(), 100);
 
   return (
     <div
@@ -44,8 +44,8 @@ const ServiceImageWithTextItem = ({
           href={""}
           text={buttonText}
           classNameContent="padding-10 padding-l-20 padding-r-20"
-          preventDefault={false}
-          onClick={() => scrollear}
+          preventDefault={true}
+          onClick={scrollear}
         />
       </div>
     </div>

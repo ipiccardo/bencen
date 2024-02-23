@@ -5,25 +5,31 @@ export const useScroll = (id: string, offset: number) => {
   const router = useRouter();
   const pathname = usePathname();
 
-  useEffect(() => {
-    const scrollToElement = () => {
-      const element = document.getElementById(id);
-      if (element) {
-        const elementPosition = element.getBoundingClientRect().top;
-        window.scrollTo({
-          top: window.pageYOffset + elementPosition - offset,
-          behavior: 'smooth',
-        });
-      }
-    };
+  // useEffect(() => {
+    
 
-    if (pathname.includes(`#${id}`)) {
-      setTimeout(scrollToElement, 100);
+  //   if (pathname.includes(`#${id}`)) {
+  //     setTimeout(scrollToElement, 100);
+  //   }
+  // }, [pathname, id, offset]);
+
+  const scrollToElement = () => {
+    const element = document.getElementById(`${id}`);
+    if (element) {
+      const y = element.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: y, behavior: "smooth" });
     }
-  }, [pathname, id, offset]);
+  };
 
   return () => {
-    const href = `${pathname}#${id}`;
-    router.push(href, undefined);
+    // const href = `${pathname}#${id}`;
+    // console.log("pasa por scrollear")
+    // console.log(href)
+    router.replace(`/dashboard/projects#${id}`, {
+      scroll: false,
+       // Hacer scroll a la parte superior de la página después de la navegación
+    });
+    setTimeout(scrollToElement, 100);
+    console.log("hola")
   };
 };
