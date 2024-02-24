@@ -9,6 +9,7 @@ type FirstSectionProps = {
   folderName: string;
   secondChild?: JSX.Element;
   textToTheRight?: boolean;
+  moreTranslate?: boolean;
 };
 
 const FirstSection = ({
@@ -16,6 +17,7 @@ const FirstSection = ({
   folderName,
   secondChild,
   textToTheRight = false,
+  moreTranslate = false,
 }: FirstSectionProps) => {
   // const [Resolution, setResolution] = useState({ width: 0, height: 0 });
   const [widthPercentage, SetWidthPercentage] = useState(1);
@@ -64,7 +66,11 @@ const FirstSection = ({
           />
           <div
             className={`${classes.cards} ${
-              folderName === "about_us" ? classes.withTranslate : ""
+              folderName === "about_us"
+                ? moreTranslate
+                  ? classes.withMoreTranslateY
+                  : classes.withTranslateY
+                : ""
             }`}
           >
             {secondChild}

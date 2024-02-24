@@ -2,7 +2,7 @@
 .section {
   background-color: black;
   padding-bottom: 2rem;
-  padding-top: 560px;
+  padding-top: 360px;
 }
 
 .text{
@@ -54,6 +54,12 @@
   margin-left: 16px;
 }
 
+@media (max-width: 906px) {
+  .section {
+    padding-top: 840px;
+  }
+}
+
 @media (max-width: 700px) {
   .image {
     display: none;
@@ -67,5 +73,11 @@
 
   .divBullets {
     margin-top: 1rem;
+  }
+}
+
+@media (max-width: 306px) {
+  .section {
+    padding-top: 960px;
   }
 }
