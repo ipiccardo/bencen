@@ -27,6 +27,7 @@ import {
 import { store } from "@/app/context/context";
 import Link from "next/link";
 import Maintenance from "../components/Maintenance/Maintenance";
+import FirstSection from "../components/FirstSection/FirstSection";
 
 const HomePage = () => {
   const [pantallaMediana, setPantallaMediana] = useState(false);
@@ -67,8 +68,19 @@ const HomePage = () => {
     <>
       <div className={classes.homePageContainer}>
         <div className={classes.sectionsContainer}>
-          <section>
-            <div
+          <FirstSection
+            firstChild={<><div>
+              <h1>{HOME_TEXT[language][0]}</h1>
+              <p>{HOME_TEXT[language][1]}</p>
+              <p>{HOME_TEXT[language][2]}</p>
+            </div></>}
+            folderName={"home"}
+            secondChild={<div>
+              <ServiceCards />
+            </div>}
+          />
+          {/* <section> */}
+          {/* <div
               className={`${classes.FirstimageContainer} ${classes.widthImage}`}
             >
               <div className={classes.showHeaderParagraphContainer}>
@@ -89,11 +101,11 @@ const HomePage = () => {
                   alt={""}
                 />
               </div>
-            </div>
-          </section>
-          <div className={classes.serviceCardContainer}>
+            </div> */}
+          {/* </section> */}
+          {/* <div className={classes.serviceCardContainer}>
             <ServiceCards />
-          </div>
+          </div> */}
           <section className={classes.secondSectionContainer} style={{ background: 'white' }}>
             <div className={`${classes.imageContainer} ${classes.secondImage}`}>
               <div className={classes.containerAbsolute}>
