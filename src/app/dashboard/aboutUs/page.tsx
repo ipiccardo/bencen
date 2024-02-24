@@ -13,6 +13,7 @@ const AboutUs = () => {
         folderName={"about_us"}
         secondChild={<MisionVisionValuesCards />}
         textToTheRight={true}
+        moreTranslate={true}
       />
       <IMS />
       {/*<TeamCards/>*/}

@@ -396,24 +396,28 @@ export const SERVICES_SECTION: Object = {
       imageSrc: "/img/civil_works.jpg",
       paragraphText:
         "Dedicated to the design, planning, and execution of Civil Engineering projects in urban, industrial, and rural settings. Our team of specialized professionals is committed to enhancing the efficiency of our developments continually, surpassing our clients expectations. We craft tailored solutions, integrating various engineering specialties, while upholding the highest standards of quality, safety, and environmental consciousness. Our projects are meticulously designed and executed, striking a delicate balance with their surroundings, not only providing solutions but also harmonizing with the environment. In the industrial domain, we factor in all client-specific regulations, standards, and requirements as fundamental aspects of our planning.",
+      buttonText: "SEE ALL PROJECTS",
     },
     {
       h2Text: "Architecture",
       imageSrc: "/img/architecture.jpg",
       paragraphText:
         "We have a dedicated team of professionals focused on the design, planning, and execution of architectural projects, as well as the development, planning, and execution of urban projects. We create projects of various scales, building strong relationships with our clients and addressing each of their needs. In the realm of urban planning, we design public spaces, green areas, recreational zones, etc., and efficiently develop urban areas, restructure them, and ensure the provision of various services. We employ the latest and most efficient technologies in the market, always aiming for maximum resource utilization, streamlined timelines, and minimal environmental impact.",
+      buttonText: "SEE ALL PROJECTS",
     },
     {
       h2Text: "Environment",
       imageSrc: "/img/environment.jpg",
       paragraphText:
         "We specialize in tailored projects dedicated to environmental care, protection, and conservation. Our services encompass environmental impact assessments, analysis of physical-chemical and biological parameters, and projects focused on renewable energy generation, utilizing solar, wind, and other sources. We advocate for systems to utilize recyclable waste like PET, recovering and reintegrating them as reusable materials. We collaborate with strategic partners in academia, leveraging their state-of-the-art laboratories and expertise. Our clients receive top-notch service facilitated by our experienced professionals.",
+      buttonText: "SEE ALL PROJECTS",
     },
     {
       h2Text: "Integrated Services",
       imageSrc: "/img/integrated_services.jpg",
       paragraphText:
         "Dedicated professionals with expertise in providing comprehensive solutions under the umbrella of integrated services. Specialized in delivering excellence in cleaning, maintenance, and general upkeep, including proficiency in masonry, plumbing, electrical work, ironwork, metal structures, and restoration and maintenance of facades. Proven track record of ensuring optimal functionality and aesthetics in diverse environments through a holistic approach to facility management.",
+      buttonText: "SEE ALL PROJECTS",
     },
   ],
   spanish: [
@@ -422,24 +426,28 @@ export const SERVICES_SECTION: Object = {
       imageSrc: "/img/civil_works.jpg",
       paragraphText:
         "Dedicada al diseño, planificación y ejecución de proyectos de Ingeniería Civil en entornos urbanos, industriales y rurales. Nuestro equipo de profesionales especializados está comprometido a mejorar continuamente la eficiencia de nuestros desarrollos, superando las expectativas de nuestros clientes. Creamos soluciones a la medida, integrando diversas especialidades de ingeniería, manteniendo los más altos estándares de calidad, seguridad y conciencia ambiental. Nuestros proyectos están meticulosamente diseñados y ejecutados, logrando un delicado equilibrio con su entorno, no sólo aportando soluciones sino también armonizando con el entorno. En el ámbito industrial, tenemos en cuenta todas las regulaciones, normas y requisitos específicos del cliente como aspectos fundamentales de nuestra planificación.",
+      buttonText: "VER PROYECTOS",
     },
     {
       h2Text: "Arquitectura",
       imageSrc: "/img/architecture.jpg",
       paragraphText:
         "Contamos con un equipo dedicado de profesionales enfocados en el diseño, planificación y ejecución de proyectos arquitectónicos, así como en el desarrollo, planificación y ejecución de proyectos urbanos. Creamos proyectos de diversas escalas, construyendo relaciones sólidas con nuestros clientes y atendiendo cada una de sus necesidades. En el ámbito del urbanismo diseñamos espacios públicos, áreas verdes, zonas recreativas, etc., y desarrollamos eficientemente las áreas urbanas, las reestructuramos y aseguramos la prestación de diversos servicios. Empleamos las últimas y más eficientes tecnologías del mercado, buscando siempre la máxima utilización de recursos, tiempos optimizados y un mínimo impacto ambiental.",
+      buttonText: "VER PROYECTOS",
     },
     {
       h2Text: "Medio ambiente",
       imageSrc: "/img/environment.jpg",
       paragraphText:
         "Nos especializamos en proyectos a medida dedicados al cuidado, protección y conservación del medio ambiente. Nuestros servicios abarcan evaluaciones de impacto ambiental, análisis de parámetros físico-químicos y biológicos, y proyectos enfocados en la generación de energía renovable, utilizando fuentes solares, eólicas y otras. Abogamos por sistemas que aprovechen residuos reciclables como el PET, recuperándolos y reintegrándolos como materiales reutilizables. Colaboramos con socios estratégicos en el mundo académico, aprovechando sus laboratorios y experiencia de última generación. Nuestros clientes reciben un servicio de primer nivel facilitado por nuestros profesionales experimentados.",
+      buttonText: "VER PROYECTOS",
     },
     {
       h2Text: "Servicios Integrales",
       imageSrc: "/img/integrated_services.jpg",
       paragraphText:
         "Profesionales dedicados con experiencia en proporcionar soluciones integrales bajo el paraguas de servicios integrados. Especializado en ofrecer excelencia en limpieza, mantenimiento y cuidado general, incluyendo habilidades en albañilería, fontanería, trabajos eléctricos, herrería, estructuras metálicas, y restauración y mantenimiento de fachadas. Historial comprobado de asegurar funcionalidad y estética óptimas en diversos entornos mediante un enfoque integral de la gestión de instalaciones.",
+      buttonText: "VER PROYECTOS",
     },
   ],
 };
@@ -473,419 +481,496 @@ export const CATEGORIES: Object = {
   ],
 };
 
-export const CIVILWORKS: Object = {
-  english: [
-    {
-      title: "Presidential Palace Terraces",
-      year: "2022",
-      description:
-        'Renovation was carried out on two terraces on the North side of the "Casa Rosada" (Presidential Palace) due to water leaks.',
-      location: "Monserrat, Buenos Aires City, Argentina",
-      src: "c1",
-    },
-    {
-      title: "Infrastructure Massif Güemes Sector",
-      year: "2023",
-      description:
-        "The layout of new sewer, stormwater, and drinking water pipes was completed in the Güemes Massif Sector, Evita - Luma Chequen-Yacaré section.",
-      location: "Retiro, Buenos Aires City, Argentina",
-      src: "c2",
-    },
-    {
-      title: "Low Voltage Network Father Múgica Neighborhood",
-      year: "2023",
-      description:
-        "The low voltage power supply network was renewed with aerial installations and home pillars in the Massif of the Father C. Múgica Neighborhood.",
-      location: "Retiro, Buenos Aires City, Argentina",
-      src: "c3",
-    },
-    {
-      title: "Coastal Walk Lobos Lagoon",
-      year: "2023",
-      description:
-        "Pavement with concrete was carried out on the existing street in the coastal walk of the Lobos lagoon.",
-      location: "Lobos, Buenos Aires, Argentina",
-      src: "c4",
-    },
-    {
-      title: "Shell Refinery Dock Sud",
-      year: "2022",
-      description:
-        "Cleaning and sandblasting of tanks with hydrocarbons were performed at the Shell refinery in Dock Sud, Buenos Aires.",
-      location: "Dock Sud, Buenos Aires, Argentina",
-      src: "c5",
-    },
-    {
-      title: "Water Reservoir Sarmiento Park",
-      year: "2022",
-      description:
-        'We worked on the execution of a water reservoir in "Parque Sarmiento" with a capacity of 500,000 m³ and associated hydraulic works.',
-      location: "Saavedra, Buenos Aires City, Argentina",
-      src: "c6",
-    },
-  ],
-  spanish: [
-    {
-      title: "Terrazas Casa Rosada",
-      year: "2022",
-      description:
-        "Se realizó la puesta en valor en dos terrazas del lado Norte de la Casa Rosada por filtraciones de agua.",
-      location: "Monserrat, CABA, Argentina",
-      src: "c1",
-    },
-    {
-      title: "Infraestructura Macizo Sector Güemes",
-      year: "2023",
-      description:
-        "Se realizaron los trazados de nuevos cañeros de cloaca, pluvial y agua potable del Macizo Sector Güemes Tramo Evita - Luma Chequen-Yacaré.",
-      location: "Retiro, CABA, Argentina",
-      src: "c2",
-    },
-    {
-      title: "Red Baja Tensión Barrio Padre Múgica",
-      year: "2023",
-      description:
-        "Se realizó la renovación de la red de alimentación de Baja Tensión con tendidos aéreos y pilares domiciliarios en el Macizo del Barrio Padre C. Múgica.",
-      location: "Retiro, CABA, Argentina",
-      src: "c3",
-    },
-    {
-      title: "Paseo Costero Laguna Lobos",
-      year: "2023",
-      description:
-        "Se realizó la pavimentación con hormigón de la calle existente en el paseo costero de la laguna de Lobos",
-      location: "Lobos, Buenos Aires, Argentina",
-      src: "c4",
-    },
-    {
-      title: "Refinería Shell Dock Sud",
-      year: "2022",
-      description:
-        "Se realizó la limpieza y arenado de tanques con hidrocarburos en la refinería Shell de Dock Sud.",
-      location: "Dock Sud, Buenos Aires, Argentina",
-      src: "c5",
-    },
-    {
-      title: "Reservorio Hídrico Parque Sarmiento",
-      year: "2022",
-      description:
-        "Trabajamos en la ejecución del reservorio hídrico en el Parque Sarmiento de 500.000 m³  y obras hidráulicas asociadas.",
-      location: "Saavedra, CABA, Argentina",
-      src: "c6",
-    },
-  ],
+const CIVILWORKS = {
+  english: {
+    category: "CIVIL WORKS",
+    data: [
+      {
+        id: 1,
+        title: "Presidential Palace Terraces",
+        year: "2022",
+        description:
+          'Renovation was carried out on two terraces on the North side of the "Casa Rosada" (Presidential Palace) due to water leaks.',
+        location: "Monserrat, Buenos Aires City, Argentina",
+        src: "/images/projects/civil_works/c1.jpg",
+      },
+      {
+        id: 2,
+        title: "Infrastructure Massif Güemes Sector",
+        year: "2023",
+        description:
+          "The layout of new sewer, stormwater, and drinking water pipes was completed in the Güemes Massif Sector, Evita - Luma Chequen-Yacaré section.",
+        location: "Retiro, Buenos Aires City, Argentina",
+        src: "/images/projects/civil_works/c2.jpg",
+      },
+      {
+        id: 3,
+        title: "Low Voltage Network Father Múgica Neighborhood",
+        year: "2023",
+        description:
+          "The low voltage power supply network was renewed with aerial installations and home pillars in the Massif of the Father C. Múgica Neighborhood.",
+        location: "Retiro, Buenos Aires City, Argentina",
+        src: "/images/projects/civil_works/c3.jpg",
+      },
+      {
+        id: 4,
+        title: "Coastal Walk Lobos Lagoon",
+        year: "2023",
+        description:
+          "Pavement with concrete was carried out on the existing street in the coastal walk of the Lobos lagoon.",
+        location: "Lobos, Buenos Aires, Argentina",
+        src: "/images/projects/civil_works/c4.jpg",
+      },
+      {
+        id: 5,
+        title: "Shell Refinery Dock Sud",
+        year: "2022",
+        description:
+          "Cleaning and sandblasting of tanks with hydrocarbons were performed at the Shell refinery in Dock Sud, Buenos Aires.",
+        location: "Dock Sud, Buenos Aires, Argentina",
+        src: "/images/projects/civil_works/c5.jpg",
+      },
+      {
+        id: 6,
+        title: "Water Reservoir Sarmiento Park",
+        year: "2022",
+        description:
+          'We worked on the execution of a water reservoir in "Parque Sarmiento" with a capacity of 500,000 m³ and associated hydraulic works.',
+        location: "Saavedra, Buenos Aires City, Argentina",
+        src: "/images/projects/civil_works/c6.jpg",
+      },
+    ],
+  },
+  spanish: {
+    category: "OBRAS CIVILES",
+    data: [
+      {
+        id: 1,
+        title: "Terrazas Casa Rosada",
+        year: "2022",
+        description:
+          "Se realizó la puesta en valor en dos terrazas del lado Norte de la Casa Rosada por filtraciones de agua.",
+        location: "Monserrat, CABA, Argentina",
+        src: "/images/projects/civil_works/c1.jpg",
+      },
+      {
+        id: 2,
+        title: "Infraestructura Macizo Sector Güemes",
+        year: "2023",
+        description:
+          "Se realizaron los trazados de nuevos cañeros de cloaca, pluvial y agua potable del Macizo Sector Güemes Tramo Evita - Luma Chequen-Yacaré.",
+        location: "Retiro, CABA, Argentina",
+        src: "/images/projects/civil_works/c2.jpg",
+      },
+      {
+        id: 3,
+        title: "Red Baja Tensión Barrio Padre Múgica",
+        year: "2023",
+        description:
+          "Se realizó la renovación de la red de alimentación de Baja Tensión con tendidos aéreos y pilares domiciliarios en el Macizo del Barrio Padre C. Múgica.",
+        location: "Retiro, CABA, Argentina",
+        src: "/images/projects/civil_works/c3.jpg",
+      },
+      {
+        id: 4,
+        title: "Paseo Costero Laguna Lobos",
+        year: "2023",
+        description:
+          "Se realizó la pavimentación con hormigón de la calle existente en el paseo costero de la laguna de Lobos",
+        location: "Lobos, Buenos Aires, Argentina",
+        src: "/images/projects/civil_works/c4.jpg",
+      },
+      {
+        id: 5,
+        title: "Refinería Shell Dock Sud",
+        year: "2022",
+        description:
+          "Se realizó la limpieza y arenado de tanques con hidrocarburos en la refinería Shell de Dock Sud.",
+        location: "Dock Sud, Buenos Aires, Argentina",
+        src: "/images/projects/civil_works/c5.jpg",
+      },
+      {
+        id: 6,
+        title: "Reservorio Hídrico Parque Sarmiento",
+        year: "2022",
+        description:
+          "Trabajamos en la ejecución del reservorio hídrico en el Parque Sarmiento de 500.000 m³  y obras hidráulicas asociadas.",
+        location: "Saavedra, CABA, Argentina",
+        src: "/images/projects/civil_works/c6.jpg",
+      },
+    ],
+  },
 };
 
-export const ARCHITECTURE: Object = {
-  english: [
-    {
-      title: "Moreno Child Development Center",
-      year: "2022",
-      description:
-        "Construction of a new Child Development Center (CDC) of 320 m² with a metal structure and dry construction.",
-      location: "Moreno, Buenos Aires, Argentina",
-      src: "a1",
-    },
-    {
-      title: "Interactive Ecopark Trails",
-      year: "2022",
-      description:
-        'Creation of a family-friendly walking space with trails immersed in natural environments of native flora and fauna in "Ecoparque Interactivo"',
-      location: "Palermo, Buenos Aires City, Argentina",
-      src: "a2",
-    },
-    {
-      title: "Electrical Installation Technical School No. 30",
-      year: "2022",
-      description:
-        "Execution of new service areas and the general readjustment of the electrical installation.",
-      location: "Almagro, Buenos Aires City, Argentina",
-      src: "a3",
-    },
-    {
-      title: "Electrical Installation Rivadavia School",
-      year: "2022",
-      description:
-        'Electrical installation, execution of new wiring, panels, and connections for "E.N.S. No. 4 - LICEO N°2 - D.E. 8º - COMUNA 6 - A. Rivadavia No. 4950".',
-      location: "Caballito, Buenos Aires City, Argentina",
-      src: "a4",
-    },
-    {
-      title: "Bank Offices",
-      year: "2018-2023",
-      description:
-        "Comprehensive refurbishment of more than 40 bank offices, including Supervielle Bank, Santander Río Bank, Ciudad de Buenos Aires Bank.",
-      location: "Buenos Aires, Argentina",
-      src: "a5",
-    },
-    {
-      title: "Special Rooms Subway Line A",
-      year: "2022",
-      description:
-        "Execution of special rooms on Line A of the Buenos Aires City Subway (Miserere Plaza).",
-      location: "Almagro, Buenos Aires City, Argentina",
-      src: "a6",
-    },
-  ],
-  spanish: [
-    {
-      title: "Centro de Desarrollo Infantil Moreno",
-      year: "2022",
-      description:
-        "Se realizó la construcción de un nuevo Centro de Desarrollo Infantil (CDI) de 320 m² con estructura metálica y construcción en seco.",
-      location: "Moreno, Buenos Aires, Argentina",
-      src: "a1",
-    },
-    {
-      title: "Senderos Ecoparque Interactivo",
-      year: "2022",
-      description:
-        "Se realizó un espacio de paseo familiar con senderos en contacto con entornos naturales de flora y fauna autóctona.",
-      location: "Palermo, CABA, Argentina",
-      src: "a2",
-    },
-    {
-      title: "Instalación Eléctrica Escuela Técnica Nº30",
-      year: "2022",
-      description:
-        "Se realizó la ejecución de nuevas áreas de servicios, y la readecuación de la instalación eléctrica en general.",
-      location: "Almagro, CABA, Argentina",
-      src: "a3",
-    },
-    {
-      title: "Instalación Eléctrica Escuela Rivadavia",
-      year: "2022",
-      description:
-        "Se realizó la instalación eléctrica, ejecución de nuevos tendidos, tableros y conexiones de E.N.S. N° 4 - LICEO N°2 - D.E. 8º - COMUNA 6 - A. Rivadavia Nº 4950.",
-      location: "Caballito, CABA, Argentina",
-      src: "a4",
-    },
-    {
-      title: "Sucursales Bancarias",
-      year: "2018-2023",
-      description:
-        "Puesta en valor integral de más de 40 sucursales bancarias, entre las que se destacan: Banco Supervielle, Santander Río, Banco Ciudad de Buenos Aires.",
-      location: "Buenos Aires, Argentina",
-      src: "a5",
-    },
-    {
-      title: "Salas Especiales Subte Línea A",
-      year: "2022",
-      description:
-        "Se realizó la ejecución de salas especiales en la Línea A del Subte de la Ciudad (Plaza Miserere).",
-      location: "Almagro, CABA, Argentina",
-      src: "a6",
-    },
-  ],
+const ARCHITECTURE = {
+  english: {
+    category: "ARCHITECTURE",
+    data: [
+      {
+        id: 7,
+        title: "Moreno Child Development Center",
+        year: "2022",
+        description:
+          "Construction of a new Child Development Center (CDC) of 320 m² with a metal structure and dry construction.",
+        location: "Moreno, Buenos Aires, Argentina",
+        src: "/images/projects/architecture/a1.jpg",
+      },
+      {
+        id: 8,
+        title: "Interactive Ecopark Trails",
+        year: "2022",
+        description:
+          'Creation of a family-friendly walking space with trails immersed in natural environments of native flora and fauna in "Ecoparque Interactivo"',
+        location: "Palermo, Buenos Aires City, Argentina",
+        src: "/images/projects/architecture/a2.jpg",
+      },
+      {
+        id: 9,
+        title: "Electrical Installation Technical School No. 30",
+        year: "2022",
+        description:
+          "Execution of new service areas and the general readjustment of the electrical installation.",
+        location: "Almagro, Buenos Aires City, Argentina",
+        src: "/images/projects/architecture/a3.jpg",
+      },
+      {
+        id: 10,
+        title: "Electrical Installation Rivadavia School",
+        year: "2022",
+        description:
+          'Electrical installation, execution of new wiring, panels, and connections for "E.N.S. No. 4 - LICEO N°2 - D.E. 8º - COMUNA 6 - A. Rivadavia No. 4950".',
+        location: "Caballito, Buenos Aires City, Argentina",
+        src: "/images/projects/architecture/a4.jpg",
+      },
+      {
+        id: 11,
+        title: "Bank Offices",
+        year: "2018-2023",
+        description:
+          "Comprehensive refurbishment of more than 40 bank offices, including Supervielle Bank, Santander Río Bank, Ciudad de Buenos Aires Bank.",
+        location: "Buenos Aires, Argentina",
+        src: "/images/projects/architecture/a5.jpg",
+      },
+      {
+        id: 12,
+        title: "Special Rooms Subway Line A",
+        year: "2022",
+        description:
+          "Execution of special rooms on Line A of the Buenos Aires City Subway (Miserere Plaza).",
+        location: "Almagro, Buenos Aires City, Argentina",
+        src: "/images/projects/architecture/a6.jpg",
+      },
+    ],
+  },
+  spanish: {
+    category: "ARQUITECTURA",
+    data: [
+      {
+        id: 7,
+        title: "Centro de Desarrollo Infantil Moreno",
+        year: "2022",
+        description:
+          "Se realizó la construcción de un nuevo Centro de Desarrollo Infantil (CDI) de 320 m² con estructura metálica y construcción en seco.",
+        location: "Moreno, Buenos Aires, Argentina",
+        src: "/images/projects/architecture/a1.jpg",
+      },
+      {
+        id: 8,
+        title: "Senderos Ecoparque Interactivo",
+        year: "2022",
+        description:
+          "Se realizó un espacio de paseo familiar con senderos en contacto con entornos naturales de flora y fauna autóctona.",
+        location: "Palermo, CABA, Argentina",
+        src: "/images/projects/architecture/a2.jpg",
+      },
+      {
+        id: 9,
+        title: "Instalación Eléctrica Escuela Técnica Nº30",
+        year: "2022",
+        description:
+          "Se realizó la ejecución de nuevas áreas de servicios, y la readecuación de la instalación eléctrica en general.",
+        location: "Almagro, CABA, Argentina",
+        src: "/images/projects/architecture/a3.jpg",
+      },
+      {
+        id: 10,
+        title: "Instalación Eléctrica Escuela Rivadavia",
+        year: "2022",
+        description:
+          "Se realizó la instalación eléctrica, ejecución de nuevos tendidos, tableros y conexiones de E.N.S. N° 4 - LICEO N°2 - D.E. 8º - COMUNA 6 - A. Rivadavia Nº 4950.",
+        location: "Caballito, CABA, Argentina",
+        src: "/images/projects/architecture/a4.jpg",
+      },
+      {
+        id: 11,
+        title: "Sucursales Bancarias",
+        year: "2018-2023",
+        description:
+          "Puesta en valor integral de más de 40 sucursales bancarias, entre las que se destacan: Banco Supervielle, Santander Río, Banco Ciudad de Buenos Aires.",
+        location: "Buenos Aires, Argentina",
+        src: "/images/projects/architecture/a5.jpg",
+      },
+      {
+        id: 12,
+        title: "Salas Especiales Subte Línea A",
+        year: "2022",
+        description:
+          "Se realizó la ejecución de salas especiales en la Línea A del Subte de la Ciudad (Plaza Miserere).",
+        location: "Almagro, CABA, Argentina",
+        src: "/images/projects/architecture/a6.jpg",
+      },
+    ],
+  },
 };
 
-export const ENVIRONMENT: Object = {
-  english: [
-    {
-      title: "Condor Habitat Interactive Ecopark",
-      year: "2022",
-      description:
-        "Adaptation of the existing environment of former bears to make it operational for the protection of Andean Condors.",
-      location: "Palermo, Buenos Aires City, Argentina",
-      src: "e1",
-    },
-    {
-      title: 'Wolf of "Gargantilla" Habitat Interactive Ecopark',
-      year: "2022",
-      description:
-        'Construction of pools and new facilities in environments for the habitation of "Gargantilla" Wolves.',
-      location: "Palermo, Buenos Aires City, Argentina",
-      src: "e2",
-    },
-    {
-      title: "Bird Habitat Interactive Ecopark",
-      year: "2023",
-      description:
-        "Restoration and adaptation of the existing environment for habitation by different bird species.",
-      location: "Palermo, Buenos Aires City, Argentina",
-      src: "e3",
-    },
-    {
-      title: "Plastic Floaters in Basins",
-      year: "2021",
-      description:
-        "Recovery of plastic floaters in the basins: Ugarteche, Raggio, and Rodrigo Bueno, within the City of Buenos Aires.",
-      location: "Buenos Aires City, Argentina",
-      src: "e4",
-    },
-    {
-      title: "Recovery and Recycling of Plastics",
-      year: "2021",
-      description:
-        "Recovery of plastics in the four basins of the Maldonado Stream reliever and subsequent recycling.",
-      location: "Buenos Aires City, Argentina",
-      src: "e5",
-    },
-    {
-      title: "Solid Analysis",
-      year: "2020",
-      description:
-        "Analysis of solids extracted from stormwater and industrial outfalls for proper disposal.",
-      location: "Buenos Aires City, Argentina",
-      src: "e6",
-    },
-  ],
-  spanish: [
-    {
-      title: "Hábitat Condor Ecoparque Interactivo",
-      year: "2022",
-      description:
-        "Se realizó la adecuación del ambiente existente de ex-osos, con el objeto de ponerlo operativo, para resguardar Cóndores Andinos.",
-      location: "Palermo, CABA, Argentina",
-      src: "e1",
-    },
-    {
-      title: "Hábitat Lobo de Gargantilla Ecoparque Interactivo",
-      year: "2022",
-      description:
-        "Se realizó la ejecución de piletas y nuevas instalaciones en ambientes para que habiten los Lobos de Gargantilla.",
-      location: "Palermo, CABA, Argentina",
-      src: "e2",
-    },
-    {
-      title: "Hábitat Aves Ecoparque Interactivo",
-      year: "2023",
-      description:
-        "Se realizó la puesta en valor y adecuación del ambiente existente para que sea habitado por diferentes especies de aves.",
-      location: "Palermo, CABA, Argentina",
-      src: "e3",
-    },
-    {
-      title: "Flotantes Plásticos en Cuencas",
-      year: "2021",
-      description:
-        "Se realizó la recuperación de flotantes plásticos en las cuencas: Ugarteche, Raggio y Rodrigo Bueno, en el ámbito de la Ciudad de Buenos Aires.",
-      location: "CABA, Argentina",
-      src: "e4",
-    },
-    {
-      title: "Recuperación y Reciclado de Plásticos",
-      year: "2021",
-      description:
-        "Recuperación de plásticos en los cuatro cuencos del aliviador del Arroyo Maldonado, y su posterior reciclado del PET.",
-      location: "CABA, Argentina",
-      src: "e5",
-    },
-    {
-      title: "Análisis de Sólidos",
-      year: "2020",
-      description:
-        "Se realizaron análisis de sólidos extraídos en emisarios pluviales e industriales, para su correcta disposición.",
-      location: "CABA, Argentina",
-      src: "e6",
-    },
-  ],
+const ENVIRONMENT = {
+  english: {
+    category: "ENVIRONMENT",
+    data: [
+      {
+        id: 13,
+        title: "Condor Habitat Interactive Ecopark",
+        year: "2022",
+        description:
+          "Adaptation of the existing environment of former bears to make it operational for the protection of Andean Condors.",
+        location: "Palermo, Buenos Aires City, Argentina",
+        src: "/images/projects/environment/e1.jpg",
+      },
+      {
+        id: 14,
+        title: 'Wolf of "Gargantilla" Habitat Interactive Ecopark',
+        year: "2022",
+        description:
+          'Construction of pools and new facilities in environments for the habitation of "Gargantilla" Wolves.',
+        location: "Palermo, Buenos Aires City, Argentina",
+        src: "/images/projects/environment/e2.jpg",
+      },
+      {
+        id: 15,
+        title: "Bird Habitat Interactive Ecopark",
+        year: "2023",
+        description:
+          "Restoration and adaptation of the existing environment for habitation by different bird species.",
+        location: "Palermo, Buenos Aires City, Argentina",
+        src: "/images/projects/environment/e3.jpg",
+      },
+      {
+        id: 16,
+        title: "Plastic Floaters in Basins",
+        year: "2021",
+        description:
+          "Recovery of plastic floaters in the basins: Ugarteche, Raggio, and Rodrigo Bueno, within the City of Buenos Aires.",
+        location: "Buenos Aires City, Argentina",
+        src: "/images/projects/environment/e4.jpg",
+      },
+      {
+        id: 17,
+        title: "Recovery and Recycling of Plastics",
+        year: "2021",
+        description:
+          "Recovery of plastics in the four basins of the Maldonado Stream reliever and subsequent recycling.",
+        location: "Buenos Aires City, Argentina",
+        src: "/images/projects/environment/e5.jpg",
+      },
+      {
+        id: 18,
+        title: "Solid Analysis",
+        year: "2020",
+        description:
+          "Solid waste analysis for the recycling program in the City of Buenos Aires.",
+        location: "Buenos Aires City, Argentina",
+        src: "/images/projects/environment/e6.jpg",
+      },
+    ],
+  },
+  spanish: {
+    category: "MEDIO AMBIENTE",
+    data: [
+      {
+        id: 13,
+        title: "Hábitat Cóndor Ecoparque Interactivo",
+        year: "2022",
+        description:
+          "Adaptación del entorno existente de antiguos osos para su operatividad para la protección de Cóndores Andinos.",
+        location: "Palermo, CABA, Argentina",
+        src: "/images/projects/environment/e1.jpg",
+      },
+      {
+        id: 14,
+        title: 'Hábitat Lobo de "Gargantilla" Ecoparque Interactivo',
+        year: "2022",
+        description:
+          'Construcción de piscinas y nuevas instalaciones en ambientes para la habilitación de Lobos "Gargantilla".',
+        location: "Palermo, CABA, Argentina",
+        src: "/images/projects/environment/e2.jpg",
+      },
+      {
+        id: 15,
+        title: "Hábitat Aves Ecoparque Interactivo",
+        year: "2023",
+        description:
+          "Restauración y adaptación del entorno existente para la habilitación de distintas especies de aves.",
+        location: "Palermo, CABA, Argentina",
+        src: "/images/projects/environment/e3.jpg",
+      },
+      {
+        id: 16,
+        title: "Flotadores Plásticos en Cuencas",
+        year: "2021",
+        description:
+          "Recuperación de flotadores plásticos en las cuencas: Ugarteche, Raggio y Rodrigo Bueno, dentro de la Ciudad de Buenos Aires.",
+        location: "CABA, Argentina",
+        src: "/images/projects/environment/e4.jpg",
+      },
+      {
+        id: 17,
+        title: "Recuperación y Reciclado de Plásticos",
+        year: "2021",
+        description:
+          "Recuperación de plásticos en las cuatro cuencas del aliviador Arroyo Maldonado y posterior reciclado.",
+        location: "CABA, Argentina",
+        src: "/images/projects/environment/e5.jpg",
+      },
+      {
+        id: 18,
+        title: "Análisis de Sólidos",
+        year: "2020",
+        description:
+          "Análisis de residuos sólidos para el programa de reciclado en la Ciudad de Buenos Aires.",
+        location: "CABA, Argentina",
+        src: "/images/projects/environment/e6.jpg",
+      },
+    ],
+  },
 };
 
-export const INTEGRATED_SERVICES: Object = {
-  english: [
-    {
-      title: "Comprehensive Cleaning Ministry of Education",
-      year: "2021",
-      description:
-        "Routine comprehensive cleaning of the building and its external sectors of the Ministry of Education of the Government of the City of Buenos Aires (27,000 m²).",
-      location: "Retiro, Buenos Aires City, Argentina",
-      src: "i1",
-    },
-    {
-      title:
-        "Comprehensive Cleaning and Maintenance Ministry of Human Development",
-      year: "2022",
-      description:
-        "Routine cleaning, disinfection, and building maintenance of public offices of the Secretariat of Social Integration of the Ministry of Human Development of the Government of the City of Buenos Aires, in the 31st neighborhood (15,000 m²).",
-      location: "Villa Lugano, Buenos Aires City, Argentina",
-      src: "i2",
-    },
-    {
-      title: "Cleaning Supervielle Bank Offices",
-      year: "2022",
-      description:
-        'Comprehensive cleaning in Supervielle Bank offices throughout the "AMBA" region (180,000 m²).',
-      location: "Buenos Aires, Argentina",
-      src: "i3",
-    },
-    {
-      title: "Cleaning Provincia Bank Offices",
-      year: "2022",
-      description:
-        "Cleaning and building maintenance of Provincia Bank offices (12,000 m²).",
-      location: "Buenos Aires, Argentina",
-      src: "i4",
-    },
-    {
-      title: "Cleaning Santander Río Bank Offices",
-      year: "2022",
-      description:
-        "Building maintenance in Santander Río Bank Offices (1,500 m²).",
-      location: "Buenos Aires, Argentina",
-      src: "i5",
-    },
-    {
-      title: "Comprehensive Cleaning and Maintenance Schools",
-      year: "2020-2023",
-      description:
-        "Cleaning, disinfection, and building maintenance of primary and secondary schools throughout the City of Buenos Aires.",
-      location: "Buenos Aires City, Argentina",
-      src: "i6",
-    },
-  ],
-  spanish: [
-    {
-      title: "Limpieza Integral Ministerio de Educación",
-      year: "2021",
-      description:
-        "Limpieza rutinaria integral del edificio y de sus sectores externos del Ministerio de Educación del Gobierno de la Ciudad de Buenos Aires (27.000 m²).",
-      location: "Retiro, CABA, Argentina",
-      src: "i1",
-    },
-    {
-      title:
-        "Limpieza y Mantenimiento Integral Ministerio de Desarrollo Humano",
-      year: "2022",
-      description:
-        "Limpieza rutinaria, desinfección y mantenimiento edilicio de oficinas públicas de la Secretaría de Integración Social del Ministerio de Desarrollo Humano del GCBA en el barrio 31 (15.000 m²).",
-      location: "Villa Lugano, CABA, Argentina",
-      src: "i2",
-    },
-    {
-      title: "Limpieza Sucursales Banco Supervielle",
-      year: "2022",
-      description:
-        "Limpieza integral en sucursales del Banco Supervielle en toda la región del AMBA (180.000 m²).",
-      location: " Buenos Aires, Argentina",
-      src: "i3",
-    },
-    {
-      title: "Limpieza Sucursales Banco Provincia",
-      year: "2022",
-      description:
-        "Limpieza y mantenimiento edilicio de sucursales del Banco Provincia (12.000 m²).",
-      location: "Buenos Aires, Argentina",
-      src: "i4",
-    },
-    {
-      title: "Limpieza Sucursales Banco Santander Río",
-      year: "2022",
-      description:
-        "Mantenimiento edilicio en sucursales del Banco Santander Río (1500 m²).",
-      location: "Buenos Aires, Argentina",
-      src: "i5",
-    },
-    {
-      title: "Limpieza y Mantenimiento Integral Escuelas CABA",
-      year: "2020-2023",
-      description:
-        "Limpieza, desinfección y mantenimiento edilicio de establecimientos escolares primarios y secundarios en todo el ámbito de la Ciudad de Buenos Aires.",
-      location: "CABA, Argentina",
-      src: "i6",
-    },
-  ],
+const INTEGRATEDSERVICES = {
+  english: {
+    category: "INTEGRATED SERVICES",
+    data: [
+      {
+        id: 19,
+        title: "Operation and Maintenance of Sewage Systems",
+        year: "2017-2024",
+        description:
+          "Integral operation and maintenance service for the sewerage systems of the Autonomous City of Buenos Aires.",
+        location: "Buenos Aires City, Argentina",
+        src: "/images/projects/integrated_services/i1.jpg",
+      },
+      {
+        id: 20,
+        title: "Street Lighting Renewal Program",
+        year: "2017-2024",
+        description:
+          "Renewal and replacement of public lighting luminaires and electrical connections throughout the City of Buenos Aires.",
+        location: "Buenos Aires City, Argentina",
+        src: "/images/projects/integrated_services/i2.jpg",
+      },
+      {
+        id: 21,
+        title: "Urban Waste Collection Service",
+        year: "2017-2024",
+        description:
+          "Integral service of collection, transport, and final disposal of urban waste.",
+        location: "Buenos Aires City, Argentina",
+        src: "/images/projects/integrated_services/i3.jpg",
+      },
+      {
+        id: 22,
+        title: "Urban Sweeping and Cleaning Service",
+        year: "2017-2024",
+        description:
+          "Integral service for urban cleaning, including manual and mechanical sweeping, and litter removal.",
+        location: "Buenos Aires City, Argentina",
+        src: "/images/projects/integrated_services/i4.jpg",
+      },
+      {
+        id: 23,
+        title: "Road and Pathway Maintenance Service",
+        year: "2017-2024",
+        description:
+          "Integral maintenance service for roads, paths, and public spaces, including asphalt repairs and green area maintenance.",
+        location: "Buenos Aires City, Argentina",
+        src: "/images/projects/integrated_services/i5.jpg",
+      },
+      {
+        id: 24,
+        title: "Urban Tree Planting Program",
+        year: "2017-2024",
+        description:
+          "Program for the planting and maintenance of trees in public spaces.",
+        location: "Buenos Aires City, Argentina",
+        src: "/images/projects/integrated_services/i6.jpg",
+      },
+    ],
+  },
+  spanish: {
+    category: "SERVICIOS INTEGRADOS",
+    data: [
+      {
+        id: 19,
+        title: "Operación y Mantenimiento de Sistemas Cloacales",
+        year: "2017-2024",
+        description:
+          "Servicio integral de operación y mantenimiento de los sistemas cloacales de la Ciudad Autónoma de Buenos Aires.",
+        location: "CABA, Argentina",
+        src: "/images/projects/integrated_services/i1.jpg",
+      },
+      {
+        id: 20,
+        title: "Programa de Renovación de Alumbrado Público",
+        year: "2017-2024",
+        description:
+          "Renovación y recambio de luminarias de alumbrado público y conexiones eléctricas en toda la Ciudad de Buenos Aires.",
+        location: "CABA, Argentina",
+        src: "/images/projects/integrated_services/i2.jpg",
+      },
+      {
+        id: 21,
+        title: "Servicio de Recolección de Residuos Urbanos",
+        year: "2017-2024",
+        description:
+          "Servicio integral de recolección, transporte y disposición final de los residuos urbanos.",
+        location: "CABA, Argentina",
+        src: "/images/projects/integrated_services/i3.jpg",
+      },
+      {
+        id: 22,
+        title: "Servicio de Barrido y Limpieza Urbana",
+        year: "2017-2024",
+        description:
+          "Servicio integral para la limpieza urbana, incluyendo barrido manual y mecánico, y retiro de residuos.",
+        location: "CABA, Argentina",
+        src: "/images/projects/integrated_services/i4.jpg",
+      },
+      {
+        id: 23,
+        title: "Servicio de Mantenimiento de Calzadas y Veredas",
+        year: "2017-2024",
+        description:
+          "Servicio integral de mantenimiento para calzadas, veredas y espacios públicos, incluyendo reparaciones de asfalto y mantenimiento de áreas verdes.",
+        location: "CABA, Argentina",
+        src: "/images/projects/integrated_services/i5.jpg",
+      },
+      {
+        id: 24,
+        title: "Programa de Plantación de Árboles Urbanos",
+        year: "2017-2024",
+        description:
+          "Programa de plantación y mantenimiento de árboles en espacios públicos.",
+        location: "CABA, Argentina",
+        src: "/images/projects/integrated_services/i6.jpg",
+      },
+    ],
+  },
 };
+
+export const CATEGORIES_WITH_DATA = [
+  CIVILWORKS,
+  ARCHITECTURE,
+  ENVIRONMENT,
+  INTEGRATEDSERVICES,
+];
 
 // Contact:
 export const CONNECT_WITH_US: Object = {

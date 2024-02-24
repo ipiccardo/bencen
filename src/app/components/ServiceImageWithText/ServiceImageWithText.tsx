@@ -17,6 +17,7 @@ export type infoForCardsItemProps = {
   h2Text: string;
   paragraphText: string;
   last: boolean;
+  buttonText: string;
 };
 
 type infoForCardsContainerProps = infoForCardsItemProps[];
@@ -30,7 +31,7 @@ const ServiceImageWithTextContainer = () => {
     language,
     servicesInfo
   ).map((object: any, index: number, array: any) => {
-    const { h2Text, paragraphText, imageSrc } = object;
+    const { h2Text, paragraphText, imageSrc, buttonText } = object;
     return {
       id: index + 1,
       alignTo: index === 0 || index === 2 ? "left" : "right",
@@ -39,6 +40,7 @@ const ServiceImageWithTextContainer = () => {
       h2Text: h2Text,
       paragraphText: paragraphText,
       last: array.length === index + 1,
+      buttonText: buttonText,
     };
   });
 
@@ -54,6 +56,7 @@ const ServiceImageWithTextContainer = () => {
             h2Text,
             paragraphText,
             last,
+            buttonText,
           } = card;
           return (
             <ServiceImageWithTextItem
@@ -65,6 +68,7 @@ const ServiceImageWithTextContainer = () => {
               h2Text={h2Text}
               paragraphText={paragraphText}
               last={last}
+              buttonText={buttonText}
             />
           );
         })}

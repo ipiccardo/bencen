@@ -55,8 +55,12 @@
     width: 100%;
   }
 
-  .withTranslate {
-    transform: translateY(60%);
+  .withTranslateY {
+    transform: translateY(45%);
+  }
+
+  .withMoreTranslateY {
+    transform: translateY(45%);
   }
   
   @media (max-width: 1440px) {
@@ -93,6 +97,12 @@
     }
   }
   
+  @media (max-width: 906px) {
+    .withMoreTranslateY{
+      transform: translateY(75%);
+    }
+  }
+
   @media (max-width: 900px) {
     .cards {
       margin: -100px 0 0 3px;
@@ -162,5 +172,11 @@
     }
     .textRight {
       left: 1%;
+    }
+  }
+
+  @media (max-width: 306px) {
+    .withMoreTranslateY {
+      transform: translateY(88%);
     }
   }

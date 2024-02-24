@@ -11,6 +11,7 @@ interface Props {
   text: string;
   onClick?: () => void;
   style?: any;
+  preventDefault?: boolean;
 }
 
 const Button = ({
@@ -20,17 +21,15 @@ const Button = ({
   text,
   onClick,
   style,
+  preventDefault = true,
 }: Props): JSX.Element => {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-
-    console.log('entro al click')
-    console.log(href, 'href')
-
     if (onClick) {
       onClick(); // Execute the provided onClick function
     }
-
-    event.preventDefault(); // Prevent the default button behavior
+    if (preventDefault) {
+      event.preventDefault(); // Prevent the default button behavior
+    }
   };
 
   return (
