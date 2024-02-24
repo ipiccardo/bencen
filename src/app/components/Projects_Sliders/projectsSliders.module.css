@@ -32,7 +32,6 @@
 
 .backgroundContainer:hover::before {
   opacity: 0.3;
-  cursor: pointer;
 }
 
 .cardContainer {
@@ -63,12 +62,12 @@
   justify-content: space-between;
 }
 
-.textContainer h2{
-  height: 55px
+.buttonInfo {
+  justify-content: center;
 }
 
-.textContainer:hover {
-  cursor: pointer;
+.textContainer h2{
+  height: 55px
 }
 
 .backgroundImageContainer {
@@ -84,6 +83,17 @@
   .textContainer h2{
     height: 55px
   }
+}
+
+@media (max-width: 600px) {
+  .backgroundContainer:hover::before {
+    opacity: 0.3;
+    cursor: pointer;
+  }
+  .textContainer:hover {
+    cursor: pointer;
+  }
+  
 }
 
 @media (max-width: 450px) {
