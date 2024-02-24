@@ -124,6 +124,10 @@
   color: grey;
 }
 
+.sliderContainer div div div > div:nth-child(1) {
+  width: 240px !important;
+}
+
 .showSlider {
   display: none;
 }
