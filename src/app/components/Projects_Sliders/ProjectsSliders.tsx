@@ -5,6 +5,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Modal from "../Modal/Modal";
 import Image from "next/image";
+import Button from "../Ui/Button";
+import useWindow from "@/app/hooks/useWindow";
+
+type Hover = {
+  id: number;
+  isHover: boolean;
+};
 
 const CustomPrevArrow = (props: any) => (
   <div
@@ -36,6 +43,7 @@ const ProjectsSliders = ({ categoryData }: any): any => {
     speed: 100,
     slidesToShow: 3,
     slidesToScroll: 1,
+    // lazyLoad: "anticipated",
     responsive: [
       {
         breakpoint: 1000,
@@ -51,6 +59,7 @@ const ProjectsSliders = ({ categoryData }: any): any => {
     nextArrow: <CustomNextArrow />,
   };
 
+  const [hoverObject, setHoverObject] = useState<Hover[]>([]);
   const [activeModalId, setActiveModalId] = useState(null);
   const [projectInModal, setProjectInModal] = useState({
     id: 0,
@@ -69,6 +78,19 @@ const ProjectsSliders = ({ categoryData }: any): any => {
     setActiveModalId(null);
   };
 
+  const handleHover = (id: number, hover: boolean) => {
+    const newHoverObject = hoverObject.filter((object) => object.id !== id);
+    setHoverObject([
+      ...newHoverObject,
+      {
+        id: id,
+        isHover: hover,
+      },
+    ]);
+  };
+
+  const { width } = useWindow();
+
   useEffect(() => {
     setProjectInModal(
       categoryData.find((project: any) => project.id === activeModalId)
@@ -83,12 +105,12 @@ const ProjectsSliders = ({ categoryData }: any): any => {
             {categoryData.map((project: any, index: number) => {
               const { id, title, year, src } = project;
 
+              const hoverCondition = hoverObject.find(
+                (object) => object.id === id
+              )?.isHover;
+
               return (
-                <div
-                  key={index + 3000}
-                  className={classes.cardContainer}
-                  onClick={() => openModal(id)}
-                >
+                <div key={index + 3000} className={classes.cardContainer}>
                   <div
                     className={classes.backgroundContainer}
                     style={{
@@ -99,10 +121,37 @@ const ProjectsSliders = ({ categoryData }: any): any => {
                       height: "100%",
                       borderRadius: "16px",
                     }}
+                    onClick={() => (width <= 600 ? openModal(id) : null)}
                   >
-                    <div className={classes.textContainer}>
-                      <h2>{title}</h2>
-                      <p>{year}</p>
+                    <div
+                      className={`${
+                        hoverCondition && width > 600
+                          ? `${classes.textContainer} ${classes.buttonInfo} `
+                          : classes.textContainer
+                      }`}
+                      onMouseEnter={() => handleHover(id, true)}
+                      onMouseLeave={() => handleHover(id, false)}
+                    >
+                      {hoverCondition && width > 600 ? (
+                        <Button
+                          href={""}
+                          text={"+ Info"}
+                          onClick={() => openModal(id)}
+                          preventDefault={true}
+                          style={{
+                            padding: "10px 15px",
+                            transform: "translate(-50%, -50%)",
+                            position: "absolute",
+                            top: "50%",
+                            left: "50%",
+                          }}
+                        />
+                      ) : (
+                        <>
+                          <h2>{title}</h2>
+                          <p>{year}</p>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
