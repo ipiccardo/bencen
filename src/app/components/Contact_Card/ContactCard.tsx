@@ -67,7 +67,7 @@ const ContactCardSlider = (): JSX.Element => {
   const sliderSettings = {
     responsive: [
       {
-        breakpoint: 1000,
+        breakpoint: 1100,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
