@@ -6,68 +6,68 @@
   border-color: var(--gray-color);
 }
 
-  .contactCard .group{
-    align-items: center;
-    display: inline-flex;
-    flex-direction: column;
-    gap: 16px;
-    position: relative;
-    left: 6.67%;
-    top: 10.41%;
-  }
+.contactCard .group {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  left: 6.67%;
+  top: 10.41%;
+}
 
-  .contactCard .imageGroup{
-    width: 96px;
-    height: 96px;
-    justify-content: center;
-    align-items: center;
-  }
+.contactCard .imageGroup {
+  width: 96px;
+  height: 96px;
+  justify-content: center;
+  align-items: center;
+}
 
-  .contactCard .image{
-    align-self: center;
-  }
+.contactCard .image {
+  align-self: center;
+}
 
-  .contactCard .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-  
-  .contactCard .header {
-    color: #000000;
-    font-family: var(--bold-font-family);
-    font-size: var(--bold-font-size);
-    font-style: var(--bold-font-style);
-    font-weight: var(--bold-font-weight);
-    letter-spacing: var(--bold-letter-spacing);
-    line-height: var(--bold-line-height);
-    width: 144px;
-    height: 24px;
-    text-align: center;
-  }
+.contactCard .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
 
-  .contactCard .content {
-    color: var(--gray-dark-color);
-    font-family: var(--normal-small-font-family);
-    font-size: var(--normal-small-font-size);
-    font-style: var(--normal-small-font-style);
-    font-weight: var(--normal-small-font-weight);
-    letter-spacing: var(--normal-small-letter-spacing);
-    line-height: var(--normal-small-line-height);
-    text-align: center;
-    margin-top: 0;
-  }
+.contactCard .header {
+  color: #000000;
+  font-family: var(--bold-font-family);
+  font-size: var(--bold-font-size);
+  font-style: var(--bold-font-style);
+  font-weight: var(--bold-font-weight);
+  letter-spacing: var(--bold-letter-spacing);
+  line-height: var(--bold-line-height);
+  width: 144px;
+  height: 24px;
+  text-align: center;
+}
+
+.contactCard .content {
+  color: var(--gray-dark-color);
+  font-family: var(--normal-small-font-family);
+  font-size: var(--normal-small-font-size);
+  font-style: var(--normal-small-font-style);
+  font-weight: var(--normal-small-font-weight);
+  letter-spacing: var(--normal-small-letter-spacing);
+  line-height: var(--normal-small-line-height);
+  text-align: center;
+  margin-top: 0;
+}
 
 .contactCard .footer__icons {
   display: flex;
-  gap: 40px
+  gap: 40px;
 }
 
 /* Contact Card - Hover State */
-  .contactCard:hover {
-    box-shadow: inset 0px 0px 22px 5px rgba(255, 140, 66, 0.25);
-  }
+.contactCard:hover {
+  box-shadow: inset 0px 0px 22px 5px rgba(255, 140, 66, 0.25);
+}
 
 /* Contact Cards */
 .contactCards {
@@ -89,9 +89,46 @@
   color: grey;
 }
 
-@media (max-width: 1100px) {
+.sliderContainer {
+  max-width: 240px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  height: 299px;
+}
+
+.sliderContainer button::before {
+  color: grey;
+}
+
+/* .sliderContainer div div div > div:nth-child(1) {
+  width: 255px !important;
+} */
+.showSlider {
+  display: block;
+}
+
+.serviceCards {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.hideSlider {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  /* .serviceCardContainer {
+    height: auto;
+  } */
   .contactCard {
     box-shadow: none;
     border: none;
+  }
+  .hideSlider {
+    display: block;
+  }
+  .showSlider {
+    display: none;
   }
 }

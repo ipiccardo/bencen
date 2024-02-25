@@ -67,7 +67,7 @@ const ContactCardSlider = (): JSX.Element => {
   const sliderSettings = {
     responsive: [
       {
-        breakpoint: 1100,
+        breakpoint: 1000,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -79,20 +79,23 @@ const ContactCardSlider = (): JSX.Element => {
   };
 
   return (
-    <Slider {...sliderSettings}>
-      {Object.keys(CONTACT_CARD[language]).map((key) => {
-        const [imageName, header, content] = CONTACT_CARD[language][key];
-        return (
-          <div key={key}>
-            <ContactCard
-              imageName={imageName}
-              header={header}
-              content={content}
-            />
-          </div>
-        );
-      })}
-    </Slider>
+    <div className={classes.sliderContainer}>
+      <Slider {...sliderSettings}>
+        {Object.keys(CONTACT_CARD[language]).map((key) => {
+          const [imageName, header, content] = CONTACT_CARD[language][key];
+          return (
+            <div key={key}>
+              <ContactCard
+                imageName={imageName}
+                header={header}
+                content={content}
+              />
+            </div>
+          );
+        })}
+      </Slider>
+    </div>
+
   );
 };
 
@@ -116,15 +119,19 @@ const ContactCards = (): JSX.Element => {
 
   return (
     <>
-      {window.innerWidth > 1100 ? (
+
+      <div className={classes.showSlider}>
         <ul className={classes.contactCards}>{renderContactCards()}</ul>
-      ) : (
-        <div className={`${classes.showSlider} serviceCardSliderContainer`}>
+      </div>
+
+      <div className={`${classes.serviceCardContainer}`}>
+        <div className={`${classes.hideSlider} serviceCardSliderContainer`}>
           <div className={classes.sliderContainer}>
             <ContactCardSlider />
           </div>
         </div>
-      )}
+      </div>
+
     </>
   );
 };
