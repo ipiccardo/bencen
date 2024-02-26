@@ -195,6 +195,16 @@
   margin-top: 33px;
 }
 
+@media (min-width: 1200px) {
+  .aboutCardContainer {
+    gap: 0px;
+  }
+
+  .aboutUsParagraphContainer {
+    margin-right: 100px;
+  }
+}
+
 /* CLIENT SECTION */
 
 .clientCardContainer {
@@ -268,11 +278,13 @@
   width: 900px;
 }
 
-.buttonContainer {
+.buttonContactContainer {
   display: flex;
+  justify-content: flex-start;
+  width: 100%;
 }
 
-.buttonContainer button {
+.buttonContactContainer button {
   width: 176px;
   height: 48px;
 }
@@ -375,7 +387,7 @@
     background-image: url("/images/FrameSevenInside.png");
     background-size: cover;
   }
-  .buttonContainer button {
+  .buttonContactContainer button {
     width: 255px;
   }
   .showHeaderParagraphContainer {
@@ -540,13 +552,13 @@
     color: var(--gray-light-color);
   }
 
-  .buttonContainer {
+  .buttonContactContainer {
     display: flex;
     gap: 10px;
     flex-direction: column;
   }
 
-  .buttonContainer button {
+  .buttonContactContainer button {
     width: 255px;
   }
 }

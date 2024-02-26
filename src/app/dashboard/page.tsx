@@ -79,33 +79,6 @@ const HomePage = () => {
               <ServiceCards />
             </div>}
           />
-          {/* <section> */}
-          {/* <div
-              className={`${classes.FirstimageContainer} ${classes.widthImage}`}
-            >
-              <div className={classes.showHeaderParagraphContainer}>
-                <h1>{HOME_TEXT[language][0]}</h1>
-                <p>{HOME_TEXT[language][1]}</p>
-                <p>{HOME_TEXT[language][2]}</p>
-              </div>
-              <div className={classes.firstImageShow}>
-                <div className={classes.headerParagraphContainer}>
-                  <h1>{HOME_TEXT[language][0]}</h1>
-                  <p>{HOME_TEXT[language][1]}</p>
-                  <p>{HOME_TEXT[language][2]}</p>
-                </div>
-                <Image
-                  width={firtAndLastImage.width}
-                  height={firtAndLastImage.heigth}
-                  src={"/images/FrameOneWithoutMark.png"}
-                  alt={""}
-                />
-              </div>
-            </div> */}
-          {/* </section> */}
-          {/* <div className={classes.serviceCardContainer}>
-            <ServiceCards />
-          </div> */}
           <section className={classes.secondSectionContainer} style={{ background: 'white' }}>
             <div className={`${classes.imageContainer} ${classes.secondImage}`}>
               <div className={classes.containerAbsolute}>
@@ -197,7 +170,7 @@ const HomePage = () => {
                   <h1>{CONTACT[language][0]}</h1>
                   <p>{CONTACT[language][1]}</p>
                   <p>{CONTACT[language][2]}</p>
-                  <div className={classes.buttonContainer}>
+                  <div className={classes.buttonContactContainer}>
                     <Button
                       href={"/dashboard/contact"}
                       text={CONTACT_BUTTON[language][0]}
