@@ -181,6 +181,7 @@ const ProjectsSliders = ({ categoryData }: any): any => {
         <p
           style={{
             fontSize: "1.2rem",
+            alignSelf: "flex-start",
           }}
         >
           {projectInModal?.description}
