@@ -496,7 +496,7 @@ const CIVILWORKS = {
       },
       {
         id: 2,
-        title: "Infrastructure Massif Güemes Sector",
+        title: "Infrastructure Massif Güemes",
         year: "2023",
         description:
           "The layout of new sewer, stormwater, and drinking water pipes was completed in the Güemes Massif Sector, Evita - Luma Chequen-Yacaré section.",
@@ -647,7 +647,7 @@ const ARCHITECTURE = {
         title: "Bank Offices",
         year: "2018-2023",
         description:
-          "Comprehensive refurbishment of more than 40 bank offices, including Supervielle Bank, Santander Río Bank, Ciudad de Buenos Aires Bank.",
+          'Comprehensive refurbishment of more than 40 bank offices, including Supervielle Bank, Santander Río Bank and "Ciudad" Bank.',
         location: "Buenos Aires, Argentina",
         src: "/images/projects/architecture/a5.jpg",
       },
@@ -706,7 +706,7 @@ const ARCHITECTURE = {
         title: "Sucursales Bancarias",
         year: "2018-2023",
         description:
-          "Puesta en valor integral de más de 40 sucursales bancarias, entre las que se destacan: Banco Supervielle, Santander Río, Banco Ciudad de Buenos Aires.",
+          "Puesta en valor integral de más de 40 sucursales bancarias, entre las que se destacan: Banco Supervielle, Santander Río y Banco Ciudad de Buenos Aires.",
         location: "Buenos Aires, Argentina",
         src: "/images/projects/architecture/a5.jpg",
       },
@@ -738,10 +738,10 @@ const ENVIRONMENT = {
       },
       {
         id: 14,
-        title: 'Wolf of "Gargantilla" Habitat Interactive Ecopark',
+        title: '"Gargantilla" Otter Habitat Interactive Ecopark',
         year: "2022",
         description:
-          'Construction of pools and new facilities in environments for the habitation of "Gargantilla" Wolves.',
+          'Construction of pools and new facilities in environments for the habitation of "Gargantilla" Otters.',
         location: "Palermo, Buenos Aires City, Argentina",
         src: "/images/projects/environment/e2.jpg",
       },
@@ -850,7 +850,7 @@ const INTEGRATEDSERVICES = {
     data: [
       {
         id: 19,
-        title: "Comprehensive Cleaning Ministry of Education",
+        title: "Ministry of Education",
         year: "2021",
         description:
           "Routine comprehensive cleaning of the building and its external sectors of the Ministry of Education of the Government of the City of Buenos Aires (27,000 m²).",
@@ -859,16 +859,16 @@ const INTEGRATEDSERVICES = {
       },
       {
         id: 20,
-        title: "Comprehensive Cleaning and Maintenance Ministry of Human Development",
+        title: "Ministry of Human Development",
         year: "2022",
         description:
-          "Routine cleaning, disinfection, and building maintenance of public offices of the Secretariat of Social Integration of the Ministry of Human Development of the GCBA in the 31st neighborhood (15,000 m²).",
+          "Routine cleaning, disinfection, and building maintenance of public offices of the Secretariat of Social Integration of the Ministry of Human Development of the Buenos Aires City in the 31st neighborhood (15,000 m²).",
         location: "Villa Lugano, Buenos Aires City, Argentina",
         src: "/images/projects/integrated_services/i2.jpg",
       },
       {
         id: 21,
-        title: "Cleaning Supervielle Bank Offices",
+        title: "Supervielle Bank Offices",
         year: "2022",
         description:
           "Comprehensive cleaning in Supervielle Bank offices throughout the Buenos Aires region (180,000 m²).",
@@ -877,7 +877,7 @@ const INTEGRATEDSERVICES = {
       },
       {
         id: 22,
-        title: "Cleaning Provincia Bank Offices",
+        title: "Provincia Bank Offices",
         year: "2022",
         description:
           "Cleaning and building maintenance of Provincia Bank offices (12,000 m²).",
@@ -886,7 +886,7 @@ const INTEGRATEDSERVICES = {
       },
       {
         id: 23,
-        title: "Cleaning Santander Río Bank Offices",
+        title: "Santander Río Bank Offices",
         year: "2022",
         description:
           "Building maintenance in Santander Río Bank offices (1,500 m²).",
@@ -895,7 +895,7 @@ const INTEGRATEDSERVICES = {
       },
       {
         id: 24,
-        title: "Comprehensive Cleaning and Maintenance in Schools",
+        title: "Cleaning and Maintenance in Schools",
         year: "2020-2023",
         description:
           "Cleaning, disinfection, and building maintenance of primary and secondary schools throughout the City of Buenos Aires.",
@@ -909,7 +909,7 @@ const INTEGRATEDSERVICES = {
     data: [
       {
         id: 19,
-        title: "Limpieza Integral Ministerio de Educación",
+        title: "Ministerio de Educación",
         year: "2021",
         description:
           "Limpieza rutinaria integral del edificio y de sus sectores externos del Ministerio de Educación del Gobierno de la Ciudad de Buenos Aires (27.000 m²).",
@@ -918,7 +918,7 @@ const INTEGRATEDSERVICES = {
       },
       {
         id: 20,
-        title: "Limpieza y Mantenimiento Integral Ministerio de Desarrollo Humano",
+        title: "Ministerio de Desarrollo Humano",
         year: "2022",
         description:
           "Limpieza rutinaria, desinfección y mantenimiento edilicio de oficinas públicas de la Secretaría de Integración Social del Ministerio de Desarrollo Humano del GCBA en el barrio 31 (15.000 m²).",
@@ -927,7 +927,7 @@ const INTEGRATEDSERVICES = {
       },
       {
         id: 21,
-        title: "Limpieza Sucursales Banco Supervielle",
+        title: "Sucursales Banco Supervielle",
         year: "2022",
         description:
           "Limpieza integral en sucursales del Banco Supervielle en toda la región del AMBA (180.000 m²).",
@@ -936,7 +936,7 @@ const INTEGRATEDSERVICES = {
       },
       {
         id: 22,
-        title: "Limpieza Sucursales Banco Provincia",
+        title: "Sucursales Banco Provincia",
         year: "2022",
         description:
           "Limpieza y mantenimiento edilicio de sucursales del Banco Provincia (12.000 m²).",
@@ -945,7 +945,7 @@ const INTEGRATEDSERVICES = {
       },
       {
         id: 23,
-        title: "Limpieza Sucursales Banco Santander Río",
+        title: "Sucursales Banco Santander Río",
         year: "2022",
         description:
           "Mantenimiento edilicio en sucursales del Banco Santander Río (1500 m²).",
@@ -954,7 +954,7 @@ const INTEGRATEDSERVICES = {
       },
       {
         id: 24,
-        title: "Limpieza y Mantenimiento Integral Escuelas CABA",
+        title: "Limpieza y Mantenimiento Escuelas CABA",
         year: "2020-2023",
         description:
           "Limpieza, desinfección y mantenimiento edilicio de establecimientos escolares primarios y secundarios en todo el ámbito de la Ciudad de Buenos Aires",
