@@ -20,12 +20,14 @@ const ContactCard = ({ imageName, header, content }: Props): JSX.Element => {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    if (window.innerWidth >= 1440) {
-      setWidth(280);
-    } else {
-      setWidth(255);
+    if (typeof window !== "undefined") {
+      if (window.innerWidth >= 1440) {
+        setWidth(280);
+      } else {
+        setWidth(255);
+      }
     }
-  }, [window.innerWidth]);
+  }, []);
 
   return (
     <div
@@ -95,7 +97,6 @@ const ContactCardSlider = (): JSX.Element => {
         })}
       </Slider>
     </div>
-
   );
 };
 
@@ -119,7 +120,6 @@ const ContactCards = (): JSX.Element => {
 
   return (
     <>
-
       <div className={classes.showSlider}>
         <ul className={classes.contactCards}>{renderContactCards()}</ul>
       </div>
@@ -131,7 +131,6 @@ const ContactCards = (): JSX.Element => {
           </div>
         </div>
       </div>
-
     </>
   );
 };

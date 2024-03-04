@@ -34,9 +34,7 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if (openSideBar) {
-      setOpenSideBar(false);
-    }
+    setOpenSideBar(false);
   }, [pathName]);
 
   const handleChangeLanguage = () => {
@@ -54,33 +52,30 @@ const Header = () => {
   }, [openSideBar]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
+    if (typeof window !== "undefined") {
+      const handleScroll = () => {
+        if (window.scrollY > 0) {
+          setScrolling(true);
+        } else {
+          setScrolling(false);
+        }
+      };
 
-    window.addEventListener("scroll", handleScroll);
+      window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, []);
-
 
   return (
     <>
       <div
         className={`${classes.header} ${scrolling ? classes.scrolling : ""}`}
       >
-
-
         <div>
-          <Link
-            href="/"
-          >
+          <Link href="/">
             <IconWithImages name="logo" size={150} />
           </Link>
         </div>
@@ -95,11 +90,11 @@ const Header = () => {
             handleChangeLanguage={handleChangeLanguage}
           />
         </div>
-
       </div>
       <div
-        className={`${classes.header__hamburguerMenu} ${scrolling ? classes.scrolling : ""
-          }`}
+        className={`${classes.header__hamburguerMenu} ${
+          scrolling ? classes.scrolling : ""
+        }`}
       >
         <div className={`${showOverlay && classes.bencenIconContainer}`}>
           <IconWithImages name="logo" size={150} />
@@ -112,8 +107,9 @@ const Header = () => {
         </div>
         <div
           ref={myRefElement1}
-          className={`${classes.mobileNav} ${openSideBar ? classes.open : classes.close
-            }`}
+          className={`${classes.mobileNav} ${
+            openSideBar ? classes.open : classes.close
+          }`}
         >
           <NavBar
             withHome={true}

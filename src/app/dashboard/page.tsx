@@ -53,15 +53,17 @@ const HomePage = () => {
       setOtherImages({ width: 1200, heigth: 960 });
     }
   };
-  //Hace Hook de Windows Resize
+
   useEffect(() => {
-    handleResize();
+    if (typeof window !== "undefined") {
+      handleResize();
 
-    window.addEventListener("resize", handleResize);
+      window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, []);
 
   return (
@@ -69,17 +71,26 @@ const HomePage = () => {
       <div className={classes.homePageContainer}>
         <div className={classes.sectionsContainer}>
           <FirstSection
-            firstChild={<><div>
-              <h1>{HOME_TEXT[language][0]}</h1>
-              <p>{HOME_TEXT[language][1]}</p>
-              <p>{HOME_TEXT[language][2]}</p>
-            </div></>}
+            firstChild={
+              <>
+                <div>
+                  <h1>{HOME_TEXT[language][0]}</h1>
+                  <p>{HOME_TEXT[language][1]}</p>
+                  <p>{HOME_TEXT[language][2]}</p>
+                </div>
+              </>
+            }
             folderName={"home"}
-            secondChild={<div>
-              <ServiceCards />
-            </div>}
+            secondChild={
+              <div>
+                <ServiceCards />
+              </div>
+            }
           />
-          <section className={classes.secondSectionContainer} style={{ background: 'white' }}>
+          <section
+            className={classes.secondSectionContainer}
+            style={{ background: "white" }}
+          >
             <div className={`${classes.imageContainer} ${classes.secondImage}`}>
               <div className={classes.containerAbsolute}>
                 <div className={classes.aboutCardContainer}>
@@ -108,9 +119,11 @@ const HomePage = () => {
           </section>
           <section className={classes.threeSectionContainer}>
             <div
-              className={`${classes.imageContainer} ${classes.otherImage} ${classes.paddingBottom
-                } ${pantallaMediana && classes.widthOutMarginTop} ${pantallaMediana && classes.widthOutMarginTop
-                }`}
+              className={`${classes.imageContainer} ${classes.otherImage} ${
+                classes.paddingBottom
+              } ${pantallaMediana && classes.widthOutMarginTop} ${
+                pantallaMediana && classes.widthOutMarginTop
+              }`}
             >
               <div className={classes.containerAbsolute}>
                 <div className={classes.unmatchedServicesContainer}>
@@ -136,7 +149,10 @@ const HomePage = () => {
               </div>
             </div>
           </section>
-          <section className={classes.fourSectionContainer} style={{ background: 'white' }}>
+          <section
+            className={classes.fourSectionContainer}
+            style={{ background: "white" }}
+          >
             <div className={`${classes.imageContainer} ${classes.otherImage}`}>
               <div className={classes.containerAbsolute}>
                 <div className={classes.clientCardContainer}>
@@ -194,7 +210,10 @@ const HomePage = () => {
               </div>
             </div>
           </section>
-          <section className={classes.sixSectionContainer} style={{ background: 'white' }}>
+          <section
+            className={classes.sixSectionContainer}
+            style={{ background: "white" }}
+          >
             <div className={`${classes.imageContainer} ${classes.otherImage}`}>
               <div className={classes.containerAbsolute}>
                 <div

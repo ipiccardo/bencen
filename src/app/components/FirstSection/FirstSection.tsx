@@ -21,54 +21,61 @@ const FirstSection = ({
 }: FirstSectionProps) => {
   // const [Resolution, setResolution] = useState({ width: 0, height: 0 });
   const [widthPercentage, SetWidthPercentage] = useState(1);
+  const [widthInPx, SetWidthInPx] = useState(1);
   const [heightPercentage, SetHeightPercentage] = useState(1);
-  const screenWidth = window.innerWidth;
 
   const handleResolution = () => {
     // Set dimensions based on a percentage of the screen width and height:
     if (window.innerWidth >= 1440) {
       SetWidthPercentage(1);
+      SetWidthInPx(window.innerWidth);
     } else {
       SetHeightPercentage(1 - (1 - window.innerWidth / 1440) / 2);
     }
   };
 
   useEffect(() => {
-    handleResolution();
-    window.addEventListener("resize", handleResolution);
+    if (typeof window !== "undefined") {
+      handleResolution();
+      window.addEventListener("resize", handleResolution);
 
-    return () => {
-      window.removeEventListener("resize", handleResolution);
-    };
+      return () => {
+        window.removeEventListener("resize", handleResolution);
+      };
+    }
   }, []);
 
   return (
     <div className={classes.firstSectionContainer}>
       <div className={classes.firstSection}>
         <div
-          className={`${classes.text} ${textToTheRight ? classes.textRight : classes.textLeft
-            }`}
+          className={`${classes.text} ${
+            textToTheRight ? classes.textRight : classes.textLeft
+          }`}
         >
           {firstChild}
         </div>
         <div
-          className={`${classes.backgroundContainer} ${textToTheRight ? classes.backgroundImageTranslated : ""
-            }`}
+          className={`${classes.backgroundContainer} ${
+            textToTheRight ? classes.backgroundImageTranslated : ""
+          }`}
         >
           <Image
-            src={`/images/backgrounds/${folderName}/${screenWidth > 900 ? "1" : "1-R"
-              }.png`}
+            src={`/images/backgrounds/${folderName}/${
+              widthInPx > 900 ? "1" : "1-R"
+            }.png`}
             alt={""}
             layout="fill"
             objectFit="cover"
           />
           <div
-            className={`${classes.cards} ${folderName === "about_us"
-              ? moreTranslate
-                ? classes.withMoreTranslateY
-                : classes.withTranslateY
-              : ""
-              }`}
+            className={`${classes.cards} ${
+              folderName === "about_us"
+                ? moreTranslate
+                  ? classes.withMoreTranslateY
+                  : classes.withTranslateY
+                : ""
+            }`}
           >
             {secondChild}
           </div>

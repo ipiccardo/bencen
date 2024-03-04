@@ -69,7 +69,9 @@ export const languageRendering = (language: string, object: any) =>
 export const scrollToId = (id: number, offset: number) => {
   const element = document.getElementById(`${id}`);
   if (element) {
-    const y = element.getBoundingClientRect().top + window.scrollY - offset;
-    window.scrollTo({ top: y, behavior: "smooth" });
+    if (typeof window !== "undefined") {
+      const y = element.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   }
 };
