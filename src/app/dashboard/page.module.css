@@ -667,4 +667,8 @@
   .aboutUsParagraphContainerInSpanish {
     margin-top: -70px;
   }
+
+  .buttonContactContainer button {
+    width: 100%;
+  }
 }
