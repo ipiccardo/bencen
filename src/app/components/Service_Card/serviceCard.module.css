@@ -128,6 +128,10 @@
   width: 240px !important;
 }
 
+.sliderContainer div div div > div:nth-child(1) div:nth-child(1) {
+  width: 100% !important;
+}
+
 .showSlider {
   display: none;
 }

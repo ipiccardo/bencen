@@ -39,6 +39,7 @@ const HomePage = () => {
   const context = useContext(store);
   const { language, setLanguage }: any = context;
 
+
   const handleResize = () => {
     setPantallaMediana(window.innerWidth < 768);
     const screenWidth = window.innerWidth;
@@ -95,7 +96,7 @@ const HomePage = () => {
               <div className={classes.containerAbsolute}>
                 <div className={classes.aboutCardContainer}>
                   <AboutUsCard />
-                  <div className={classes.aboutUsParagraphContainer}>
+                  <div className={`${classes.aboutUsParagraphContainer} ${language === 'spanish' ? classes.aboutUsParagraphContainerInSpanish : ''}`}>
                     <h1>{ABOUT_US[language][0]}</h1>
                     <p>{ABOUT_US[language][1]}</p>
                     <p>{ABOUT_US[language][2]}</p>
@@ -117,15 +118,13 @@ const HomePage = () => {
               </div>
             </div>
           </section>
-          <section className={classes.threeSectionContainer}>
+          <section className={`${classes.threeSectionContainer}`}>
             <div
-              className={`${classes.imageContainer} ${classes.otherImage} ${
-                classes.paddingBottom
-              } ${pantallaMediana && classes.widthOutMarginTop} ${
-                pantallaMediana && classes.widthOutMarginTop
-              }`}
+              className={`${classes.imageContainer} ${classes.otherImage} ${classes.paddingBottom
+                } ${pantallaMediana && classes.widthOutMarginTop} ${pantallaMediana && classes.widthOutMarginTop
+                }`}
             >
-              <div className={classes.containerAbsolute}>
+              <div className={`${classes.containerAbsolute} ${language === 'spanish' ? classes.threeSectionContainerInSpanish : ''}`}>
                 <div className={classes.unmatchedServicesContainer}>
                   <div className={classes.unmatchedServicesParagraphContainer}>
                     <h1>{UNMATCHED_SERVICES_TITLE[language][0]}</h1>
@@ -134,6 +133,7 @@ const HomePage = () => {
                       href="/brochure/Folleto_Bencen.pdf"
                       text={UNMATCHED_SERVICES_BUTTON[language]}
                       classNameContent="padding-10"
+                      download='Folleto_bencen.pdf'
                     />
                   </div>
                   <UnmatchedCards />

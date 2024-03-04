@@ -650,4 +650,21 @@
   .maintenanceContainer {
     height: 80vh;
   }
+
+  /* .threeSectionContainer .containerAbsolute {
+    top: 90px;
+  } */
+}
+
+.unmatchedServicesParagraphContainer p {
+  padding: 0 2rem;
+}
+
+@media (max-width: 400px) {
+  .threeSectionContainerInSpanish {
+    top: 70px !important;
+  }
+  .aboutUsParagraphContainerInSpanish {
+    margin-top: -70px;
+  }
 }

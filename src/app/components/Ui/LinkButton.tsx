@@ -11,6 +11,7 @@ interface Props {
   text: string;
   onClick?: () => void;
   style?: any;
+  download?: string
 }
 
 const LinkButton = ({
@@ -20,12 +21,13 @@ const LinkButton = ({
   text,
   onClick,
   style,
+  download
 }: Props): JSX.Element => {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
   };
 
   return (
-    <Link href={href} target="_blank">
+    <Link href={href} target="_blank" download={download && download}>
       <button
         type="button"
         className={`${classes.button} ${classNameButton || ""}`}
