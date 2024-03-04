@@ -175,7 +175,7 @@ const ProjectsSliders = ({ categoryData }: any): any => {
             src={projectInModal?.src}
             alt={projectInModal?.title}
             layout="fill"
-            objectFit="cover"
+            objectFit="contain"
           />
         </div>
         <p

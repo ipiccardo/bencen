@@ -7,7 +7,7 @@
 
 .group {
   align-items: flex-start;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   gap: 13px;
   position: relative;
@@ -70,7 +70,7 @@
 /* Team Cards */
 .text{
   align-items: center;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   width: 928px;
   margin: 0 auto;

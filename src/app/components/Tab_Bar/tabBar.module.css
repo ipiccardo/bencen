@@ -54,6 +54,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .boxRight:hover {
@@ -116,7 +117,7 @@
     margin-top: 1rem;
     font-size: var(--normal-small-font-size);
     font-style: var(--small-text-italic-font-style);
-    display: inline-flex;
+    display: flex;
     padding: 0 8px;
     align-items: center;
     justify-content: center;

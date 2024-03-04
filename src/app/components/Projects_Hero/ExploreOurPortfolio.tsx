@@ -19,7 +19,7 @@ const ExploreOurPortfolio = (): JSX.Element => {
           <li key={index}>
             <Button
               href={`#${index}`}
-              classNameButton={classes.button}
+              style={{ width: "192px", height: "48px" }}
               text={value}
               onClick={() => scrollToId(index, 80)}
             />
