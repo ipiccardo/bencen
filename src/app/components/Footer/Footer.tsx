@@ -28,9 +28,10 @@ const Footer = () => {
             <p>{TOP_FOOTER[language][1]}</p>
           </div>
           <LinkButton
-            href="../brochure/Folleto_Bencen.pdf"
+            href="/brochure/Folleto_Bencen.pdf"
             text={UNMATCHED_SERVICES_BUTTON[language]}
             classNameContent="padding-20"
+            download="Folleto_Bencen.pdf"
           />
         </div>
       </div>

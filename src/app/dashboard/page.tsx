@@ -133,7 +133,7 @@ const HomePage = () => {
                       href="/brochure/Folleto_Bencen.pdf"
                       text={UNMATCHED_SERVICES_BUTTON[language]}
                       classNameContent="padding-10"
-                      download='Folleto_bencen.pdf'
+                      download='Folleto_Bencen.pdf'
                     />
                   </div>
                   <UnmatchedCards />
