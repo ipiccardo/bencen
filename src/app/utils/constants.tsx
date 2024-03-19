@@ -1039,7 +1039,7 @@ export const TAB_BAR: Object = {
     "ENVIAR",
     "¡Felicidades, tu mensaje se envió con éxito!.",
     "TRABAJA CON NOSOTROS",
-    "Comparte tu currículum con nuestro equipo de Recursos Humanos.",
+    "Compartí tu currículum con nuestro equipo de Recursos Humanos.",
     "Área de Trabajo",
     "Cargá tu CV:",
     "Seleccionar Archivo",
@@ -1056,6 +1056,7 @@ export const WORK_AREA: Object = {
     "Engineering",
     "Human Resources",
     "Safety",
+    "Others"
   ],
   spanish: [
     "Administración",
@@ -1064,6 +1065,7 @@ export const WORK_AREA: Object = {
     "Ingeniería",
     "Recursos Humanos",
     "Seg. e Higiene",
+    "Otros"
   ],
 };
 
