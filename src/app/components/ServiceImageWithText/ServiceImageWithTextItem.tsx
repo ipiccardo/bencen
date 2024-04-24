@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import classes from "./ServiceImageWithText.module.css";
 import Button from "../Ui/Button";
 import { infoForCardsItemProps } from "./ServiceImageWithText";
@@ -18,9 +18,8 @@ const ServiceImageWithTextItem = ({
 
   return (
     <div
-      className={`${classes.serviceImageWithText__item} ${classes[alignTo]} ${
-        last ? classes.serviceImageWithText__item__last : ""
-      }`}
+      className={`${classes.serviceImageWithText__item} ${classes[alignTo]} ${last ? classes.serviceImageWithText__item__last : ""
+        }`}
       id={(id - 1).toString()}
     >
       <div

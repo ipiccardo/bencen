@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import classes from "./firstSection.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 type FirstSectionProps = {
   firstChild: JSX.Element;

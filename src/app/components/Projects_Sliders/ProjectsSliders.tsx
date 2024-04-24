@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Modal from "../Modal/Modal";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Button from "../Ui/Button";
 import useWindow from "@/app/hooks/useWindow";
 
@@ -22,6 +22,7 @@ const CustomPrevArrow = (props: any) => (
       zIndex: 1,
       cursor: "pointer",
     }}
+    aria-disabled={props.currentSlide === 0 ? true : false}
   >
     {"<"}
   </div>
@@ -31,6 +32,7 @@ const CustomNextArrow = (props: any) => (
   <div
     {...props}
     style={{ ...props.style, right: "30px", zIndex: 1, cursor: "pointer" }}
+    aria-disabled={props.currentSlide === 0 ? true : false}
   >
     {">"}
   </div>
@@ -124,11 +126,10 @@ const ProjectsSliders = ({ categoryData }: any): any => {
                     onClick={() => (width <= 600 ? openModal(id) : null)}
                   >
                     <div
-                      className={`${
-                        hoverCondition && width > 600
-                          ? `${classes.textContainer} ${classes.buttonInfo} `
-                          : classes.textContainer
-                      }`}
+                      className={`${hoverCondition && width > 600
+                        ? `${classes.textContainer} ${classes.buttonInfo} `
+                        : classes.textContainer
+                        }`}
                       onMouseEnter={() => handleHover(id, true)}
                       onMouseLeave={() => handleHover(id, false)}
                     >
