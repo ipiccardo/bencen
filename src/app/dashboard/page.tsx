@@ -38,6 +38,9 @@ const HomePage = () => {
   const [otherImages, setOtherImages] = useState({ width: 1200, heigth: 960 });
   const context = useContext(store);
   const { language, setLanguage }: any = context;
+  const [widthPercentage, SetWidthPercentage] = useState(1);
+  const [widthInPx, SetWidthInPx] = useState(1);
+  const [heightPercentage, SetHeightPercentage] = useState(1);
 
 
   const handleResize = () => {
@@ -67,11 +70,44 @@ const HomePage = () => {
     }
   }, []);
 
+
+
+  // if (window.innerWidth >= 1440) {
+  //   SetWidthPercentage(1);
+  //   SetWidthInPx(window.innerWidth);
+  // } else {
+  //   SetHeightPercentage(1 - (1 - window.innerWidth / 1440) / 2);
+  // }
+
+
+  // const handleResolution = () => {
+  //   // Set dimensions based on a percentage of the screen width and height:
+  //   if (window.innerWidth >= 1440) {
+  //     SetWidthPercentage(1);
+  //     SetWidthInPx(window.innerWidth);
+  //   } else {
+  //     SetHeightPercentage(1 - (1 - window.innerWidth / 1440) / 2);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     handleResolution();
+  //     window.addEventListener("resize", handleResolution);
+
+  //     return () => {
+  //       window.removeEventListener("resize", handleResolution);
+  //     };
+  //   }
+  // }, []);
+
   return (
     <>
       <div className={classes.homePageContainer}>
         <div className={classes.sectionsContainer}>
           <FirstSection
+            widthInPx={widthInPx}
+
             firstChild={
               <>
                 <div>
