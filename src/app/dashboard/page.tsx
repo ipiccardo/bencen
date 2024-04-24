@@ -114,6 +114,7 @@ const HomePage = () => {
                   height={otherImages.heigth}
                   src={"/images/FrameTwoInside.png"}
                   alt={""}
+                  priority
                 />
               </div>
             </div>
@@ -145,6 +146,7 @@ const HomePage = () => {
                   height={960}
                   src={"/images/FrameThree.png"}
                   alt={""}
+                  priority
                 />
               </div>
             </div>
@@ -175,6 +177,7 @@ const HomePage = () => {
                   height={720}
                   src={"/images/FrameFour.png"}
                   alt={""}
+                  priority
                 />
               </div>
             </div>
@@ -206,6 +209,7 @@ const HomePage = () => {
                   height={720}
                   src={"/images/FrameFive.png"}
                   alt={""}
+                  priority
                 />
               </div>
             </div>
@@ -235,6 +239,7 @@ const HomePage = () => {
                   height={820}
                   src={"/images/FrameSix.png"}
                   alt={""}
+                  priority
                 />
               </div>
             </div>

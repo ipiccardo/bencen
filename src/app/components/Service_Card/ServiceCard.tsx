@@ -47,11 +47,11 @@ const ServiceCard = ({
         <Image
           className={classes.image}
           alt={`${header}`.toLowerCase() + " icon"}
-          src={`/icons/Services/${
-            hover ? imageName + "_hover" : imageName
-          }.png`}
+          src={`/icons/Services/${hover ? imageName + "_hover" : imageName
+            }.png`}
           width={96}
           height={96}
+          priority
         />
         <div className={classes.text}>
           <div className={classes.header}>{header}</div>

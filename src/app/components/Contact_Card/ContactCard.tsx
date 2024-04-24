@@ -42,6 +42,7 @@ const ContactCard = ({ imageName, header, content }: Props): JSX.Element => {
             src={`/icons/Contact/${imageName}.svg`}
             width={96}
             height={96}
+            priority
           />
         </div>
         <div

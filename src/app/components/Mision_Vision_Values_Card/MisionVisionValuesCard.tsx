@@ -26,9 +26,8 @@ const MisionVisionValuesCard = ({
 
   return (
     <div
-      className={`${classes.misionVisionValuesCard} ${
-        hover ? classes.hover : ""
-      }`}
+      className={`${classes.misionVisionValuesCard} ${hover ? classes.hover : ""
+        }`}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={handleClick}
@@ -60,6 +59,7 @@ const MisionVisionValuesCard = ({
             src={`/icons/Mision_Vision_Values/${imageName}.png`}
             width={140}
             height={140}
+            priority
           />
           <div className={classes.title}>{header.toUpperCase()}</div>
         </div>

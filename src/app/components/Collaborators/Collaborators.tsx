@@ -22,6 +22,7 @@ const Customer = ({ imageName, width, height }: Props): JSX.Element => {
           src={`/icons/Customers/${imageName}.svg`}
           width={width}
           height={height}
+          priority
         />
       </div>
     </div>
