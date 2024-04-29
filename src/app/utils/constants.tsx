@@ -844,7 +844,7 @@ const ENVIRONMENT = {
   },
 };
 
-const INTEGRATEDSERVICES = {
+export const INTEGRATEDSERVICES = {
   english: {
     category: "INTEGRATED SERVICES",
     data: [

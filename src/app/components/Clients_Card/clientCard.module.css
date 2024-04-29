@@ -41,5 +41,9 @@
 @media (max-width: 450px) {
   .clientCardContainer {
     max-width: 320px;
+    height: auto;
+  }
+  .image {
+    height: 100%;
   }
 }
